@@ -1,0 +1,155 @@
+[Adblock Plus 1.1]
+! Checksum: uO+x+iunogea8pLG+LW/zQ
+! Latvian Adblock filter
+! Expires: 2 days (update frequency)
+! filters
+||t.delfi.lv^
+||b.tvnet.lv^
+||q.tvnet.lv^
+||b.itvnet.lv^
+||itvnet.lv/partner/
+||ads.inbox.lv^
+||b.inbox.lv^
+||r.inbox.lv^
+||ad.one.lv^
+||g.delfi.lv/s.gif
+||g.delfi.lv/ap/edu/g/*$image
+||g.delfi.lv/b/
+||g.delfi.lv/d/bus/
+||g.delfi.lv/m/pardod.png
+||g.delfi.lv/wd/x/*/*
+||g.delfi.lv/mango/b/*
+||g.delfi.lv/fp/i/delfi_ticker_v3.2.swf
+||delfi.lv/misc/*$subdocument
+||img.apollo.lv/upload/infobox/*
+||static.apollo.lv/images/infobox/*
+||static.apollo.lv/images/phone_bg.png
+||static.apollo.lv/images/kopaletak.swf
+||apollo.lv/upload/kopaletak_akcijas.xml
+||1188.lv/img/special/*
+||riga.lv/MEDIA/Misc/*
+||notepad.lv/partneri/*
+||ads.datuve.lv^
+||easyget.lv/ads/*
+||lv.lv/bildes/reklaama.png
+||leta.lv/img/*/info_banneris_
+||nra.lv/spec/*
+||nra.lv/_rekl/
+||spoki.lv/banners/*
+||spoki.lv/img/okarte/*
+||lnt.lv/images/banners/
+||lattelecom.lv/images/modules/banners/1293461582WEB-baneris-C1.gif
+||bilesuserviss.lv/upload/banner/*
+||antireklama.lv/banners/*
+||ss.lv/counter/*
+||lib.manstv.lv/js/bannerhandlerv2.js
+||reklama.lv/services/ads_count.html
+||gudrinieks.lv/res/banner/*
+||gudrinieks.lv/res/js/sb_banner.js
+||cenuklubs.lv/assets/media/*
+||oga.lv/ieBildes/*
+||e-pica.lv/mce/uploads/banners/*
+||iaptieka.lv/atteli/apmaina/*
+||x-power.lv/images/banners/*
+||lursoft.lv/img/banners/*
+/city24/*
+/reklama/*
+/xgemius_lv.js
+/xgemius.php
+/counter.php
+! filters for 3rd party sites
+||statistik-gallup.net^
+||textads.lv^
+||adclick.lv^
+||smartad.lv^
+||smartad.ee^
+||irreklama.lv^
+||reinvigorate.net^
+||counter.hackers.lv^
+||anymedia.lv^
+||inectar.lv^
+||puls.lv^
+||europuls.eu^
+||europuls.net^
+||stats.tunt.lv^
+||reitingi.lv^
+||openstat.net^
+||counter.yadro.ru^
+||statistika.lv^
+||ads.image.lv^
+||knc.lv^
+||nerealitate.lv^
+||top.lv^
+||hits.sys.lv^
+||affiliate.dateks.lv^
+||affiliate.lattelecom.lv^
+||on-line.lv^$third-party
+||city24.lv^$third-party
+||tools.spylog.ru/counter$third-party
+||partneriem.smscredit.lv^$third-party
+||saites.eon.lv^$third-party
+||leta.lv/bm/www/images/*$third-party
+||agk.lv^$third-party
+||1shop.lv/i/ban/*
+||garmtech.lv/i/banners-lv/*
+||webstatistika.lv^
+||insbergs.lv/ins_statistics/*
+!
+||draugiem.lv^$third-party
+!
+! element filters
+##.taxtad_title
+##.catwrap.city24w
+##.eshop_table
+##A[href="/reklama"]
+###city24-wrapper
+##[id^="city24-wrapper"]
+delfi.lv###right
+delfi.lv###right2
+delfi.lv###right IMG
+delfi.lv###horoweatherblock
+delfi.lv###ticker_cont
+delfi.lv##.admiral_xml
+delfi.lv###delfishopitems
+delfi.lv##.darbs
+delfi.lv###layout_column4
+delfi.lv###header_wide_fb
+delfi.lv###column_3
+diena.lv##[class*="BANNER_BOX "]
+forums.delfi.lv##TD[style="padding: 0px; margin: 0px; font-size: 0px"]
+forums.delfi.lv##DIV[style="width:150px;margin-bottom:5px;"]
+tv.delfi.lv##.toolblock
+mango.delfi.lv##DIV[style="font-weight:bold;width:250px;margin-bottom:5px;background:#98abc9;padding-bottom:25px;"]
+apollo.lv###tourism
+apollo.lv##.admiral_box
+apollo.lv##.city24_box
+apollo.lv##.mid_most_lmt
+apollo.lv##.apollo_infobox
+apollo.lv###apollo_kopaLetakDiv
+apollo.lv##a[href^="/click_thru.php?cat="]
+lattelecom.lv###fixme_l_b_inner
+tvnet.lv###trackbar_box
+tvnet.lv##.list.customer
+tvnet.lv###shops_offer
+tvnet.lv##.customers
+financenet.lv##.list.customer
+financenet.lv##.tracbuttons
+ir.lv###abonbanner
+kasjauns.lv##DIV[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
+inbox.lv##.shoplink
+inbox.lv##.shophlink
+inbox.lv##A[href^="http://b.inbox.lv/"]
+salidzini.lv##[id^="media_place"]
+salidzini.lv##TD[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
+salidzini.lv##DIV[style="padding: 1px; border: 2px solid red; background-color: #FFE479; width: 920px; margin: 2px auto 4px auto; text-align: center;"]
+riga.lv##[id^="_ctl20_Elements__"]
+easyget.lv##[class^="adholder"]
+nra.lv##DIV[style="padding-top:2px; font-size:0.917em;"]
+spoki.lv###okarte-banner
+nozare.lv##DIV[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
+bilesuserviss.lv##.banner_clicker
+bilesuserviss.lv##.main_column_banner
+bilesuserviss.lv##.top_banner
+db.lv###slid_close
+saites.eon.lv###jauto-container
+@@||g.delfi.lv/wd/x/*/r/*
