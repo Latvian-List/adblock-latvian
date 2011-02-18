@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: uO+x+iunogea8pLG+LW/zQ
+! Checksum: JVmBic/SjqFJhFnUWgsF9Q
 ! Latvian Adblock filter
 ! Expires: 2 days (update frequency)
 ! filters
@@ -83,6 +83,7 @@
 ||hits.sys.lv^
 ||affiliate.dateks.lv^
 ||affiliate.lattelecom.lv^
+||promo.boomtime.lv^
 ||on-line.lv^$third-party
 ||city24.lv^$third-party
 ||tools.spylog.ru/counter$third-party
