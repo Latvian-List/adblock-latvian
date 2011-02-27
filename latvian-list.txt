@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: JVmBic/SjqFJhFnUWgsF9Q
+! Checksum: ss1W6ieRC5fIeOKKvpGrZg
 ! Latvian Adblock filter
 ! Expires: 2 days (update frequency)
 ! filters
@@ -38,7 +38,6 @@
 ||spoki.lv/banners/*
 ||spoki.lv/img/okarte/*
 ||lnt.lv/images/banners/
-||lattelecom.lv/images/modules/banners/1293461582WEB-baneris-C1.gif
 ||bilesuserviss.lv/upload/banner/*
 ||antireklama.lv/banners/*
 ||ss.lv/counter/*
@@ -129,6 +128,7 @@ apollo.lv##.apollo_infobox
 apollo.lv###apollo_kopaLetakDiv
 apollo.lv##a[href^="/click_thru.php?cat="]
 lattelecom.lv###fixme_l_b_inner
+lattelecom.lv###fixme_l_c
 tvnet.lv###trackbar_box
 tvnet.lv##.list.customer
 tvnet.lv###shops_offer
