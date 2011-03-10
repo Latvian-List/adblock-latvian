@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: ss1W6ieRC5fIeOKKvpGrZg
+! Checksum: JenBDou/3GdcPQwUmrPjEg
 ! Latvian Adblock filter
 ! Expires: 2 days (update frequency)
 ! filters
@@ -94,6 +94,7 @@
 ||garmtech.lv/i/banners-lv/*
 ||webstatistika.lv^
 ||insbergs.lv/ins_statistics/*
+||banneri.lv^
 !
 ||draugiem.lv^$third-party
 !
