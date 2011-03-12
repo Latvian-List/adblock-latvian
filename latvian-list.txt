@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: JenBDou/3GdcPQwUmrPjEg
+! Checksum: dlHf9D6I74VjUN0nzOXWfw
 ! Latvian Adblock filter
 ! Expires: 2 days (update frequency)
 ! filters
@@ -19,10 +19,13 @@
 ||g.delfi.lv/m/pardod.png
 ||g.delfi.lv/wd/x/*/*
 ||g.delfi.lv/mango/b/*
+||g.delfi.lv/d/h2011/pardotnet/*
 ||g.delfi.lv/fp/i/delfi_ticker_v3.2.swf
 ||delfi.lv/misc/*$subdocument
 ||img.apollo.lv/upload/infobox/*
+||img.apollo.lv/upload/rentinriga/*
 ||static.apollo.lv/images/infobox/*
+||static.apollo.lv/images/RentInRiga*
 ||static.apollo.lv/images/phone_bg.png
 ||static.apollo.lv/images/kopaletak.swf
 ||apollo.lv/upload/kopaletak_akcijas.xml
@@ -79,12 +82,15 @@
 ||knc.lv^
 ||nerealitate.lv^
 ||top.lv^
+||webstatistika.lv^
+||banneri.lv^
 ||hits.sys.lv^
 ||affiliate.dateks.lv^
 ||affiliate.lattelecom.lv^
 ||promo.boomtime.lv^
 ||on-line.lv^$third-party
 ||city24.lv^$third-party
+||otrapuse.lv^$third-party
 ||tools.spylog.ru/counter$third-party
 ||partneriem.smscredit.lv^$third-party
 ||saites.eon.lv^$third-party
@@ -92,9 +98,7 @@
 ||agk.lv^$third-party
 ||1shop.lv/i/ban/*
 ||garmtech.lv/i/banners-lv/*
-||webstatistika.lv^
 ||insbergs.lv/ins_statistics/*
-||banneri.lv^
 !
 ||draugiem.lv^$third-party
 !
@@ -126,7 +130,9 @@ apollo.lv##.admiral_box
 apollo.lv##.city24_box
 apollo.lv##.mid_most_lmt
 apollo.lv##.apollo_infobox
+apollo.lv##.infobox_item
 apollo.lv###apollo_kopaLetakDiv
+apollo.lv###RentInRiga
 apollo.lv##a[href^="/click_thru.php?cat="]
 lattelecom.lv###fixme_l_b_inner
 lattelecom.lv###fixme_l_c
@@ -148,6 +154,7 @@ riga.lv##[id^="_ctl20_Elements__"]
 easyget.lv##[class^="adholder"]
 nra.lv##DIV[style="padding-top:2px; font-size:0.917em;"]
 spoki.lv###okarte-banner
+spoki.lv###mod_eshops_b
 nozare.lv##DIV[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
 bilesuserviss.lv##.banner_clicker
 bilesuserviss.lv##.main_column_banner
