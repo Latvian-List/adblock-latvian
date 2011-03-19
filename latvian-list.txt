@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: 4wEqIJ0XFHkKnMOFFuAZ+g
+! Checksum: 6HFqd3/4m59uqtn6bTAxtA
 ! Latvian Adblock filter
 ! contact: anonymous.74100@gmail.com
 ! Expires: 2 days (update frequency)
@@ -21,6 +21,8 @@
 ||g.delfi.lv/d/bus/
 ||g.delfi.lv/m/pardod.png
 ||g.delfi.lv/wd/x/*/*
+||g.delfi.lv/ve/g/*
+||g.delfi.lv/jo/g/*
 ||g.delfi.lv/mango/b/*
 ||g.delfi.lv/d/h2011/pardotnet/*
 ||g.delfi.lv/fp/i/delfi_ticker_v3.2.swf
@@ -28,11 +30,13 @@
 ||img.apollo.lv/upload/infobox/*
 ||img.apollo.lv/upload/rentinriga/*
 ||static.apollo.lv/images/infobox/*
+||static.apollo.lv/images/v5/infobox/*
 ||static.apollo.lv/images/RentInRiga*
 ||static.apollo.lv/images/phone_bg.png
 ||static.apollo.lv/images/kopaletak.swf
 ||apollo.lv/upload/kopaletak_akcijas.xml
 ||1188.lv/img/special/*
+||1188.lv/img/banners/*
 ||riga.lv/MEDIA/Misc/*
 ||notepad.lv/partneri/*
 ||ads.datuve.lv^
@@ -43,6 +47,7 @@
 ||nra.lv/_rekl/
 ||spoki.lv/banners/*
 ||spoki.lv/img/okarte/*
+||spoki.lv/img/backs/*-banner.png
 ||lnt.lv/images/banners/
 ||bilesuserviss.lv/upload/banner/*
 ||antireklama.lv/banners/*
@@ -57,6 +62,7 @@
 ||iaptieka.lv/atteli/apmaina/*
 ||x-power.lv/images/banners/*
 ||lursoft.lv/img/banners/*
+||gudriem.lv/App_Themes/Default/Banners/*
 /city24/*
 /reklama/*
 /xgemius_lv.js
@@ -151,7 +157,6 @@ inbox.lv##.shophlink
 inbox.lv##A[href^="http://b.inbox.lv/"]
 salidzini.lv##[id^="media_place"]
 salidzini.lv##TD[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
-salidzini.lv##DIV[style="padding: 1px; border: 2px solid red; background-color: #FFE479; width: 920px; margin: 2px auto 4px auto; text-align: center;"]
 riga.lv##[id^="_ctl20_Elements__"]
 easyget.lv##[class^="adholder"]
 nra.lv##DIV[style="padding-top:2px; font-size:0.917em;"]
@@ -163,4 +168,6 @@ bilesuserviss.lv##.main_column_banner
 bilesuserviss.lv##.top_banner
 db.lv###slid_close
 saites.eon.lv###jauto-container
+zeltazivtina.lv###banner
+boot.lv##[class*="ad_*"]
 @@||g.delfi.lv/wd/x/*/r/*
