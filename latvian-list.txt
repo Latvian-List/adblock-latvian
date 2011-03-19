@@ -1,7 +1,10 @@
 [Adblock Plus 1.1]
-! Checksum: dlHf9D6I74VjUN0nzOXWfw
+! Checksum: /B1ukGlYXXfIfQa1mBX/0g
 ! Latvian Adblock filter
+! contact: anonymous.74100@gmail.com
 ! Expires: 2 days (update frequency)
+! License: https://creativecommons.org/licenses/by-sa/3.0/
+!
 ! filters
 ||t.delfi.lv^
 ||b.tvnet.lv^
@@ -99,7 +102,6 @@
 ||1shop.lv/i/ban/*
 ||garmtech.lv/i/banners-lv/*
 ||insbergs.lv/ins_statistics/*
-!
 ||draugiem.lv^$third-party
 !
 ! element filters
