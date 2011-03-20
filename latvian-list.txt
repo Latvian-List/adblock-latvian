@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: nE9Epicyb4IIwpQSw+2gQg
+! Checksum: yvX3sKH/kONjCawCam9H2Q
 ! Latvian Adblock filter
 ! Contact: anonymous.74100@gmail.com
 ! Expires: 2 days (update frequency)
@@ -161,6 +161,7 @@ nra.lv##DIV[style="padding-top:2px; font-size:0.917em;"]
 riga.lv##[id^="_ctl20_Elements__"]
 saites.eon.lv###jauto-container
 salidzini.lv##[id^="media_place"]
+salidzini.lv##DIV[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
 salidzini.lv##DIV[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
 salidzini.lv##TD[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
 spoki.lv###mod_eshops_b
