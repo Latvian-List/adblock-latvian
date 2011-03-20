@@ -1,15 +1,19 @@
 [Adblock Plus 1.1]
-! Checksum: c5K6bDcBe2UvU1VDTRSBrw
+! Checksum: 55JAopZlQN3lFqelCRrb5w
 ! Latvian Adblock filter
 ! Contact: anonymous.74100@gmail.com
 ! Expires: 2 days (update frequency)
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
+!
+! DNT header
+*$image,~image,donottrack
 !
 ! Filters
 /city24/*
 /reklama/*
 ||1188.lv/img/banners/*
 ||1188.lv/img/special/*
+||1w.lv/banner_*
 ||ad.one.lv^
 ||ads.datuve.lv^
 ||ads.inbox.lv^
@@ -62,10 +66,13 @@
 ||static.apollo.lv/images/phone_bg.png
 ||static.apollo.lv/images/RentInRiga*
 ||static.apollo.lv/images/v5/infobox/*
+||sudzibas.lv/baneris_*
 ||t.delfi.lv^
 ||x-power.lv/images/banners/*
+||zip.lv/kasjauns.swf
 ! Filters for 3. party sites
 ||1shop.lv/i/ban/*
+||468x60.lv^
 ||adclick.lv^
 ||ads.image.lv^
 ||adsxchange.lv^
@@ -74,8 +81,10 @@
 ||agk.lv^$third-party
 ||anymedia.lv^
 ||banneri.lv^
+||bbes.lv^
 ||city24.lv^$third-party
-||garmtech.lv/i/banners-lv/*
+||evolution.lv^$third-party
+||garmtech.lv^$third-party
 ||inectar.lv^
 ||irreklama.lv^
 ||knc.lv^
@@ -96,6 +105,7 @@
 ||e-spy.petit.lv^
 ||ss.lv/counter/*
 ! Tracking filters for 3. party sites
+||adocean.pl^
 ||counter.hackers.lv^
 ||counter.yadro.ru^
 ||draugiem.lv^$third-party
