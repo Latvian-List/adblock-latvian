@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: yvX3sKH/kONjCawCam9H2Q
+! Checksum: c5K6bDcBe2UvU1VDTRSBrw
 ! Latvian Adblock filter
 ! Contact: anonymous.74100@gmail.com
 ! Expires: 2 days (update frequency)
@@ -7,10 +7,7 @@
 !
 ! Filters
 /city24/*
-/counter.php
 /reklama/*
-/xgemius.php
-/xgemius_lv.js
 ||1188.lv/img/banners/*
 ||1188.lv/img/special/*
 ||ad.one.lv^
@@ -34,7 +31,6 @@
 ||g.delfi.lv/jo/g/*
 ||g.delfi.lv/m/pardod.png
 ||g.delfi.lv/mango/b/*
-||g.delfi.lv/s.gif
 ||g.delfi.lv/ve/g/*
 ||g.delfi.lv/wd/x/*/*
 ||gudriem.lv/App_Themes/Default/Banners/*
@@ -53,6 +49,7 @@
 ||nra.lv/_rekl/
 ||nra.lv/spec/*
 ||oga.lv/ieBildes/*
+||petits.lv/pics/banners/*
 ||q.tvnet.lv^
 ||r.inbox.lv^
 ||reklama.lv/services/ads_count.html
@@ -60,7 +57,6 @@
 ||spoki.lv/banners/*
 ||spoki.lv/img/backs/*-banner.png
 ||spoki.lv/img/okarte/*
-||ss.lv/counter/*
 ||static.apollo.lv/images/infobox/*
 ||static.apollo.lv/images/kopaletak.swf
 ||static.apollo.lv/images/phone_bg.png
@@ -68,46 +64,55 @@
 ||static.apollo.lv/images/v5/infobox/*
 ||t.delfi.lv^
 ||x-power.lv/images/banners/*
-! Filters for 3rd party sites
+! Filters for 3. party sites
 ||1shop.lv/i/ban/*
 ||adclick.lv^
 ||ads.image.lv^
+||adsxchange.lv^
 ||affiliate.dateks.lv^
 ||affiliate.lattelecom.lv^
 ||agk.lv^$third-party
 ||anymedia.lv^
 ||banneri.lv^
 ||city24.lv^$third-party
+||garmtech.lv/i/banners-lv/*
+||inectar.lv^
+||irreklama.lv^
+||knc.lv^
+||leta.lv/bm/www/images/*$third-party
+||nerealitate.lv^
+||otrapuse.lv^$third-party
+||partneriem.smscredit.lv^$third-party
+||promo.boomtime.lv^
+||saites.eon.lv^$third-party
+||smartad.ee^
+||smartad.lv^
+||textads.lv^
+!
+! Tracking filters
+/counter.php
+/xgemius.php
+/xgemius_lv.js
+||e-spy.petit.lv^
+||ss.lv/counter/*
+! Tracking filters for 3. party sites
 ||counter.hackers.lv^
 ||counter.yadro.ru^
 ||draugiem.lv^$third-party
 ||europuls.eu^
 ||europuls.net^
-||garmtech.lv/i/banners-lv/*
 ||hits.sys.lv^
-||inectar.lv^
 ||insbergs.lv/ins_statistics/*
-||irreklama.lv^
-||knc.lv^
-||leta.lv/bm/www/images/*$third-party
-||nerealitate.lv^
 ||on-line.lv^$third-party
 ||openstat.net^
-||otrapuse.lv^$third-party
-||partneriem.smscredit.lv^$third-party
-||promo.boomtime.lv^
 ||puls.lv^
 ||reinvigorate.net^
-||reitingi.lv^
-||saites.eon.lv^$third-party
-||smartad.ee^
-||smartad.lv^
+||reitingi.lv^$third-party
 ||statistik-gallup.net^
 ||statistika.lv^
 ||stats.tunt.lv^
-||textads.lv^
 ||tools.spylog.ru/counter$third-party
-||top.lv^
+||top.lv^$third-party
 ||webstatistika.lv^
 !
 ! Element filters
