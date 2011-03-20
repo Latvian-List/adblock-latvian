@@ -1,9 +1,11 @@
 [Adblock Plus 1.1]
-! Checksum: EYSYQi6l0HcJbP985dfQKw
+! Checksum: 3qE0Jsj6ILVKM0NniIqGaA
 ! Latvian Adblock filter
-! Contact: anonymous.74100@gmail.com
-! Expires: 2 days (update frequency)
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
+! Email: anonymous.74100@gmail.com
+!
+! Last modified: 20.03.2011. 14:54 GMT+2
+! Expires: 2 days (update frequency)
 !
 ! DNT header
 *$image,~image,donottrack
