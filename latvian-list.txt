@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: 55JAopZlQN3lFqelCRrb5w
+! Checksum: EYSYQi6l0HcJbP985dfQKw
 ! Latvian Adblock filter
 ! Contact: anonymous.74100@gmail.com
 ! Expires: 2 days (update frequency)
@@ -31,6 +31,7 @@
 ||g.delfi.lv/b/
 ||g.delfi.lv/d/bus/
 ||g.delfi.lv/d/h2011/pardotnet/*
+||g.delfi.lv/d/infoblock/*
 ||g.delfi.lv/fp/i/delfi_ticker_v3.2.swf
 ||g.delfi.lv/jo/g/*
 ||g.delfi.lv/m/pardod.png
@@ -67,7 +68,6 @@
 ||static.apollo.lv/images/RentInRiga*
 ||static.apollo.lv/images/v5/infobox/*
 ||sudzibas.lv/baneris_*
-||t.delfi.lv^
 ||x-power.lv/images/banners/*
 ||zip.lv/kasjauns.swf
 ! Filters for 3. party sites
@@ -104,6 +104,7 @@
 /xgemius_lv.js
 ||e-spy.petit.lv^
 ||ss.lv/counter/*
+||t.delfi.lv^
 ! Tracking filters for 3. party sites
 ||adocean.pl^
 ||counter.hackers.lv^
@@ -157,6 +158,7 @@ delfi.lv###right2
 delfi.lv###ticker_cont
 delfi.lv##.admiral_xml
 delfi.lv##.darbs
+delfi.lv##DIV[style="background:#fef2d9;"]
 diena.lv##[class*="BANNER_BOX "]
 easyget.lv##[class^="adholder"]
 financenet.lv##.list.customer
