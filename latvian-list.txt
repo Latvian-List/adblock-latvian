@@ -1,10 +1,10 @@
 [Adblock Plus 1.1]
-! Checksum: 3qE0Jsj6ILVKM0NniIqGaA
+! Checksum: 061ANui25fJvkPCmW9OKZA
 ! Latvian Adblock filter
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
 ! Email: anonymous.74100@gmail.com
 !
-! Last modified: 20.03.2011. 14:54 GMT+2
+! Last modified: 20.03.2011. 15:26 GMT+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -167,6 +167,7 @@ financenet.lv##.list.customer
 financenet.lv##.tracbuttons
 forums.delfi.lv##DIV[style="width:150px;margin-bottom:5px;"]
 forums.delfi.lv##TD[style="padding: 0px; margin: 0px; font-size: 0px"]
+gay.lv##DIV[style="width:568px;height:60px;background-color:#000000;"]
 inbox.lv##.shophlink
 inbox.lv##.shoplink
 inbox.lv##A[href^="http://b.inbox.lv/"]
