@@ -1,8 +1,9 @@
 [Adblock Plus 1.1]
-! Checksum: 061ANui25fJvkPCmW9OKZA
+! Checksum: NO5BGfzc6TgGQL69Uh+khw
 ! Latvian Adblock filter
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
 ! Email: anonymous.74100@gmail.com
+! Blog: http://adblock-latvian.blogspot.com/
 !
 ! Last modified: 20.03.2011. 15:26 GMT+2
 ! Expires: 2 days (update frequency)
