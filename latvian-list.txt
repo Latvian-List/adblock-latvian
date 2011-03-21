@@ -1,11 +1,11 @@
 [Adblock Plus 1.1]
-! Checksum: NO5BGfzc6TgGQL69Uh+khw
+! Checksum: TzgO4qC7uzghfjNfOkMD8w
 ! Latvian Adblock filter
-! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
+! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 20.03.2011. 15:26 GMT+2
+! Last modified: 21.03.2011. 19:04 GMT+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -141,9 +141,13 @@ apollo.lv###RentInRiga
 apollo.lv###tourism
 apollo.lv##.admiral_box
 apollo.lv##.apollo_infobox
+apollo.lv##.ban420x200
+apollo.lv##.ban420x260
+apollo.lv##.ban980x90
 apollo.lv##.city24_box
 apollo.lv##.infobox_item
 apollo.lv##.mid_most_lmt
+apollo.lv##.right_banner
 apollo.lv##a[href^="/click_thru.php?cat="]
 bilesuserviss.lv##.banner_clicker
 bilesuserviss.lv##.main_column_banner
