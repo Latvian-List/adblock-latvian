@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: k2Xtji16ZBnpOMT1Smr2Ug
+! Checksum: Ib2LyUSX5+DKxRw3Jo7yHw
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 22.03.2011. 14:43 GMT+2
+! Last modified: 22.03.2011. 19:55 GMT+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -93,8 +93,10 @@
 ||nerealitate.lv^
 ||otrapuse.lv^$third-party
 ||partneriem.smscredit.lv^$third-party
+||perkamkopa.lv^$third-party
 ||promo.boomtime.lv^
 ||saites.eon.lv^$third-party
+||sludini.lv^$third-party
 ||smartad.ee^
 ||smartad.lv^
 ||textads.lv^
@@ -108,12 +110,14 @@
 ||t.delfi.lv^
 ! Tracking filters for 3. party sites
 ||adocean.pl^
+||clicktale.net^
 ||counter.hackers.lv^
 ||counter.yadro.ru^
 ||draugiem.lv^$third-party
 ||europuls.eu^
 ||europuls.net^
 ||hits.sys.lv^
+||ifrype.com^$domain=~draugiem.lv|~frype.com,third-party
 ||insbergs.lv/ins_statistics/*
 ||on-line.lv^$third-party
 ||openstat.net^
@@ -196,6 +200,9 @@ tvnet.lv###trackbar_box
 tvnet.lv##.customers
 tvnet.lv##.list.customer
 zeltazivtina.lv###banner
+zip.lv###ad_view
+zip.lv###perkam_group_banner
+zip.lv##.zip_spotlight.main_td
 !
 ! Whitelist
 @@||g.delfi.lv/wd/x/*/r/*
