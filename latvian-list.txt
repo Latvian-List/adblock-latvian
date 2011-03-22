@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: 5gKyqObSHRPnKxXA/bTHGQ
+! Checksum: k2Xtji16ZBnpOMT1Smr2Ug
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 22.03.2011. 12:16 GMT+2
+! Last modified: 22.03.2011. 14:43 GMT+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -179,6 +179,7 @@ kasjauns.lv##DIV[style="overflow:hidden; width:277px; height:70px; border: 1px s
 lattelecom.lv###fixme_l_b_inner
 lattelecom.lv###fixme_l_c
 mango.delfi.lv##DIV[style="font-weight:bold;width:250px;margin-bottom:5px;background:#98abc9;padding-bottom:25px;"]
+notepad.lv###ja-sh
 nozare.lv##DIV[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
 nra.lv##DIV[style="padding-top:2px; font-size:0.917em;"]
 riga.lv##[id^="_ctl20_Elements__"]
