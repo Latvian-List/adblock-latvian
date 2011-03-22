@@ -1,11 +1,11 @@
 [Adblock Plus 1.1]
-! Checksum: P4QPi+0fqGu83dT51etQ8A
+! Checksum: GP7Zsz6nCTnpCC4LOo76Mg
 ! Latvian Adblock filter
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 22.03.2011. 09:30 GMT+2
+! Last modified: 22.03.2011. 12:16 GMT+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -35,10 +35,8 @@
 ||g.delfi.lv/d/h2011/pardotnet/*
 ||g.delfi.lv/d/infoblock/*
 ||g.delfi.lv/fp/i/delfi_ticker_v3.2.swf
-||g.delfi.lv/jo/g/*
 ||g.delfi.lv/m/pardod.png
 ||g.delfi.lv/mango/b/*
-||g.delfi.lv/ve/g/*
 ||g.delfi.lv/wd/x/*/*
 ||gudriem.lv/App_Themes/Default/Banners/*
 ||gudrinieks.lv/res/banner/*
