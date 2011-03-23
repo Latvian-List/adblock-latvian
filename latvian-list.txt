@@ -6,7 +6,7 @@
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 23.03.2011. 11:44 GMT+2
+! Last modified: 23.03.2011. 14:23 GMT+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -93,6 +93,7 @@
 ||leta.lv/bm/www/images/*$third-party
 ||nerealitate.lv^
 ||otrapuse.lv^$third-party
+||otrapuse.mango.lv^$third-party
 ||partneriem.smscredit.lv^$third-party
 ||perkamkopa.lv^$third-party
 ||promo.boomtime.lv^
@@ -204,6 +205,7 @@ zeltazivtina.lv###banner
 zip.lv###ad_view
 zip.lv###perkam_group_banner
 zip.lv##.zip_spotlight.main_td
+tvnet.lv##.banner
 !
 ! Whitelist
 @@||g.delfi.lv/wd/x/*/r/*
