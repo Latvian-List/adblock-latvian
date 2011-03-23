@@ -1,5 +1,5 @@
 [Adblock Plus 1.1]
-! Checksum: pTSKieM/Qbh6ZVw0dvjbwQ
+! Checksum: c0igrcOvTHH/MAZqQfOZhg
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
@@ -199,13 +199,13 @@ spoki.lv###okarte-banner
 tv.delfi.lv##.toolblock
 tvnet.lv###shops_offer
 tvnet.lv###trackbar_box
+tvnet.lv##.banner
 tvnet.lv##.customers
 tvnet.lv##.list.customer
 zeltazivtina.lv###banner
 zip.lv###ad_view
 zip.lv###perkam_group_banner
 zip.lv##.zip_spotlight.main_td
-tvnet.lv##.banner
 !
 ! Whitelist
 @@||g.delfi.lv/wd/x/*/r/*
