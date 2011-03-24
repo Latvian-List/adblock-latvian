@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: eFbsBBUMdn00sk3APQk18Q
+! Checksum: B22fptEfZqhBcZO1gi0QBw
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 24.03.2011. 14:33 UTC+2
+! Last modified: 24.03.2011. 14:58 UTC+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -26,6 +26,7 @@
 ||b.inbox.lv^
 ||b.itvnet.lv^
 ||b.tvnet.lv^
+||banners.zl.lv^
 ||bilesuserviss.lv/upload/banner/*
 ||cenuklubs.lv/assets/media/*
 ||delfi.lv/misc/*$subdocument
@@ -72,6 +73,7 @@
 ||sudzibas.lv/baneris_*
 ||x-power.lv/images/banners/*
 ||zip.lv/kasjauns.swf
+||zl.lv/banners/*
 ! Filters for 3. party sites
 ||1shop.lv/i/ban/*
 ||468x60.lv^
@@ -92,6 +94,7 @@
 ||knc.lv^
 ||leta.lv/bm/www/images/*$third-party
 ||nerealitate.lv^
+||novonews.lv/ticker/flash/*$third-party
 ||otrapuse.lv^$third-party
 ||otrapuse.mango.lv^$third-party
 ||partneriem.smscredit.lv^$third-party
@@ -140,6 +143,7 @@
 ##.taxtad_title
 ##[id^="city24-wrapper"]
 ##A[href="/reklama"]
+1188.lv##.LabsservissAdd
 apollo.lv###apollo_kopaLetakDiv
 apollo.lv###RentInRiga
 apollo.lv###tourism
@@ -181,6 +185,7 @@ inbox.lv##.shophlink
 inbox.lv##.shoplink
 inbox.lv##A[href^="http://b.inbox.lv/"]
 ir.lv###abonbanner
+kasjauns.lv###top_banner_container
 kasjauns.lv##DIV[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
 lattelecom.lv###fixme_l_b_inner
 lattelecom.lv###fixme_l_c
@@ -197,6 +202,7 @@ salidzini.lv##TD[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
 spoki.lv###mod_eshops_b
 spoki.lv###okarte-banner
 spoki.lv##.garnier-banner
+spoki.lv##DIV[style^="background: url('/banners/draugiem.png')"]
 tv.delfi.lv##.toolblock
 tvnet.lv###shops_offer
 tvnet.lv###trackbar_box
