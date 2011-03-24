@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: c0igrcOvTHH/MAZqQfOZhg
+! Checksum: DVOgu5ZoEXYKKUILJuwang
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 23.03.2011. 14:23 GMT+2
+! Last modified: 24.03.2011. 14:33 UTC+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -194,6 +194,7 @@ salidzini.lv##[id^="media_place"]
 salidzini.lv##DIV[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
 salidzini.lv##DIV[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
 salidzini.lv##TD[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
+spoki.lv###garnier-msg
 spoki.lv###mod_eshops_b
 spoki.lv###okarte-banner
 tv.delfi.lv##.toolblock
