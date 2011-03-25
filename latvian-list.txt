@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: B22fptEfZqhBcZO1gi0QBw
+! Checksum: Q2QrFPKsEdscRv1kIrb7Kw
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 24.03.2011. 14:58 UTC+2
+! Last modified: 25.03.2011. 15:54 UTC+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -213,6 +213,7 @@ zeltazivtina.lv###banner
 zip.lv###ad_view
 zip.lv###perkam_group_banner
 zip.lv##.zip_spotlight.main_td
+~nva.gov.lv##.adbanner
 !
 ! Whitelist
 @@||g.delfi.lv/wd/x/*/r/*
