@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: Q2QrFPKsEdscRv1kIrb7Kw
+! Checksum: UK/UZCQWskmrXvgaHGEwAA
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 25.03.2011. 15:54 UTC+2
+! Last modified: 25.03.2011. 16:33 UTC+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -21,6 +21,7 @@
 ||ad.one.lv^
 ||ads.datuve.lv^
 ||ads.inbox.lv^
+||ads.sportacentrs.com^
 ||antireklama.lv/banners/*
 ||apollo.lv/upload/kopaletak_akcijas.xml
 ||b.inbox.lv^
@@ -203,6 +204,7 @@ spoki.lv###mod_eshops_b
 spoki.lv###okarte-banner
 spoki.lv##.garnier-banner
 spoki.lv##DIV[style^="background: url('/banners/draugiem.png')"]
+sportacentrs.com##.banner
 tv.delfi.lv##.toolblock
 tvnet.lv###shops_offer
 tvnet.lv###trackbar_box
