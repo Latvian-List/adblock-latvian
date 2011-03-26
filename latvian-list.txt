@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: UK/UZCQWskmrXvgaHGEwAA
+! Checksum: rnlIeUGEdmcwouaeJMxexA
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 25.03.2011. 16:33 UTC+2
+! Last modified: 26.03.2011. 14:25 UTC+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -177,7 +177,6 @@ delfi.lv##.darbs
 delfi.lv##DIV[style="background:#fef2d9;"]
 diena.lv##[class*="BANNER_BOX "]
 easyget.lv##[class^="adholder"]
-financenet.lv##.list.customer
 financenet.lv##.tracbuttons
 forums.delfi.lv##DIV[style="width:150px;margin-bottom:5px;"]
 forums.delfi.lv##TD[style="padding: 0px; margin: 0px; font-size: 0px"]
@@ -208,9 +207,10 @@ sportacentrs.com##.banner
 tv.delfi.lv##.toolblock
 tvnet.lv###shops_offer
 tvnet.lv###trackbar_box
-tvnet.lv##.banner
 tvnet.lv##.customers
-tvnet.lv##.list.customer
+tvnet.lv,financenet.lv###ad_175x300
+tvnet.lv,financenet.lv##.banner
+tvnet.lv,financenet.lv##.list.customer
 zeltazivtina.lv###banner
 zip.lv###ad_view
 zip.lv###perkam_group_banner
