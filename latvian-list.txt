@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: Ebb80IHoqybyV336ZcaKew
+! Checksum: G+myqiK0cQVyjEG6s2Iegg
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 28.03.2011. 8:54 UTC+2
+! Last modified: 28.03.2011. 18:22 UTC+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -38,9 +38,13 @@
 ||g.delfi.lv/d/bus/
 ||g.delfi.lv/d/h2011/pardotnet/*
 ||g.delfi.lv/d/infoblock/*
+||g.delfi.lv/jo/g/*
 ||g.delfi.lv/m/pardod.png
 ||g.delfi.lv/mango/b/*
+||g.delfi.lv/tr/g/*
+||g.delfi.lv/ve/g/*
 ||g.delfi.lv/wd/x/*/*
+||g.mango.lv/otra_*.gif
 ||gudriem.lv/App_Themes/Default/Banners/*
 ||gudrinieks.lv/res/banner/*
 ||gudrinieks.lv/res/js/sb_banner.js
@@ -173,6 +177,7 @@ delfi.lv###right2
 delfi.lv###ticker_cont
 delfi.lv##.admiral_xml
 delfi.lv##.darbs
+delfi.lv##.delfi_shop
 delfi.lv##DIV[style="background:#fef2d9;"]
 diena.lv##[class*="BANNER_BOX "]
 easyget.lv##[class^="adholder"]
@@ -189,6 +194,9 @@ kasjauns.lv##DIV[style="overflow:hidden; width:277px; height:70px; border: 1px s
 lattelecom.lv###fixme_l_b_inner
 lattelecom.lv###fixme_l_c
 mango.delfi.lv##DIV[style="font-weight:bold;width:250px;margin-bottom:5px;background:#98abc9;padding-bottom:25px;"]
+mango.delfi.lv##DIV[style="margin-bottom:5px; height: 250px"]
+mango.delfi.lv##DIV[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
+mango.delfi.lv##TABLE[style="background-color: #ECECEC; width:250px;"]
 notepad.lv###ja-sh
 nozare.lv##DIV[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
 nra.lv##DIV[style="padding-top:2px; font-size:0.917em;"]
