@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: QWHcuIRshk4kxuNIg79Xog
+! Checksum: eNHNCCkUpbDXbMgBu/fkZA
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 30.03.2011. 18:48 UTC+2
+! Last modified: 30.03.2011. 20:15 UTC+2
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !
@@ -31,6 +31,7 @@
 ||banners.zl.lv^
 ||bilesuserviss.lv/upload/banner/*
 ||cenuklubs.lv/assets/media/*
+||db.lv/images/design/tnt.gif
 ||delfi.lv/misc/*$subdocument
 ||e-latvenergo.lv/images/girl*
 ||e-pica.lv/mce/uploads/banners/*
@@ -169,6 +170,7 @@ bilesuserviss.lv##.main_column_banner
 bilesuserviss.lv##.top_banner
 boot.lv##[class*="ad_*"]
 db.lv###slid_close
+db.lv##.banner
 delfi.lv###column_3
 delfi.lv###delfishopitems
 delfi.lv###header_wide_fb
