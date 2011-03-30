@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: G+myqiK0cQVyjEG6s2Iegg
+! Checksum: w/YIa51oDWEt3gNUKEB6sg
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 28.03.2011. 18:22 UTC+2
+! Last modified: 30.03.2011. 08:29 UTC+2
 ! Expires: 2 days (update frequency)
 !
 ! DNT header
@@ -66,6 +66,7 @@
 ||r.inbox.lv^
 ||reklama.lv/services/ads_count.html
 ||riga.lv/MEDIA/Misc/*
+||serveris.lv/images/Baners/*
 ||spoki.lv/banners/*
 ||spoki.lv/img/backs/*-banner.png
 ||spoki.lv/img/okarte/*
@@ -147,6 +148,7 @@
 ##.taxtad_title
 ##[id^="city24-wrapper"]
 ##A[href="/reklama"]
+##A[href^="http://www.serveris.lv/?ref="]
 1188.lv##.LabsservissAdd
 apollo.lv###apollo_kopaLetakDiv
 apollo.lv###RentInRiga
