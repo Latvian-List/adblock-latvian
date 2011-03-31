@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: WgDYT+PtGUy2EOdihuvdRQ
+! Checksum: NF2KW/o6+GrBymCLPAxaeg
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 31.03.2011. 10:25 UTC+2
+! Last modified: 31.03.2011. 10:38 UTC+2
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !
@@ -51,6 +51,7 @@
 ||iaptieka.lv/atteli/apmaina/*
 ||img.apollo.lv/upload/infobox/*
 ||img.apollo.lv/upload/rentinriga/*
+||inbox.lv/banners/*
 ||itvnet.lv/partner/
 ||leta.lv/img/*/info_banneris_
 ||lib.manstv.lv/js/bannerhandlerv2.js
@@ -191,6 +192,7 @@ gay.lv##DIV[style="width:568px;height:60px;background-color:#000000;"]
 inbox.lv##.shophlink
 inbox.lv##.shoplink
 inbox.lv##A[href^="http://b.inbox.lv/"]
+inbox.lv##DIV[style="width:341px; overflow:hidden;white-space:nowrap;"]
 ir.lv###abonbanner
 kasjauns.lv###top_banner_container
 kasjauns.lv##DIV[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
