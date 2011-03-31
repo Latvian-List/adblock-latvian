@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: rCwY9ZTBGNH1RTx/BDo4nw
+! Checksum: 7xHYLMerzNAirEJN7bezrw
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3+  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 31.03.2011. 10:45 UTC+2
+! Last modified: 31.03.2011. 15:49 UTC+2
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !
@@ -34,6 +34,7 @@
 ||e-latvenergo.lv/images/girl*
 ||e-pica.lv/mce/uploads/banners/*
 ||easyget.lv/ads/*
+||ecompics.power.oho.lv^
 ||g.delfi.lv/b/
 ||g.delfi.lv/d/bus/
 ||g.delfi.lv/d/h2011/pardotnet/*
@@ -62,6 +63,7 @@
 ||nra.lv/_rekl/
 ||nra.lv/spec/*
 ||oga.lv/ieBildes/*
+||oho.lv/ads/*
 ||petits.lv/pics/banners/*
 ||q.tvnet.lv^
 ||r.inbox.lv^
@@ -208,6 +210,7 @@ mango.delfi.lv##TABLE[style="background-color: #ECECEC; width:250px;"]
 notepad.lv###ja-sh
 nozare.lv##DIV[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
 nra.lv##DIV[style="padding-top:2px; font-size:0.917em;"]
+oho.lv##DIV[style="width:180px; overflow:hidden; background:#ffffff; border: solid 1px #D30528; font-family:Verdana; font-size:11px; margin: 5px 0px 10px 0px;"]
 riga.lv##[id^="_ctl20_Elements__"]
 saites.eon.lv###jauto-container
 salidzini.lv##[id^="media_place"]
