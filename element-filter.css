@@ -1,0 +1,16 @@
+/*
+! Checksum: FZlIw/+PoyquUBgt3NTDgw
+! Latvian Adblock element filter
+! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
+!                AGPLv3+  https://www.gnu.org/licenses/agpl.html
+! Email: anonymous.74100@gmail.com
+! Blog: http://adblock-latvian.blogspot.com/
+!
+! Last modified: 02.04.2011. 14:57 UTC
+! Expires: 10 days (update frequency)
+*/
+#city24-wrapper,
+.catwrap.city24w,
+.eshop_table,
+.taxtad_title
+{ display: none !important }
