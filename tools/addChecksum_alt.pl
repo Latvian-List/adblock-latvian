@@ -45,7 +45,7 @@ my $checksum = md5_base64($checksumData);
 # If the old checksum matches the new one die
 if ($checksum eq $oldchecksum)
 {
-	die "List has not changed.\n";
+  die "List has not changed.\n";
 }
 
 # Update the date and time.
