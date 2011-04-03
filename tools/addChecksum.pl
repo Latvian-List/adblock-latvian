@@ -1,6 +1,7 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 # Copyright 2011 Wladimir Palant
+# Adapted by anonymous74100
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,40 +15,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#############################################################################
-# This is a slightly modified version of the reference script to add        #
-# checksums to downloadable subscriptions. The checksum will be validated   #
-# by Adblock Plus on download and checksum mismatches(broken downloads)     #
-# will be rejected.															#
-#                                                                           #
-# To add a checksum to a subscription file, run the script like this:       #
-#                                                                           #
-#   perl addChecksum.pl subscription.txt                                    #
-#                                                                           #
-# Note: your subscription file should be saved in UTF-8 encoding, otherwise #
-# the generated checksum might be incorrect.                                #
-#                                                                           #
-#############################################################################
-
 use strict;
 use warnings;
 use Digest::MD5 qw(md5_base64);
+use POSIX qw(strftime);
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
 my $file = $ARGV[0];
 my $data = readFile($file);
 
-# Get existing checksum.
+# Get existing checksum
 $data =~ /^.*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n/gmi;
 my $oldchecksum = $1;
 
-# Remove already existing checksum.
+# Remove already existing checksum
 $data =~ s/^.*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n//gmi;
 
 # Calculate new checksum: remove all CR symbols and empty
 # lines and get an MD5 checksum of the result (base64-encoded,
-# without the trailing = characters).
+# without the trailing = characters)
 my $checksumData = $data;
 $checksumData =~ s/\r//g;
 $checksumData =~ s/\n+/\n/g;
@@ -55,20 +42,17 @@ $checksumData =~ s/\n+/\n/g;
 # Calculate new checksum
 my $checksum = md5_base64($checksumData);
 
-# If the old checksum matches the new one bail.
+# If the old checksum matches the new one die
 if ($checksum eq $oldchecksum)
 {
-	exit 0;
+	die "List has not changed.\n";
 }
 
-# Update the date.
-my @months = qw(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec);
-my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
-$year += 1900; # Year is years since 1900.
-my $todaysdate = "$mday $months[$mon] $year";
-$data =~ s/(^.*!.*Updated:\s*)(.*)\s*$/$1$todaysdate/gmi;
+# Update the date and time.
+my $updated = strftime("%d.%m.%Y. %H:%M UTC", gmtime);
+$data =~ s/(^.*!.*Last modified:\s*)(.*)\s*$/$1$updated/gmi;
 
-# Recalculate the checksum as we've altered the date.
+# Recalculate the checksum as we've altered the date
 $checksumData = $data;
 $checksumData =~ s/\r//g;
 $checksumData =~ s/\n+/\n/g;
@@ -83,7 +67,7 @@ sub readFile
 {
   my $file = shift;
 
-  open(local *FILE, "<", $file) || die "Could not read file '$file'";
+  open(local *FILE, "<", $file) || die "Could not read file '$file'\n";
   binmode(FILE);
   local $/;
   my $result = <FILE>;
@@ -96,7 +80,7 @@ sub writeFile
 {
   my ($file, $contents) = @_;
 
-  open(local *FILE, ">", $file) || die "Could not write file '$file'";
+  open(local *FILE, ">", $file) || die "Could not write file '$file'\n";
   binmode(FILE);
   print FILE $contents;
   close(FILE);
