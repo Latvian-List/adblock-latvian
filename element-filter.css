@@ -1,12 +1,12 @@
 /*
-! Checksum: p2G5yrwmJze8b1EncD+mpg
+! Checksum: SFKe6Pu9TmgVjwHO8pnANA
 ! Latvian Adblock element filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 03.04.2011. 09:54 UTC
+! Last modified: 03.04.2011. 13:47 UTC
 ! Expires: 2 days (update frequency)
 */
 @namespace url(http://www.w3.org/1999/xhtml);
@@ -14,5 +14,7 @@
 #city24-wrapper,
 .catwrap.city24w,
 .eshop_table,
-.taxtad_title
+.taxtad_title,
+div[id="city24-wrapper"],
+a[href="/reklama"]
 { display: none !important }

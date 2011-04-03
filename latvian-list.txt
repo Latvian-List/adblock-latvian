@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: un21ZKgQwA7V0hPfVweR3g
+! Checksum: LkuJGX9SbhkJKwRjkrCP7w
 ! Latvian Adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 03.04.2011. 06:26 UTC
+! Last modified: 03.04.2011. 13:47 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !
@@ -153,8 +153,8 @@
 ##.eshop_table
 ##.taxtad_title
 ##[id^="city24-wrapper"]
-##A[href="/reklama"]
-##A[href^="http://www.serveris.lv/?ref="]
+##a[href="/reklama"]
+##a[href^="http://www.serveris.lv/?ref="]
 1188.lv##.LabsservissAdd
 apollo.lv###apollo_kopaLetakDiv
 apollo.lv###RentInRiga
@@ -189,41 +189,41 @@ delfi.lv##.admiral_xml
 delfi.lv##.articlebanner
 delfi.lv##.darbs
 delfi.lv##.delfi_shop
-delfi.lv##DIV[style="background:#fef2d9;"]
+delfi.lv##div[style="background:#fef2d9;"]
 diena.lv##[class*="BANNER_BOX "]
 easyget.lv##[class^="adholder"]
 financenet.lv##.tracbuttons
-forums.delfi.lv##DIV[style="width:150px;margin-bottom:5px;"]
-forums.delfi.lv##TD[style="padding: 0px; margin: 0px; font-size: 0px"]
-gay.lv##DIV[style="width:568px;height:60px;background-color:#000000;"]
+forums.delfi.lv##div[style="width:150px;margin-bottom:5px;"]
+forums.delfi.lv##td[style="padding: 0px; margin: 0px; font-size: 0px"]
+gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
 inbox.lv###inxHeadAdsPlace
 inbox.lv##.shophlink
 inbox.lv##.shoplink
-inbox.lv##A[href^="http://b.inbox.lv/"]
-inbox.lv##DIV[style="width:341px; overflow:hidden;white-space:nowrap;"]
+inbox.lv##a[href^="http://b.inbox.lv/"]
+inbox.lv##div[style="width:341px; overflow:hidden;white-space:nowrap;"]
 ir.lv###abonbanner
 kasjauns.lv###top_banner_container
-kasjauns.lv##DIV[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
+kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
 lattelecom.lv###fixme_l_b_inner
 lattelecom.lv###fixme_l_c
-mango.delfi.lv##DIV[style="font-weight:bold;width:250px;margin-bottom:5px;background:#98abc9;padding-bottom:25px;"]
-mango.delfi.lv##DIV[style="margin-bottom:5px; height: 250px"]
-mango.delfi.lv##DIV[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
-mango.delfi.lv##TABLE[style="background-color: #ECECEC; width:250px;"]
+mango.delfi.lv##div[style="font-weight:bold;width:250px;margin-bottom:5px;background:#98abc9;padding-bottom:25px;"]
+mango.delfi.lv##div[style="margin-bottom:5px; height: 250px"]
+mango.delfi.lv##div[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
+mango.delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
 notepad.lv###ja-sh
-nozare.lv##DIV[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
-nra.lv##DIV[style="padding-top:2px; font-size:0.917em;"]
-oho.lv##DIV[style="width:180px; overflow:hidden; background:#ffffff; border: solid 1px #D30528; font-family:Verdana; font-size:11px; margin: 5px 0px 10px 0px;"]
+nozare.lv##div[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
+nra.lv##div[style="padding-top:2px; font-size:0.917em;"]
+oho.lv##div[style="width:180px; overflow:hidden; background:#ffffff; border: solid 1px #D30528; font-family:Verdana; font-size:11px; margin: 5px 0px 10px 0px;"]
 riga.lv##[id^="_ctl20_Elements__"]
 saites.eon.lv###jauto-container
 salidzini.lv##[id^="media_place"]
-salidzini.lv##DIV[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
-salidzini.lv##DIV[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
-salidzini.lv##TD[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
+salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
+salidzini.lv##div[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
+salidzini.lv##td[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
 spoki.lv###mod_eshops_b
 spoki.lv###okarte-banner
 spoki.lv##.garnier-banner
-spoki.lv##DIV[style^="background: url('/banners/draugiem.png')"]
+spoki.lv##div[style^="background: url('/banners/draugiem.png')"]
 sportacentrs.com##.banner
 tv.delfi.lv##.toolblock
 tvnet.lv###shops_offer
