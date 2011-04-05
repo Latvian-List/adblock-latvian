@@ -1,19 +1,18 @@
 [Adblock Plus 1.1]
-! Checksum: L6a2CT3Hg6xVuTOtDkemlA
+! Checksum: gw+eVadifT140jeOEbHAPQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 04.04.2011. 14:33 UTC
+! Last modified: 05.04.2011. 13:29 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !
 !
 ! Filters
 /city24/*
-/reklama/*
 ||1188.lv/img/banners/*
 ||1188.lv/img/special/*
 ||1w.lv/banner_*
@@ -153,7 +152,6 @@
 ##.eshop_table
 ##.taxtad_title
 ##[id^="city24-wrapper"]
-##a[href="/reklama"]
 ##a[href^="http://www.serveris.lv/?ref="]
 1188.lv##.LabsservissAdd
 apollo.lv###apollo_kopaLetakDiv
@@ -199,7 +197,6 @@ gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
 inbox.lv###inxHeadAdsPlace
 inbox.lv##.shophlink
 inbox.lv##.shoplink
-inbox.lv##a[href^="http://b.inbox.lv/"]
 inbox.lv##div[style="width:341px; overflow:hidden;white-space:nowrap;"]
 ir.lv###abonbanner
 kasjauns.lv###top_banner_container

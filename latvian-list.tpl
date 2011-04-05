@@ -6,13 +6,12 @@ msFilterList
 # Email: anonymous.74100@gmail.com
 # Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 04.04.2011. 14:33 UTC
+# Last modified: 05.04.2011. 13:29 UTC
 # Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 #
 #
 # Filters
 - /city24/
-- /reklama/
 -d 1188.lv /img/banners/
 -d 1188.lv /img/special/
 -d 1w.lv /banner_
