@@ -6,7 +6,7 @@ msFilterList
 # Email: anonymous.74100@gmail.com
 # Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 05.04.2011. 15:08 UTC
+# Last modified: 05.04.2011. 15:44 UTC
 # Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 #
 #
@@ -19,7 +19,7 @@ msFilterList
 - http://ads.inbox.lv
 - http://ads.sportacentrs.com
 -d antireklama.lv /banners/
--d apollo.lv /upload/kopaletak_akcijas.xml
+-d apollo.lv /rentinriga_content/
 - http://b.inbox.lv
 - http://b.itvnet.lv
 - http://b.tvnet.lv
@@ -32,6 +32,7 @@ msFilterList
 -d e-pica.lv /mce/uploads/banners/
 -d easyget.lv /ads/
 - http://ecompics.power.oho.lv
+-d g.delfi.lv /ap/edu/g/
 -d g.delfi.lv /b/
 -d g.delfi.lv /d/bus/
 -d g.delfi.lv /d/h2011/pardotnet/
@@ -72,8 +73,6 @@ msFilterList
 -d spoki.lv /img/okarte/
 -d static.apollo.lv /images/infobox/
 -d static.apollo.lv /images/infobox_admiral/
--d static.apollo.lv /images/kopaletak.swf
--d static.apollo.lv /images/phone_bg.png
 -d static.apollo.lv /images/RentInRiga
 -d static.apollo.lv /images/v5/infobox/
 -d sudzibas.lv /baneris_
@@ -152,9 +151,7 @@ msFilterList
 # ##.eshop_table
 # ##.taxtad_title
 # 1188.lv##.LabsservissAdd
-# apollo.lv###apollo_kopaLetakDiv
 # apollo.lv###RentInRiga
-# apollo.lv###tourism
 # apollo.lv##.admiral_box
 # apollo.lv##.apollo_infobox
 # apollo.lv##.ban420x200
@@ -163,25 +160,13 @@ msFilterList
 # apollo.lv##.city24_box
 # apollo.lv##.comment_banner_v2
 # apollo.lv##.infobox_item
-# apollo.lv##.mid_most_lmt
 # apollo.lv##.right_banner
 # bilesuserviss.lv##.banner_clicker
 # bilesuserviss.lv##.main_column_banner
 # bilesuserviss.lv##.top_banner
 # db.lv###slid_close
 # db.lv##.banner
-# delfi.lv###column_3
-# delfi.lv###delfishopitems
-# delfi.lv###header_wide_fb
-# delfi.lv###horoweatherblock
-# delfi.lv###layout_column4
-# delfi.lv###right
-# delfi.lv###right IMG
-# delfi.lv###right2
-# delfi.lv###ticker_cont
-# delfi.lv##.admiral_xml
-# delfi.lv##.articlebanner
-# delfi.lv##.darbs
+# delfi.lv###delfieduitems
 # delfi.lv##.delfi_shop
 # financenet.lv##.tracbuttons
 # inbox.lv###inxHeadAdsPlace

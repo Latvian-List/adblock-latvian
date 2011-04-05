@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: 9lkIbApMzg4L8ms7C2dFPw
+! Checksum: UN5Ao9hVWWlq+lBcbVE/9A
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 05.04.2011. 15:08 UTC
+! Last modified: 05.04.2011. 15:44 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !
@@ -20,7 +20,7 @@
 ||ads.inbox.lv^
 ||ads.sportacentrs.com^
 ||antireklama.lv/banners/*
-||apollo.lv/upload/kopaletak_akcijas.xml
+||apollo.lv/rentinriga_content/*
 ||b.inbox.lv^
 ||b.itvnet.lv^
 ||b.tvnet.lv^
@@ -33,6 +33,7 @@
 ||e-pica.lv/mce/uploads/banners/*
 ||easyget.lv/ads/*
 ||ecompics.power.oho.lv^
+||g.delfi.lv/ap/edu/g/*
 ||g.delfi.lv/b/
 ||g.delfi.lv/d/bus/
 ||g.delfi.lv/d/h2011/pardotnet/*
@@ -73,8 +74,6 @@
 ||spoki.lv/img/okarte/*
 ||static.apollo.lv/images/infobox/*
 ||static.apollo.lv/images/infobox_admiral/*
-||static.apollo.lv/images/kopaletak.swf
-||static.apollo.lv/images/phone_bg.png
 ||static.apollo.lv/images/RentInRiga*
 ||static.apollo.lv/images/v5/infobox/*
 ||sudzibas.lv/baneris_*
@@ -155,9 +154,7 @@
 ##[id^="city24-wrapper"]
 ##a[href^="http://www.serveris.lv/?ref="]
 1188.lv##.LabsservissAdd
-apollo.lv###apollo_kopaLetakDiv
 apollo.lv###RentInRiga
-apollo.lv###tourism
 apollo.lv##.admiral_box
 apollo.lv##.apollo_infobox
 apollo.lv##.ban420x200
@@ -166,34 +163,23 @@ apollo.lv##.ban980x90
 apollo.lv##.city24_box
 apollo.lv##.comment_banner_v2
 apollo.lv##.infobox_item
-apollo.lv##.mid_most_lmt
 apollo.lv##.right_banner
-apollo.lv##a[href^="/click_thru.php?cat="]
 bilesuserviss.lv##.banner_clicker
 bilesuserviss.lv##.main_column_banner
 bilesuserviss.lv##.top_banner
 boot.lv##[class*="ad_*"]
 db.lv###slid_close
 db.lv##.banner
-delfi.lv###column_3
-delfi.lv###delfishopitems
-delfi.lv###header_wide_fb
-delfi.lv###horoweatherblock
-delfi.lv###layout_column4
-delfi.lv###right
-delfi.lv###right IMG
-delfi.lv###right2
-delfi.lv###ticker_cont
-delfi.lv##.admiral_xml
-delfi.lv##.articlebanner
-delfi.lv##.darbs
+delfi.lv###delfieduitems
 delfi.lv##.delfi_shop
+delfi.lv##[id^="adoceandelfilv"]
 delfi.lv##div[style="background:#fef2d9;"]
+delfi.lv##div[style="width:248px;"]
+delfi.lv##TABLE[style="background-color: #ECECEC; width:250px;"]
 diena.lv##[class*="BANNER_BOX "]
 easyget.lv##[class^="adholder"]
 financenet.lv##.tracbuttons
-forums.delfi.lv##div[style="width:150px;margin-bottom:5px;"]
-forums.delfi.lv##td[style="padding: 0px; margin: 0px; font-size: 0px"]
+forums.delfi.lv##DIV[style="width:150px;margin-bottom:5px;"]
 gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
 inbox.lv###inxHeadAdsPlace
 inbox.lv##.shophlink
