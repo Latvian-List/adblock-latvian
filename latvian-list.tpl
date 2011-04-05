@@ -6,7 +6,7 @@ msFilterList
 # Email: anonymous.74100@gmail.com
 # Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 05.04.2011. 13:29 UTC
+# Last modified: 05.04.2011. 15:08 UTC
 # Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 #
 #
@@ -71,6 +71,7 @@ msFilterList
 -d spoki.lv /img/backs/*-banner.png
 -d spoki.lv /img/okarte/
 -d static.apollo.lv /images/infobox/
+-d static.apollo.lv /images/infobox_admiral/
 -d static.apollo.lv /images/kopaletak.swf
 -d static.apollo.lv /images/phone_bg.png
 -d static.apollo.lv /images/RentInRiga
