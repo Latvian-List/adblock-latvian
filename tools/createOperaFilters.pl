@@ -176,8 +176,8 @@ sub createElemfilter
     }
   }
   # Remove last comma
-  # ???
-  
+  $elemfilter[-1] =~ s/,$//;
+
   push @elemfilter,"{ display: none !important }";
 
   return join("\n", @elemfilter);
