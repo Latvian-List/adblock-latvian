@@ -88,24 +88,25 @@ sub createUrlfilter
       {
         push @whitelists, $line;
       }
-      # Convert domain beginings
+      # Convert domain beginnings
       else
       {
-        if ($line =~ m/^\|\|/)
+        if ($line =~ m/^\|/)
         {
           $line =~ s/^\|\|/http:\/\//;
+          $line =~ s/^\|/http:\/\//;
         }
-        # Add begining asterix
+        # Add beginning asterisk
         if ($line =~ m/^\//)
         {
           $line = "*".$line;
         }
-        # Add ending asterix
+        # Add ending asterisk
         if ($line =~ m/\/$/)
         {
           $line = $line."*";
         }
-        # Convert ^ to /*
+        # Convert domain filter endings
         if ($line =~ m/\^$/)
         {
           $line =~ s/\^$/\/*/;
