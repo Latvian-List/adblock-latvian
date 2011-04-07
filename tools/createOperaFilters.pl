@@ -91,9 +91,12 @@ sub createUrlfilter
       else
       {
         # Convert domain beginnings
-        if ($line =~ m/^\|/)
+        if ($line =~ m/^\|\|/)
         {
           $line =~ s/^\|\|/http:\/\//;
+        }
+        elsif ($line =~ m/^\|/)
+        {
           $line =~ s/^\|/http:\/\//;
         }
         # Add beginning asterisk
@@ -111,6 +114,7 @@ sub createUrlfilter
         {
           $line =~ s/\^$/\/*/;
         }
+
         push @urlfilter, $line;
       }
     }
