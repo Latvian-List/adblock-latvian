@@ -41,7 +41,6 @@ sub createUrlfilter
   my @whitelists;
 
 
-  # Add urlfilter header
   foreach my $line (split(/\n/, $list))
   {
     if ($line !~m/\[.*?\]/i)
@@ -49,31 +48,8 @@ sub createUrlfilter
       # Convert comments
       if ($line =~ m/^!/)
       {
-        # Remove redirect
-        if ($line !~ m/.Redirect:/)
-        {
-          $line =~ s/\!/#/;
-          push @urlfilter, $line;
-        }
-      }
-      else
-      {
-        push @urlfilter, "[prefs]\nprioritize excludelist=1\n[include]\n*\n[exclude]";
-        last;
-      }
-    }
-  }
-
-
-  foreach my $line (split(/\n/, $list))
-  {
-    if ($line !~m/\[.*?\]/i)
-    {
-      # Convert comments
-      if ($line =~ m/^!/)
-      {
-        #$line =~ s/\!/#/;
-        #push @urlfilter, $line;
+        $line =~ s/\!/#/;
+        push @urlfilter, $line;
       }
       # Remove lines with types
       elsif ($line =~ m/.\$/)
@@ -127,6 +103,23 @@ sub createUrlfilter
     # Remove filters that require whitelists
     # ???
   #}
+
+
+  $list = join("\n", @urlfilter);
+  # Add urlfilter header
+  my $linenr = 0;
+  foreach my $line (split(/\n/, $list))
+  {
+    if ($line =~ m/^#/)
+    {
+      $linenr++;
+    }
+    else
+    {
+      last;
+    }
+  }
+  splice (@urlfilter, $linenr, 0, "[prefs]\nprioritize excludelist=1\n[include]\n*\n[exclude]");
 
   return join("\n", @urlfilter);
 }
