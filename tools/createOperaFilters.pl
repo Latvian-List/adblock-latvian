@@ -88,9 +88,9 @@ sub createUrlfilter
       {
         push @whitelists, $line;
       }
-      # Convert domain beginnings
       else
       {
+        # Convert domain beginnings
         if ($line =~ m/^\|/)
         {
           $line =~ s/^\|\|/http:\/\//;
