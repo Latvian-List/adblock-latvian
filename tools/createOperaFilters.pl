@@ -159,6 +159,7 @@ sub createElemfilter
     }
   }
   push @elemfilter, "*/";
+  push @elemfilter, "\@namespace url(http://www.w3.org/1999/xhtml);";
 
   # Create element filter rules
   foreach my $line (split(/\n/, $list))
@@ -168,11 +169,15 @@ sub createElemfilter
       # Add generic element filters
       if ($line =~ m/^##/)
       {
-        push @elemfilter, $line;
+        $line =~ s/##//;
+        push @elemfilter, $line.",";
       }
     }
   }
-
+  # Remove last comma
+  # ???
+  
+  push @elemfilter,"{ display: none !important }";
 
   return join("\n", @elemfilter);
 }
