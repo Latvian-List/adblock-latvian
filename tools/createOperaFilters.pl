@@ -164,7 +164,7 @@ sub createElemfilter
     }
   }
   push @elemfilter, "*/";
-  push @elemfilter, "\@namespace url(http://www.w3.org/1999/xhtml);";
+  push @elemfilter, "\@namespace \"http://www.w3.org/1999/xhtml\";\n";
 
   # Create element filter rules
   foreach my $line (split(/\n/, $list))
@@ -182,7 +182,7 @@ sub createElemfilter
   # Remove last comma
   $elemfilter[-1] =~ s/,$//;
   # Add CSS rule
-  push @elemfilter,"{ display: none !important }";
+  push @elemfilter,"{ display: none !important; }";
 
   return join("\n", @elemfilter);
 }
