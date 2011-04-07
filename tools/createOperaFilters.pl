@@ -181,7 +181,7 @@ sub createElemfilter
   }
   # Remove last comma
   $elemfilter[-1] =~ s/,$//;
-
+  # Add CSS rule
   push @elemfilter,"{ display: none !important }";
 
   return join("\n", @elemfilter);
