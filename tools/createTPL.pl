@@ -40,14 +40,14 @@ sub convertToTPL
 
   my @result;
 
-  #Add necessary definitions
+  # Add necessary definitions
   push @result, "msFilterList";
   push @result, ": Expires=2";
 
   foreach my $line (split(/\n/, $data))
   {
     my $original = $line;
-    #Translate comments, not including Adblock Plus specific values
+    # Translate comments, not including Adblock Plus specific values
     if ($line =~m/\[.*?\]/i)
     {
     }
@@ -55,7 +55,11 @@ sub convertToTPL
     {
       if ($line =~m/Expires/i)
       {
-        #Eventually use this for the : Expires= value
+        # Eventually use this for the : Expires= value
+      }
+      # Remove redirect
+      elsif ($line =~ m/.Redirect:/)
+      {
       }
       elsif ($line !~ m/\!\s*checksum/i)
       {
@@ -65,7 +69,7 @@ sub convertToTPL
     }
     else
     {
-      #Translate domain blocks
+      # Translate domain blocks
       if ($line =~ /^(|@@)\|\|.*?\^/)
       {
         $line =~ s/\^/ /;
@@ -74,56 +78,56 @@ sub convertToTPL
       {
         $line =~ s/\// \//;
       }
-      #Remove unnecessary asterisks
+      # Remove unnecessary asterisks
       $line =~ s/\*$//;
       $line =~ s/ \*/ /;
-      #Remove unnecessary slashes and spaces
+      # Remove unnecessary slashes and spaces
       $line =~ s/ \/$//;
       $line =~ s/ $//;
 
-      #Remove beginning and end anchors
+      # Remove beginning and end anchors
       unless ($line =~ m/^\|\|/)
       {
         $line =~ s/^\|//;
       }
       $line =~ s/\|($|\$)//;
 
-      #Translate the script option to "*.js"
+      # Translate the script option to "*.js"
       $line =~ s/\$script$/\*\.js/;
 
-      #Translate whitelists, making them wider if necessary
+      # Translate whitelists, making them wider if necessary
       if ($line =~ m/^@@\|\|.*?(^|\/)/)
       {
         $line =~ s/@@\|\|/\+d /;
-        #Remove all options
+        # Remove all options
         $line =~ s/\$.*?$//;
       }
-      #Comment out all other whitelists, as a domain must be specified in Internet Explorer
+      # Comment out all other whitelists, as a domain must be specified in Internet Explorer
       elsif ($line =~ m/^@@/)
       {
         $line = "# " . $original;
       }
-      #Comment out all filters with options or element hiding rules, as this functionality is not available in Internet Explorer
+      # Comment out all filters with options or element hiding rules, as this functionality is not available in Internet Explorer
       elsif ($line =~ m/(\$|##)/)
       {
         $line = "# " . $original;
       }
-      #Comment out lone third party options
+      # Comment out lone third party options
       elsif ($line =~ s/\$third-party$//)
       {
         $line = "# " . $original;
       }
-      #Translate all domain filters
+      # Translate all domain filters
       elsif ($line =~ m/^\|\|.*?(^|\/)/)
       {
         $line =~ s/^\|\|/\-d /;
       }
-      #Translate all other double anchored filters
+      # Translate all other double anchored filters
       elsif ($line =~ m/^\|\|/)
       {
         $line =~ s/^\|\|/\- http:\/\//;
       }
-      #Translate all remaining filters as general
+      # Translate all remaining filters as general
       else
       {
         $line = "- " . $line;

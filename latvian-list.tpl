@@ -7,7 +7,6 @@ msFilterList
 # Blog: http://adblock-latvian.blogspot.com/
 #
 # Last modified: 07.04.2011. 10:48 UTC
-# Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 - 
 #
 # Filters
