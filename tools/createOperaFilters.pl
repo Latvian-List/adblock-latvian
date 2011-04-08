@@ -48,8 +48,12 @@ sub createUrlfilter
       # Convert comments
       if ($line =~ m/^!/)
       {
-        $line =~ s/\!/#/;
-        push @urlfilter, $line;
+        # Remove redirect
+        if ($line !~ m/.Redirect:/)
+        {
+          $line =~ s/\!/#/;
+          push @urlfilter, $line;
+        }
       }
       # Remove lines with types
       elsif ($line =~ m/.\$/)
@@ -141,10 +145,7 @@ sub createElemfilter
     elsif ($line =~ m/!/)
     {
       # Remove redirect
-      if ($line =~ m/.Redirect:/)
-      {
-      }
-      else
+      if ($line !~ m/.Redirect:/)
       {
         # Add all header comment lines
         push @elemfilter, $line;
