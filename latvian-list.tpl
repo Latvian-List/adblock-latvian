@@ -6,7 +6,7 @@ msFilterList
 # Email: anonymous.74100@gmail.com
 # Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 09.04.2011. 12:29 UTC
+# Last modified: 09.04.2011. 12:53 UTC
 - 
 #
 # Filters
@@ -58,6 +58,7 @@ msFilterList
 -d lursoft.lv /img/banners/
 -d lv.lv /bildes/reklaama.png
 -d notepad.lv /partneri/dators2.jpg
+-d notepad.lv /partneri/h.gif
 -d nra.lv /_rekl/
 -d nra.lv /spec/
 -d oga.lv /ieBildes/
