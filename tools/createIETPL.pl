@@ -53,7 +53,7 @@ sub createTPL
       if ($line =~ m/^!/)
       {
         # Get expire value and checksum
-        elsif (($line !~ m/.Redirect:/) and ($line !~ m/.Checksum:/))
+        if (($line !~ m/.Redirect:/) and ($line !~ m/.Checksum:/))
         {
           ($expires) = $line =~ /(\d+)/;
         }
