@@ -6,7 +6,7 @@ msFilterList
 # Email: anonymous.74100@gmail.com
 # Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 07.04.2011. 10:48 UTC
+# Last modified: 09.04.2011. 12:29 UTC
 - 
 #
 # Filters
@@ -107,7 +107,7 @@ msFilterList
 # ||partneriem.smscredit.lv^$third-party
 # ||perkamkopa.lv^$third-party
 - http://promo.boomtime.lv
-# ||saites.eon.lv^$third-party
+- http://saites.eon.lv
 # ||sludini.lv^$third-party
 - http://smartad.ee
 - http://smartad.lv
