@@ -1,12 +1,12 @@
 [Adblock Plus 1.1]
-! Checksum: FBsVk7BJX0cwascBkzPCOg
+! Checksum: 5/IQrE/Tmb5jNV48DCq5cQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com
 ! Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 09.04.2011. 12:53 UTC
+! Last modified: 09.04.2011. 15:50 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 
@@ -191,8 +191,7 @@ inbox.lv##div[style="width:341px; overflow:hidden;white-space:nowrap;"]
 ir.lv###abonbanner
 kasjauns.lv###top_banner_container
 kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
-lattelecom.lv###fixme_l_b_inner
-lattelecom.lv###fixme_l_c
+lattelecom.lv##[id^="fixme_"]
 mango.delfi.lv##div[style="font-weight:bold;width:250px;margin-bottom:5px;background:#98abc9;padding-bottom:25px;"]
 mango.delfi.lv##div[style="margin-bottom:5px; height: 250px"]
 mango.delfi.lv##div[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
