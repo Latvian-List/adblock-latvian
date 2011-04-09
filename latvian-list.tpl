@@ -1,5 +1,6 @@
 msFilterList
 : Expires=2
+# Checksum: FBsVk7BJX0cwascBkzPCOg
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
@@ -7,30 +8,30 @@ msFilterList
 # Blog: http://adblock-latvian.blogspot.com/
 #
 # Last modified: 09.04.2011. 12:53 UTC
-- 
+
 #
 # Filters
 - /city24/
 -d 1188.lv /img/banners/
 -d 1188.lv /img/special/
--d 1w.lv /banner_
-- http://ad.one.lv
-- http://ads.inbox.lv
-- http://ads.sportacentrs.com
+-d 1w.lv /banner_*
+-d ad.one.lv
+-d ads.inbox.lv
+-d ads.sportacentrs.com
 -d antireklama.lv /banners/
 -d apollo.lv /rentinriga_content/
-- http://b.inbox.lv
-- http://b.itvnet.lv
-- http://b.tvnet.lv
-- http://banners.zl.lv
+-d b.inbox.lv
+-d b.itvnet.lv
+-d b.tvnet.lv
+-d banners.zl.lv
 -d bilesuserviss.lv /upload/banner/
 -d cenuklubs.lv /assets/media/
 -d db.lv /images/design/tnt.gif
 -d delfi.lv /misc/
--d e-latvenergo.lv /images/girl
+-d e-latvenergo.lv /images/girl*
 -d e-pica.lv /mce/uploads/banners/
 -d easyget.lv /ads/
-- http://ecompics.power.oho.lv
+-d ecompics.power.oho.lv
 -d flvplayer.viastream.viasat.tv /Commercials/
 -d g.delfi.lv /ap/edu/g/
 -d g.delfi.lv /b/
@@ -64,8 +65,8 @@ msFilterList
 -d oga.lv /ieBildes/
 -d oho.lv /ads/
 -d petits.lv /pics/banners/
-- http://q.tvnet.lv
-- http://r.inbox.lv
+-d q.tvnet.lv
+-d r.inbox.lv
 -d reklama.lv /services/ads_count.html
 -d riga.lv /MEDIA/Misc/
 -d serveris.lv /images/Baners/
@@ -74,128 +75,66 @@ msFilterList
 -d spoki.lv /img/okarte/
 -d static.apollo.lv /images/infobox/
 -d static.apollo.lv /images/infobox_admiral/
--d static.apollo.lv /images/RentInRiga
+-d static.apollo.lv /images/RentInRiga*
 -d static.apollo.lv /images/v5/infobox/
--d sudzibas.lv /baneris_
--d torrenti.lv /themes/TBDev/images/banner
+-d sudzibas.lv /baneris_*
+-d torrenti.lv /themes/TBDev/images/banner*
 -d torrenti.lv /themes/TBDev/images/ftlv.swf
 -d x-power.lv /images/banners/
 -d zip.lv /kasjauns.swf
 -d zl.lv /banners/
 # Filters for 3. party sites
 -d 1shop.lv /i/ban/
-- http://468x60.lv
-- http://adclick.lv
-- http://ads.image.lv
-- http://adsxchange.lv
-- http://affiliate.dateks.lv
-- http://affiliate.lattelecom.lv
-# ||agk.lv^$third-party
-- http://anymedia.lv
-- http://banneri.lv
-- http://bbes.lv
-# ||city24.lv^$third-party
-# ||evolution.lv^$third-party
-# ||garmtech.lv^$third-party
-- http://inectar.lv
-- http://irreklama.lv
-- http://knc.lv
-# ||leta.lv/bm/www/images/*$third-party
-- http://nerealitate.lv
-# ||novonews.lv/ticker/flash/*$third-party
-# ||otrapuse.lv^$third-party
-# ||otrapuse.mango.lv^$third-party
-# ||partneriem.smscredit.lv^$third-party
-# ||perkamkopa.lv^$third-party
-- http://promo.boomtime.lv
-- http://saites.eon.lv
-# ||sludini.lv^$third-party
-- http://smartad.ee
-- http://smartad.lv
-- http://textads.lv
+-d 468x60.lv
+-d adclick.lv
+-d ads.image.lv
+-d adsxchange.lv
+-d affiliate.dateks.lv
+-d affiliate.lattelecom.lv
+-d anymedia.lv
+-d banneri.lv
+-d bbes.lv
+-d inectar.lv
+-d irreklama.lv
+-d knc.lv
+-d nerealitate.lv
+-d promo.boomtime.lv
+-d saites.eon.lv
+-d smartad.ee
+-d smartad.lv
+-d textads.lv
 #
 # Tracking filters
 - /counter.php
 - /xgemius.php
 - /xgemius_lv.js
-- http://e-spy.petit.lv
+-d e-spy.petit.lv
 -d ss.lv /counter/
-- http://t.delfi.lv
+-d t.delfi.lv
 # Tracking filters for 3. party sites
-- http://clicktale.net
-- http://counter.hackers.lv
-- http://counter.yadro.ru
-# ||draugiem.lv^$third-party
-- http://europuls.eu
-- http://europuls.net
-- http://hits.sys.lv
-# ||ifrype.com^$domain=~draugiem.lv|~frype.com,third-party
+-d clicktale.net
+-d counter.hackers.lv
+-d counter.yadro.ru
+-d europuls.eu
+-d europuls.net
+-d hits.sys.lv
 -d insbergs.lv /ins_statistics/
-- http://on-line.lv
-- http://openstat.net
-- http://puls.lv
-- http://reinvigorate.net
-- http://reitingi.lv
-- http://statistik-gallup.net
-- http://statistika.lv
-- http://stats.tunt.lv
-- http://stats4u.lv
+-d on-line.lv
+-d openstat.net
+-d puls.lv
+-d reinvigorate.net
+-d reitingi.lv
+-d statistik-gallup.net
+-d statistika.lv
+-d stats.tunt.lv
+-d stats4u.lv
 -d tools.spylog.ru /counter
-- http://top.lv
-- http://topsite.lv
-- http://webstatistika.lv
-- http://wos.lv
+-d top.lv
+-d topsite.lv
+-d webstatistika.lv
+-d wos.lv
 #
 # Element filters
-# ###city24-wrapper
-# ##.catwrap.city24w
-# ##.eshop_table
-# ##.taxtad_title
-# 1188.lv##.LabsservissAdd
-# apollo.lv###RentInRiga
-# apollo.lv##.admiral_box
-# apollo.lv##.apollo_infobox
-# apollo.lv##.ban420x200
-# apollo.lv##.ban420x260
-# apollo.lv##.ban980x90
-# apollo.lv##.city24_box
-# apollo.lv##.comment_banner_v2
-# apollo.lv##.infobox_item
-# apollo.lv##.right_banner
-# bilesuserviss.lv##.banner_clicker
-# bilesuserviss.lv##.main_column_banner
-# bilesuserviss.lv##.top_banner
-# db.lv###slid_close
-# db.lv##.banner
-# delfi.lv###delfieduitems
-# delfi.lv###right
-# delfi.lv##.delfi_shop
-# financenet.lv##.tracbuttons
-# inbox.lv###inxHeadAdsPlace
-# inbox.lv##.shophlink
-# inbox.lv##.shoplink
-# ir.lv###abonbanner
-# kasjauns.lv###top_banner_container
-# lattelecom.lv###fixme_l_b_inner
-# lattelecom.lv###fixme_l_c
-# notepad.lv###ja-sh
-# saites.eon.lv###jauto-container
-# spoki.lv###mod_eshops_b
-# spoki.lv###okarte-banner
-# spoki.lv##.garnier-banner
-# sportacentrs.com##.banner
-# tv.delfi.lv##.toolblock
-# tvnet.lv###shops_offer
-# tvnet.lv###trackbar_box
-# tvnet.lv##.customers
-# tvnet.lv,financenet.lv###ad_175x300
-# tvnet.lv,financenet.lv##.banner
-# tvnet.lv,financenet.lv##.list.customer
-# zeltazivtina.lv###banner
-# zip.lv###ad_view
-# zip.lv###perkam_group_banner
-# zip.lv##.zip_spotlight.main_td
-# ~nva.gov.lv##.adbanner
 #
 # Whitelist
 +d g.delfi.lv /wd/x/*/r/
