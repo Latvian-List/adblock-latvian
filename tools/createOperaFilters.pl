@@ -48,8 +48,8 @@ sub createUrlfilter
       # Convert comments
       if ($line =~ m/^!/)
       {
-        # Remove redirect
-        if ($line !~ m/.Redirect:/)
+        # Remove redirect and checksum
+        if (($line !~ m/.Redirect:/) and ($line !~ m/.Checksum:/))
         {
           $line =~ s/\!/#/;
           push @urlfilter, $line;
@@ -66,6 +66,13 @@ sub createUrlfilter
       # Collect whitelists
       elsif ($line =~ m/^@@/)
       {
+        $line =~ s/^@@//;
+        $line =~ s/\|\|//;
+        $line =~ s/\|//;
+        while ($line =~ m/\/\*/)
+        {
+          $line =~ s/\/\*//;
+        }
         push @whitelists, $line;
       }
       else
@@ -101,12 +108,29 @@ sub createUrlfilter
   }
 
 
-  #$list = join(@urlfilter);
-  #foreach my $line (split(/\n/, $list))
-  #{
+
+
+#  $list = join("\n", @urlfilter);
+#  undef(@urlfilter);
+#  my $tmpline = "";
+#  foreach my $line (split(/\n/, $list))
+#  {
     # Remove filters that require whitelists
-    # ???
-  #}
+#    ($tmpline) = $line;
+#    $tmpline =~ s/http:\/\///;
+#    while ($tmpline =~ m/\/\*/)
+#    {
+#      $tmpline =~ s/\/\*//;
+#    }
+#    if (grep {$_ =~ m/.$tmpline/} @whitelists)
+#    {
+#      print "$tmpline\n";
+#    }
+#    else
+#    {
+#      push @urlfilter, $line;
+#    }
+#  }
 
 
   $list = join("\n", @urlfilter);
