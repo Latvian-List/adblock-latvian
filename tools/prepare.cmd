@@ -11,5 +11,6 @@ perl addChecksum_alt.pl ..\urlfilter.ini
 perl addChecksum.pl ..\element-filter.css
 ::
 :: Prepare IE list
+perl createIETPL.pl ..\latvian-list.txt
 ::
 pause
