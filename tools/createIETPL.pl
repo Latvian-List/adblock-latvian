@@ -52,13 +52,13 @@ sub createTPL
       # Convert comments
       if ($line =~ m/^!/)
       {
-        # Get expire value and checksum
-        if (($line !~ m/.Redirect:/) and ($line !~ m/.Checksum:/))
+        # Get expire value
+        if ($line =~ m/.Expires:/)
         {
           ($expires) = $line =~ /(\d+)/;
         }
-        # Remove redirect
-        elsif ($line !~ m/.Redirect:/)
+        # Remove redirect and checksum
+        elsif (($line !~ m/.Redirect:/) and ($line !~ m/.Checksum:/))
         {
           $line =~ s/\!/#/;
           push @tpl, $line;
