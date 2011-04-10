@@ -221,6 +221,8 @@ sub createElemfilter
   my $list = shift;
   my @elemfilter;
 
+  #Add charset declaration
+  push @elemfilter, "\@charset \"utf-8\";";
   # Add comment section
   push @elemfilter, "/*";
   foreach my $line (split(/\n/, $list))
