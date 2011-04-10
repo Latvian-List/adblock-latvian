@@ -1,12 +1,13 @@
 msFilterList
 : Expires=2
+# Checksum: JMZ02PjnVx5nGkKZ5dbYaQ
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com
 # Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 09.04.2011. 15:50 UTC
+# Last modified: 10.04.2011. 07:12 UTC
 
 #
 # Filters

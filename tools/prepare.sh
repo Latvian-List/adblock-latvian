@@ -14,6 +14,7 @@ perl addChecksum.pl ../element-filter.css
 #
 # Prepare IE list
 perl createIETPL.pl ../latvian-list.txt
+perl addChecksum_alt.pl ../latvian-list.tpl
 #
 echo -n "Press enter to proceed:"
 read xx
