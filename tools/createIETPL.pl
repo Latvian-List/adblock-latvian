@@ -25,12 +25,33 @@ die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 my $file = $ARGV[0];
 my $path = dirname($file);
 my $list = readFile($file);
+# Generate TPL filename
+my $tplfilename = fileparse("$file", qr/\.[^.]*/).".tpl";
+
+
+my $oldchecksum;
+my $oldmodified;
+# Get old checksum and modification time
+if (-e "$path/$tplfilename")
+{
+  my $oldlist = readFile("$path/$tplfilename");
+  foreach my $line (split(/\n/, $oldlist))
+  {
+    if ($line =~ m/.Checksum:/)
+    {
+      ($oldchecksum)  = $line;
+    }
+    elsif ($line =~ m/.Last modified:/)
+    {
+      ($oldmodified) = $line;
+    }
+  }
+  $oldlist = undef;
+}
 
 
 my $tpl = createTPL($list);
 
-# Generate TPL filename
-my $tplfilename = fileparse("$file", qr/\.[^.]*/).".tpl";
 
 # Write TPL
 writeFile("$path/$tplfilename",$tpl);
@@ -57,8 +78,34 @@ sub createTPL
         {
           ($expires) = $line =~ /(\d+)/;
         }
-        # Remove redirect and checksum
-        elsif (($line !~ m/.Redirect:/) and ($line !~ m/.Checksum:/))
+        # Insert old checksumm
+        elsif ($line =~ m/.Checksum:/)
+        {
+          if (defined ($oldchecksum))
+          {
+            ($line) = $oldchecksum;
+          }
+          else
+          {
+            $line =~ s/^\!/#/;
+          }
+          push @tpl, $line;
+        }
+        # Insert old last modified
+        elsif ($line =~ m/.Last modified:/)
+        {
+          if (defined ($oldmodified))
+          {
+            ($line) = $oldmodified;
+          }
+          else
+          {
+            $line =~ s/^\!/#/;
+          }
+          push @tpl, $line;
+        }
+        # Remove redirect
+        elsif ($line !~ m/.Redirect:/)
         {
           $line =~ s/\!/#/;
           push @tpl, $line;

@@ -26,6 +26,45 @@ my $file = $ARGV[0];
 my $path = dirname($file);
 my $list = readFile($file);
 
+# Get old checksum and modification time
+my @oldchecksum;
+my @oldmodified;
+
+if (-e "$path/urlfilter.ini")
+{
+  my $oldlist = readFile("$path/urlfilter.ini");
+  foreach my $line (split(/\n/, $oldlist))
+  {
+    if ($line =~ m/.Checksum:/)
+    {
+      ($oldchecksum[0])  = $line;
+    }
+    elsif ($line =~ m/.Last modified:/)
+    {
+      ($oldmodified[0]) = $line;
+    }
+  }
+  $oldlist = undef;
+}
+
+if (-e "$path/element-filter.css")
+{
+  my $oldlist = readFile("$path/element-filter.css");
+  foreach my $line (split(/\n/, $oldlist))
+  {
+    if ($line =~ m/.Checksum:/)
+    {
+      ($oldchecksum[1])  = $line;
+    }
+    elsif ($line =~ m/.Last modified:/)
+    {
+      ($oldmodified[1]) = $line;
+    }
+  }
+  $oldlist = undef;
+}
+
+
 my $urlfilter = createUrlfilter($list);
 my $elemfilter = createElemfilter($list);
 
@@ -48,10 +87,34 @@ sub createUrlfilter
       # Convert comments
       if ($line =~ m/^!/)
       {
-        # Remove redirect and checksum
-        if (($line !~ m/.Redirect:/) and ($line !~ m/.Checksum:/))
+        # Insert old checksumm
+        if ($line =~ m/.Checksum:/)
         {
-          $line =~ s/\!/#/;
+          if (defined ($oldchecksum[0]))
+          {
+            ($line) = $oldchecksum[0];
+          }
+          else
+          {
+            $line =~ s/^\!/#/;
+          }
+        }
+        # Insert old last modified
+        elsif ($line =~ m/.Last modified:/)
+        {
+          if (defined ($oldmodified[0]))
+          {
+            ($line) = $oldmodified[0];
+          }
+          else
+          {
+            $line =~ s/^\!/#/;
+          }
+        }
+        # Add the rest of comments
+        if ($line !~ m/.Redirect:/)
+        {
+          $line =~ s/^\!/#/;
           push @urlfilter, $line;
         }
       }
@@ -172,6 +235,24 @@ sub createElemfilter
       if ($line !~ m/.Redirect:/)
       {
         # Add all header comment lines
+        push @elemfilter, $line;
+      }
+      # Insert old checksumm
+      elsif ($line =~ m/.Checksum:/)
+      {
+        if (defined ($oldchecksum[1]))
+        {
+          ($line) = $oldchecksum[1];
+        }
+        push @elemfilter, $line;
+      }
+      # Insert old last modified
+      elsif ($line =~ m/.Last modified:/)
+      {
+        if (defined ($oldmodified[1]))
+        {
+          ($line) = $oldmodified[1];
+        }
         push @elemfilter, $line;
       }
     }
