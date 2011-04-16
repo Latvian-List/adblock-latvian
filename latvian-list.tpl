@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: 2muMkUkSfzgu/9bfZX+oWA
+# Checksum: fQBO4R0sJyiSxSVxlxigAQ
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 16.04.2011. 08:10 UTC
+# Last modified: 16.04.2011. 08:12 UTC
 #
 # Filters
 - /city24/
@@ -33,6 +33,7 @@ msFilterList
 -d e1.lv /images/banners/
 -d easyget.lv /ads/
 -d ecompics.power.oho.lv
+-d ehalle.lv /grupu_bildes/
 -d flvplayer.viastream.viasat.tv /Commercials/
 -d g.delfi.lv /ap/edu/g/
 -d g.delfi.lv /b/
