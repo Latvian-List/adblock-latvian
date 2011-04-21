@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: 8g393D8v+4nAjd7issDYvw
+! Checksum: 6OlFNqHd7WEtCBOI88ying
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 21.04.2011. 12:53 UTC
+! Last modified: 21.04.2011. 12:58 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 
@@ -182,12 +182,14 @@ boot.lv##[class*="ad_*"]
 db.lv###slid_close
 db.lv##.banner
 delfi.lv###delfieduitems
+delfi.lv###horoweatherblock
 delfi.lv###right
 delfi.lv##.articlebanner
 delfi.lv##.catwrap.city24w
 delfi.lv##.delfi_shop
 delfi.lv##[id^="adoceandelfilv"]
 delfi.lv##div[style="background:#fef2d9;"]
+delfi.lv##DIV[style="font-size:0px;"]
 delfi.lv##div[style="width:248px;"]
 delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
 diena.lv###city24-wrapper
