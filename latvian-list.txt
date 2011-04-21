@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: ityjNoH0o4rNhP3IZ6wirg
+! Checksum: CXzoI1gZvuhstlB2ClLlCQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 20.04.2011. 14:53 UTC
+! Last modified: 21.04.2011. 10:52 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 
@@ -207,8 +207,8 @@ mango.delfi.lv##div[style="margin-bottom:5px; height: 250px"]
 mango.delfi.lv##div[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
 mango.delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
 miljons.com##div[style="padding:3px; font-size:13px;"]
-notepad.lv###ja-sh
-notepad.lv##.module div > h3 + br + ul
+notepad.lv###ad_big
+notepad.lv##.banner_center
 nozare.lv##div[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
 nra.lv##div[style="padding-top:2px; font-size:0.917em;"]
 oho.lv##div[style="width:180px; overflow:hidden; background:#ffffff; border: solid 1px #D30528; font-family:Verdana; font-size:11px; margin: 5px 0px 10px 0px;"]
