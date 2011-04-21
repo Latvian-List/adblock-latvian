@@ -1,13 +1,12 @@
 msFilterList
+# Checksum: +n/TEcfLPxIOPxwYbOY84w
 : Expires=2
-# Checksum: KYV6V56midbk+/4v508XbQ
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 21.04.2011. 11:45 UTC
-
+# Last modified: 21.04.2011. 12:53 UTC
 #
 # Filters
 - /city24/
@@ -29,7 +28,18 @@ msFilterList
 -d boot.lv /wp-content/themes/boot/img/pics/*_ban_boot.png
 -d cenuklubs.lv /assets/media/
 -d db.lv /images/design/tnt.gif
+-d delfi.lv /ap/edu/g/
+-d delfi.lv /b/
+-d delfi.lv /d/bus/
+-d delfi.lv /d/h2011/pardotnet/
+-d delfi.lv /d/infoblock/
+-d delfi.lv /jo/g/
+-d delfi.lv /m/pardod.png
+-d delfi.lv /mango/b/
 -d delfi.lv /misc/
+-d delfi.lv /tr/g/
+-d delfi.lv /ve/g/
+-d delfi.lv /wd/x/*/
 -d discover.lv /userfiles/promofotos/
 -d e-latvenergo.lv /images/girl*
 -d e-pica.lv /mce/uploads/banners/
@@ -38,18 +48,6 @@ msFilterList
 -d ecompics.power.oho.lv
 -d ehalle.lv /grupu_bildes/
 -d flvplayer.viastream.viasat.tv /Commercials/
--d g.delfi.lv /ap/edu/g/
--d g.delfi.lv /b/
--d g.delfi.lv /d/bus/
--d g.delfi.lv /d/h2011/pardotnet/
--d g.delfi.lv /d/infoblock/
--d g.delfi.lv /jo/g/
--d g.delfi.lv /m/pardod.png
--d g.delfi.lv /mango/b/
--d g.delfi.lv /tr/g/
--d g.delfi.lv /ve/g/
--d g.delfi.lv /wd/x/*/
--d g.mango.lv /otra_*.gif
 -d gudriem.lv /App_Themes/Default/Banners/
 -d gudrinieks.lv /res/banner/
 -d gudrinieks.lv /res/js/sb_banner.js
@@ -63,6 +61,7 @@ msFilterList
 -d lnt.lv /images/banners/
 -d lursoft.lv /img/banners/
 -d lv.lv /bildes/reklaama.png
+-d mango.lv /otra_*.gif
 -d notepad.lv /partneri/
 -d nra.lv /_rekl/
 -d nra.lv /spec/

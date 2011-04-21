@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: d6DQVF352+deD8ulDwD1sw
+! Checksum: 8g393D8v+4nAjd7issDYvw
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 21.04.2011. 12:51 UTC
+! Last modified: 21.04.2011. 12:53 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 
@@ -31,7 +31,18 @@
 ||boot.lv/wp-content/themes/boot/img/pics/*_ban_boot.png
 ||cenuklubs.lv/assets/media/*
 ||db.lv/images/design/tnt.gif
+||delfi.lv/ap/edu/g/*
+||delfi.lv/b/
+||delfi.lv/d/bus/
+||delfi.lv/d/h2011/pardotnet/*
+||delfi.lv/d/infoblock/*
+||delfi.lv/jo/g/*
+||delfi.lv/m/pardod.png
+||delfi.lv/mango/b/*
 ||delfi.lv/misc/*
+||delfi.lv/tr/g/*
+||delfi.lv/ve/g/*
+||delfi.lv/wd/x/*/*
 ||discover.lv/userfiles/promofotos/*
 ||e-latvenergo.lv/images/girl*
 ||e-pica.lv/mce/uploads/banners/*
@@ -40,18 +51,6 @@
 ||ecompics.power.oho.lv^
 ||ehalle.lv/grupu_bildes/*
 ||flvplayer.viastream.viasat.tv/Commercials/
-||g.delfi.lv/ap/edu/g/*
-||g.delfi.lv/b/
-||g.delfi.lv/d/bus/
-||g.delfi.lv/d/h2011/pardotnet/*
-||g.delfi.lv/d/infoblock/*
-||g.delfi.lv/jo/g/*
-||g.delfi.lv/m/pardod.png
-||g.delfi.lv/mango/b/*
-||g.delfi.lv/tr/g/*
-||g.delfi.lv/ve/g/*
-||g.delfi.lv/wd/x/*/*
-||g.mango.lv/otra_*.gif
 ||gudriem.lv/App_Themes/Default/Banners/*
 ||gudrinieks.lv/res/banner/*
 ||gudrinieks.lv/res/js/sb_banner.js
@@ -65,6 +64,7 @@
 ||lnt.lv/images/banners/
 ||lursoft.lv/img/banners/*
 ||lv.lv/bildes/reklaama.png
+||mango.lv/otra_*.gif
 ||notepad.lv/partneri/*
 ||nra.lv/_rekl/
 ||nra.lv/spec/*
