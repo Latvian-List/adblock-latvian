@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: c64zpKEbZb58skurnI5hKQ
+! Checksum: 9CZxP8L6sAsK9zaxPALClQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 22.04.2011. 06:54 UTC
+! Last modified: 22.04.2011. 06:57 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 
@@ -119,7 +119,7 @@
 ||partneriem.smscredit.lv^$third-party
 ||perkamkopa.lv^$third-party
 ||promo.boomtime.lv^
-||saites.eon.lv
+||saites.eon.lv^
 ||serveris.lv/images/affiliate/*
 ||sludini.lv^$third-party
 ||smartad.ee^
