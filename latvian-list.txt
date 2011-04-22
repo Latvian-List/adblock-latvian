@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: jeRlCWZHSXZ5Q71mWI7NiQ
+! Checksum: c64zpKEbZb58skurnI5hKQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 21.04.2011. 14:14 UTC
+! Last modified: 22.04.2011. 06:54 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 
@@ -161,7 +161,6 @@
 ! Element filters
 ##.eshop_table
 ##.taxtad_title
-##[id^="city24-wrapper"]
 ##a[href^="http://www.serveris.lv/?ref="]
 1188.lv##.LabsservissAdd
 apollo.lv###RentInRiga
@@ -189,11 +188,10 @@ delfi.lv##.catwrap.city24w
 delfi.lv##.delfi_shop
 delfi.lv##[id^="adoceandelfilv"]
 delfi.lv##div[style="background:#fef2d9;"]
-delfi.lv##DIV[style="font-size:0px;"]
+delfi.lv##div[style="font-size:0px;"]
 delfi.lv##div[style="width:248px;"]
 delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
-diena.lv###city24-wrapper
-diena.lv##[class*="BANNER_BOX "]
+diena.lv##[id^="city24-wrapper"]
 easyget.lv##[class^="adholder"]
 financenet.lv##.tracbuttons
 forums.delfi.lv##div[style="width:150px;margin-bottom:5px;"]
