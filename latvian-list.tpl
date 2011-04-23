@@ -1,15 +1,15 @@
 msFilterList
-# Checksum: JkqHPNiprYi1vcQzklXJ4A
+# Checksum: /zVMlGPQmqgKvMcrP9Cghw
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 23.04.2011. 14:06 UTC
+# Last modified: 23.04.2011. 14:29 UTC
 #-
 #
-# Filters
+# -------------------- Blocking filters --------------------
 - /city24/
 -d 1188.lv /img/banners/
 -d 1188.lv /img/special/
@@ -91,7 +91,7 @@ msFilterList
 -d xp.lv /res/banners/
 -d zip.lv /kasjauns.swf
 -d zl.lv /banners/
-# Filters for 3rd party sites
+# ---------- Blocking filters for 3rd party sites ----------
 -d 1shop.lv /i/ban/
 -d 468x60.lv
 -d adclick.lv
@@ -114,14 +114,14 @@ msFilterList
 -d smartad.lv
 -d textads.lv
 #
-# Tracking filters
+# -------------------- Tracking filters --------------------
 - /counter.php
 - /xgemius.php
 - /xgemius_lv.js
 -d e-spy.petit.lv
 -d ss.lv /counter/
 -d t.delfi.lv
-# Tracking filters for 3rd party sites
+# ---------- Tracking filters for 3rd party sites ----------
 -d clicktale.net
 -d counter.hackers.lv
 -d counter.yadro.ru
@@ -144,9 +144,9 @@ msFilterList
 -d webstatistika.lv
 -d wos.lv
 #
-# Element filters
+# -------------------- Element filters ---------------------
 #
-# Whitelist
+# ----------------------- Whitelist ------------------------
 +d delfi.lv /wd/x/*/r/
-# Whitelist for 3rd party sites
+# ------------- Whitelist for 3rd party sites --------------
 +d api.draugiem.lv /authorize/
