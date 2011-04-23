@@ -201,11 +201,8 @@ sub createUrlfilter
   my $linenr = 0;
   foreach my $line (split(/\n/, $list))
   {
-    if ($line =~ m/^#/)
-    {
-      $linenr++;
-    }
-    else
+    $linenr++;
+    if ($line =~ m/^\#\-/)
     {
       last;
     }
@@ -221,8 +218,6 @@ sub createElemfilter
   my $list = shift;
   my @elemfilter;
 
-  #Add charset declaration
-  push @elemfilter, "\@charset \"utf-8\";";
   # Add comment section
   push @elemfilter, "/*";
   foreach my $line (split(/\n/, $list))
@@ -258,7 +253,7 @@ sub createElemfilter
         push @elemfilter, $line;
       }
     }
-    else
+    if ($line =~ m/^\!\-/)
     {
       # Stop at header comment end
       last;
