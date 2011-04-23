@@ -1,12 +1,13 @@
 msFilterList
-# Checksum: wnuPn+u/mPZbSWDjkeKDhQ
 : Expires=2
+# Checksum: wnuPn+u/mPZbSWDjkeKDhQ
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
 # Last modified: 23.04.2011. 10:05 UTC
+
 #
 # Filters
 - /city24/
