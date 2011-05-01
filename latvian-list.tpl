@@ -1,12 +1,12 @@
 msFilterList
+# Checksum: q7xc6Zr3s0QgujW0Wp6IPQ
 : Expires=2
-# Checksum: /zVMlGPQmqgKvMcrP9Cghw
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 23.04.2011. 14:29 UTC
+# Last modified: 01.05.2011. 12:38 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -48,6 +48,8 @@ msFilterList
 -d easyget.lv /ads/
 -d ecompics.power.oho.lv
 -d ehalle.lv /grupu_bildes/
+-d elittesport.lv /pictures/banneri_gar_malam/
+-d elittesport.lv /pictures/Tirgoshanas/
 -d flvplayer.viastream.viasat.tv /Commercials/
 -d gudriem.lv /App_Themes/Default/Banners/
 -d gudrinieks.lv /res/banner/
