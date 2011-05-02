@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: MqZF02npRoKvVoVj5yC1QQ
+! Checksum: mFbAy7crBHuDH/8MvR4ljw
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 02.05.2011. 11:02 UTC
+! Last modified: 02.05.2011. 11:08 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -195,7 +195,7 @@ delfi.lv###delfieduitems
 delfi.lv###horoweatherblock
 delfi.lv###right
 delfi.lv##.articlebanner
-delfi.lv##.catwrap.city24w
+delfi.lv##.city24w
 delfi.lv##.delfi_shop
 delfi.lv##[id^="adoceandelfilv"]
 delfi.lv##div[style="background:#fef2d9;"]

@@ -1,11 +1,11 @@
 /*
-! Checksum: +73N60KeMCZLwbNbZc1nkw
+! Checksum: dkkEHyn7Nc4U29uPjlj/3A
 ! Latvian adblock element filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 02.05.2011. 05:37 UTC
+! Last modified: 02.05.2011. 11:08 UTC
 ! Expires: 2 days (update frequency)
 */
 @namespace "http://www.w3.org/1999/xhtml";
@@ -27,7 +27,7 @@ a[href^="http://www.serveris.lv/?ref="],
 /* delfi.lv */
 #delfieduitems,
 .delfi_shop,
-.catwrap.city24w,
+.city24w,
 [id^="adoceandelfilv"],
 /* diena.lv */
 #city24-wrapper,
