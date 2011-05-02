@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: 0kvWxezndaIF3mN/Lae7DQ
+! Checksum: kK9yvgTjc45IOjR9F1j2Gg
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 01.05.2011. 12:55 UTC
+! Last modified: 02.05.2011. 05:35 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -226,10 +226,12 @@ oho.lv##div[style="width:180px; overflow:hidden; background:#ffffff; border: sol
 riga.lv##[id="_ctl16_HtmlBanner"]
 riga.lv##[id^="_ctl20_Elements__"]
 saites.eon.lv###jauto-container
+salidzini.lv##.add_cell
 salidzini.lv##[id^="media_place"]
 salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
 salidzini.lv##div[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
 salidzini.lv##td[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
+salidzini.lv##td[style="width: 340px; background-color: #FFFFFF; border: 1px solid #CCCCCC;"]
 spoki.lv###mod_eshops_b
 spoki.lv###okarte-banner
 spoki.lv##.garnier-banner
