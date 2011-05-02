@@ -195,6 +195,19 @@ sub createUrlfilter
 #    }
 #  }
 
+  # Create rules for subdomains
+  $list = join("\n", @urlfilter);
+  undef(@urlfilter);
+  foreach my $line (split(/\n/, $list))
+  {
+    push @urlfilter, $line;
+    if ($line =~ m/^http\:\/\//)
+    {
+      $line =~ s/http\:\/\//\*\./;
+      push @urlfilter, $line;
+    }
+  }
+
 
   $list = join("\n", @urlfilter);
   # Add urlfilter header
