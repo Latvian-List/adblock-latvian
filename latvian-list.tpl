@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: UlzeJYOlO1JB0W0MHQqRPw
+# Checksum: aKdHGGT5XkLcKyxPO5RY8Q
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 02.05.2011. 11:22 UTC
+# Last modified: 02.05.2011. 11:28 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -32,6 +32,7 @@ msFilterList
 -d delfi.lv /ap/edu/g/
 -d delfi.lv /b/
 -d delfi.lv /d/bus/
+-d delfi.lv /d/h2011/Interinfo_LV_250x100px.gif
 -d delfi.lv /d/h2011/pardotnet/
 -d delfi.lv /d/infoblock/
 -d delfi.lv /jo/g/
