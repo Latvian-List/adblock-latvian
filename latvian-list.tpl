@@ -1,12 +1,12 @@
 msFilterList
+# Checksum: 1lS1tL72UHVw8YaWhrRNbA
 : Expires=2
-# Checksum: CHgqm+QHYBg8yptwkJr5hA
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 01.05.2011. 12:55 UTC
+# Last modified: 02.05.2011. 10:57 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -84,6 +84,7 @@ msFilterList
 -d spoki.lv /img/okarte/
 -d static.apollo.lv /images/infobox/
 -d static.apollo.lv /images/infobox_admiral/
+-d static.apollo.lv /images/infobox_fxf/
 -d static.apollo.lv /images/RentInRiga*
 -d static.apollo.lv /images/v5/infobox/
 -d sudzibas.lv /baneris_*
