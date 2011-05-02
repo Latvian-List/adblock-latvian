@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: l8fcL7nB8Xi3ip3NJphocw
+! Checksum: MqZF02npRoKvVoVj5yC1QQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 02.05.2011. 10:57 UTC
+! Last modified: 02.05.2011. 11:02 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -85,6 +85,7 @@
 ||spoki.lv/banners/*
 ||spoki.lv/img/backs/*-banner.png
 ||spoki.lv/img/okarte/*
+||static.apollo.lv/images/europass_v3.jpg
 ||static.apollo.lv/images/infobox/*
 ||static.apollo.lv/images/infobox_admiral/*
 ||static.apollo.lv/images/infobox_fxf/*
@@ -181,7 +182,9 @@ apollo.lv##.city24_box
 apollo.lv##.comment_banner_v2
 apollo.lv##.fxf_box
 apollo.lv##.infobox_item
+apollo.lv##.news_blue_left
 apollo.lv##.right_banner
+apollo.lv##div[style="width:259px; border:1px solid #DBDBDB; border-left:none; margin-bottom:15px"]
 bilesuserviss.lv##.banner_clicker
 bilesuserviss.lv##.main_column_banner
 bilesuserviss.lv##.top_banner
