@@ -1,6 +1,6 @@
 msFilterList
-# Checksum: CPRzeg57L+fVw2Dsf51+2w
 : Expires=2
+# Checksum: CPRzeg57L+fVw2Dsf51+2w
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
