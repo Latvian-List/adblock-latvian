@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: zfe5sjaOR9ULApIVQdtiMQ
+# Checksum: Wo6z4OeyPrvwcM9Tdl5PGQ
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 03.05.2011. 08:08 UTC
+# Last modified: 03.05.2011. 11:18 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -158,4 +158,4 @@ msFilterList
 +d delfi.lv /wd/x/*/r/
 # ------------- Whitelist for 3rd party sites --------------
 +d api.draugiem.lv /authorize/
-+d flvplayer.viastream.viasat.tv /flvplayer/play/swf/
++d viastream.viasat.tv /*?affiliate=
