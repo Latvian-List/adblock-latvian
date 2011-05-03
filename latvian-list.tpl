@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: zHV4x9I2gQKZIIYc2fCcJQ
+# Checksum: CPRzeg57L+fVw2Dsf51+2w
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 03.05.2011. 13:13 UTC
+# Last modified: 03.05.2011. 13:31 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -26,9 +26,7 @@ msFilterList
 -d banners.zl.lv
 -d bigshop.lv /baners/
 -d bilesuserviss.lv /upload/banner/
--d boot.lv /wp-content/themes/boot/img/pics/*_ban_boot.png
 -d cenuklubs.lv /assets/media/
--d db.lv /images/design/tnt.gif
 -d delfi.lv /ap/edu/g/
 -d delfi.lv /b/
 -d delfi.lv /d/bus/
@@ -36,14 +34,12 @@ msFilterList
 -d delfi.lv /d/h2011/pardotnet/
 -d delfi.lv /d/infoblock/
 -d delfi.lv /jo/g/
--d delfi.lv /m/pardod.png
 -d delfi.lv /mango/b/
 -d delfi.lv /misc/
 -d delfi.lv /tr/g/
 -d delfi.lv /ve/g/
 -d delfi.lv /wd/x/*/
 -d discover.lv /userfiles/promofotos/
--d e-latvenergo.lv /images/girl*
 -d e-pica.lv /mce/uploads/banners/
 -d e1.lv /images/banners/
 -d easyget.lv /ads/
