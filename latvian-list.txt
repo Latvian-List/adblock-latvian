@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: H1+BiMxvb2l7fX1oSEWB8Q
+! Checksum: bJOQXH1ovTDLkfGS8yry9Q
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 02.05.2011. 11:28 UTC
+! Last modified: 03.05.2011. 07:40 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -259,6 +259,7 @@ zip.lv##.zip_spotlight.main_td
 !
 ! ----------------------- Whitelist ------------------------
 @@||delfi.lv/wd/x/*/r/*
+@@||flvplayer.viastream.viasat.tv/flvplayer/play/swf/*
 ! ------------- Whitelist for 3rd party sites --------------
 @@||api.draugiem.lv/authorize/*
 @@||ifrype.com/profile/*$image,domain=~draugiem.lv|~frype.com|~frype.lt|~baratikor.com,third-party
