@@ -165,6 +165,11 @@ sub createTPL
         {
           $line =~ s/\/\*$/\//;
         }
+        # Remove ending caret in mudle of rule
+        if ($line =~ m/.\^\*/)
+        {
+          $line =~ s/\^\*/ \/*/;
+        }
 
         push @tpl, $line;
       }
