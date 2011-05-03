@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: AK7BGfh1T/rojyJEhX718w
+! Checksum: XIv9tLXRbqiDPy0eP0jhwQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 03.05.2011. 13:37 UTC
+! Last modified: 03.05.2011. 13:47 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -166,6 +166,13 @@
 ||webstatistika.lv^
 ||wos.lv^
 !
+! ----------------------- Whitelist ------------------------
+@@||delfi.lv/wd/x/*/r/*
+! ------------- Whitelist for 3rd party sites --------------
+@@||api.draugiem.lv/authorize/*
+@@||ifrype.com/profile/*$image,domain=~draugiem.lv|~frype.com|~frype.lt|~baratikor.com,third-party
+@@||viastream.viasat.tv^*?affiliate=
+!
 ! -------------------- Element filters ---------------------
 ##a[href^="http://www.serveris.lv/?ref="]
 1188.lv##.LabsservissAdd
@@ -252,10 +259,3 @@ zeltazivtina.lv###banner
 zip.lv###ad_view
 zip.lv###perkam_group_banner
 zip.lv##.zip_spotlight.main_td
-!
-! ----------------------- Whitelist ------------------------
-@@||delfi.lv/wd/x/*/r/*
-! ------------- Whitelist for 3rd party sites --------------
-@@||api.draugiem.lv/authorize/*
-@@||ifrype.com/profile/*$image,domain=~draugiem.lv|~frype.com|~frype.lt|~baratikor.com,third-party
-@@||viastream.viasat.tv^*?affiliate=
