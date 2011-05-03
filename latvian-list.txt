@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: pCrNHcl43jMvolKjI+bLhQ
+! Checksum: p3XVsZUt69dVcKTTFP+voA
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 03.05.2011. 11:18 UTC
+! Last modified: 03.05.2011. 13:13 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -69,6 +69,7 @@
 ||lursoft.lv/img/banners/*
 ||lv.lv/bildes/reklaama.png
 ||mango.lv/otra_*.gif
+||miljons.com/bnr/*
 ||notepad.lv/partneri/*
 ||nra.lv/_rekl/
 ||nra.lv/spec/*
@@ -221,6 +222,7 @@ mango.delfi.lv##div[style="font-weight:bold;width:250px;margin-bottom:5px;backgr
 mango.delfi.lv##div[style="margin-bottom:5px; height: 250px"]
 mango.delfi.lv##div[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
 mango.delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
+miljons.com###opencredit
 miljons.com##div[style="padding:3px; font-size:13px;"]
 notepad.lv###ad_big
 notepad.lv###blocks > .tabsaction + .news
