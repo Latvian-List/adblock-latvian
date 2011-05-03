@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: XIv9tLXRbqiDPy0eP0jhwQ
+! Checksum: U1J4PtMhjlcHNocGDQ1eMw
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 03.05.2011. 13:47 UTC
+! Last modified: 03.05.2011. 13:54 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -78,6 +78,7 @@
 ||r.inbox.lv^
 ||reklama.lv/services/ads_count.html
 ||riga.lv/MEDIA/Misc/*
+||rigaslaiks.lv/Resources/Ads/*
 ||semicom.lv/admin/files/*$object
 ||serveris.lv/images/Baners/*
 ||spoki.lv/banners/*
@@ -236,6 +237,7 @@ nra.lv##div[style="padding-top:2px; font-size:0.917em;"]
 oho.lv##div[style="width:180px; overflow:hidden; background:#ffffff; border: solid 1px #D30528; font-family:Verdana; font-size:11px; margin: 5px 0px 10px 0px;"]
 riga.lv##[id="_ctl16_HtmlBanner"]
 riga.lv##[id^="_ctl20_Elements__"]
+rigaslaiks.lv###ctl00_divAd1
 salidzini.lv##.add_cell
 salidzini.lv##[id^="media_place"]
 salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
