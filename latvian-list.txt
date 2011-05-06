@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: MSI1B2AlRcvXZnPv1WaMiA
+! Checksum: B66E9T0i2wCSiPk6gP566Q
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 06.05.2011. 08:11 UTC
+! Last modified: 06.05.2011. 14:02 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -147,11 +147,9 @@
 ||clicktale.net^
 ||counter.hackers.lv^
 ||counter.yadro.ru^
-||draugiem.lv^$third-party
 ||europuls.eu^
 ||europuls.net^
 ||hits.sys.lv^
-||ifrype.com^$domain=~draugiem.lv|~frype.com|~frype.lt|~baratikor.com,third-party
 ||insbergs.lv/ins_statistics/*
 ||on-line.lv^
 ||openstat.net^
@@ -171,8 +169,6 @@
 ! ----------------------- Whitelist ------------------------
 @@||delfi.lv/wd/x/*/r/*
 ! ------------- Whitelist for 3rd party sites --------------
-@@||api.draugiem.lv/authorize/*
-@@||ifrype.com/profile/*$image,domain=~draugiem.lv|~frype.com|~frype.lt|~baratikor.com,third-party
 @@||viastream.viasat.tv^*?affiliate=
 !
 ! -------------------- Element filters ---------------------
@@ -214,7 +210,6 @@ diena.lv##.taxtad_title
 diena.lv##[id^="city24-wrapper"]
 easyget.lv##[class^="adholder"]
 easyget.lv##div[style="padding-top:5px;text-align:center;margin-bottom:10px;line-height:1;"]
-financenet.lv##.tracbuttons
 forums.delfi.lv##div[style="width:150px;margin-bottom:5px;"]
 gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
 inbox.lv###firstRow + div + table[align="center"]
@@ -254,7 +249,6 @@ sportacentrs.com##table[style="width: 240px; height: 97px;"]
 travelnews.lv##table + #div_main_right_block
 tv.delfi.lv##.toolblock
 tvnet.lv###shops_offer
-tvnet.lv###trackbar_box
 tvnet.lv##.customers
 tvnet.lv,financenet.lv###ad_175x300
 tvnet.lv,financenet.lv##.banner
