@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: B66E9T0i2wCSiPk6gP566Q
+! Checksum: VVD7P7IQktjQd15xsDuMFw
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 06.05.2011. 14:02 UTC
+! Last modified: 06.05.2011. 14:17 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/latvian-list.txt
 !-
@@ -166,12 +166,12 @@
 ||webstatistika.lv^
 ||wos.lv^
 !
-! ----------------------- Whitelist ------------------------
+! ----------------------- Whitelists -----------------------
 @@||delfi.lv/wd/x/*/r/*
-! ------------- Whitelist for 3rd party sites --------------
+! ------------- Whitelists for 3rd party sites -------------
 @@||viastream.viasat.tv^*?affiliate=
 !
-! -------------------- Element filters ---------------------
+! ----------------- Element hiding filters -----------------
 ##a[href^="http://www.serveris.lv/?ref="]
 1188.lv##.LabsservissAdd
 apollo.lv###RentInRiga
