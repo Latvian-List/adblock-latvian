@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: LBL1cdGOlkzorzE0XWhv/Q
+# Checksum: HqR3BfMp3Pay421v3IJk1w
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 19.05.2011. 12:20 UTC
+# Last modified: 23.05.2011. 17:50 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -121,6 +121,7 @@ msFilterList
 -d smartad.ee
 -d smartad.lv
 -d textads.lv
+-d videoavatars.com
 #
 # -------------------- Tracking filters --------------------
 - /counter.php
