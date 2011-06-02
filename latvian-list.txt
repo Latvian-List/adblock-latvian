@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: 2DRfMBGNDtzje/ouDtgF+Q
+! Checksum: JNdnHw18NuslxukEnUh3mw
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 23.05.2011. 17:50 UTC
+! Last modified: 02.06.2011. 16:19 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -20,7 +20,16 @@
 ||ads.inbox.lv^
 ||ads.sportacentrs.com^
 ||antireklama.lv/banners/*
+||apollo.lv/images/europass_v3.jpg
+||apollo.lv/images/hockey/first_page_
+||apollo.lv/images/infobox/*
+||apollo.lv/images/infobox_admiral/*
+||apollo.lv/images/infobox_fxf/*
+||apollo.lv/images/RentInRiga*
+||apollo.lv/images/v5/infobox/*
 ||apollo.lv/rentinriga_content/*
+||apollo.lv/upload/infobox/*
+||apollo.lv/upload/rentinriga/*
 ||b.inbox.lv^
 ||b.itvnet.lv^
 ||b.tvnet.lv^
@@ -53,8 +62,6 @@
 ||gudrinieks.lv/res/banner/*
 ||gudrinieks.lv/res/js/sb_banner.js
 ||iaptieka.lv/atteli/apmaina/*
-||img.apollo.lv/upload/infobox/*
-||img.apollo.lv/upload/rentinriga/*
 ||inbox.lv/banners/*
 ||itvnet.lv/partner/
 ||leta.lv/img/*/info_banneris_
@@ -83,13 +90,6 @@
 ||spoki.lv/banners/*
 ||spoki.lv/img/backs/*-banner.png
 ||spoki.lv/img/okarte/*
-||static.apollo.lv/images/europass_v3.jpg
-||static.apollo.lv/images/hockey/first_page_
-||static.apollo.lv/images/infobox/*
-||static.apollo.lv/images/infobox_admiral/*
-||static.apollo.lv/images/infobox_fxf/*
-||static.apollo.lv/images/RentInRiga*
-||static.apollo.lv/images/v5/infobox/*
 ||sudzibas.lv/baneris_*
 ||tiesraides.lv/files/2011-01/2011-01-14_bruninieks.jpg
 ||torrenti.lv/themes/TBDev/images/banner*

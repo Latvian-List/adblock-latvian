@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: HqR3BfMp3Pay421v3IJk1w
+# Checksum: SRH2rSXk8CP0n6gheTMUww
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 23.05.2011. 17:50 UTC
+# Last modified: 02.06.2011. 16:19 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -19,7 +19,16 @@ msFilterList
 -d ads.inbox.lv
 -d ads.sportacentrs.com
 -d antireklama.lv /banners/
+-d apollo.lv /images/europass_v3.jpg
+-d apollo.lv /images/hockey/first_page_
+-d apollo.lv /images/infobox/
+-d apollo.lv /images/infobox_admiral/
+-d apollo.lv /images/infobox_fxf/
+-d apollo.lv /images/RentInRiga*
+-d apollo.lv /images/v5/infobox/
 -d apollo.lv /rentinriga_content/
+-d apollo.lv /upload/infobox/
+-d apollo.lv /upload/rentinriga/
 -d b.inbox.lv
 -d b.itvnet.lv
 -d b.tvnet.lv
@@ -52,8 +61,6 @@ msFilterList
 -d gudrinieks.lv /res/banner/
 -d gudrinieks.lv /res/js/sb_banner.js
 -d iaptieka.lv /atteli/apmaina/
--d img.apollo.lv /upload/infobox/
--d img.apollo.lv /upload/rentinriga/
 -d inbox.lv /banners/
 -d itvnet.lv /partner/
 -d leta.lv /img/*/info_banneris_
@@ -81,13 +88,6 @@ msFilterList
 -d spoki.lv /banners/
 -d spoki.lv /img/backs/*-banner.png
 -d spoki.lv /img/okarte/
--d static.apollo.lv /images/europass_v3.jpg
--d static.apollo.lv /images/hockey/first_page_
--d static.apollo.lv /images/infobox/
--d static.apollo.lv /images/infobox_admiral/
--d static.apollo.lv /images/infobox_fxf/
--d static.apollo.lv /images/RentInRiga*
--d static.apollo.lv /images/v5/infobox/
 -d sudzibas.lv /baneris_*
 -d tiesraides.lv /files/2011-01/2011-01-14_bruninieks.jpg
 -d torrenti.lv /themes/TBDev/images/banner*
