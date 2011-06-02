@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: JNdnHw18NuslxukEnUh3mw
+! Checksum: pGg2WuafeVnKKLI1QdVwsQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 02.06.2011. 16:19 UTC
+! Last modified: 02.06.2011. 16:20 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -20,6 +20,8 @@
 ||ads.inbox.lv^
 ||ads.sportacentrs.com^
 ||antireklama.lv/banners/*
+||apollo.lv/_infobox/*
+||apollo.lv/images/_infobox/*
 ||apollo.lv/images/europass_v3.jpg
 ||apollo.lv/images/hockey/first_page_
 ||apollo.lv/images/infobox/*
@@ -181,6 +183,7 @@ apollo.lv##.admiral_box
 apollo.lv##.apollo_infobox
 apollo.lv##.ban420x200
 apollo.lv##.ban420x260
+apollo.lv##[id$="_infobox"]
 apollo.lv##.ban980x90
 apollo.lv##.city24_box
 apollo.lv##.comment_banner_v2
