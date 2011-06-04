@@ -1,12 +1,12 @@
 msFilterList
+# Checksum: dQXrnQy9D2h3W8ujH681Bg
 : Expires=2
-# Checksum: NDedwIHlhKKmxpCjCHjH8Q
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 04.06.2011. 12:04 UTC
+# Last modified: 04.06.2011. 12:29 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -64,6 +64,7 @@ msFilterList
 -d gudrinieks.lv /res/js/sb_banner.js
 -d iaptieka.lv /atteli/apmaina/
 -d inbox.lv /banners/
+-d intim.lv /res/banners/
 -d itvnet.lv /partner/
 -d leta.lv /img/*/info_banneris_
 -d lib.manstv.lv /js/bannerhandlerv2.js
@@ -88,6 +89,9 @@ msFilterList
 -d riga.lv /MEDIA/Misc/
 -d rigaslaiks.lv /Resources/Ads/
 -d serveris.lv /images/Baners/
+-d sexparty.lv /style/flash/banner.swf
+-d sexparty.lv /uploads/banner/
+-d sexparty.lv /uploads/vip/
 -d spoki.lv /banners/
 -d spoki.lv /img/backs/*-banner.png
 -d spoki.lv /img/okarte/
@@ -137,6 +141,7 @@ msFilterList
 -d clicktale.net
 -d counter.hackers.lv
 -d counter.yadro.ru
+-d erotop.lv
 -d europuls.eu
 -d europuls.net
 -d hits.sys.lv

@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: tvzH4lqiCpvjb2QQ9Q00gg
+! Checksum: +/upYKE49Nw8aKd82P6jbQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 04.06.2011. 12:04 UTC
+! Last modified: 04.06.2011. 12:29 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -15,7 +15,6 @@
 ||1188.lv/img/special/*
 ||1w.lv/banner_*
 ||220.lv/rek_html/
-||intim.lv/res/banners/*
 ||2x2.lv/img/*$object
 ||ad.one.lv^
 ||ads.inbox.lv^
@@ -66,6 +65,7 @@
 ||gudrinieks.lv/res/js/sb_banner.js
 ||iaptieka.lv/atteli/apmaina/*
 ||inbox.lv/banners/*
+||intim.lv/res/banners/*
 ||itvnet.lv/partner/
 ||leta.lv/img/*/info_banneris_
 ||lib.manstv.lv/js/bannerhandlerv2.js
@@ -91,6 +91,9 @@
 ||rigaslaiks.lv/Resources/Ads/*
 ||semicom.lv/admin/files/*$object
 ||serveris.lv/images/Baners/*
+||sexparty.lv/style/flash/banner.swf
+||sexparty.lv/uploads/banner/*
+||sexparty.lv/uploads/vip/*
 ||spoki.lv/banners/*
 ||spoki.lv/img/backs/*-banner.png
 ||spoki.lv/img/okarte/*
@@ -152,6 +155,7 @@
 ||clicktale.net^
 ||counter.hackers.lv^
 ||counter.yadro.ru^
+||erotop.lv^
 ||europuls.eu^
 ||europuls.net^
 ||hits.sys.lv^
@@ -159,7 +163,6 @@
 ||on-line.lv^
 ||openstat.net^
 ||puls.lv^
-||erotop.lv^
 ||reinvigorate.net^
 ||reitingi.lv^
 ||statistik-gallup.net^
@@ -185,7 +188,6 @@ apollo.lv###rs_topshops
 apollo.lv##.admiral_box
 apollo.lv##.apollo_infobox
 apollo.lv##.ban420x200
-intim.lv##div[style="margin: 8px 0px; cursor: hand;"]
 apollo.lv##.ban420x260
 apollo.lv##.ban980x90
 apollo.lv##.city24_box
@@ -222,6 +224,7 @@ gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
 inbox.lv###firstRow + div + table[align="center"]
 inbox.lv###inboxshops_div
 inbox.lv###inxHeadAdsPlace
+intim.lv##div[style="margin: 8px 0px; cursor: hand;"]
 ir.lv###abonbanner
 kasjauns.lv###top_banner_container
 kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
@@ -250,6 +253,7 @@ salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; backg
 salidzini.lv##div[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
 salidzini.lv##td[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
 salidzini.lv##td[style="width: 340px; background-color: #FFFFFF; border: 1px solid #CCCCCC;"]
+sexparty.lv##TD[width="230"]
 spoki.lv###mod_eshops_b
 spoki.lv###okarte-banner
 spoki.lv##.garnier-banner
