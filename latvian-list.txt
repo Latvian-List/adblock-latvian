@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: Pu7wxE8W+uOG2vyAVkreTQ
+! Checksum: OaTQ9KFEyhhNsdrWGrXsgg
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 02.06.2011. 16:30 UTC
+! Last modified: 04.06.2011. 10:00 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -255,6 +255,8 @@ tv.delfi.lv##.toolblock
 tvnet.lv###shops_offer
 tvnet.lv##.customers
 tvnet.lv,financenet.lv###ad_175x300
+tvnet.lv,financenet.lv###pop_keyword_everest_ad
+tvnet.lv,financenet.lv###pop_keyword_letpas_ad
 tvnet.lv,financenet.lv##.banner
 tvnet.lv,financenet.lv##.list.customer
 uzkartes.lv###sz
