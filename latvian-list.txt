@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: GHKsfCg4PEmx1Ui9SBJ+gA
+! Checksum: tvzH4lqiCpvjb2QQ9Q00gg
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 04.06.2011. 11:49 UTC
+! Last modified: 04.06.2011. 12:04 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -82,6 +82,7 @@
 ||pc.lv/images/banners/*
 ||petits.lv/pics/banners/*
 ||pornotv.lv/images/banners/*
+||pornotv.lv/scroll_ads2.js
 ||q.tvnet.lv^
 ||r.inbox.lv^
 ||reklama.lv/services/ads_count.html
@@ -235,6 +236,8 @@ notepad.lv##.banner_center
 nozare.lv##div[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
 nra.lv##div[style="padding-top:2px; font-size:0.917em;"]
 oho.lv##div[style="width:180px; overflow:hidden; background:#ffffff; border: solid 1px #D30528; font-family:Verdana; font-size:11px; margin: 5px 0px 10px 0px;"]
+pornotv.lv###footer > TABLE[width="100%"]
+pornotv.lv##.top_slud.sakums
 riga.lv##[id="_ctl16_HtmlBanner"]
 riga.lv##[id^="_ctl20_Elements__"]
 rigaslaiks.lv###ctl00_divAd1

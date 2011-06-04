@@ -1,12 +1,12 @@
 msFilterList
 : Expires=2
-# Checksum: vBK1etFBo5TRdZIZKxt6Pg
+# Checksum: NDedwIHlhKKmxpCjCHjH8Q
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 02.06.2011. 16:20 UTC
+# Last modified: 04.06.2011. 12:04 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -81,6 +81,7 @@ msFilterList
 -d pc.lv /images/banners/
 -d petits.lv /pics/banners/
 -d pornotv.lv /images/banners/
+-d pornotv.lv /scroll_ads2.js
 -d q.tvnet.lv
 -d r.inbox.lv
 -d reklama.lv /services/ads_count.html
