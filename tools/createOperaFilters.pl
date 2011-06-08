@@ -118,6 +118,17 @@ sub createUrlfilter
           push @urlfilter, $line;
         }
       }
+      # Collect whitelists
+      elsif ($line =~ m/^@@/)
+      {
+        $line =~ s/^@@//;
+        $line =~ s/\|\|//;
+        $line =~ s/\|//;
+        $line =~ s/\^.*//;
+        $line =~ s/\/\*.*//;
+
+        push @whitelists, $line;
+      }
       # Remove lines with types
       elsif ($line =~ m/.\$/)
       {
@@ -125,18 +136,6 @@ sub createUrlfilter
       # Remove element rules
       elsif (($line =~ m/.##/) or ($line =~ m/^##/))
       {
-      }
-      # Collect whitelists
-      elsif ($line =~ m/^@@/)
-      {
-        $line =~ s/^@@//;
-        $line =~ s/\|\|//;
-        $line =~ s/\|//;
-        while ($line =~ m/\/\*/)
-        {
-          $line =~ s/\/\*//;
-        }
-        push @whitelists, $line;
       }
       else
       {
@@ -173,27 +172,34 @@ sub createUrlfilter
 
 
 
-#  $list = join("\n", @urlfilter);
-#  undef(@urlfilter);
-#  my $tmpline = "";
-#  foreach my $line (split(/\n/, $list))
-#  {
+  $list = join("\n", @urlfilter);
+  undef(@urlfilter);
+  my $whitelists = join("\n", @whitelists);
+  my $tmpline = "";
+  my $matcheswhitelist;
+
+  foreach my $line (split(/\n/, $list))
+  {
     # Remove filters that require whitelists
-#    ($tmpline) = $line;
-#    $tmpline =~ s/http:\/\///;
-#    while ($tmpline =~ m/\/\*/)
-#    {
-#      $tmpline =~ s/\/\*//;
-#    }
-#    if (grep {$_ =~ m/.$tmpline/} @whitelists)
-#    {
-#      print "$tmpline\n";
-#    }
-#    else
-#    {
-#      push @urlfilter, $line;
-#    }
-#  }
+    ($tmpline) = $line;
+    $tmpline =~ s/http:\/\///;
+    while ($tmpline =~ m/\/\*/)
+    {
+      $tmpline =~ s/\^.*//;
+      $tmpline =~ s/\/\*.*//;
+    }
+    foreach my $inline (split(/\n/, $whitelists))
+    {
+      $matcheswhitelist = 1 if ($tmpline =~ m/$inline/);
+    }
+
+    if (!defined($matcheswhitelist))
+    {
+      push @urlfilter, $line;
+    }
+    $matcheswhitelist = undef;
+
+  }
 
   # Create rules for subdomains
   $list = join("\n", @urlfilter);
