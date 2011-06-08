@@ -1,12 +1,12 @@
 msFilterList
+# Checksum: WKCno8eoINhN6PnzTXDnJQ
 : Expires=2
-# Checksum: YRAP569Kts9vfkPBkh4ZKw
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 06.06.2011. 10:41 UTC
+# Last modified: 08.06.2011. 12:07 UTC
 #-
 #
 # -------------------- Blocking filters --------------------
@@ -113,17 +113,28 @@ msFilterList
 -d adsxchange.lv
 -d affiliate.dateks.lv
 -d affiliate.lattelecom.lv
+-d agk.lv
 -d anymedia.lv
 -d banneri.lv
 -d bbes.lv
+-d city24.lv
 -d deal24.lv
+-d evolution.lv
+-d garmtech.lv
 -d inectar.lv
 -d irreklama.lv
 -d knc.lv
+-d leta.lv /bm/www/images/
 -d nerealitate.lv
+-d novonews.lv /ticker/flash/
+-d otrapuse.lv
+-d otrapuse.mango.lv
+-d partneriem.smscredit.lv
+-d perkamkopa.lv
 -d promo.boomtime.lv
 -d saites.eon.lv
 -d serveris.lv /images/affiliate/
+-d sludini.lv
 -d smartad.ee
 -d smartad.lv
 -d textads.lv
