@@ -190,7 +190,7 @@ sub createUrlfilter
     }
     foreach my $inline (split(/\n/, $whitelists))
     {
-      $matcheswhitelist = 1 if ($tmpline =~ m/$inline/);
+      $matcheswhitelist = 1 if ($tmpline =~ m/\Q$inline\E/);
     }
 
     if (!defined($matcheswhitelist))
