@@ -111,8 +111,8 @@ sub createTPL
           push @tpl, $line;
         }
       }
-      # Remove lines with types
-      elsif ($line =~ m/.\$/)
+      # Remove lines with types except third-party
+      elsif (($line =~ m/.\$/) and ($line !~ m/.\$third-party/))
       {
       }
       # Remove element rules
@@ -154,6 +154,11 @@ sub createTPL
         elsif ($line !~ m/^$/)
         {
           $line = "- ".$line;
+        }
+        # Convert third party rules to first party rules
+        if ($line =~ m/.\$third-party/)
+        {
+          $line =~ s/\$third-party//;
         }
         # Remove ending caret
         if ($line =~ m/\^$/)
