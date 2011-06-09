@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: sOCCSDAJcJGo/3PtvE0CFQ
+! Checksum: j/37n5owHkXvvVCDEo21NA
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 06.06.2011. 10:41 UTC
+! Last modified: 09.06.2011. 13:14 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -194,6 +194,7 @@ apollo.lv##.comment_banner_v2
 apollo.lv##.eshop_table
 apollo.lv##.fxf_box
 apollo.lv##.infobox_item
+apollo.lv##.middle_banner
 apollo.lv##.news_blue_left
 apollo.lv##.right_banner
 apollo.lv##[id$="_infobox"]
