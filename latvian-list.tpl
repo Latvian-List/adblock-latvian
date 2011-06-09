@@ -1,6 +1,6 @@
 msFilterList
-# Checksum: WKCno8eoINhN6PnzTXDnJQ
 : Expires=2
+# Checksum: WKCno8eoINhN6PnzTXDnJQ
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
