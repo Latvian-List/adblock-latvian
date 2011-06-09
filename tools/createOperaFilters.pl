@@ -127,8 +127,9 @@ sub createUrlfilter
         $line =~ s/\|\|//;
         $line =~ s/\|//;
         $line =~ s/\|$//;
-        # Remove everything after an asterisk
+        # Remove everything after an caret
         $line =~ s/\^.*//;
+        # Remove everything after an asterisk
         $line =~ s/\/\*.*//;
 
         push @whitelists, $line;
@@ -150,27 +151,32 @@ sub createUrlfilter
         }
         elsif ($line =~ m/^\|/)
         {
+          $line =~ s/^\|/https:\/\//;
           $line =~ s/^\|/http:\/\//;
         }
-        # Add beginning asterisk
-        if ($line =~ m/^\//)
+        # Convert domain endings
+        if ($line =~ m/\|$/)
         {
-          $line = "*".$line;
-        }
-        # Add ending asterisk
-        if ($line =~ m/\/$/)
-        {
-          $line = $line."*";
-        }
-        # Convert domain filter endings
-        if ($line =~ m/\^$/)
-        {
-          $line =~ s/\^$/\/*/;
+          $line =~ s/\|$//;
         }
         # Remove caret
         if ($line =~ m/\^\*/)
         {
-          $line =~ s/\^/\//;
+          $line =~ s/\^/\//;;
+        }
+        elsif ($line =~ m/\^/)
+        {
+          $line =~ s/\^/\/\*/;
+        }
+        # Add beginning asterisk
+        if ($line !~ m/^[A-Za-z0-9*]/)
+        {
+          $line = "*".$line;
+        }
+        # Add ending asterisk
+        if ($line !~ m/[A-Za-z0-9*]$/)
+        {
+          $line = $line."*";
         }
 
         push @urlfilter, $line;
@@ -194,8 +200,9 @@ sub createUrlfilter
     $tmpline =~ s/http:\/\///;
     while ($tmpline =~ m/\/\*/)
     {
-      # Remove everything after an asterisk  
+      # Remove everything after an caret
       $tmpline =~ s/\^.*//;
+      # Remove everything after an asterisk  
       $tmpline =~ s/\/\*.*//;
     }
     foreach my $inline (split(/\n/, $whitelists))
