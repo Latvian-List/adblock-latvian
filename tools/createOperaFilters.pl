@@ -207,7 +207,7 @@ sub createUrlfilter
     }
     foreach my $inline (split(/\n/, $whitelists))
     {
-      $matcheswhitelist = 1 if (($tmpline =~ m/\Q$inline\E/) or ($inline =~ m/\Q$tmpline\E/));
+      $matcheswhitelist = 1 if (($tmpline =~ m/\Q$inline\E/i) or ($inline =~ m/\Q$tmpline\E/i));
     }
 
     if (!defined($matcheswhitelist))
