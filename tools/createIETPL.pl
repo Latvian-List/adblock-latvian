@@ -146,7 +146,7 @@ sub createTPL
           }
         }
         # Convert generic whitelists
-        elsif ($line =~ m/^@@\//)
+        elsif ($line =~ m/^@@/)
         {
           $line =~ s/^@@/+ /;
         }
@@ -175,7 +175,8 @@ sub createTPL
         {
           $line =~ s/\^\*/ \/*/;
         }
-
+        # Remove ending vertical bars
+        $line =~ s/\|$//;
         push @tpl, $line;
       }
 
