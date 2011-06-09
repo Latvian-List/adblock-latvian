@@ -163,6 +163,11 @@ sub createUrlfilter
         {
           $line =~ s/\^$/\/*/;
         }
+        # Remove caret
+        if ($line =~ m/\^\*/)
+        {
+          $line =~ s/\^/\//;
+        }
 
         push @urlfilter, $line;
       }
