@@ -174,7 +174,7 @@ sub createUrlfilter
           $line = "*".$line;
         }
         # Add ending asterisk
-        if ($line !~ m/[A-Za-z0-9*]$/)
+        if ($line !~ m/[A-Za-z0-9* ]$/)
         {
           $line = $line."*";
         }
