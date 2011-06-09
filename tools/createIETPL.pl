@@ -133,7 +133,17 @@ sub createTPL
           }
           elsif ($line =~ m/^\|/)
           {
-            $line =~ s/^\|/- http:\/\//;
+            # Detect if filter already has "http" in it
+            if ($line =~ m/^\|http/)
+            {
+              # If filter has "http" keep it
+              $line =~ s/^\|/- /;
+            }
+            else
+            {
+              # If filter doesn't have "http" add it
+              $line =~ s/^\|/- http:\/\//;
+            }
           }
           # Convert whitelists
           elsif ($line =~ m/^@@/)
