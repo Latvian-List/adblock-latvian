@@ -121,9 +121,13 @@ sub createUrlfilter
       # Collect whitelists
       elsif ($line =~ m/^@@/)
       {
+        # Remove whitelist symbols
         $line =~ s/^@@//;
+        # Remove vertical bars
         $line =~ s/\|\|//;
         $line =~ s/\|//;
+        $line =~ s/\|$//;
+        # Remove everything after an asterisk
         $line =~ s/\^.*//;
         $line =~ s/\/\*.*//;
 
@@ -190,6 +194,7 @@ sub createUrlfilter
     $tmpline =~ s/http:\/\///;
     while ($tmpline =~ m/\/\*/)
     {
+      # Remove everything after an asterisk  
       $tmpline =~ s/\^.*//;
       $tmpline =~ s/\/\*.*//;
     }
