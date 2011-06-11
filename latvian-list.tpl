@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: /NR305KYtN7YYs4xvG/edA
+# Checksum: 6gKIPY/4Egjvxu9uThx3Vw
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 11.06.2011. 16:23 UTC
+# Last modified: 11.06.2011. 16:29 UTC
 #-
 #
 # ---------------- Generic blocking filters ----------------
@@ -182,7 +182,6 @@ msFilterList
 -d topsite.lv
 -d webstatistika.lv
 -d wos.lv
-#
 #
 # ------------------ 1st party whitelists ------------------
 #
