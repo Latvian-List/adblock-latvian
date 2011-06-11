@@ -307,6 +307,8 @@ sub createElemfilter
       if ($line =~ m/^##/)
       {
         $line =~ s/##//;
+        # Convert tags to lowercase
+        $line =~ s/(^.*[\[\.\#])/\L$1/ if ($line =~ m/^.*[\[\.\#]/);
         push @elemfilter, $line.",";
       }
     }
