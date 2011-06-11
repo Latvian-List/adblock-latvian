@@ -1,16 +1,20 @@
 msFilterList
+# Checksum: /NR305KYtN7YYs4xvG/edA
 : Expires=2
-# Checksum: WKCno8eoINhN6PnzTXDnJQ
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 08.06.2011. 12:07 UTC
+# Last modified: 11.06.2011. 16:23 UTC
 #-
 #
-# -------------------- Blocking filters --------------------
+# ---------------- Generic blocking filters ----------------
+#
 - /city24/
+#
+# --------------- 1st party blocking filters ---------------
+#
 -d 1188.lv /img/banners/
 -d 1188.lv /img/special/
 -d 1w.lv /banner_*
@@ -105,7 +109,9 @@ msFilterList
 -d xp.lv /res/banners/
 -d zip.lv /kasjauns.swf
 -d zl.lv /banners/
-# ---------- Blocking filters for 3rd party sites ----------
+#
+# --------------- 3rd party blocking filters ---------------
+#
 -d 1shop.lv /i/ban/
 -d 468x60.lv
 -d adclick.lv
@@ -140,14 +146,20 @@ msFilterList
 -d textads.lv
 -d videoavatars.com
 #
-# -------------------- Tracking filters --------------------
+# ---------------- Generic tracking filters ----------------
+#
 - /counter.php
 - /xgemius.php
 - /xgemius_lv.js
+#
+# --------------- 1st party tracking filters ---------------
+#
 -d e-spy.petit.lv
 -d ss.lv /counter/
 -d t.delfi.lv
-# ---------- Tracking filters for 3rd party sites ----------
+#
+# --------------- 3rd party tracking filters ---------------
+#
 -d clicktale.net
 -d counter.hackers.lv
 -d counter.yadro.ru
@@ -171,9 +183,17 @@ msFilterList
 -d webstatistika.lv
 -d wos.lv
 #
-# ----------------------- Whitelists -----------------------
+#
+# ------------------ 1st party whitelists ------------------
+#
 +d delfi.lv /wd/x/*/r/
-# ------------- Whitelists for 3rd party sites -------------
+#
+# ------------------ 3rd party whitelists ------------------
+#
 +d viastream.viasat.tv /*?affiliate=
 #
-# ----------------- Element hiding filters -----------------
+# ------------- Generic element hiding filters -------------
+#
+#
+# ---------- Site specific element hiding filters ----------
+#

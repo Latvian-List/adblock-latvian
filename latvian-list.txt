@@ -1,16 +1,20 @@
 [Adblock Plus 1.2]
-! Checksum: j/37n5owHkXvvVCDEo21NA
+! Checksum: yfDT1n6TktxNyEcuKv205g
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 09.06.2011. 13:14 UTC
+! Last modified: 11.06.2011. 16:23 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
-! -------------------- Blocking filters --------------------
+! ---------------- Generic blocking filters ----------------
+!
 /city24/*
+!
+! --------------- 1st party blocking filters ---------------
+!
 ||1188.lv/img/banners/*
 ||1188.lv/img/special/*
 ||1w.lv/banner_*
@@ -107,7 +111,9 @@
 ||xp.lv/res/banners/*
 ||zip.lv/kasjauns.swf
 ||zl.lv/banners/*
-! ---------- Blocking filters for 3rd party sites ----------
+!
+! --------------- 3rd party blocking filters ---------------
+!
 ||1shop.lv/i/ban/*
 ||468x60.lv^
 ||adclick.lv^
@@ -143,14 +149,20 @@
 ||textads.lv^
 ||videoavatars.com^
 !
-! -------------------- Tracking filters --------------------
+! ---------------- Generic tracking filters ----------------
+!
 /counter.php
 /xgemius.php
 /xgemius_lv.js
+!
+! --------------- 1st party tracking filters ---------------
+!
 ||e-spy.petit.lv^
 ||ss.lv/counter/*
 ||t.delfi.lv^
-! ---------- Tracking filters for 3rd party sites ----------
+!
+! --------------- 3rd party tracking filters ---------------
+!
 ||clicktale.net^
 ||counter.hackers.lv^
 ||counter.yadro.ru^
@@ -174,13 +186,21 @@
 ||webstatistika.lv^
 ||wos.lv^
 !
-! ----------------------- Whitelists -----------------------
+!
+! ------------------ 1st party whitelists ------------------
+!
 @@||delfi.lv/wd/x/*/r/*
-! ------------- Whitelists for 3rd party sites -------------
+!
+! ------------------ 3rd party whitelists ------------------
+!
 @@||viastream.viasat.tv^*?affiliate=
 !
-! ----------------- Element hiding filters -----------------
+! ------------- Generic element hiding filters -------------
+!
 ##a[href^="http://www.serveris.lv/?ref="]
+!
+! ---------- Site specific element hiding filters ----------
+!
 1188.lv##.LabsservissAdd
 apollo.lv###RentInRiga
 apollo.lv###rs_topshops
