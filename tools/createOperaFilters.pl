@@ -262,7 +262,7 @@ sub createElemfilter
     if ($line =~m/\[.*?\]/i)
     {
     }
-    elsif ($line =~ m/!/)
+    elsif ($line =~ m/^!/)
     {
       # Remove redirect
       if ($line !~ m/.Redirect:/)
@@ -301,7 +301,7 @@ sub createElemfilter
   # Create element filter rules
   foreach my $line (split(/\n/, $list))
   {
-    if ($line !~ m/\!/)
+    if ($line !~ m/^\!/)
     {
       # Add generic element filters
       if ($line =~ m/^##/)
