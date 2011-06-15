@@ -1,16 +1,18 @@
 msFilterList
-# Checksum: qRN41eqASu+3NmqCnHBtgw
+# Checksum: iGJcvB94xGEix1ayeL6czw
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 14.06.2011. 15:58 UTC
+# Last modified: 15.06.2011. 10:34 UTC
 #-
 #
 # ---------------- Generic blocking filters ----------------
 #
+
+- /assets/swf/tvnet_pasts_997x250.swf
 - /city24/
 #
 # --------------- 1st party blocking filters ---------------
@@ -105,7 +107,6 @@ msFilterList
 -d torrenti.lv /themes/TBDev/images/ftlv.swf
 -d tours.lv /images/misc/
 -d travelnews.lv /banners/
--d tvnet.lv /assets/swf/tvnet_pasts_997x250.swf
 -d uzkartes.lv /images/banners/
 -d x-power.lv /images/banners/
 -d xp.lv /res/banners/
