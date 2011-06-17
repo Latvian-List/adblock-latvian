@@ -81,27 +81,13 @@ sub createTPL
         # Insert old checksumm
         elsif ($line =~ m/.Checksum:/)
         {
-          if (defined ($oldchecksum))
-          {
-            ($line) = $oldchecksum;
-          }
-          else
-          {
-            $line =~ s/^\!/#/;
-          }
+          (defined ($oldchecksum)) ? ($line) = $oldchecksum : $line =~ s/^\!/#/;
           push @tpl, $line;
         }
         # Insert old last modified
         elsif ($line =~ m/.Last modified:/)
         {
-          if (defined ($oldmodified))
-          {
-            ($line) = $oldmodified;
-          }
-          else
-          {
-            $line =~ s/^\!/#/;
-          }
+          (defined ($oldmodified)) ? ($line) = $oldmodified : $line =~ s/^\!/#/;
           push @tpl, $line;
         }
         # Remove redirect
@@ -134,16 +120,7 @@ sub createTPL
           elsif ($line =~ m/^\|/)
           {
             # Detect if filter already has "http" in it
-            if ($line =~ m/^\|http/)
-            {
-              # If filter has "http" keep it
-              $line =~ s/^\|/- /;
-            }
-            else
-            {
-              # If filter doesn't have "http" add it
-              $line =~ s/^\|/- http:\/\//;
-            }
+            ($line =~ m/^\|http/) ? $line =~ s/^\|/- / : $line =~ s/^\|/- http:\/\//;
           }
           # Convert whitelists
           elsif ($line =~ m/^@@/)

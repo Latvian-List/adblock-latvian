@@ -95,26 +95,12 @@ sub createUrlfilter
         # Insert old checksumm
         if ($line =~ m/.Checksum:/)
         {
-          if (defined ($oldchecksum[0]))
-          {
-            ($line) = $oldchecksum[0];
-          }
-          else
-          {
-            $line =~ s/^\!/#/;
-          }
+          ((defined ($oldchecksum[0])) ? ($line) = $oldchecksum[0] : $line =~ s/^\!/#/);
         }
         # Insert old last modified
         elsif ($line =~ m/.Last modified:/)
         {
-          if (defined ($oldmodified[0]))
-          {
-            ($line) = $oldmodified[0];
-          }
-          else
-          {
-            $line =~ s/^\!/#/;
-          }
+          (defined ($oldmodified[0])) ? ($line) = $oldmodified[0] : $line =~ s/^\!/#/;
         }
         # Add the rest of comments
         if ($line !~ m/.Redirect:/)
