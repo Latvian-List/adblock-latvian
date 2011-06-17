@@ -26,6 +26,9 @@ my $file = $ARGV[0];
 my $path = dirname($file);
 my $list = readFile($file);
 
+my $nocss = 1 if (defined($ARGV[1]) and ($ARGV[1] eq "-nocss"));
+
+
 # Get old checksum and modification time
 my @oldchecksum;
 my @oldmodified;
@@ -47,29 +50,31 @@ if (-e "$path/urlfilter.ini")
   $oldlist = undef;
 }
 
-if (-e "$path/element-filter.css")
+if (!defined($nocss))
 {
-  my $oldlist = readFile("$path/element-filter.css");
-  foreach my $line (split(/\n/, $oldlist))
+  if (-e "$path/element-filter.css")
   {
-    if ($line =~ m/.Checksum:/)
+    my $oldlist = readFile("$path/element-filter.css");
+    foreach my $line (split(/\n/, $oldlist))
     {
-      ($oldchecksum[1])  = $line;
+      if ($line =~ m/.Checksum:/)
+      {
+        ($oldchecksum[1])  = $line;
+      }
+      elsif ($line =~ m/.Last modified:/)
+      {
+        ($oldmodified[1]) = $line;
+      }
     }
-    elsif ($line =~ m/.Last modified:/)
-    {
-      ($oldmodified[1]) = $line;
-    }
+    $oldlist = undef;
   }
-  $oldlist = undef;
 }
 
-
 my $urlfilter = createUrlfilter($list);
-my $elemfilter = createElemfilter($list);
+my $elemfilter = createElemfilter($list) if (!defined($nocss));
 
 writeFile("$path/urlfilter.ini",$urlfilter);
-writeFile("$path/element-filter.css",$elemfilter);
+writeFile("$path/element-filter.css",$elemfilter) if (!defined($nocss));
 
 
 
