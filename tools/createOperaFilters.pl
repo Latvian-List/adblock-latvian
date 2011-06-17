@@ -126,18 +126,22 @@ sub createUrlfilter
       # Collect whitelists
       elsif ($line =~ m/^@@/)
       {
-        # Remove whitelist symbols
-        $line =~ s/^@@//;
-        # Remove vertical bars
-        $line =~ s/\|\|//;
-        $line =~ s/\|//;
-        $line =~ s/\|$//;
-        # Remove everything after an caret
-        $line =~ s/\^.*//;
-        # Remove everything after an asterisk
-        $line =~ s/\/\*.*//;
+        # Ignore elemhide whitelists
+        if ($line !~ m/\^\$elemhide$/)
+        {
+          # Remove whitelist symbols
+          $line =~ s/^@@//;
+          # Remove vertical bars
+          $line =~ s/\|\|//;
+          $line =~ s/\|//;
+          $line =~ s/\|$//;
+          # Remove everything after an caret
+          $line =~ s/\^.*//;
+          # Remove everything after an asterisk
+          $line =~ s/\/\*.*//;
 
-        push @whitelists, $line;
+          push @whitelists, $line;
+        }
       }
       # Remove lines with types
       elsif ($line =~ m/.\$/)
