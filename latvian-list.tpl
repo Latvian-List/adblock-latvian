@@ -1,12 +1,12 @@
 msFilterList
+# Checksum: wYDroNRttGxURIja54ZVow
 : Expires=2
-# Checksum: 0e4yQUIAsNYNnDfB5XFL+g
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 15.06.2011. 11:07 UTC
+# Last modified: 17.06.2011. 10:30 UTC
 #-
 #
 # ---------------- Generic blocking filters ----------------
@@ -146,7 +146,6 @@ msFilterList
 #
 # ---------------- Generic tracking filters ----------------
 #
-- /counter.php
 - /xgemius.php
 - /xgemius_lv.js
 #
