@@ -1,17 +1,16 @@
 msFilterList
-# Checksum: wYDroNRttGxURIja54ZVow
+# Checksum: S7y6tHHEYBTReASqMDs6Eg
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 17.06.2011. 10:30 UTC
+# Last modified: 17.06.2011. 13:21 UTC
 #-
 #
 # ---------------- Generic blocking filters ----------------
 #
-
 - /assets/swf/tvnet_pasts_997x250.swf
 - /city24/
 #
@@ -31,6 +30,7 @@ msFilterList
 -d apollo.lv /rentinriga_content/
 -d apollo.lv /upload/rentinriga/
 -d apollo.lv /*infobox*
+-d atlaides.delfi.lv
 -d b.inbox.lv
 -d b.itvnet.lv
 -d b.tvnet.lv
