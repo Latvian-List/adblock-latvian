@@ -43,10 +43,7 @@ $checksumData =~ s/\n+/\n/g;
 my $checksum = md5_base64($checksumData);
 
 # If the old checksum matches the new one die
-if ($checksum eq $oldchecksum)
-{
-  die "List has not changed.\n";
-}
+die "List has not changed.\n" if ($checksum eq $oldchecksum);
 
 # Update the date and time.
 my $updated = strftime("%d.%m.%Y. %H:%M UTC", gmtime);

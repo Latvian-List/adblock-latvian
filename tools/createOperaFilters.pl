@@ -164,29 +164,20 @@ sub createUrlfilter
           $line =~ s/^\|/http:\/\//;
         }
         # Convert domain endings
-        if ($line =~ m/\|$/)
-        {
-          $line =~ s/\|$//;
-        }
+        $line =~ s/\|$// if ($line =~ m/\|$/);
         # Remove caret
         if ($line =~ m/\^\*/)
         {
-          $line =~ s/\^/\//;;
+          $line =~ s/\^/\//;
         }
         elsif ($line =~ m/\^/)
         {
           $line =~ s/\^/\/\*/;
         }
         # Add beginning asterisk
-        if ($line !~ m/^[A-Za-z0-9*]/)
-        {
-          $line = "*".$line;
-        }
+        $line = "*".$line if ($line !~ m/^[A-Za-z0-9*]/);
         # Add ending asterisk
-        if ($line !~ m/[A-Za-z0-9* ]$/)
-        {
-          $line = $line."*";
-        }
+        $line = $line."*" if ($line !~ m/[A-Za-z0-9* ]$/);
 
         push @urlfilter, $line;
       }
@@ -219,10 +210,7 @@ sub createUrlfilter
       $matcheswhitelist = 1 if (($tmpline =~ m/\Q$inline\E/i) or ($inline =~ m/\Q$tmpline\E/i));
     }
 
-    if (!defined($matcheswhitelist))
-    {
-      push @urlfilter, $line;
-    }
+    push @urlfilter, $line if (!defined($matcheswhitelist));
     $matcheswhitelist = undef;
 
   }
@@ -247,10 +235,7 @@ sub createUrlfilter
   foreach my $line (split(/\n/, $list))
   {
     $linenr++;
-    if ($line =~ m/^\#\-/)
-    {
-      last;
-    }
+    last if ($line =~ m/^\#\-/);
   }
   splice (@urlfilter, $linenr, 0, "[prefs]\nprioritize excludelist=1\n[include]\n*\n[exclude]");
 
@@ -282,27 +267,18 @@ sub createElemfilter
       # Insert old checksumm
       elsif ($line =~ m/.Checksum:/)
       {
-        if (defined ($oldchecksum[1]))
-        {
-          ($line) = $oldchecksum[1];
-        }
+        ($line) = $oldchecksum[1] if (defined ($oldchecksum[1]));
         push @elemfilter, $line;
       }
       # Insert old last modified
       elsif ($line =~ m/.Last modified:/)
       {
-        if (defined ($oldmodified[1]))
-        {
-          ($line) = $oldmodified[1];
-        }
+        ($line) = $oldmodified[1] if (defined ($oldmodified[1]));
         push @elemfilter, $line;
       }
     }
-    if ($line =~ m/^\!\-/)
-    {
-      # Stop at header comment end
-      last;
-    }
+    # Stop at header comment end
+    last if ($line =~ m/^\!\-/);
   }
   push @elemfilter, "*/";
   push @elemfilter, "\@namespace \"http://www.w3.org/1999/xhtml\";\n";

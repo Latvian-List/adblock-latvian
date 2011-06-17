@@ -166,10 +166,7 @@ sub createTPL
           $line = "- ".$line;
         }
         # Convert third party rules to first party rules
-        if ($line =~ m/.\$third-party/)
-        {
-          $line =~ s/\$third-party//;
-        }
+        $line =~ s/\$third-party// if ($line =~ m/.\$third-party/);
         # Remove ending caret
         if ($line =~ m/\^$/)
         {
@@ -181,10 +178,7 @@ sub createTPL
           $line =~ s/\/\*$/\//;
         }
         # Remove ending caret in middle of rule
-        if ($line =~ m/.\^\*/)
-        {
-          $line =~ s/\^\*/ \/*/;
-        }
+        $line =~ s/\^\*/ \/*/ if ($line =~ m/.\^\*/);
         # Remove ending vertical bars
         $line =~ s/\|$//;
         push @tpl, $line;
