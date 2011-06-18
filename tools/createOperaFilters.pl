@@ -50,7 +50,7 @@ if (-e "$path/urlfilter.ini")
   $oldlist = undef;
 }
 
-if (!defined($nocss))
+unless (defined($nocss))
 {
   if (-e "$path/element-filter.css")
   {
@@ -71,10 +71,10 @@ if (!defined($nocss))
 }
 
 my $urlfilter = createUrlfilter($list);
-my $elemfilter = createElemfilter($list) if (!defined($nocss));
+my $elemfilter = createElemfilter($list) unless (defined($nocss));
 
 writeFile("$path/urlfilter.ini",$urlfilter);
-writeFile("$path/element-filter.css",$elemfilter) if (!defined($nocss));
+writeFile("$path/element-filter.css",$elemfilter) unless (defined($nocss));
 
 
 
@@ -87,7 +87,7 @@ sub createUrlfilter
 
   foreach my $line (split(/\n/, $list))
   {
-    if ($line !~m/\[.*?\]/i)
+    unless ($line =~m/\[.*?\]/i)
     {
       # Convert comments
       if ($line =~ m/^!/)
@@ -103,7 +103,7 @@ sub createUrlfilter
           (defined ($oldmodified[0])) ? ($line) = $oldmodified[0] : $line =~ s/^\!/#/;
         }
         # Add the rest of comments
-        if ($line !~ m/.Redirect:/)
+        unless ($line =~ m/.Redirect:/)
         {
           $line =~ s/^\!/#/;
           push @urlfilter, $line;
@@ -113,7 +113,7 @@ sub createUrlfilter
       elsif ($line =~ m/^@@/)
       {
         # Ignore elemhide whitelists
-        if ($line !~ m/\^\$elemhide$/)
+        unless ($line =~ m/\^\$elemhide$/)
         {
           # Remove whitelist symbols
           $line =~ s/^@@//;
@@ -161,9 +161,9 @@ sub createUrlfilter
           $line =~ s/\^/\/\*/;
         }
         # Add beginning asterisk
-        $line = "*".$line if ($line !~ m/^[A-Za-z0-9*]/);
+        $line = "*".$line unless ($line =~ m/^[A-Za-z0-9*]/);
         # Add ending asterisk
-        $line = $line."*" if ($line !~ m/[A-Za-z0-9* ]$/);
+        $line = $line."*" unless ($line =~ m/[A-Za-z0-9* ]$/);
 
         push @urlfilter, $line;
       }
@@ -196,7 +196,7 @@ sub createUrlfilter
       $matcheswhitelist = 1 if (($tmpline =~ m/\Q$inline\E/i) or ($inline =~ m/\Q$tmpline\E/i));
     }
 
-    push @urlfilter, $line if (!defined($matcheswhitelist));
+    push @urlfilter, $line unless (defined($matcheswhitelist));
     $matcheswhitelist = undef;
 
   }
@@ -245,7 +245,7 @@ sub createElemfilter
     elsif ($line =~ m/^!/)
     {
       # Remove redirect
-      if ($line !~ m/.Redirect:/)
+      unless ($line =~ m/.Redirect:/)
       {
         # Add all header comment lines
         push @elemfilter, $line;
@@ -272,7 +272,7 @@ sub createElemfilter
   # Create element filter rules
   foreach my $line (split(/\n/, $list))
   {
-    if ($line !~ m/^\!/)
+    unless ($line =~ m/^\!/)
     {
       # Add generic element filters
       if ($line =~ m/^##/)

@@ -68,7 +68,7 @@ sub createTPL
 
   foreach my $line (split(/\n/, $list))
   {
-    if ($line !~m/\[.*?\]/i)
+    unless ($line =~m/\[.*?\]/i)
     {
       # Convert comments
       if ($line =~ m/^!/)
