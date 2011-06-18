@@ -1,11 +1,11 @@
 /*
-! Checksum: bbudbSQ6zxCLYjwPosW9CA
+! Checksum: EitmBWJeAP9Lcuiyv2AsfA
 ! Latvian adblock element filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 09.06.2011. 13:14 UTC
+! Last modified: 18.06.2011. 15:34 UTC
 ! Expires: 2 days (update frequency)
 */
 @namespace "http://www.w3.org/1999/xhtml";
@@ -37,6 +37,8 @@ a[href^="http://www.serveris.lv/?ref="],
 #inxHeadAdsPlace,
 /* ir.lv */
 #abonbanner,
+/* notepad.lv */
+#ad_big,
 /* tvnet.lv financenet.lv*/
 #ad_175x300,
 #pop_keyword_everest_ad,
