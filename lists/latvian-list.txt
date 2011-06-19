@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: duwsGs+/s2mmWrVqkM0bbg
+! Checksum: WZxjl6DLhq4zSD6UZ3vvIg
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 19.06.2011. 06:26 UTC
+! Last modified: 19.06.2011. 09:24 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/lists/latvian-list.txt
 !-
@@ -276,6 +276,7 @@ spoki.lv###mod_eshops_b
 spoki.lv###okarte-banner
 spoki.lv##.garnier-banner
 sportacentrs.com##.banner
+sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
 travelnews.lv##table + #div_main_right_block
 tv.delfi.lv##.toolblock
