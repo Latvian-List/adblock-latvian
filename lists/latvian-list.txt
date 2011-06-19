@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: bA00BQRTOFZndUetFQjo7A
+! Checksum: pZ74NouYxmZ63JM3gRivmw
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 19.06.2011. 15:30 UTC
+! Last modified: 19.06.2011. 15:34 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/lists/latvian-list.txt
 !-
@@ -238,6 +238,7 @@ delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
 easyget.lv##[class^="adholder"]
 easyget.lv##div[style="padding-top:5px;text-align:center;margin-bottom:10px;line-height:1;"]
 forums.delfi.lv##div[style="width:150px;margin-bottom:5px;"]
+forums.delfi.lv##div[style="width:250px;"]:last-child
 gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
 inbox.lv###firstRow + div + table[align="center"]
 inbox.lv###inboxshops_div
