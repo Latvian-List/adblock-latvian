@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: 6t6GAYkZO1b9aMFbMeCq1Q
+# Checksum: Ta+YHqrF4tVU2J1qKNZYBg
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 20.06.2011. 14:28 UTC
+# Last modified: 20.06.2011. 14:47 UTC
 #-
 #
 # ---------------- Generic blocking filters ----------------
@@ -132,6 +132,7 @@ msFilterList
 -d irreklama.lv
 -d knc.lv
 -d leta.lv /bm/www/images/
+-d nagi.ee
 -d nerealitate.lv
 -d novonews.lv /ticker/flash/
 -d otrapuse.lv
@@ -163,6 +164,7 @@ msFilterList
 -d clicktale.net
 -d counter.hackers.lv
 -d counter.yadro.ru
+-d cv.ee /static/stat.php
 -d erotop.lv
 -d europuls.eu
 -d europuls.net
