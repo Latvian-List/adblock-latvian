@@ -19,6 +19,7 @@
 use strict;
 use warnings;
 use File::Basename;
+use List::MoreUtils qw{lastidx};
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
@@ -293,7 +294,7 @@ sub createElemfilter
   #push @elemfilter, "\@namespace \"http://www.w3.org/1999/xhtml\";\n";
 
   # Remove last comma
-  $elemfilter[-1] =~ s/,$//;
+  $elemfilter[lastidx{ ($_ =~ m/,$/) and ($_ !~ m/^!/) } @elemfilter] =~ s/,$//;
   # Add CSS rule
   push @elemfilter,"{ display: none !important; }";
 
