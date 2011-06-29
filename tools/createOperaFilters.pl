@@ -26,28 +26,33 @@ my $file = $ARGV[0];
 my $path = dirname($file);
 my $list = readFile($file);
 
-my $nocss = 1 if (defined($ARGV[1]) and ($ARGV[1] eq "-nocss"));
+my $nocss = 1 if ( grep { $_ eq "--nocss"} @ARGV );
+my $nourlfilter = 1 if ( grep { $_ eq "--nourlfilter"} @ARGV );
+die "No lists generated!\n" if ((defined($nourlfilter)) and (defined($nocss)));
 
 
 # Get old checksum and modification time
 my @oldchecksum;
 my @oldmodified;
 
-if (-e "$path/urlfilter.ini")
+unless (defined($nourlfilter))
 {
-  my $oldlist = readFile("$path/urlfilter.ini");
-  foreach my $line (split(/\n/, $oldlist))
+  if (-e "$path/urlfilter.ini")
   {
-    if ($line =~ m/.Checksum:/)
+    my $oldlist = readFile("$path/urlfilter.ini");
+    foreach my $line (split(/\n/, $oldlist))
     {
-      ($oldchecksum[0])  = $line;
+      if ($line =~ m/.Checksum:/)
+      {
+        ($oldchecksum[0])  = $line;
+      }
+      elsif ($line =~ m/.Last modified:/)
+      {
+        ($oldmodified[0]) = $line;
+      }
     }
-    elsif ($line =~ m/.Last modified:/)
-    {
-      ($oldmodified[0]) = $line;
-    }
+    $oldlist = undef;
   }
-  $oldlist = undef;
 }
 
 unless (defined($nocss))
@@ -70,10 +75,10 @@ unless (defined($nocss))
   }
 }
 
-my $urlfilter = createUrlfilter($list);
+my $urlfilter = createUrlfilter($list) unless (defined($nourlfilter));
 my $elemfilter = createElemfilter($list) unless (defined($nocss));
 
-writeFile("$path/urlfilter.ini",$urlfilter);
+writeFile("$path/urlfilter.ini",$urlfilter) unless (defined($nourlfilter));
 writeFile("$path/element-filter.css",$elemfilter) unless (defined($nocss));
 
 
