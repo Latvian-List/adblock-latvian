@@ -237,58 +237,61 @@ sub createUrlfilter
 sub createElemfilter
 {
   my $list = shift;
+  my $previousline = "";
   my @elemfilter;
 
-  # Add comment section
-  push @elemfilter, "/*";
   foreach my $line (split(/\n/, $list))
   {
     # Remove ABP header
     if ($line =~m/\[.*?\]/i)
     {
     }
-    elsif ($line =~ m/^!/)
+    
+    unless ($line =~ m/.Redirect:/)
     {
-      # Remove redirect
-      unless ($line =~ m/.Redirect:/)
+      if ($line =~ m/^!/)
       {
-        # Add all header comment lines
+        # Insert old checksumm
+        if ($line =~ m/.Checksum:/)
+        {
+          ($line) = $oldchecksum[1] if (defined ($oldchecksum[1]));
+        }
+        # Insert old last modified
+        elsif ($line =~ m/.Last modified:/)
+        {
+          ($line) = $oldmodified[1] if (defined ($oldmodified[1]));
+        }
+      }
+      
+      # Convert comments
+      if (($previousline !~ m/^!/) and ($line =~ m/^!/))
+      {
+        push @elemfilter, "/*";
         push @elemfilter, $line;
       }
-      # Insert old checksumm
-      elsif ($line =~ m/.Checksum:/)
+      elsif (($previousline =~ m/^!/) and ($line =~ m/^!/))
       {
-        ($line) = $oldchecksum[1] if (defined ($oldchecksum[1]));
-        push @elemfilter, $line;
+        push @elemfilter, $line ;
       }
-      # Insert old last modified
-      elsif ($line =~ m/.Last modified:/)
+      elsif (($previousline =~ m/^!/) and ($line !~ m/^!/))
       {
-        ($line) = $oldmodified[1] if (defined ($oldmodified[1]));
-        push @elemfilter, $line;
+        push @elemfilter, "*/";
       }
     }
-    # Stop at header comment end
-    last if ($line =~ m/^\!\-/);
-  }
-  push @elemfilter, "*/";
-  push @elemfilter, "\@namespace \"http://www.w3.org/1999/xhtml\";\n";
+    # Add generic element filters
+    if ($line =~ m/^##/)
+    {
+      $line =~ s/##//;
+      # Convert tags to lowercase
+      $line =~ s/(^.*[\[\.\#])/\L$1/ if ($line =~ m/^.*[\[\.\#]/);
+      push @elemfilter, $line.",";
+    }
 
-  # Create element filter rules
-  foreach my $line (split(/\n/, $list))
-  {
-    unless ($line =~ m/^\!/)
-    {
-      # Add generic element filters
-      if ($line =~ m/^##/)
-      {
-        $line =~ s/##//;
-        # Convert tags to lowercase
-        $line =~ s/(^.*[\[\.\#])/\L$1/ if ($line =~ m/^.*[\[\.\#]/);
-        push @elemfilter, $line.",";
-      }
-    }
+
+    $previousline = $line;
   }
+  #push @elemfilter, "\@namespace \"http://www.w3.org/1999/xhtml\";\n";
+
   # Remove last comma
   $elemfilter[-1] =~ s/,$//;
   # Add CSS rule
