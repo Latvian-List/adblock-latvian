@@ -186,7 +186,6 @@ sub createUrlfilter
 
     push @urlfilter, $line unless (defined($matcheswhitelist));
     $matcheswhitelist = undef;
-
   }
 
   # Create rules for subdomains
@@ -201,15 +200,14 @@ sub createUrlfilter
       push @urlfilter, $line;
     }
   }
-
-
   $list = join("\n", @urlfilter);
+
   # Add urlfilter header
   my $linenr = 0;
   foreach my $line (split(/\n/, $list))
   {
     $linenr++;
-    last if ($line =~ m/^\#\-/);
+    last if ($line =~ m/^#-/);
   }
   splice (@urlfilter, $linenr, 0, "[prefs]\nprioritize excludelist=1\n[include]\n*\n[exclude]");
 
@@ -270,10 +268,17 @@ sub createElemfilter
       push @elemfilter, $line.",";
     }
 
-
     $previousline = $line;
   }
-  #push @elemfilter, "\@namespace \"http://www.w3.org/1999/xhtml\";\n";
+
+  # Add xml namespace declaration
+  my $linenr = 0;
+  foreach my $line (split(/\n/, $list))
+  {
+    $linenr++;
+    last if ($line =~ m/^!-/);
+  }
+  splice (@elemfilter, $linenr, 0, "*/\n\@namespace \"http://www.w3.org/1999/xhtml\";\n/*");
 
   # Remove last comma
   $elemfilter[lastidx{ ($_ =~ m/,$/) and ($_ !~ m/^!/) } @elemfilter] =~ s/,$//;
