@@ -6,7 +6,7 @@ perl tools\sorter.pl lists\latvian-list.txt
 perl tools\addChecksum.pl lists\latvian-list.txt
 ::
 :: Prepare Opera list
-perl tools\createOperaFilters.pl lists\latvian-list.txt -nocss
+perl tools\createOperaFilters.pl lists\latvian-list.txt --nocss
 perl tools\addChecksum_alt.pl lists\urlfilter.ini
 perl tools\addChecksum.pl lists\element-filter.css
 ::
