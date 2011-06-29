@@ -19,7 +19,7 @@
 use strict;
 use warnings;
 use File::Basename;
-use List::MoreUtils qw{lastidx};
+use List::MoreUtils qw{lastidx firstval};
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
@@ -40,19 +40,10 @@ unless (defined($nourlfilter))
 {
   if (-e "$path/urlfilter.ini")
   {
-    my $oldlist = readFile("$path/urlfilter.ini");
-    foreach my $line (split(/\n/, $oldlist))
-    {
-      if ($line =~ m/.Checksum:/)
-      {
-        ($oldchecksum[0])  = $line;
-      }
-      elsif ($line =~ m/.Last modified:/)
-      {
-        ($oldmodified[0]) = $line;
-      }
-    }
-    $oldlist = undef;
+    my @oldlist = (split(/\n/, (readFile("$path/urlfilter.ini"))));
+    ($oldchecksum[0]) = firstval { $_ =~ m/.Checksum:/ } @oldlist;
+    ($oldmodified[0]) = firstval { $_ =~ m/.Last modified:/ } @oldlist;
+    @oldlist = undef;
   }
 }
 
@@ -60,19 +51,10 @@ unless (defined($nocss))
 {
   if (-e "$path/element-filter.css")
   {
-    my $oldlist = readFile("$path/element-filter.css");
-    foreach my $line (split(/\n/, $oldlist))
-    {
-      if ($line =~ m/.Checksum:/)
-      {
-        ($oldchecksum[1])  = $line;
-      }
-      elsif ($line =~ m/.Last modified:/)
-      {
-        ($oldmodified[1]) = $line;
-      }
-    }
-    $oldlist = undef;
+    my @oldlist = (split(/\n/, (readFile("$path/element-filter.css"))));
+    ($oldchecksum[1]) = firstval { $_ =~ m/.Checksum:/ } @oldlist;
+    ($oldmodified[1]) = firstval { $_ =~ m/.Last modified:/ } @oldlist;
+    @oldlist = undef;
   }
 }
 
@@ -247,7 +229,7 @@ sub createElemfilter
     if ($line =~m/\[.*?\]/i)
     {
     }
-    
+
     unless ($line =~ m/.Redirect:/)
     {
       if ($line =~ m/^!/)
@@ -263,7 +245,7 @@ sub createElemfilter
           ($line) = $oldmodified[1] if (defined ($oldmodified[1]));
         }
       }
-      
+
       # Convert comments
       if (($previousline !~ m/^!/) and ($line =~ m/^!/))
       {
