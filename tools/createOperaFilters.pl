@@ -35,6 +35,11 @@ die "No lists generated!\n" if ((defined $nourlfilter) and (defined $nocss));
 my $urlfilter = createUrlfilter($list) unless (defined $nourlfilter);
 my $elemfilter = createElemfilter($list) unless (defined $nocss);
 
+# Warn if a file won't be generated
+print "Urlfilter won't be generated!\n" unless (defined $urlfilter);
+print "CSS won't be generated!\n" unless (defined $elemfilter);
+
+# Write generated files
 writeFile("$path/urlfilter.ini",$urlfilter) unless ((defined $nourlfilter) or (!defined $urlfilter));
 writeFile("$path/element-filter.css",$elemfilter) unless ((defined $nocss) or (!defined $elemfilter));
 
