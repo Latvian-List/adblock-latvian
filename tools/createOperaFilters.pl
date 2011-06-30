@@ -29,14 +29,14 @@ my $list = readFile($file);
 
 my $nocss = 1 if ( grep { $_ eq "--nocss"} @ARGV );
 my $nourlfilter = 1 if ( grep { $_ eq "--nourlfilter"} @ARGV );
-die "No lists generated!\n" if ((defined($nourlfilter)) and (defined($nocss)));
+die "No lists generated!\n" if ((defined $nourlfilter) and (defined $nocss));
 
 
-my $urlfilter = createUrlfilter($list) unless (defined($nourlfilter));
-my $elemfilter = createElemfilter($list) unless (defined($nocss));
+my $urlfilter = createUrlfilter($list) unless (defined $nourlfilter);
+my $elemfilter = createElemfilter($list) unless (defined $nocss);
 
-writeFile("$path/urlfilter.ini",$urlfilter) unless (defined($nourlfilter));
-writeFile("$path/element-filter.css",$elemfilter) unless (defined($nocss));
+writeFile("$path/urlfilter.ini",$urlfilter) unless ((defined $nourlfilter) or (!defined $urlfilter));
+writeFile("$path/element-filter.css",$elemfilter) unless ((defined $nocss) or (!defined $elemfilter));
 
 
 
@@ -168,7 +168,7 @@ sub createUrlfilter
       $matcheswhitelist = 1 if (($tmpline =~ m/\Q$inline\E/i) or ($inline =~ m/\Q$tmpline\E/i));
     }
 
-    push @urlfilter, $line unless (defined($matcheswhitelist));
+    push @urlfilter, $line unless (defined $matcheswhitelist);
     undef $matcheswhitelist;
   }
 
