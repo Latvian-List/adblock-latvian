@@ -145,6 +145,10 @@ sub createUrlfilter
   }
 
 
+  # Return undef if list is empty
+  return undef if (scalar(grep {$_ !~ m/^#/} @urlfilter) <= 0);
+
+
   $list = join("\n", @urlfilter);
   undef @urlfilter;
   my $whitelists = join("\n", @whitelists);
@@ -171,6 +175,11 @@ sub createUrlfilter
     push @urlfilter, $line unless (defined $matcheswhitelist);
     undef $matcheswhitelist;
   }
+
+
+  # Return undef if list is empty
+  return undef if (scalar(grep {$_ !~ m/^#/} @urlfilter) <= 0);
+
 
   # Create rules for subdomains
   $list = join("\n", @urlfilter);
@@ -202,7 +211,6 @@ sub createUrlfilter
 sub createElemfilter
 {
   my $list = shift;
-  my $previousline = "";
   my @elemfilter;
   
   my $oldchecksum;
@@ -224,7 +232,6 @@ sub createElemfilter
     if ($line =~m/\[.*?\]/i)
     {
     }
-
     unless ($line =~ m/.Redirect:/)
     {
       if ($line =~ m/^!/)
@@ -239,23 +246,10 @@ sub createElemfilter
         {
           ($line) = $oldmodified if defined $oldmodified;
         }
-      }
-
-      # Convert comments
-      if (($previousline !~ m/^!/) and ($line =~ m/^!/))
-      {
-        push @elemfilter, "/*";
         push @elemfilter, $line;
       }
-      elsif (($previousline =~ m/^!/) and ($line =~ m/^!/))
-      {
-        push @elemfilter, $line ;
-      }
-      elsif (($previousline =~ m/^!/) and ($line !~ m/^!/))
-      {
-        push @elemfilter, "*/";
-      }
     }
+
     # Add generic element filters
     if ($line =~ m/^##/)
     {
@@ -265,22 +259,45 @@ sub createElemfilter
       push @elemfilter, $line.",";
     }
 
-    $previousline = $line;
   }
+
+
+  # Return undef if list is empty
+  return undef if (scalar(grep {$_ !~ m/^!/} @elemfilter) <= 0);
+
 
   # Add xml namespace declaration
   my $linenr = 0;
+  $list = join("\n", @elemfilter);
   foreach my $line (split(/\n/, $list))
   {
     $linenr++;
     last if ($line =~ m/^!-/);
   }
-  splice (@elemfilter, $linenr, 0, "*/\n\@namespace \"http://www.w3.org/1999/xhtml\";\n/*");
+  splice (@elemfilter, $linenr, 0, "\@namespace \"http://www.w3.org/1999/xhtml\";");
 
   # Remove last comma
   $elemfilter[lastidx{ ($_ =~ m/,$/) and ($_ !~ m/^!/) } @elemfilter] =~ s/,$//;
+
   # Add CSS rule
   push @elemfilter,"{ display: none !important; }";
+
+
+  # Convert comments
+  my $previousline = "";
+
+  $list = join("\n", @elemfilter);
+  undef @elemfilter;
+
+  foreach my $line (split(/\n/, $list))
+  {
+    push @elemfilter, "/*" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
+    push @elemfilter, "*/" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
+    push @elemfilter, $line;
+    $previousline = $line;
+  }
+  undef $previousline;
+
 
   return join("\n", @elemfilter);
 }
