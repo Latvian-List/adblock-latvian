@@ -32,32 +32,6 @@ my $nourlfilter = 1 if ( grep { $_ eq "--nourlfilter"} @ARGV );
 die "No lists generated!\n" if ((defined($nourlfilter)) and (defined($nocss)));
 
 
-# Get old checksum and modification time
-my @oldchecksum;
-my @oldmodified;
-
-unless (defined($nourlfilter))
-{
-  if (-e "$path/urlfilter.ini")
-  {
-    my @oldlist = (split(/\n/, (readFile("$path/urlfilter.ini"))));
-    ($oldchecksum[0]) = firstval { $_ =~ m/.Checksum:/ } @oldlist;
-    ($oldmodified[0]) = firstval { $_ =~ m/.Last modified:/ } @oldlist;
-    @oldlist = undef;
-  }
-}
-
-unless (defined($nocss))
-{
-  if (-e "$path/element-filter.css")
-  {
-    my @oldlist = (split(/\n/, (readFile("$path/element-filter.css"))));
-    ($oldchecksum[1]) = firstval { $_ =~ m/.Checksum:/ } @oldlist;
-    ($oldmodified[1]) = firstval { $_ =~ m/.Last modified:/ } @oldlist;
-    @oldlist = undef;
-  }
-}
-
 my $urlfilter = createUrlfilter($list) unless (defined($nourlfilter));
 my $elemfilter = createElemfilter($list) unless (defined($nocss));
 
@@ -71,6 +45,18 @@ sub createUrlfilter
   my $list = shift;
   my @urlfilter;
   my @whitelists;
+  
+  my $oldchecksum;
+  my $oldmodified;
+  
+  # Get old checksum and modification time
+  if (-e "$path/urlfilter.ini")
+  {
+    my @oldlist = (split(/\n/, (readFile("$path/urlfilter.ini"))));
+    $oldchecksum = firstval { $_ =~ m/.Checksum:/ } @oldlist;
+    $oldmodified = firstval { $_ =~ m/.Last modified:/ } @oldlist;
+    undef @oldlist;
+  }
 
 
   foreach my $line (split(/\n/, $list))
@@ -83,12 +69,12 @@ sub createUrlfilter
         # Insert old checksumm
         if ($line =~ m/.Checksum:/)
         {
-          ((defined ($oldchecksum[0])) ? ($line) = $oldchecksum[0] : $line =~ s/^\!/#/);
+          (defined $oldchecksum) ? ($line) = $oldchecksum : $line =~ s/^!/#/;
         }
         # Insert old last modified
         elsif ($line =~ m/.Last modified:/)
         {
-          (defined ($oldmodified[0])) ? ($line) = $oldmodified[0] : $line =~ s/^\!/#/;
+          (defined $oldmodified) ? ($line) = $oldmodified : $line =~ s/^!/#/;
         }
         # Add the rest of comments
         unless ($line =~ m/.Redirect:/)
@@ -159,10 +145,8 @@ sub createUrlfilter
   }
 
 
-
-
   $list = join("\n", @urlfilter);
-  undef(@urlfilter);
+  undef @urlfilter;
   my $whitelists = join("\n", @whitelists);
   my $tmpline = "";
   my $matcheswhitelist;
@@ -185,12 +169,12 @@ sub createUrlfilter
     }
 
     push @urlfilter, $line unless (defined($matcheswhitelist));
-    $matcheswhitelist = undef;
+    undef $matcheswhitelist;
   }
 
   # Create rules for subdomains
   $list = join("\n", @urlfilter);
-  undef(@urlfilter);
+  undef @urlfilter;
   foreach my $line (split(/\n/, $list))
   {
     push @urlfilter, $line;
@@ -220,6 +204,19 @@ sub createElemfilter
   my $list = shift;
   my $previousline = "";
   my @elemfilter;
+  
+  my $oldchecksum;
+  my $oldmodified;
+
+  # Get old checksum and modification time
+  if (-e "$path/element-filter.css")
+  {
+    my @oldlist = (split(/\n/, (readFile("$path/element-filter.css"))));
+    $oldchecksum = firstval { $_ =~ m/.Checksum:/ } @oldlist;
+    $oldmodified = firstval { $_ =~ m/.Last modified:/ } @oldlist;
+    undef @oldlist;
+  }
+
 
   foreach my $line (split(/\n/, $list))
   {
@@ -235,12 +232,12 @@ sub createElemfilter
         # Insert old checksumm
         if ($line =~ m/.Checksum:/)
         {
-          ($line) = $oldchecksum[1] if (defined ($oldchecksum[1]));
+          ($line) = $oldchecksum if defined $oldchecksum;
         }
         # Insert old last modified
         elsif ($line =~ m/.Last modified:/)
         {
-          ($line) = $oldmodified[1] if (defined ($oldmodified[1]));
+          ($line) = $oldmodified if defined $oldmodified;
         }
       }
 
