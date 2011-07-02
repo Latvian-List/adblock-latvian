@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: VikWHpatn6PIkCdAX3wKCw
+! Checksum: ZWsFr45t7VKhErDDD7xADQ
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 30.06.2011. 13:22 UTC
+! Last modified: 02.07.2011. 18:18 UTC
 ! Expires: 2 days (update frequency)
 ! Redirect: https://gitorious.org/adblock-latvian/adblock-latvian/blobs/raw/master/lists/latvian-list.txt
 !-
@@ -206,6 +206,7 @@
 ! ---------- Site specific element hiding filters ----------
 !
 1188.lv##.LabsservissAdd
+apollo.lv###lvc_infobox
 apollo.lv###RentInRiga
 apollo.lv###rs_topshops
 apollo.lv##.admiral_box
@@ -223,7 +224,6 @@ apollo.lv##.life_left
 apollo.lv##.middle_banner
 apollo.lv##.news_blue_left
 apollo.lv##.right_banner
-apollo.lv##[id$="_infobox"]
 apollo.lv##div[style="width:259px; border:1px solid #DBDBDB; border-left:none; margin-bottom:15px"]
 apollo.lv##div[style="width:261px; height:45px; background-image:url('http://static.apollo.lv/images/_infobox/2011.05.30_ventspils/back.jpg');"]
 bilesuserviss.lv##.banner_clicker
