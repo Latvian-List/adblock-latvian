@@ -1,12 +1,12 @@
 msFilterList
-# Checksum: QdksmQxlS1ZC6BX1Su6NsQ
+# Checksum: eL1aeEBaci6uLQH0Xfx/BA
 : Expires=2
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 16.07.2011. 11:15 UTC
+# Last modified: 16.07.2011. 12:15 UTC
 #-
 #
 # ---------------- Generic blocking filters ----------------
@@ -144,6 +144,8 @@ msFilterList
 -d perkamkopa.lv
 -d promo.boomtime.lv
 -d saites.eon.lv
+-d salidzini.lv /images/120x40.php
+-d salidzini.lv /images/88x31.php
 -d serveris.lv /images/affiliate/
 -d sludini.lv
 -d smartad.ee
