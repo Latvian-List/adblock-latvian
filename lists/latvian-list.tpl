@@ -1,12 +1,12 @@
 msFilterList
+# Checksum: wsHEZ53T9hqvBX+nXktDYQ
 : Expires=2
-# Checksum: iMKAQt1DhdeQi1BKyc42sQ
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 17.07.2011. 08:42 UTC
+# Last modified: 17.07.2011. 09:36 UTC
 #-
 #
 # ---------------- Generic blocking filters ----------------
@@ -46,6 +46,7 @@ msFilterList
 -d delfi.lv /jo/g/
 -d delfi.lv /mango/b/
 -d delfi.lv /misc/
+-d delfi.lv /teh/next_150_wtext.jpg
 -d delfi.lv /tr/g/
 -d delfi.lv /ve/g/
 -d delfi.lv /wd/x/*/
@@ -137,6 +138,7 @@ msFilterList
 -d leta.lv /bm/www/images/
 -d nagi.ee
 -d nerealitate.lv
+-d next.lv
 -d novonews.lv /ticker/flash/
 -d otrapuse.lv
 -d otrapuse.mango.lv
