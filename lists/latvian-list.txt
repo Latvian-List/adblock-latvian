@@ -1,17 +1,18 @@
 [Adblock Plus 1.2]
-! Checksum: 3RCmZaBh8+nMa8LfZe4cRw
+! Checksum: W1ASMMFSjNUSa+SRXH5pTA
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 18.07.2011. 13:51 UTC
+! Last modified: 18.07.2011. 13:54 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
 ! ---------------- Generic blocking filters ----------------
 !
 /city24/*
+/keyword_ad.js
 !
 ! --------------- 1st party blocking filters ---------------
 !
