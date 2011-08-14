@@ -74,17 +74,17 @@ sub createUrlfilter
         # Insert old checksumm
         if ($line =~ m/.Checksum:/)
         {
-          (defined $oldchecksum) ? ($line) = $oldchecksum : $line =~ s/^!/#/;
+          (defined $oldchecksum) ? ($line) = $oldchecksum : $line =~ s/^!/;/;
         }
         # Insert old last modified
         elsif ($line =~ m/.Last modified:/)
         {
-          (defined $oldmodified) ? ($line) = $oldmodified : $line =~ s/^!/#/;
+          (defined $oldmodified) ? ($line) = $oldmodified : $line =~ s/^!/;/;
         }
         # Add the rest of comments
         unless ($line =~ m/.Redirect:/)
         {
-          $line =~ s/^\!/#/;
+          $line =~ s/^\!/;/;
           push @urlfilter, $line;
         }
       }
@@ -151,7 +151,7 @@ sub createUrlfilter
 
 
   # Return undef if list is empty
-  return undef if (scalar(grep {$_ !~ m/^#/} @urlfilter) <= 0);
+  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);
 
 
   $list = join("\n", @urlfilter);
@@ -183,7 +183,7 @@ sub createUrlfilter
 
 
   # Return undef if list is empty
-  return undef if (scalar(grep {$_ !~ m/^#/} @urlfilter) <= 0);
+  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);
 
 
   # Create rules for subdomains
@@ -205,7 +205,7 @@ sub createUrlfilter
   foreach my $line (split(/\n/, $list))
   {
     $linenr++;
-    last if ($line =~ m/^#-/);
+    last if ($line =~ m/^;-/);
   }
   splice (@urlfilter, $linenr, 0, "[prefs]\nprioritize excludelist=1\n[include]\n*\n[exclude]");
 
