@@ -1,12 +1,12 @@
 msFilterList
+# Checksum: HGSNuMhJPOVkMK3RQMuzyg
 : Expires=2
-# Checksum: rtwj/5A/kKtVe8R9Kxf0VQ
 # Latvian adblock filter
 # Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 #                AGPLv3  https://www.gnu.org/licenses/agpl.html
 # Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 #
-# Last modified: 01.08.2011. 07:04 UTC
+# Last modified: 18.08.2011. 13:40 UTC
 #-
 #
 # ---------------- Generic blocking filters ----------------
@@ -27,6 +27,7 @@ msFilterList
 -d apollo.lv /images/europass_v3.jpg
 -d apollo.lv /images/hockey/first_page_
 -d apollo.lv /images/RentInRiga*
+-d apollo.lv /js/keywords.js
 -d apollo.lv /rentinriga_content/
 -d apollo.lv /upload/rentinriga/
 -d apollo.lv /*infobox*
