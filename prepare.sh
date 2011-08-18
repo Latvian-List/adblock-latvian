@@ -12,9 +12,5 @@ perl tools/createOperaFilters.pl lists/latvian-list.txt --nocss
 perl tools/addChecksum_Opera.pl lists/urlfilter.ini
 perl tools/addChecksum.pl lists/element-filter.css
 #
-# Prepare IE list
-perl tools/createIETPL.pl lists/latvian-list.txt
-perl tools/addChecksum_IE.pl lists/latvian-list.tpl
-#
 echo -n "Press enter to proceed:"
 read xx
