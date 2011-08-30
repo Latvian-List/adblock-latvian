@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: KAydZPapWz/gY6ASSvT0dA
+! Checksum: 2pPfV69sTUn2ezWn0vKPZw
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 29.08.2011. 09:12 UTC
+! Last modified: 30.08.2011. 10:39 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -102,6 +102,7 @@
 ||sexparty.lv/style/flash/banner.swf
 ||sexparty.lv/uploads/banner/*
 ||sexparty.lv/uploads/vip/*
+||signe.lv/userfiles/image/main%20page%20banners/*
 ||spoki.lv/banners/*
 ||spoki.lv/img/backs/*-banner.png
 ||spoki.lv/img/okarte/*
