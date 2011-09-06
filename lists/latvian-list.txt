@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: odteWnkOghzvJGlc4vyfxw
+! Checksum: 3Bt6YLbYlWWt/tgm5/4VSA
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 06.09.2011. 06:04 UTC
+! Last modified: 06.09.2011. 12:50 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -320,6 +320,7 @@ sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
 tehnika.delfi.lv##div[style="width: 150px; background-color: #54AAFF;overflow: hidden;"]
 tehnika.delfi.lv##div[style="width: 150px; height:220px"]
+tera.lv###REKLAI
 travelnews.lv##table + #div_main_right_block
 tv.delfi.lv##.toolblock
 tvnet.lv###flag-banner
