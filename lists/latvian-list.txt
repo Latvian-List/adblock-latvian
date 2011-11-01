@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: 8GXGPXZ+xLfzpkpZe7wXRA
+! Checksum: YmLrg/4Q0pSP1zTpC0mJxg
 ! Latvian adblock filter
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Email: anonymous.74100@gmail.com -- Blog: http://adblock-latvian.blogspot.com/
 !
-! Last modified: 01.11.2011. 11:24 UTC
+! Last modified: 01.11.2011. 12:21 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -315,6 +315,7 @@ salidzini.lv##[id^="media_place"]
 salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
 salidzini.lv##div[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
 salidzini.lv##td[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
+salidzini.lv##td[style="border: 1px solid #D4D4D4;"]
 salidzini.lv##td[style="width: 340px; background-color: #FFFFFF; border: 1px solid #CCCCCC;"]
 sexparty.lv##td[width="230"]
 spoki.lv###mod_eshops_b
