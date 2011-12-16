@@ -1,12 +1,12 @@
 [Adblock Plus 1.2]
-! Checksum: CKswRKC+zc6EyqJalp7lyQ
+! Checksum: uy4XczDz4EBMuWvLp8EANQ
 ! Latvian adblock filter list
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 !
-! Last modified: 16.12.2011. 09:19 UTC
+! Last modified: 16.12.2011. 13:12 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -323,6 +323,7 @@ rigaslaiks.lv###ctl00_divAd1
 salidzini.lv##.add_cell
 salidzini.lv##[id^="media_place"]
 salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
+salidzini.lv##div[style="padding: 7px; margin: 2px 0px 6px 0px; border: 3px solid red; background-color: white; width: 1100px; font-size: 17px;"]
 salidzini.lv##div[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
 salidzini.lv##td[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
 salidzini.lv##td[style="border: 1px solid #D4D4D4;"]
