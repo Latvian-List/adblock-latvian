@@ -1,12 +1,12 @@
 [Adblock Plus 1.2]
-! Checksum: 9zw84BtxT91q+Qw5TT+2pQ
+! Checksum: 23us/r7dxmY+gAjwWc20lQ
 ! Latvian adblock filter list
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 !
-! Last modified: 22.12.2011. 14:38 UTC
+! Last modified: 23.12.2011. 09:03 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -301,6 +301,7 @@ ir.lv###abonbanner
 kasjauns.lv###left
 kasjauns.lv###top_banner_container
 kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
+kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
 lattelecom.lv##[id^="fixme_"]
 m79.lv##.ad_630x130
 mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
