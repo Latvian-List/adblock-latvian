@@ -1,12 +1,12 @@
 [Adblock Plus 1.2]
-! Checksum: gip53PIVzVRTfCH7I5g5dA
+! Checksum: U+cLfBQutCl/aLq2dOreaw
 ! Latvian adblock filter list
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 !
-! Last modified: 09.01.2012. 10:40 UTC
+! Last modified: 14.01.2012. 08:42 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -273,12 +273,9 @@ db.lv###slid_close
 db.lv##.banner
 delfi.lv###delfieduitems
 delfi.lv###horoweatherblock
-delfi.lv###right
 delfi.lv##.articlebanner
 delfi.lv##.city24w
-delfi.lv##.delfi_shop
 delfi.lv##[id="250x250AutoLV"]
-delfi.lv##[id^="adoceandelfilv"]
 delfi.lv##div[style="background:#fef2d9;"]
 delfi.lv##div[style="font-size:0px;"]
 delfi.lv##div[style="margin-bottom:5px; height: 250px"]
@@ -287,6 +284,9 @@ delfi.lv##div[style="overflow:auto;background: #ffffff url('http://g3.delfi.lv/v
 delfi.lv##div[style="width:150px;margin-bottom:5px;"]
 delfi.lv##div[style="width:248px;"]
 delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
+delfi.lv,morning.lv###right
+delfi.lv,morning.lv##.delfi_shop
+delfi.lv,morning.lv##[id^="adoceandelfilv"]
 easyget.lv##[class^="adholder"]
 easyget.lv##div[style="padding-top:5px;text-align:center;margin-bottom:10px;line-height:1;"]
 europeanhitradio.com,europeanhitradio.lv##td[style="padding-top:10px;padding-left:6px;padding-bottom:10px;"]
