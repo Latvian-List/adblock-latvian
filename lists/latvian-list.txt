@@ -1,12 +1,12 @@
 [Adblock Plus 1.2]
-! Checksum: cpolbFlkk+QonhKBYQAAVA
+! Checksum: RGKxjqLv7JOtVcMt4VHaBA
 ! Latvian adblock filter list
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 !
-! Last modified: 15.01.2012. 14:22 UTC
+! Last modified: 16.01.2012. 10:30 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -261,6 +261,9 @@ apollo.lv##.life_left
 apollo.lv##.middle_banner
 apollo.lv##.news_blue_left
 apollo.lv##.right_banner
+apollo.lv##div[style="border: 1px solid #CECECE; border-left:none; margin-left:1px; position:relative; margin:10px 0;"]
+apollo.lv##div[style="border:1px solid #DBDBDB; border-left:none; padding-top:10px;"]
+apollo.lv##div[style="border:solid 1px #DBDBDB; border-left:none; margin-bottom:5px;"]
 apollo.lv##div[style="width:259px; border:1px solid #DBDBDB; border-left:none; margin-bottom:15px"]
 apollo.lv##div[style="width:261px; height:45px; background-image:url('http://static.apollo.lv/images/_infobox/2011.05.30_ventspils/back.jpg');"]
 apollo.lv##div[style^="width:259px; height:50px; background-image:url('http://img.apollo.lv/upload/apollo_infobox_logos/"]
