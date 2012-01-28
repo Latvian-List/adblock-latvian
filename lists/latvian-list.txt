@@ -1,12 +1,12 @@
 [Adblock Plus 1.2]
-! Checksum: Q/V0G4OxDO8BM16+qGIi/g
+! Checksum: 9DJq9UarFlN+LZma8cXMQA
 ! Latvian adblock filter list
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 !
-! Last modified: 27.01.2012. 10:31 UTC
+! Last modified: 28.01.2012. 09:28 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -297,7 +297,6 @@ delfi.lv,morning.lv##[id^="adoceandelfilv"]
 easyget.lv##[class^="adholder"]
 easyget.lv##div[style="padding-top:5px;text-align:center;margin-bottom:10px;line-height:1;"]
 europeanhitradio.com,europeanhitradio.lv##td[style="padding-top:10px;padding-left:6px;padding-bottom:10px;"]
-forums.delfi.lv##div[style="width:150px;margin-bottom:5px;"]
 forums.delfi.lv##div[style="width:250px;"]:last-child
 gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
 google.lv###taw
@@ -318,9 +317,7 @@ mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
 mac.tunt.lv##div[style="padding-left: 10px;"] + br + table[width="100%"]
 mac.tunt.lv##table[style="border: 1px solid #CBCBCB; background-color: #F3F3F3;"]
 mango.delfi.lv##div[style="font-weight:bold;width:250px;margin-bottom:5px;background:#98abc9;padding-bottom:25px;"]
-mango.delfi.lv##div[style="margin-bottom:5px; height: 250px"]
 mango.delfi.lv##div[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
-mango.delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
 miljons.com###opencredit
 miljons.com##div[style="padding:3px; font-size:13px;"]
 notepad.lv###ad_big
