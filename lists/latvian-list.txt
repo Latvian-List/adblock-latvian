@@ -1,12 +1,12 @@
 [Adblock Plus 1.2]
-! Checksum: Qp7SjIlZ5gR8vyzY9jH41w
+! Checksum: G0E147PndEOwjGhLXR+u9w
 ! Latvian adblock filter list
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 !
-! Last modified: 29.01.2012. 10:05 UTC
+! Last modified: 29.01.2012. 11:10 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -198,6 +198,7 @@
 ||diena.lv/statistics/*
 ||e-spy.petit.lv^
 ||inbox.lv^*/ga.js
+||reklama.lv/services/espy.php
 ||ss.lv/counter/*
 ||t.delfi.lv^
 !
