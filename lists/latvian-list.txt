@@ -1,12 +1,12 @@
 [Adblock Plus 1.2]
-! Checksum: Ts4dooM2ZE1kX8E+dR7Scg
+! Checksum: Qp7SjIlZ5gR8vyzY9jH41w
 ! Latvian adblock filter list
 ! Dual-licensed: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !                AGPLv3  https://www.gnu.org/licenses/agpl.html
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 !
-! Last modified: 29.01.2012. 09:24 UTC
+! Last modified: 29.01.2012. 10:05 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -14,12 +14,12 @@
 !
 *$image,~image,donottrack
 !
-! ---------------- Generic blocking filters ----------------
+! -------------- Generic ad blocking filters ---------------
 !
 /city24/*
 /keyword_ad.js
 !
-! --------------- 1st party blocking filters ---------------
+! ------------- 1st party ad blocking filters --------------
 !
 ||1188.lv/img/banners/*
 ||1188.lv/img/special/*
@@ -133,7 +133,7 @@
 ||zip.lv/kasjauns.swf
 ||zl.lv/banners/*
 !
-! --------------- 3rd party blocking filters ---------------
+! ------------- 3rd party ad blocking filters --------------
 !
 ||1shop.lv/i/ban/*
 ||468x60.lv^
@@ -184,7 +184,7 @@
 ||textads.lv^
 ||videoavatars.com^
 !
-! ---------------- Generic tracking filters ----------------
+! ----------- Generic tracker blocking filters -------------
 !
 /add_stats
 /tmv11.js
@@ -192,7 +192,7 @@
 /xgemius_lv.js
 /xgemius_v2.js
 !
-! --------------- 1st party tracking filters ---------------
+! ---------- 1st party tracker blocking filters ------------
 !
 ||delfi.lv/t/*
 ||diena.lv/statistics/*
@@ -201,7 +201,7 @@
 ||ss.lv/counter/*
 ||t.delfi.lv^
 !
-! --------------- 3rd party tracking filters ---------------
+! ---------- 3rd party tracker blocking filters ------------
 !
 ||clicktale.net^
 ||cms.lv^
