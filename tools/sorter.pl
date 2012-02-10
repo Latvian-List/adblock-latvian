@@ -1,3 +1,4 @@
+#!/usr/bin/env perl
 #
 # Fanboy Adblock Sorter v1.5 (22/03/2011)
 #
