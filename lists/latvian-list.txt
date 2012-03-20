@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: HOQk6UjRkUPTZIXHJNqZWA
+! Checksum: C5vjFvy7/PmR2H59fIxjhQ
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 20.03.2012. 10:02 UTC
+! Last modified: 20.03.2012. 13:01 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -329,6 +329,7 @@ miljons.com###opencredit
 miljons.com##div[style="padding:3px; font-size:13px;"]
 notepad.lv###ad_big
 notepad.lv###blocks > .tabsaction + .news
+notepad.lv###footer > div:last-child
 notepad.lv###section_full + #blocks > .news:first-child
 notepad.lv##.banner_center
 nozare.lv##div[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
