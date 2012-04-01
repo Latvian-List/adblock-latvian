@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: C5vjFvy7/PmR2H59fIxjhQ
+! Checksum: LE9FmnOqGDejC/1G9HJTGg
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.blogspot.com/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 20.03.2012. 13:01 UTC
+! Last modified: 01.04.2012. 13:42 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -349,6 +349,7 @@ salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; backg
 salidzini.lv##div[style="padding: 7px; margin: 2px 0px 6px 0px; border: 3px solid red; background-color: white; width: 1100px; font-size: 17px;"]
 salidzini.lv##div[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
 salidzini.lv##td[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
+salidzini.lv##td[style="background-color: #FFDCB9; border: 1px solid #FF8040; background-color: #FFFAD9; border: 1px solid #DFC400;"]
 salidzini.lv##td[style="border: 1px solid #D4D4D4;"]
 salidzini.lv##td[style="width: 340px; background-color: #FFFFFF; border: 1px solid #CCCCCC;"]
 sexparty.lv##td[width="230"]
