@@ -121,12 +121,11 @@ sub createUrlfilter
         # Convert domain beginnings
         if ($line =~ m/^\|\|/)
         {
-          $line =~ s/^\|\|/http:\/\//;
+          $line =~ s/^\|\|/\*:\/\//;
         }
         elsif ($line =~ m/^\|/)
         {
-          $line =~ s/^\|/https:\/\//;
-          $line =~ s/^\|/http:\/\//;
+          $line =~ s/^\|/\*:\/\//;
         }
         # Convert domain endings
         $line =~ s/\|$// if ($line =~ m/\|$/);
@@ -164,7 +163,7 @@ sub createUrlfilter
   {
     # Remove filters that require whitelists
     ($tmpline) = $line;
-    $tmpline =~ s/http:\/\///;
+    $tmpline =~ s/\*:\/\///;
     while ($tmpline =~ m/\/\*/)
     {
       # Remove everything after an caret
@@ -192,9 +191,9 @@ sub createUrlfilter
   foreach my $line (split(/\n/, $list))
   {
     push @urlfilter, $line;
-    if ($line =~ m/^http\:\/\//)
+    if ($line =~ m/^\*\:\/\//)
     {
-      $line =~ s/http\:\/\//\*\./;
+      $line =~ s/\*\:\/\//\*\./;
       push @urlfilter, $line;
     }
   }
