@@ -140,9 +140,9 @@ sub createUrlfilter
           $line =~ s/\^/\/\*/;
         }
         # Add beginning asterisk
-        $line = "*".$line unless ($line =~ m/^[A-Za-z0-9*]/);
+        $line = "*".$line unless ($line =~ m/^[* ]/);
         # Add ending asterisk
-        $line = $line."*" unless ($line =~ m/[A-Za-z0-9* ]$/);
+        $line = $line."*" unless ($line =~ m/[* ]$/);
 
         push @urlfilter, $line;
       }
