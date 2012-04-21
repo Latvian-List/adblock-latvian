@@ -100,10 +100,15 @@ sub createUrlfilter
           $line =~ s/\|\|//;
           $line =~ s/\|//;
           $line =~ s/\|$//;
-          # Remove everything after an caret
-          $line =~ s/\^.*//;
-          # Remove everything after an asterisk
-          $line =~ s/\/\*.*//;
+          # Remove ending caret
+          $line =~ s/\^$//;
+          # Convert caret to slash
+          $line =~ s/.\^/\//;
+          # Remove everything after a dollar sign
+          $line =~ s/\$.*//;
+          # Remove beginning and ending asterisks
+          $line =~ s/^\*//;
+          $line =~ s/\*$//;
 
           push @whitelists, $line;
         }
@@ -164,14 +169,19 @@ sub createUrlfilter
   {
     # Remove filters that require whitelists
     ($tmpline) = $line;
+
+    # Remove protocol
     $tmpline =~ s/\*:\/\///;
-    while ($tmpline =~ m/\/\*/)
-    {
-      # Remove everything after an caret
-      $tmpline =~ s/\^.*//;
-      # Remove everything after an asterisk  
-      $tmpline =~ s/\/\*.*//;
-    }
+    # Remove ending caret
+    $tmpline =~ s/\^$//;
+    # Convert caret to slash
+    $tmpline =~ s/.\^/\//;
+    # Remove everything after a dollar sign
+    $tmpline =~ s/\$.*//;
+    # Remove beginning and ending asterisks
+    $tmpline =~ s/^\*//;
+    $tmpline =~ s/\*$//;
+
     foreach my $inline (split(/\n/, $whitelists))
     {
       $matcheswhitelist = 1 if (($tmpline =~ m/\Q$inline\E/i) or ($inline =~ m/\Q$tmpline\E/i));
