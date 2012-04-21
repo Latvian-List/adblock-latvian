@@ -125,10 +125,9 @@ sub createUrlfilter
         }
         elsif ($line =~ m/^\|/)
         {
-          $line =~ s/^\|/\*:\/\//;
+          # Remove pipe if rule has a protocol in it, if it doesn't then use a wildcard for a protocol
+          ($line =~ m/.:\/\//) ? ($line =~ s/^\|//) : ($line =~ s/^\|/\*:\/\//);
         }
-        # Convert domain endings
-        $line =~ s/\|$// if ($line =~ m/\|$/);
         # Remove caret
         if ($line =~ m/\^\*/)
         {
@@ -139,9 +138,11 @@ sub createUrlfilter
           $line =~ s/\^/\/\*/;
         }
         # Add beginning asterisk
-        $line = "*".$line unless ($line =~ m/^[* ]/);
+        $line = "*".$line unless (($line =~ m/^[* ]/) or ($line =~ m/.:\/\//));
         # Add ending asterisk
-        $line = $line."*" unless ($line =~ m/[* ]$/);
+        $line = $line."*" unless ($line =~ m/[\|* ]$/);
+        # Convert domain endings
+        $line =~ s/\|$// if ($line =~ m/\|$/);
 
         push @urlfilter, $line;
       }
