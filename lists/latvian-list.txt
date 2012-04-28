@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: wcs1JVsbIssoM9PvjOo+7w
+! Checksum: 2swXRer+80pgs/KwUfsR4Q
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 28.04.2012. 13:48 UTC
+! Last modified: 28.04.2012. 14:06 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -188,6 +188,7 @@
 ||salidzini.lv/affiliate/
 ||salidzini.lv/images/120x40.php
 ||salidzini.lv/images/88x31.php
+||salidzini.lv/images/banner/
 ||serveris.lv/images/affiliate/
 ||sludini.lv^$third-party
 ||smartad.ee^
@@ -301,6 +302,7 @@ delfi.lv##div[style="margin-bottom:5px;height: 250px;"]
 delfi.lv##div[style="margin:10px;border:1px dashed #8e8e9e;overflow:auto;padding-left:15px;padding-right:15px;padding-top:10px;padding-bottom:10px"]
 delfi.lv##div[style="margin:10px;margin-bottom:0;padding-bottom:10px;text-align:center;border-bottom:1px solid #b4c8de;text-align:center;"]
 delfi.lv##div[style="overflow:auto;background: #ffffff url('http://g3.delfi.lv/ve/g/13_42714_m.jpg') no-repeat center; width:250px; border: 0px solid #d5d5d5; text-align: center;"]
+delfi.lv##div[style="width: 185px; height: 250px; padding: 0px;"]
 delfi.lv##div[style="width:150px;margin-bottom:5px;"]
 delfi.lv##div[style="width:248px;"]
 delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
