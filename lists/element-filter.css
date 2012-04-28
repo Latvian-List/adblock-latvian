@@ -1,11 +1,11 @@
 /*
-! Checksum: nwrRh0Bdh0IKieOki36M7w
+! Checksum: t9DXRFwOfqxGH01YvEBW/g
 ! Latvian adblock element filter list
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 14.04.2012. 18:26 UTC
+! Last modified: 28.04.2012. 13:38 UTC
 ! Expires: 2 days (update frequency)
 */
 @namespace "http://www.w3.org/1999/xhtml";
@@ -49,6 +49,7 @@ a[href^="http://www.serveris.lv/?ref="],
 #ad_175x300,
 #pop_keyword_everest_ad,
 #pop_keyword_letpas_ad,
+a[href^="http://q.tvnet.lv/"],
 /* zip.lv */
 #perkam_group_banner
 { display:none !important; }
