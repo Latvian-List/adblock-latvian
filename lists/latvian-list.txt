@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: 2swXRer+80pgs/KwUfsR4Q
+! Checksum: r/n85iCV6KVXwe3JZb3XoA
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 28.04.2012. 14:06 UTC
+! Last modified: 07.05.2012. 17:41 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -295,6 +295,7 @@ delfi.lv###delfieduitems
 delfi.lv###horoweatherblock
 delfi.lv##.city24w
 delfi.lv##[id="250x250AutoLV"]
+delfi.lv##[style="position:relative;width:995px;height:100px;z-index:100000;"]
 delfi.lv##div[style="background:#fef2d9;"]
 delfi.lv##div[style="font-size:0px;"]
 delfi.lv##div[style="margin-bottom:5px; height: 250px"]
