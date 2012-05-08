@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: r/n85iCV6KVXwe3JZb3XoA
+! Checksum: +UkMVxun9O/BYWfdmJ+sew
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 07.05.2012. 17:41 UTC
+! Last modified: 08.05.2012. 07:23 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -351,7 +351,7 @@ pornotv.lv##.top_slud.sakums
 receptes.lv###slider-wrap
 reklama.lv##.right_column
 reklama.lv##div[style="margin-bottom:15px;"]
-riga.lv##[id="_ctl16_HtmlBanner"]
+riga.lv###_ctl16_HtmlBanner
 riga.lv##[id^="_ctl20_Elements__"]
 rigaslaiks.lv###ctl00_divAd1
 salidzini.lv##.add_cell
