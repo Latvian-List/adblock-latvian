@@ -1,18 +1,22 @@
 /*
-! Checksum: L4Y/F10SULSW/OYGmD+hxw
+! Checksum: 2sMdqrrm6FOukZOx/HfE/A
 ! Latvian adblock element filter list
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 16.05.2012. 10:29 UTC
+! Last modified: 16.05.2012. 10:40 UTC
 ! Expires: 2 days (update frequency)
 */
 @namespace "http://www.w3.org/1999/xhtml";
 
 #ad_175x300,
 #ad_450x280,
+.ad_250x200,
+.ad_350x100,
 .ad_630x130,
+.ad_728x90,
+.ad_sponsor,
 .ban420x200,
 .ban420x260,
 .ban680x450,
