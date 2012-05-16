@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: 6fUnl1XLXR6WSS/TGX4TPA
+! Checksum: Q8gHmdQxQXdS/9saLV7NKg
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 16.05.2012. 15:28 UTC
+! Last modified: 16.05.2012. 15:32 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -186,7 +186,6 @@
 !
 /add_stats
 /tmv11.
-/xgemius.
 /xgemius_lv.
 /xgemius_v2.
 !
@@ -202,7 +201,6 @@
 !
 ! ---------- 3rd party tracker blocking filters ------------
 !
-||clicktale.net^
 ||cms.lv^
 ||counter.hackers.lv^
 ||counter.yadro.ru^
@@ -213,9 +211,7 @@
 ||hits.sys.lv^
 ||insbergs.lv/ins_statistics/
 ||on-line.lv^
-||openstat.net^
 ||puls.lv^
-||reinvigorate.net^
 ||reitingi.lv^
 ||statistik-gallup.net^
 ||statistika.lv^
