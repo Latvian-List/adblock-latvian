@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: SzagauJjLOzkj7/cgDW9BQ
+! Checksum: TEz/+pRYuhjb2C0ie2c/ng
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 16.05.2012. 10:18 UTC
+! Last modified: 16.05.2012. 10:28 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -256,6 +256,7 @@
 !
 ###ad_175x300
 ###ad_450x280
+##.ad_630x130
 ##.ban420x200
 ##.ban420x260
 ##.ban680x450
@@ -335,7 +336,6 @@ kasjauns.lv###top_banner_container
 kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
 kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
 lattelecom.lv##[id^="fixme_"]
-m79.lv##.ad_630x130
 mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
 mac.tunt.lv##div[style="padding-left: 10px;"] + br + table[width="100%"]
 mac.tunt.lv##table[style="border: 1px solid #CBCBCB; background-color: #F3F3F3;"]
