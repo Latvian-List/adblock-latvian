@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: xEmNwa7sn++KCXXCLY0rhQ
+! Checksum: 8D8+WHxP+NHqqSesA3RuRQ
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 16.05.2012. 10:07 UTC
+! Last modified: 16.05.2012. 10:16 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -267,6 +267,7 @@ apollo.lv###banner
 apollo.lv###lvc_infobox
 apollo.lv###RentInRiga
 apollo.lv###rs_topshops
+apollo.lv##.ad
 apollo.lv##.admiral_box
 apollo.lv##.apollo_infobox
 apollo.lv##.ban420x200
