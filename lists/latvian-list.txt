@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: 8D8+WHxP+NHqqSesA3RuRQ
+! Checksum: SzagauJjLOzkj7/cgDW9BQ
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 16.05.2012. 10:16 UTC
+! Last modified: 16.05.2012. 10:18 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -256,6 +256,10 @@
 !
 ###ad_175x300
 ###ad_450x280
+##.ban420x200
+##.ban420x260
+##.ban680x450
+##.ban980x90
 ##a[href="http://www.salidzini.lv/"][style="display: block; width: 120px; height: 40px; overflow: hidden; position: relative;"]
 ##a[href="http://www.salidzini.lv/"][style="display: block; width: 88px; height: 31px; overflow: hidden; position: relative;"]
 !
@@ -270,10 +274,6 @@ apollo.lv###rs_topshops
 apollo.lv##.ad
 apollo.lv##.admiral_box
 apollo.lv##.apollo_infobox
-apollo.lv##.ban420x200
-apollo.lv##.ban420x260
-apollo.lv##.ban680x450
-apollo.lv##.ban980x90
 apollo.lv##.city24_box
 apollo.lv##.comment_banner_v2
 apollo.lv##.eshop_table

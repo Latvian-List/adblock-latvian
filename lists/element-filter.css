@@ -1,17 +1,21 @@
 /*
-! Checksum: xdMrWYZ3fddDuhmBdRbKrQ
+! Checksum: HYxEh9ltOH005HBgbNqJ+A
 ! Latvian adblock element filter list
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 16.05.2012. 10:07 UTC
+! Last modified: 16.05.2012. 10:20 UTC
 ! Expires: 2 days (update frequency)
 */
 @namespace "http://www.w3.org/1999/xhtml";
 
 #ad_175x300,
 #ad_450x280,
+##.ban420x200,
+##.ban420x260,
+##.ban680x450,
+##.ban980x90,
 a[href="http://www.salidzini.lv/"][style="display: block; width: 120px; height: 40px; overflow: hidden; position: relative;"],
 a[href="http://www.salidzini.lv/"][style="display: block; width: 88px; height: 31px; overflow: hidden; position: relative;"],
 /* 1188.lv */
@@ -20,10 +24,6 @@ a[href="http://www.salidzini.lv/"][style="display: block; width: 88px; height: 3
 #lvc_infobox,
 .admiral_box,
 .apollo_infobox,
-.ban420x200,
-.ban420x260,
-.ban680x450,
-.ban980x90,
 .city24_box,
 .comment_banner_v2,
 .eshop_table,
