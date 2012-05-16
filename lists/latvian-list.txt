@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: tJJu72yAuTok60OrsucqHQ
+! Checksum: TE2dvxggKv30n+soqwQrLA
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 16.05.2012. 10:50 UTC
+! Last modified: 16.05.2012. 12:10 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -15,12 +15,15 @@
 !
 ! -------------- Generic ad blocking filters ---------------
 !
+.lv/ads/
+.lv/banners/
+.lv/images/banners/
+.lv/img/banners/
 /keyword_ad.
 /noAds.
 !
 ! ------------- 1st party ad blocking filters --------------
 !
-||1188.lv/img/banners/
 ||1188.lv/img/special/
 ||1a.lv/images/upload/ads/
 ||1w.lv/banner_
@@ -29,7 +32,6 @@
 ||ad.one.lv^
 ||ads.inbox.lv^
 ||ads.sportacentrs.com^
-||antireklama.lv/banners/
 ||apollo.lv/images/apollo_contest/
 ||apollo.lv/images/europass_v3.jpg
 ||apollo.lv/images/hockey/first_page_
@@ -69,10 +71,7 @@
 ||delfi.lv/wd/h/
 ||delfi.lv/wd/x/*/
 ||discover.lv/userfiles/promofotos/
-||dogmar.lv/images/banners/
 ||e-pica.lv/mce/uploads/banners/
-||e1.lv/images/banners/
-||easyget.lv/ads/
 ||ecompics.power.oho.lv^
 ||ehalle.lv/grupu_bildes/
 ||elittesport.lv/pictures/banneri_gar_malam/
@@ -84,15 +83,11 @@
 ||gudrinieks.lv/res/js/sb_banner.js
 ||hop.lv^*/banneri/
 ||iaptieka.lv/atteli/apmaina/
-||inbox.lv/banners/
 ||intim.lv/res/banners/
 ||kurpirkt.lv/ba/
 ||leta.lv/img/*/info_banneris_
-||lnt.lv/images/banners/
 ||lu.lv/uploads/tx_macinabanners/
-||lursoft.lv/img/banners/
 ||lv.lv/bildes/reklaama.png
-||m79.lv/img/banners/
 ||mango.lv/otra_*.gif
 ||manstv.lv/js/bannerhandlerv2.js
 ||miljons.com/bnr/
@@ -101,14 +96,10 @@
 ||nra.lv/_rekl/
 ||nra.lv/spec/
 ||oga.lv/ieBildes/
-||oho.lv/ads/
-||pc.lv/images/banners/
 ||petits.lv/pics/banners/
-||pornotv.lv/images/banners/
 ||pornotv.lv/scroll_ads2.js
 ||q.tvnet.lv^
 ||r.inbox.lv^
-||receptes.lv/banners/
 ||receptes.lv/images/design/davana_tev.png
 ||reklama.lv/images/picads/users/
 ||reklama.lv/services/ads_count.html
@@ -120,7 +111,6 @@
 ||sexparty.lv/uploads/banner/
 ||sexparty.lv/uploads/vip/
 ||signe.lv/userfiles/image/main%20page%20banners/
-||spoki.lv/banners/
 ||spoki.lv/img/backs/*-banner.png
 ||spoki.lv/img/okarte/
 ||spoki.lv/js/ad.js
@@ -131,14 +121,10 @@
 ||torrenti.lv/themes/TBDev/images/banner
 ||torrenti.lv/themes/TBDev/images/ftlv.swf
 ||tours.lv/images/misc/
-||travelnews.lv/banners/
 ||tv.delfi.lv/adtonomy/
 ||tvnet.lv/assets/swf/tvnet_pasts_997x250.swf
-||uzkartes.lv/images/banners/
-||x-power.lv/images/banners/
 ||xp.lv/res/banners/
 ||zip.lv/kasjauns.swf
-||zl.lv/banners/
 !
 ! ------------- 3rd party ad blocking filters --------------
 !
