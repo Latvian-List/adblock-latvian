@@ -1,11 +1,11 @@
 [Adblock Plus 1.2]
-! Checksum: Q8gHmdQxQXdS/9saLV7NKg
+! Checksum: bqslG4bw9ayYKJ26ihrkwQ
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
 !
-! Last modified: 16.05.2012. 15:32 UTC
+! Last modified: 16.05.2012. 16:39 UTC
 ! Expires: 2 days (update frequency)
 !-
 !
@@ -328,6 +328,7 @@ notepad.lv###ad_big
 notepad.lv###blocks > .tabsaction + .news
 notepad.lv###footer > div:last-child
 notepad.lv###section_full + #blocks > .news:first-child
+notepad.lv##.aptauja[style="margin-top:0px;margin-bottom:20px;"]
 notepad.lv##.banner_center
 nozare.lv##div[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
 nra.lv##div[style="padding-top:2px; font-size:0.917em;"]
