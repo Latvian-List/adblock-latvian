@@ -182,7 +182,7 @@ sub createUrlfilter
     push @urlfilter, $line;
     if ($line =~ m/^\*\:\/\//)
     {
-      $line =~ s/\*\:\/\//\*\./;
+      $line =~ s/^\*\:\/\//\*\:\/\/\*\./;
       push @urlfilter, $line;
     }
   }
