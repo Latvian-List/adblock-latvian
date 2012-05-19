@@ -160,7 +160,7 @@ sub createUrlfilter
     $tmpline =~ s/^\*:\/\///;    # Remove protocol
     $tmpline =~ s/^\|\|//;    # Remove pipes
     $tmpline =~ s/\^$//;    # Remove ending caret
-    $tmpline =~ s/.\^/\//;    # Convert caret to slash
+    $tmpline =~ s/\^/\//;    # Convert caret to slash
     $tmpline =~ s/\$.*//;    # Remove everything after a dollar sign
     $tmpline =~ s/^\*//;    # Remove beginning asterisk
     $tmpline =~ s/\*$//;    # Remove ending asterisk
@@ -203,8 +203,8 @@ sub createElemfilter
   if (-e "$path/element-filter.css")
   {
     my @oldlist = (split(/\n/, (readFile("$path/element-filter.css"))));
-    $oldchecksum = firstval { $_ =~ m/.Checksum:/ } @oldlist;
-    $oldmodified = firstval { $_ =~ m/.Last modified:/ } @oldlist;
+    $oldchecksum = firstval { $_ =~ m/Checksum:/ } @oldlist;
+    $oldmodified = firstval { $_ =~ m/Last modified:/ } @oldlist;
     undef @oldlist;
   }
 
@@ -215,17 +215,17 @@ sub createElemfilter
     if ($line =~m/\[.*?\]/i)
     {
     }
-    unless ($line =~ m/.Redirect:/)
+    unless ($line =~ m/Redirect:/)
     {
       if ($line =~ m/^!/)
       {
         # Insert old checksumm
-        if ($line =~ m/.Checksum:/)
+        if ($line =~ m/Checksum:/)
         {
           ($line) = $oldchecksum if defined $oldchecksum;
         }
         # Insert old last modified
-        elsif ($line =~ m/.Last modified:/)
+        elsif ($line =~ m/Last modified:/)
         {
           ($line) = $oldmodified if defined $oldmodified;
         }
