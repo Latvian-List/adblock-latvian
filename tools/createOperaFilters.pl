@@ -50,10 +50,10 @@ sub createUrlfilter
   my $list = shift;
   my @urlfilter;
   my @whitelists;
-  
+
   my $oldchecksum;
   my $oldmodified;
-  
+
   # Get old checksum and modification time
   if (-e "$path/urlfilter.ini")
   {
@@ -205,7 +205,7 @@ sub createElemfilter
 {
   my $list = shift;
   my @elemfilter;
-  
+
   my $oldchecksum;
   my $oldmodified;
 
