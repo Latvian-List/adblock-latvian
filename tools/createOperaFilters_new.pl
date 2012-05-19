@@ -142,8 +142,7 @@ sub createUrlfilter
   }
 
 
-  # Return undef if list is empty
-  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);
+  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);    # Return undef if list is empty
 
 
   $list = join("\n", @urlfilter);
@@ -237,16 +236,14 @@ sub createElemfilter
     if ($line =~ m/^##/)
     {
       $line =~ s/##//;
-      # Convert tags to lowercase
-      $line =~ s/(^.*[\[\.\#])/\L$1/ if ($line =~ m/^.*[\[\.\#]/);
+      $line =~ s/(^.*[\[\.\#])/\L$1/ if ($line =~ m/^.*[\[\.\#]/);    # Convert tags to lowercase
       push @elemfilter, $line.",";
     }
 
   }
 
 
-  # Return undef if list is empty
-  return undef if (scalar(grep {$_ !~ m/^!/} @elemfilter) <= 0);
+  return undef if (scalar(grep {$_ !~ m/^!/} @elemfilter) <= 0);    # Return undef if list is empty
 
 
   # Add xml namespace declaration
