@@ -58,8 +58,8 @@ sub createUrlfilter
   if (-e "$path/urlfilter.ini")
   {
     my @oldlist = (split(/\n/, (readFile("$path/urlfilter.ini"))));
-    $oldchecksum = firstval { $_ =~ m/Checksum:/ } @oldlist;
-    $oldmodified = firstval { $_ =~ m/Last modified:/ } @oldlist;
+    $oldchecksum = firstval { $_ =~ m/Checksum:/i } @oldlist;
+    $oldmodified = firstval { $_ =~ m/(Last modified|Updated):/i } @oldlist;
     undef @oldlist;
   }
 
@@ -72,25 +72,25 @@ sub createUrlfilter
       if ($line =~ m/^!/)
       {
         # Insert old checksumm
-        if ($line =~ m/Checksum:/)
+        if ($line =~ m/Checksum:/i)
         {
           (defined $oldchecksum) ? ($line) = $oldchecksum : $line =~ s/^!/;/;
         }
 
         # Insert old last modified
-        elsif ($line =~ m/Last modified:/)
+        elsif ($line =~ m/(Last modified|Updated):/i)
         {
           (defined $oldmodified) ? ($line) = $oldmodified : $line =~ s/^!/;/;
         }
 
         # Normalize title
-        elsif ($line =~ m/Title:/)
+        elsif ($line =~ m/Title:/i)
         {
-          $line =~ s/Title: //;
+          $line =~ s/Title: //i;
         }
 
         # Add the rest of comments
-        unless ($line =~ m/Redirect:/)
+        unless ($line =~ m/Redirect:/i)
         {
           $line =~ s/^\!/;/;
           push @urlfilter, $line;
@@ -221,8 +221,8 @@ sub createElemfilter
   if (-e "$path/element-filter.css")
   {
     my @oldlist = (split(/\n/, (readFile("$path/element-filter.css"))));
-    $oldchecksum = firstval { $_ =~ m/.Checksum:/ } @oldlist;
-    $oldmodified = firstval { $_ =~ m/.Last modified:/ } @oldlist;
+    $oldchecksum = firstval { $_ =~ m/Checksum:/i } @oldlist;
+    $oldmodified = firstval { $_ =~ m/(Last modified|Updated):/i } @oldlist;
     undef @oldlist;
   }
 
@@ -233,17 +233,17 @@ sub createElemfilter
     if ($line =~m/\[.*?\]/i)
     {
     }
-    unless ($line =~ m/.Redirect:/)
+    unless ($line =~ m/Redirect:/i)
     {
       if ($line =~ m/^!/)
       {
         # Insert old checksumm
-        if ($line =~ m/.Checksum:/)
+        if ($line =~ m/Checksum:/i)
         {
           ($line) = $oldchecksum if defined $oldchecksum;
         }
         # Insert old last modified
-        elsif ($line =~ m/.Last modified:/)
+        elsif ($line =~ m/(Last modified|Updated):/i)
         {
           ($line) = $oldmodified if defined $oldmodified;
         }
