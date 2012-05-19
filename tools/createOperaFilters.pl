@@ -58,8 +58,8 @@ sub createUrlfilter
   if (-e "$path/urlfilter.ini")
   {
     my @oldlist = (split(/\n/, (readFile("$path/urlfilter.ini"))));
-    $oldchecksum = firstval { $_ =~ m/.Checksum:/ } @oldlist;
-    $oldmodified = firstval { $_ =~ m/.Last modified:/ } @oldlist;
+    $oldchecksum = firstval { $_ =~ m/Checksum:/ } @oldlist;
+    $oldmodified = firstval { $_ =~ m/Last modified:/ } @oldlist;
     undef @oldlist;
   }
 
@@ -72,17 +72,17 @@ sub createUrlfilter
       if ($line =~ m/^!/)
       {
         # Insert old checksumm
-        if ($line =~ m/.Checksum:/)
+        if ($line =~ m/Checksum:/)
         {
           (defined $oldchecksum) ? ($line) = $oldchecksum : $line =~ s/^!/;/;
         }
         # Insert old last modified
-        elsif ($line =~ m/.Last modified:/)
+        elsif ($line =~ m/Last modified:/)
         {
           (defined $oldmodified) ? ($line) = $oldmodified : $line =~ s/^!/;/;
         }
         # Add the rest of comments
-        unless ($line =~ m/.Redirect:/)
+        unless ($line =~ m/Redirect:/)
         {
           $line =~ s/^\!/;/;
           push @urlfilter, $line;
@@ -94,34 +94,21 @@ sub createUrlfilter
         # Ignore elemhide whitelists
         unless ($line =~ m/\^\$elemhide$/)
         {
-          # Remove whitelist symbols
-          $line =~ s/^@@//;
-          # Remove vertical bars
-          $line =~ s/\|\|//;
+          $line =~ s/^@@//;    # Remove whitelist symbols
+          $line =~ s/\|\|//;    # Remove vertical bars
           $line =~ s/\|//;
           $line =~ s/\|$//;
-          # Remove ending caret
-          $line =~ s/\^$//;
-          # Convert caret to slash
-          $line =~ s/.\^/\//;
-          # Remove everything after a dollar sign
-          $line =~ s/\$.*//;
-          # Remove beginning and ending asterisks
-          $line =~ s/^\*//;
-          $line =~ s/\*$//;
+          $line =~ s/\^$//;    # Remove ending caret
+          $line =~ s/.\^/\//;    # Convert caret to slash
+          $line =~ s/\$.*//;    # Remove everything after a dollar sign
+          $line =~ s/^\*//;    # Remove beginning asterisk
+          $line =~ s/\*$//;    # Remove ending asterisk
 
           push @whitelists, $line;
         }
       }
-      # Remove lines with types
-      elsif ($line =~ m/.\$/)
-      {
-      }
-      # Remove element rules
-      elsif (($line =~ m/.##/) or ($line =~ m/^##/))
-      {
-      }
-      else
+
+      elsif (($line !~ m/\$/) and ($line !~ m/##/))
       {
         # Convert domain beginnings
         if ($line =~ m/^\|\|/)
@@ -142,12 +129,10 @@ sub createUrlfilter
         {
           $line =~ s/\^/\/\*/;
         }
-        # Add beginning asterisk
-        $line = "*".$line unless (($line =~ m/^[* ]/) or ($line =~ m/.:\/\//));
-        # Add ending asterisk
-        $line = $line."*" unless ($line =~ m/[\|* ]$/);
-        # Convert domain endings
-        $line =~ s/\|$// if ($line =~ m/\|$/);
+
+        $line = "*".$line unless (($line =~ m/^[* ]/) or ($line =~ m/.:\/\//));    # Add beginning asterisk
+        $line = $line."*" unless ($line =~ m/[\|* ]$/);    # Add ending asterisk
+        $line =~ s/\|$// if ($line =~ m/\|$/);    # Convert domain endings
 
         push @urlfilter, $line;
       }
@@ -155,8 +140,7 @@ sub createUrlfilter
   }
 
 
-  # Return undef if list is empty
-  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);
+  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);    # Return undef if list is empty
 
 
   $list = join("\n", @urlfilter);
@@ -170,17 +154,12 @@ sub createUrlfilter
     # Remove filters that require whitelists
     ($tmpline) = $line;
 
-    # Remove protocol
-    $tmpline =~ s/\*:\/\///;
-    # Remove ending caret
-    $tmpline =~ s/\^$//;
-    # Convert caret to slash
-    $tmpline =~ s/.\^/\//;
-    # Remove everything after a dollar sign
-    $tmpline =~ s/\$.*//;
-    # Remove beginning and ending asterisks
-    $tmpline =~ s/^\*//;
-    $tmpline =~ s/\*$//;
+    $tmpline =~ s/\*:\/\///;    # Remove protocol
+    $tmpline =~ s/\^$//;    # Remove ending caret
+    $tmpline =~ s/.\^/\//;    # Convert caret to slash
+    $tmpline =~ s/\$.*//;    # Remove everything after a dollar sign
+    $tmpline =~ s/^\*//;    # Remove beginning asterisk
+    $tmpline =~ s/\*$//;    # Remove ending asterisk
 
     foreach my $inline (split(/\n/, $whitelists))
     {
@@ -192,8 +171,7 @@ sub createUrlfilter
   }
 
 
-  # Return undef if list is empty
-  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);
+  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);    # Return undef if list is empty
 
 
   # Create rules for subdomains
@@ -269,16 +247,14 @@ sub createElemfilter
     if ($line =~ m/^##/)
     {
       $line =~ s/##//;
-      # Convert tags to lowercase
-      $line =~ s/(^.*[\[\.\#])/\L$1/ if ($line =~ m/^.*[\[\.\#]/);
+      $line =~ s/(^.*[\[\.\#])/\L$1/ if ($line =~ m/^.*[\[\.\#]/);    # Convert tags to lowercase
       push @elemfilter, $line.",";
     }
 
   }
 
 
-  # Return undef if list is empty
-  return undef if (scalar(grep {$_ !~ m/^!/} @elemfilter) <= 0);
+  return undef if (scalar(grep {$_ !~ m/^!/} @elemfilter) <= 0);    # Return undef if list is empty
 
 
   # Add xml namespace declaration
@@ -291,11 +267,9 @@ sub createElemfilter
   }
   splice (@elemfilter, $linenr, 0, "\@namespace \"http://www.w3.org/1999/xhtml\";");
 
-  # Remove last comma
-  $elemfilter[lastidx{ ($_ =~ m/,$/) and ($_ !~ m/^!/) } @elemfilter] =~ s/,$//;
+  $elemfilter[lastidx{ ($_ =~ m/,$/) and ($_ !~ m/^!/) } @elemfilter] =~ s/,$//;    # Remove last comma
 
-  # Add CSS rule
-  push @elemfilter,"{ display: none !important; }";
+  push @elemfilter,"{ display: none !important; }";    # Add CSS rule
 
 
   # Convert comments
