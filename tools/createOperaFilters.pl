@@ -192,8 +192,8 @@ sub createUrlfilter
   my $linenr = 0;
   foreach my $line (split(/\n/, $list))
   {
+    last if ($line =~ m/^;[ ]*$/);
     $linenr++;
-    last if ($line =~ m/^;-/);
   }
   splice (@urlfilter, $linenr, 0, "[prefs]\nprioritize excludelist=1\n[include]\n*\n[exclude]");
 
@@ -262,8 +262,8 @@ sub createElemfilter
   $list = join("\n", @elemfilter);
   foreach my $line (split(/\n/, $list))
   {
+    last if ($line =~ m/^![ ]*$/);
     $linenr++;
-    last if ($line =~ m/^!-/);
   }
   splice (@elemfilter, $linenr, 0, "\@namespace \"http://www.w3.org/1999/xhtml\";");
 
