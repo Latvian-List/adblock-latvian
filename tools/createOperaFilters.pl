@@ -76,11 +76,19 @@ sub createUrlfilter
         {
           (defined $oldchecksum) ? ($line) = $oldchecksum : $line =~ s/^!/;/;
         }
+
         # Insert old last modified
         elsif ($line =~ m/Last modified:/)
         {
           (defined $oldmodified) ? ($line) = $oldmodified : $line =~ s/^!/;/;
         }
+
+        # Normalize title
+        elsif ($line =~ m/Title:/)
+        {
+          $line =~ s/Title: //;
+        }
+
         # Add the rest of comments
         unless ($line =~ m/Redirect:/)
         {
