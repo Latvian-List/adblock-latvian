@@ -130,11 +130,11 @@ sub createUrlfilter
 
       elsif (($line !~ m/\$/) and ($line !~ m/##/))
       {
-        # Convert domain beginnings
-        $line =~ s/^\|// if (($line !~ m/^\|\|/) and ($line =~ m/^\|/));    # Remove pipe
+        $line =~ s/^\|// if (($line !~ m/^\|\|/) and ($line =~ m/^\|/));    # Remove beginning pipe
+        $line =~ s/$/\*/ if $line =~ m/\^$/;    # Convert domain endings
         $line = "*".$line unless (($line =~ m/^[\|\* ]/) or ($line =~ m/.:\/\//));    # Add beginning asterisk
         $line = $line."*" unless ($line =~ m/[\|\*\^ ]$/);    # Add ending asterisk
-        $line =~ s/\|$// if ($line =~ m/\|$/);    # Convert domain endings
+        $line =~ s/\|$// if ($line =~ m/\|$/);    # Convert filter endings
 
         push @urlfilter, $line;
       }
