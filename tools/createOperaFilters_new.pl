@@ -51,7 +51,6 @@ writeFile($cssfile,$elemfilter) unless ((defined $nocss) or (!defined $elemfilte
 sub createUrlfilter
 {
   my $list = shift;
-  my $urlfilter = "";
 
   # Get old checksum and modification time
   if (-e $urlfilterfile)
@@ -62,8 +61,7 @@ sub createUrlfilter
     undef $oldlist;
   }
 
-  my $whitelists = $1 if $list =~ m/^(@@\S*(\$elemhide)?\r?\n)/gm;    # Collect whitelists
-
+  my ($whitelists) = $list =~ m/^@@.*$/gm;    # Collect whitelists
 
   $list =~ s/\[.*\]\n//gm;    # Remove ABP header
   $list =~ s/^@@.*\n?//gm;    # Remove whitelists
@@ -72,7 +70,7 @@ sub createUrlfilter
 
   $list =~ s/^!/;/gm;    # Convert comments
   $list =~ s/^(;\s)Title:\s/$1/mi;    # Normalize title
-  $list =~ s/^(;\sRedirect\n)//gmi;    # Remove redirect comment
+  $list =~ s/^(;\sRedirect.*\n)//gmi;    # Remove redirect comment
 
 #  $list =~ s/^(;\s)(Checksum:.*)$/$1$oldchecksum/gmi if (defined $oldchecksum);    # Insert old checksum
 #  $list =~ s/^(;\s)((Last modified|Updated):.*)$/$1$oldmodified/gmi if (defined $oldmodified);    # Insert old modification date/time
@@ -82,20 +80,45 @@ sub createUrlfilter
   $list =~ s/^\|([^|].*)$/$1/gm;    # Remove beginning pipe
   $list =~ s/^([^;].*)\|$/$1/gm;    # Remove ending pipe
 
-  $list =~ s/^(;\s*?)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;    # Add urlfilter header
 
 
   # Parse whitelists
-  # ?
+  my $urlfilter ="";
+  my $matcheswhitelist;
+
+  $whitelists =~ s/^@@//gm;    # Remove whitelist symbols
+  $whitelists =~ s/^\|\|//gm;    # Remove vertical bars
+  $whitelists =~ s/\^$//gm;    # Remove ending caret
+  $whitelists =~ s/.\^/\//gm;    # Convert caret to slash
+  $whitelists =~ s/\$.*//gm;    # Remove everything after a dollar sign
+  $whitelists =~ s/^\*//gm;    # Remove beginning asterisk
+  $whitelists =~ s/\*$//gm;    # Remove ending asterisk
+
+  foreach my $line (split(/\n/, $list))
+  {
+    # Remove filters that require whitelists
+    my $tmpline = $line;
+    unless ($line =~ m/^;/)
+    {
+      $tmpline =~ s/^\|\|//;    # Remove pipes
+      $tmpline =~ s/\^$//;    # Remove ending caret
+      $tmpline =~ s/\^/\//;    # Convert caret to slash
+      $tmpline =~ s/\$.*//;    # Remove everything after a dollar sign
+      $tmpline =~ s/^\*//;    # Remove beginning asterisk
+      $tmpline =~ s/\*$//;    # Remove ending asterisk
+
+      $matcheswhitelist = 1 if (($tmpline =~ m/\Q$whitelists\E/gmi) or ($whitelists =~ m/\Q$tmpline\E/gmi));
+    }
+
+    $urlfilter = $urlfilter."\n$line" unless (defined $matcheswhitelist);
+    undef $matcheswhitelist;
+  }
+  $list = $urlfilter;
 
 
 
 
-
-
-
-
-
+  $list =~ s/^(;\s*?)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;    # Add urlfilter header
 
   return $list;
 }
