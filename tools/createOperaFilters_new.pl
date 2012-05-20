@@ -146,12 +146,23 @@ sub createElemfilter
   $list =~ s/^([^!].*[^,])$/$1,/gm;    # Add commas
 
 
-  $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml"\n$1\n;/m;    # Add xml namespace declaration
+  $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml"\n$1\n/m;    # Add xml namespace declaration
   # Add CSS rule
   # ?
 
   # Convert comments
-  # ?
+  my $elemfilter= "";
+  my $previousline = "";
+
+  foreach my $line (split(/\n/, $list))
+  {
+    $elemfilter = $elemfilter."/*\n" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
+    $elemfilter = $elemfilter."*/\n" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
+    $elemfilter = $elemfilter.$line."\n";
+    $previousline = $line;
+  }
+  undef $previousline;
+  $list = $elemfilter;
 
   return $list;
 }
