@@ -164,7 +164,7 @@ sub createUrlfilter
 
     $tmpline =~ s/\*:\/\///;    # Remove protocol
     $tmpline =~ s/\^$//;    # Remove ending caret
-    $tmpline =~ s/.\^/\//;    # Convert caret to slash
+    $tmpline =~ s/\^/\//;    # Convert caret to slash
     $tmpline =~ s/\$.*//;    # Remove everything after a dollar sign
     $tmpline =~ s/^\*//;    # Remove beginning asterisk
     $tmpline =~ s/\*$//;    # Remove ending asterisk
