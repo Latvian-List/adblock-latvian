@@ -19,13 +19,16 @@
 use strict;
 use warnings;
 use File::Basename;
-use List::MoreUtils qw{lastidx firstval};
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
 my $file = $ARGV[0];
 my $path = dirname($file);
 my $list = readFile($file);
+
+# File names
+my $urlfilterfile = "$path/urlfilter.ini";
+my $cssfile = "$path/element-filter.css";
 
 my $nocss = 1 if ( grep { $_ eq "--nocss"} @ARGV );
 my $nourlfilter = 1 if ( grep { $_ eq "--nourlfilter"} @ARGV );
@@ -40,243 +43,94 @@ print "Urlfilter won't be generated!\n" unless (defined $urlfilter);
 print "CSS won't be generated!\n" unless (defined $elemfilter);
 
 # Write generated files
-writeFile("$path/urlfilter.ini",$urlfilter) unless ((defined $nourlfilter) or (!defined $urlfilter));
-writeFile("$path/element-filter.css",$elemfilter) unless ((defined $nocss) or (!defined $elemfilter));
+writeFile($urlfilterfile,$urlfilter) unless ((defined $nourlfilter) or (!defined $urlfilter));
+writeFile($cssfile,$elemfilter) unless ((defined $nocss) or (!defined $elemfilter));
 
 
 
 sub createUrlfilter
 {
   my $list = shift;
-  my @urlfilter;
-  my @whitelists;
-
-  my $oldchecksum;
-  my $oldmodified;
+  my $urlfilter = "";
 
   # Get old checksum and modification time
-  if (-e "$path/urlfilter.ini")
+  if (-e $urlfilterfile)
   {
-    my @oldlist = (split(/\n/, (readFile("$path/urlfilter.ini"))));
-    $oldchecksum = firstval { $_ =~ m/Checksum:/i } @oldlist;
-    $oldmodified = firstval { $_ =~ m/(Last modified|Updated):/i } @oldlist;
-    undef @oldlist;
+    my $oldlist = readFile($urlfilterfile);
+    my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/gim;
+    my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/gim;
+    undef $oldlist;
   }
 
-
-  foreach my $line (split(/\n/, $list))
-  {
-    unless ($line =~m/\[.*?\]/i)
-    {
-      # Convert comments
-      if ($line =~ m/^!/)
-      {
-        # Insert old checksumm
-        if ($line =~ m/Checksum:/i)
-        {
-          (defined $oldchecksum) ? ($line) = $oldchecksum : $line =~ s/^!/;/;
-        }
-
-        # Insert old last modified
-        elsif ($line =~ m/(Last modified|Updated):/i)
-        {
-          (defined $oldmodified) ? ($line) = $oldmodified : $line =~ s/^!/;/;
-        }
-
-        # Normalize title
-        elsif ($line =~ m/Title:/i)
-        {
-          $line =~ s/Title: //i;
-        }
-
-        # Add the rest of comments
-        unless ($line =~ m/Redirect:/i)
-        {
-          $line =~ s/^\!/;/;
-          push @urlfilter, $line;
-        }
-      }
-
-      # Collect whitelists
-      elsif (($line =~ m/^@@/) and ($line !~ m/\^\$elemhide$/))
-      {
-        $line =~ s/\$.*// if $line =~ m/\$/;    # Remove everything after a dollar sign
-
-        if ($line =~ m/^@@\|\|/)
-        {
-          # Collect domain whitelists
-          if ($line =~ m/\^$/)
-          {
-            $line =~ s/^@@\|\|//;    # Remove whitelist symbols and vertical bars
-            $line =~ s/\^$//;    # Remove ending caret
-
-            push @whitelists, $line;
-          }
-          else
-          # Collect whitelists with a domain in them
-          {
-            $line =~ s/\^/\// if $line =~ m/\^/;    # Convert caret to slash
-            $line =~ s/\*$// if $line =~ m/\*$/;    # Remove ending asterisk
-          }
-        }
-        else
-        # Collect generic whitelists
-        {
-          $line =~ s/^\*// if $line =~ m/^\*/;    # Remove beginning asterisk
-          $line =~ s/\*$// if $line =~ m/\*$/;    # Remove ending asterisk
-        }
-        push @whitelists, $line;
-      }
-
-      elsif (($line !~ m/\$/) and ($line !~ m/##/))
-      {
-        $line =~ s/^\|// if (($line !~ m/^\|\|/) and ($line =~ m/^\|/));    # Remove beginning pipe
-        $line = "*".$line unless (($line =~ m/^[\|\* ]/) or ($line =~ m/.:\/\//));    # Add beginning asterisk
-        $line = $line."*" unless ($line =~ m/[\|\* ]$/);    # Add ending asterisk
-        $line =~ s/\|$// if ($line =~ m/\|$/);    # Convert filter endings
-
-        push @urlfilter, $line;
-      }
-    }
-  }
+  my $whitelists = $1 if $list =~ m/^(@@\S*(\$elemhide)?\r?\n)/gm;    # Collect whitelists
 
 
-  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);    # Return undef if list is empty
+  $list =~ s/\[.*\]\n//gm;    # Remove ABP header
+  $list =~ s/^@@.*\n?//gm;    # Remove whitelists
+  $list =~ s/^.*##.*\n?//gm;    # Remove element filters
+  $list =~ s/^.*\$.*\n?//gm;    # Remove filters with types
+
+  $list =~ s/^!/;/gm;    # Convert comments
+  $list =~ s/^(;\s)Title:\s/$1/mi;    # Normalize title
+  $list =~ s/^(;\sRedirect\n)//gmi;    # Remove redirect comment
+
+#  $list =~ s/^(;\s)(Checksum:.*)$/$1$oldchecksum/gmi if (defined $oldchecksum);    # Insert old checksum
+#  $list =~ s/^(;\s)((Last modified|Updated):.*)$/$1$oldmodified/gmi if (defined $oldmodified);    # Insert old modification date/time
+
+  $list =~ s/^([^;|].*$)/\*$1/gm;    # Add beginning asterisk
+  $list =~ s/^([^;]\S*[^|*])$/$1\*/gm;    # Add ending asterisk
+  $list =~ s/^\|([^|].*)$/$1/gm;    # Remove beginning pipe
+  $list =~ s/^([^;].*)\|$/$1/gm;    # Remove ending pipe
+
+  $list =~ s/^(;\s*?)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;    # Add urlfilter header
 
 
-  $list = join("\n", @urlfilter);
-  undef @urlfilter;
-  my $whitelists = join("\n", @whitelists);
-  my $tmpline = "";
-  my $matcheswhitelist;
-
-  foreach my $line (split(/\n/, $list))
-  {
-    # Remove filters that require whitelists
-    ($tmpline) = $line;
-
-    $tmpline =~ s/^\*:\/\///;    # Remove protocol
-    $tmpline =~ s/^\|\|//;    # Remove pipes
-    $tmpline =~ s/\^$//;    # Remove ending caret
-    $tmpline =~ s/\^/\//;    # Convert caret to slash
-    $tmpline =~ s/\$.*//;    # Remove everything after a dollar sign
-    $tmpline =~ s/^\*//;    # Remove beginning asterisk
-    $tmpline =~ s/\*$//;    # Remove ending asterisk
-
-    foreach my $inline (split(/\n/, $whitelists))
-    {
-      $matcheswhitelist = 1 if (($tmpline =~ m/\Q$inline\E/i) or ($inline =~ m/\Q$tmpline\E/i));
-    }
-
-    push @urlfilter, $line unless (defined $matcheswhitelist);
-    undef $matcheswhitelist;
-  }
+  # Parse whitelists
+  # ?
 
 
-  return undef if (scalar(grep {$_ !~ m/^;/} @urlfilter) <= 0);    # Return undef if list is empty
 
 
-  # Add urlfilter header
-  my $linenr = 0;
-  foreach my $line (split(/\n/, $list))
-  {
-    last if ($line =~ m/^;\s*$/);
-    $linenr++;
-  }
-  splice (@urlfilter, $linenr, 0, "[prefs]\nprioritize excludelist=1\n[include]\n*\n[exclude]");
 
-  return join("\n", @urlfilter);
+
+
+
+
+
+  return $list;
 }
 
 
 sub createElemfilter
 {
   my $list = shift;
-  my @elemfilter;
-
-  my $oldchecksum;
-  my $oldmodified;
 
   # Get old checksum and modification time
-  if (-e "$path/element-filter.css")
+  if (-e $cssfile)
   {
-    my @oldlist = (split(/\n/, (readFile("$path/element-filter.css"))));
-    $oldchecksum = firstval { $_ =~ m/Checksum:/i } @oldlist;
-    $oldmodified = firstval { $_ =~ m/(Last modified|Updated):/i } @oldlist;
-    undef @oldlist;
+    my $oldlist = readFile($cssfile);
+    my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/gim;
+    my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/gim;
+    undef $oldlist;
   }
 
+  $list =~ s/^(?!##|^!).*\n?//gm;    # Leave only generic element filters and comments
 
-  foreach my $line (split(/\n/, $list))
-  {
-    # Remove ABP header
-    if ($line =~m/\[.*?\]/i)
-    {
-    }
-    unless ($line =~ m/Redirect:/i)
-    {
-      if ($line =~ m/^!/)
-      {
-        # Insert old checksumm
-        if ($line =~ m/Checksum:/i)
-        {
-          ($line) = $oldchecksum if defined $oldchecksum;
-        }
-        # Insert old last modified
-        elsif ($line =~ m/(Last modified|Updated):/i)
-        {
-          ($line) = $oldmodified if defined $oldmodified;
-        }
-        push @elemfilter, $line;
-      }
-    }
-
-    # Add generic element filters
-    if ($line =~ m/^##/)
-    {
-      $line =~ s/##//;
-      $line =~ s/(^.*[\[\.\#])/\L$1/ if ($line =~ m/^.*[\[\.\#]/);    # Convert tags to lowercase
-      push @elemfilter, $line.",";
-    }
-
-  }
+  $list =~ s/^##//gm;    # Remove beginning number signs
+  $list =~ s/(^.*[\[.#])/\L$1/gmi;    # Convert tags to lowercase
 
 
-  return undef if (scalar(grep {$_ !~ m/^!/} @elemfilter) <= 0);    # Return undef if list is empty
+  $list =~ s/^([^!].*[^,])$/$1,/;    # Add commas
 
 
-  # Add xml namespace declaration
-  my $linenr = 0;
-  $list = join("\n", @elemfilter);
-  foreach my $line (split(/\n/, $list))
-  {
-    last if ($line =~ m/^!\s*$/);
-    $linenr++;
-  }
-  splice (@elemfilter, $linenr, 0, "\@namespace \"http://www.w3.org/1999/xhtml\";");
-
-  $elemfilter[lastidx{ ($_ =~ m/,$/) and ($_ !~ m/^!/) } @elemfilter] =~ s/,$//;    # Remove last comma
-
-  push @elemfilter,"{ display: none !important; }";    # Add CSS rule
-
+  $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml"\n$1\n;/m;    # Add xml namespace declaration
+  # Add CSS rule
+  # ?
 
   # Convert comments
-  my $previousline = "";
+  # ?
 
-  $list = join("\n", @elemfilter);
-  undef @elemfilter;
-
-  foreach my $line (split(/\n/, $list))
-  {
-    push @elemfilter, "/*" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
-    push @elemfilter, "*/" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
-    push @elemfilter, $line;
-    $previousline = $line;
-  }
-  undef $previousline;
-
-
-  return join("\n", @elemfilter);
+  return $list;
 }
 
 
