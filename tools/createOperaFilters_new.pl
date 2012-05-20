@@ -120,7 +120,7 @@ sub createElemfilter
   $list =~ s/(^.*[\[.#])/\L$1/gmi;    # Convert tags to lowercase
 
 
-  $list =~ s/^([^!].*[^,])$/$1,/;    # Add commas
+  $list =~ s/^([^!].*[^,])$/$1,/gm;    # Add commas
 
 
   $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml"\n$1\n;/m;    # Add xml namespace declaration
