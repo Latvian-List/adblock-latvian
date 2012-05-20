@@ -61,7 +61,7 @@ sub createUrlfilter
     undef $oldlist;
   }
 
-  my ($whitelists) = $list =~ m/^@@.*$/gm;    # Collect whitelists
+  my $whitelists = join("\n", ($list =~ m/^@@.*$/gm));    # Collect whitelists
 
   $list =~ s/\[.*\]\n//gm;    # Remove ABP header
   $list =~ s/^@@.*\n?//gm;    # Remove whitelists
