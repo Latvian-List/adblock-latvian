@@ -166,7 +166,7 @@ sub createElemfilter
 
 
   $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml";\n$1\n/m;    # Add xml namespace declaration
-  $list =~ s/(^[^!].*),/$1/ms;    # Remove last comma
+  $list =~ s/(^[^!].*),\s*$/$1/ms;    # Remove last comma
   $list =~ s/(\n)\Z/$1\{ display: none !important; \}/ms;    # Add CSS rule
 
 
