@@ -166,8 +166,10 @@ sub createElemfilter
 
 
   $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml";\n$1\n/m;    # Add xml namespace declaration
+  $list =~ s/(^[^!].*),/$1/ms;    # Remove last comma
   # Add CSS rule
   # ?
+
 
   # Convert comments
   my $elemfilter= "";
