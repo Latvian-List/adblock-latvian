@@ -20,32 +20,51 @@ use strict;
 use warnings;
 use File::Basename;
 use File::Slurp;
+use Getopt::Long qw(:config no_auto_abbrev);
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
-my $file = $ARGV[0];
-my $path = dirname($file);
-my $list = read_file($file, binmode => ':utf8' );
 
-# File names
-my $urlfilterfile = "$path/urlfilter.ini";
-my $cssfile = "$path/element-filter.css";
+# Set defaults
+my $file = '';
+my $urlfilterfile = '';
+my $cssfile = '';
+my $nourlfilter ='';
+my $nocss = '';
 
-my $nocss = 1 if ( grep { $_ eq "--nocss"} @ARGV );
-my $nourlfilter = 1 if ( grep { $_ eq "--nourlfilter"} @ARGV );
-die "No lists generated!\n" if ((defined $nourlfilter) and (defined $nocss));
+GetOptions ('<>' => \&file, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss);    # Get command line options
+
+my $path = dirname($file);    # Get ABP list path
+$urlfilterfile = "$path/urlfilter.ini" unless $urlfilterfile;    # Set urlfilter file name
+$cssfile = "$path/element-filter.css" unless $cssfile;    # Set css file name
 
 
-my $urlfilter = createUrlfilter($list) unless (defined $nourlfilter);
-my $elemfilter = createElemfilter($list) unless (defined $nocss);
+die "No lists generated!\n" if ($nocss and $nourlfilter);
+
+
+my $list = read_file($file, binmode => ':utf8' );    # Read ABP list
+
+
+my $urlfilter = createUrlfilter($list) unless $nourlfilter;
+my $elemfilter = createElemfilter($list) unless $nocss;
+
 
 # Warn if a file won't be generated
-print "Urlfilter won't be generated!\n" unless (defined $urlfilter);
-print "CSS won't be generated!\n" unless (defined $elemfilter);
+print "Urlfilter won't be generated!\n" unless $urlfilter;
+print "CSS won't be generated!\n" unless $elemfilter;
+
 
 # Write generated files
-write_file($urlfilterfile, {binmode => ':utf8'}, $urlfilter) unless ((defined $nourlfilter) or (!defined $urlfilter));
-write_file($cssfile, {binmode => ':utf8'}, $elemfilter) unless ((defined $nocss) or (!defined $elemfilter));
+write_file($urlfilterfile, {binmode => ':utf8'}, $urlfilter) unless ($nourlfilter or (!defined $urlfilter));
+write_file($cssfile, {binmode => ':utf8'}, $elemfilter) unless ($nocss or (!defined $elemfilter));
+
+
+
+sub file
+{
+  $file = shift;
+  return;
+}
 
 
 sub createUrlfilter
