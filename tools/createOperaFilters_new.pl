@@ -55,8 +55,8 @@ print "CSS won't be generated!\n" unless $elemfilter;
 
 
 # Write generated files
-write_file($urlfilterfile, {binmode => ':utf8'}, $urlfilter) unless ($nourlfilter or (!defined $urlfilter));
-write_file($cssfile, {binmode => ':utf8'}, $elemfilter) unless ($nocss or (!defined $elemfilter));
+write_file($urlfilterfile, {binmode => ':utf8'}, $urlfilter) unless ($nourlfilter or !$urlfilter);
+write_file($cssfile, {binmode => ':utf8'}, $elemfilter) unless ($nocss or !$elemfilter);
 
 
 
@@ -73,7 +73,6 @@ sub createUrlfilter
     my $oldlist = read_file($urlfilterfile, binmode => ':utf8' );
     $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
     $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
-    undef $oldlist;
   }
 
   my $whitelists = join("\n", ($list =~ m/^@@.*$/gm));    # Collect whitelists
@@ -98,8 +97,8 @@ sub createUrlfilter
 
 
   # Parse whitelists
-  my $urlfilter ="";
-  my $matcheswhitelist;
+  my $urlfilter = "";
+  my $matcheswhitelist = '';
 
   $whitelists =~ s/^@@//gm;    # Remove whitelist symbols
   $whitelists =~ s/^\|\|//gm;    # Remove vertical bars
@@ -125,8 +124,8 @@ sub createUrlfilter
       $matcheswhitelist = 1 if (($tmpline =~ m/\Q$whitelists\E/gmi) or ($whitelists =~ m/\Q$tmpline\E/gmi));
     }
 
-    $urlfilter = $urlfilter."$line\n" unless (defined $matcheswhitelist);
-    undef $matcheswhitelist;
+    $urlfilter = $urlfilter."$line\n" unless $matcheswhitelist;
+    $matcheswhitelist = '';
   }
   $list = $urlfilter;
 
@@ -151,7 +150,6 @@ sub createElemfilter
     my $oldlist = read_file($cssfile, binmode => ':utf8' );
     my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
     my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
-    undef $oldlist;
   }
 
   $list =~ s/^(?!##|^!).*\n?//gm;    # Leave only generic element filters and comments
@@ -183,7 +181,6 @@ sub createElemfilter
     $tmplist = $tmplist.$line."\n";
     $previousline = $line;
   }
-  undef $previousline;
   ($list) = $tmplist;
 
   return $list;
