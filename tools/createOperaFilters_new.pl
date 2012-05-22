@@ -82,7 +82,7 @@ sub createUrlfilter
 
   my $whitelists = join("\n", ($list =~ m/^@@.*$/gm));    # Collect whitelists
 
-  $list =~ s/\[.*\]\n//gm;    # Remove ABP header
+  $list =~ s/^\[.*\]\n//m;    # Remove ABP header
   $list =~ s/^@@.*\n?//gm;    # Remove whitelists
   $list =~ s/^.*##.*\n?//gm;    # Remove element filters
   $list =~ s/^.*\$.*\n?//gm;    # Remove filters with types
@@ -129,7 +129,7 @@ sub createUrlfilter
       $matcheswhitelist = 1 if (($tmpline =~ m/\Q$whitelists\E/gmi) or ($whitelists =~ m/\Q$tmpline\E/gmi));
     }
 
-    $urlfilter = $urlfilter."\n$line" unless (defined $matcheswhitelist);
+    $urlfilter = $urlfilter."$line\n" unless (defined $matcheswhitelist);
     undef $matcheswhitelist;
   }
   $list = $urlfilter;
