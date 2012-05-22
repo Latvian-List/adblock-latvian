@@ -19,12 +19,13 @@
 use strict;
 use warnings;
 use File::Basename;
+use File::Slurp;
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
 my $file = $ARGV[0];
 my $path = dirname($file);
-my $list = readFile($file);
+my $list = read_file($file, binmode => ':utf8' );
 
 # File names
 my $urlfilterfile = "$path/urlfilter.ini";
@@ -43,9 +44,8 @@ print "Urlfilter won't be generated!\n" unless (defined $urlfilter);
 print "CSS won't be generated!\n" unless (defined $elemfilter);
 
 # Write generated files
-writeFile($urlfilterfile,$urlfilter) unless ((defined $nourlfilter) or (!defined $urlfilter));
-writeFile($cssfile,$elemfilter) unless ((defined $nocss) or (!defined $elemfilter));
-
+write_file($urlfilterfile, {binmode => ':utf8'}, $urlfilter) unless ((defined $nourlfilter) or (!defined $urlfilter));
+write_file($cssfile, {binmode => ':utf8'}, $elemfilter) unless ((defined $nocss) or (!defined $elemfilter));
 
 
 sub createUrlfilter
@@ -55,7 +55,7 @@ sub createUrlfilter
   # Get old checksum and modification time
   if (-e $urlfilterfile)
   {
-    my $oldlist = readFile($urlfilterfile);
+    my $oldlist = read_file($urlfilterfile, binmode => ':utf8' );
     my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/gim;
     my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/gim;
     undef $oldlist;
@@ -131,7 +131,7 @@ sub createElemfilter
   # Get old checksum and modification time
   if (-e $cssfile)
   {
-    my $oldlist = readFile($cssfile);
+    my $oldlist = read_file($cssfile, binmode => ':utf8' );
     my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/gim;
     my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/gim;
     undef $oldlist;
@@ -165,28 +165,4 @@ sub createElemfilter
   $list = $elemfilter;
 
   return $list;
-}
-
-
-sub readFile
-{
-  my $file = shift;
-
-  open(local *FILE, "<", $file) || die "Could not read file '$file'\n";
-  binmode(FILE);
-  local $/;
-  my $result = <FILE>;
-  close(FILE);
-
-  return $result;
-}
-
-sub writeFile
-{
-  my ($file, $contents) = @_;
-
-  open(local *FILE, ">", $file) || die "Could not write file '$file'\n";
-  binmode(FILE);
-  print FILE $contents;
-  close(FILE);
 }
