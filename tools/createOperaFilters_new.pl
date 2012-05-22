@@ -66,11 +66,13 @@ sub createUrlfilter
   my $list = shift;
 
   # Get old checksum and modification time
+  my $oldchecksum = '';
+  my $oldmodified = '';
   if (-e $urlfilterfile)
   {
     my $oldlist = read_file($urlfilterfile, binmode => ':utf8' );
-    my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/gim;
-    my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/gim;
+    $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
+    $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
     undef $oldlist;
   }
 
@@ -85,8 +87,8 @@ sub createUrlfilter
   $list =~ s/^(;\s)Title:\s/$1/mi;    # Normalize title
   $list =~ s/^(;\sRedirect.*\n)//gmi;    # Remove redirect comment
 
-#  $list =~ s/^(;\s)(Checksum:.*)$/$1$oldchecksum/gmi if (defined $oldchecksum);    # Insert old checksum
-#  $list =~ s/^(;\s)((Last modified|Updated):.*)$/$1$oldmodified/gmi if (defined $oldmodified);    # Insert old modification date/time
+  $list =~ s/^(;\s*)(Checksum:.*)$/$1$oldchecksum/mi if $oldchecksum;    # Insert old checksum
+  $list =~ s/^(;\s*)((Last modified|Updated):.*)$/$1$oldmodified/mi if $oldmodified;    # Insert old modification date/time
 
   $list =~ s/^([^;|].*$)/\*$1/gm;    # Add beginning asterisk
   $list =~ s/^([^;]\S*[^|*])$/$1\*/gm;    # Add ending asterisk
@@ -142,18 +144,24 @@ sub createElemfilter
   my $list = shift;
 
   # Get old checksum and modification time
+  my $oldchecksum = '';
+  my $oldmodified = '';
   if (-e $cssfile)
   {
     my $oldlist = read_file($cssfile, binmode => ':utf8' );
-    my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/gim;
-    my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/gim;
+    my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
+    my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
     undef $oldlist;
   }
 
   $list =~ s/^(?!##|^!).*\n?//gm;    # Leave only generic element filters and comments
 
+
+  $list =~ s/^(!\s*)(Checksum:.*)$/$1$oldchecksum/mi if $oldchecksum;    # Insert old checksum
+  $list =~ s/^(!\s*)((Last modified|Updated):.*)$/$1$oldmodified/mi if $oldmodified;    # Insert old modification date/time
+
   $list =~ s/^##//gm;    # Remove beginning number signs
-  $list =~ s/(^.*[\[.#])/\L$1/gmi;    # Convert tags to lowercase
+  $list =~ s/(^[^!].*[\[.#])/\L$1/gmi;    # Convert tags to lowercase
 
 
   $list =~ s/^([^!].*[^,])$/$1,/gm;    # Add commas
@@ -165,18 +173,18 @@ sub createElemfilter
 
 
   # Convert comments
-  my $elemfilter= "";
+  my $tmplist= "";
   my $previousline = "";
 
   foreach my $line (split(/\n/, $list))
   {
-    $elemfilter = $elemfilter."/*\n" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
-    $elemfilter = $elemfilter."*/\n" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
-    $elemfilter = $elemfilter.$line."\n";
+    $tmplist = $tmplist."/*\n" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
+    $tmplist = $tmplist."*/\n" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
+    $tmplist = $tmplist.$line."\n";
     $previousline = $line;
   }
   undef $previousline;
-  $list = $elemfilter;
+  ($list) = $tmplist;
 
   return $list;
 }
