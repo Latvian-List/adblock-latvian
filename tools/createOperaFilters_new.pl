@@ -32,7 +32,7 @@ my $cssfile = '';
 my $nourlfilter ='';
 my $nocss = '';
 
-GetOptions ('<>' => \&file, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss);    # Get command line options
+GetOptions ('<>' => \&{$file = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss);    # Get command line options
 
 my $path = dirname($file);    # Get ABP list path
 $urlfilterfile = "$path/urlfilter.ini" unless $urlfilterfile;    # Set urlfilter file name
@@ -59,12 +59,6 @@ write_file($urlfilterfile, {binmode => ':utf8'}, $urlfilter) unless ($nourlfilte
 write_file($cssfile, {binmode => ':utf8'}, $elemfilter) unless ($nocss or (!defined $elemfilter));
 
 
-
-sub file
-{
-  $file = shift;
-  return;
-}
 
 
 sub createUrlfilter
