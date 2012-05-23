@@ -30,11 +30,12 @@ die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 my $file = '';
 my $urlfilterfile = '';
 my $cssfile = '';
+my $customcssfile = '';
 my $nourlfilter ='';
 my $nocss = '';
 my $newsyntax = '';
 
-GetOptions ('<>' => \&{$file = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss, 'new' => \$newsyntax);    # Get command line options
+GetOptions ('<>' => \&{$file = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'addcustomcss:s' => \$customcssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss, 'new' => \$newsyntax);    # Get command line options
 
 die "Specified file: $file doesn't exist!\n" unless (-e $file);
 my $path = dirname($file);    # Get ABP list path
@@ -182,12 +183,22 @@ sub createElemfilter
   $list =~ s/(^[^!].*[\[.#])/\L$1/gmi;    # Convert tags to lowercase
 
 
-  $list =~ s/^([^!].*[^,])$/$1,/gm;    # Add commas
+  if ($customcssfile and (-e $customcssfile))
+  {
+    my $customcss = read_file($customcssfile, binmode => ':utf8' );    # Read custom CSS file
+    $list =~ s/\r\n/\n/gm;    # Remove CR from CR+LF line endings
+    $list =~ s/\r/\n/gm;    # Convert CR line endings to LF
+
+    $customcss =~ s/^@.*\n//gm;    # Remove at-rules
+    $customcss =~ s/^((?!\/\*|\*\/|!).*){.+}/$1/gm;    # Remove CSS rules
+    $list = $list."\n".$customcss;    # Add custom CSS to list
+  }
 
 
+  $list =~ s/^((?!\/\*|\*\/|\!).*[^,])\s*$/$1,/gm;    # Add commas
   $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml";\n$1\n/m;    # Add xml namespace declaration
   $list =~ s/(^[^!].*),\s*$/$1/ms;    # Remove last comma
-  $list =~ s/(\n)\Z/$1\{ display: none !important; \}/ms;    # Add CSS rule
+  $list = $list." { display: none !important; }\n";    # Add CSS rule
 
 
   # Convert comments
