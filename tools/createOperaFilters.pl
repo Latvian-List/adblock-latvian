@@ -47,6 +47,9 @@ die "No lists generated!\n" if ($nocss and $nourlfilter);
 
 my $list = read_file($file, binmode => ':utf8' );    # Read ABP list
 
+$list =~ s/\r\n/\n/gm;    # Remove CR from CR+LF line endings
+$list =~ s/\r/\n/gm;    # Convert CR line endings to LF
+
 
 my $urlfilter = createUrlfilter($list) unless $nourlfilter;
 my $elemfilter = createElemfilter($list) unless $nocss;
