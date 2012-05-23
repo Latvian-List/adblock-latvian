@@ -83,6 +83,9 @@ sub createUrlfilter
   $list =~ s/^.*\$.*\n?//gm;    # Remove filters with types
 
   $list =~ s/^!/;/gm;    # Convert comments
+
+  return '' if ((scalar(split(m/^([^;])/m,$list)) - 1) < 1);
+
   $list =~ s/^(;\s*)Title:\s/$1/mi;    # Normalize title
   $list =~ s/^(;\s*Redirect.*\n)//gmi;    # Remove redirect comment
 
@@ -129,7 +132,7 @@ sub createUrlfilter
   }
   $list = $urlfilter;
 
-
+  return '' if ((scalar(split(m/^([^;])/m,$list)) - 1) < 1);
 
 
   $list =~ s/^(;\s*)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;    # Add urlfilter header
@@ -154,6 +157,7 @@ sub createElemfilter
 
   $list =~ s/^(?!##|!).*\n?//gm;    # Leave only generic element filters and comments
 
+  return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1);
 
   $list =~ s/^(!\s*)(Checksum:.*)$/$1$oldchecksum/mi if $oldchecksum;    # Insert old checksum
   $list =~ s/^(!\s*)((Last modified|Updated):.*)$/$1$oldmodified/mi if $oldmodified;    # Insert old modification date/time
