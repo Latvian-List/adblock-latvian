@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-#  Script to convert ABP filters to Opera urlfilter and CSS element filters
+#  Script to convert ABP filters to Opera urlfilter and a CSS with a hiding rule
 #  Copyright (C) 2012  anonymous74100
 #
 #  This program is free software: you can redistribute it and/or modify
