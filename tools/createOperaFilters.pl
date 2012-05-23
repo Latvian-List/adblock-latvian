@@ -171,7 +171,6 @@ sub createElemfilter
 
   $list =~ s/^(?!##|!).*\n?//gm;    # Leave only generic element filters and comments
 
-  return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1);
 
   $list =~ s/^(!\s*)Title:\s/$1/mi;    # Normalize title
   $list =~ s/^(!\s*Redirect.*\n)//gmi;    # Remove redirect comment
@@ -194,6 +193,7 @@ sub createElemfilter
     $list = $list."\n".$customcss;    # Add custom CSS to list
   }
 
+  return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1);
 
   $list =~ s/^((?!\/\*|\*\/|\!).*[^,])\s*$/$1,/gm;    # Add commas
   $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml";\n$1\n/m;    # Add xml namespace declaration
