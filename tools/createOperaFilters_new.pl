@@ -140,7 +140,7 @@ sub createUrlfilter
   unless ($newsyntax)
   {
     $list =~ s/^\|\|(.*)/\*:\/\/$1\n\*\.$1/gm;    # Remove pipes and add protocol and add a filter with subdomain
-    $list =~ s/^([!;].*)^/$1\//gm;    # Convert caret to slash
+    $list =~ s/^([^;].*)\^/$1\//gm;    # Convert caret to slash
   }
 
 
