@@ -1,0 +1,36 @@
+/* 1188.lv */
+.LabsservissAdd,
+/* apollo.lv */
+#lvc_infobox,
+.admiral_box,
+.apollo_infobox,
+.city24_box,
+.comment_banner_v2,
+.eshop_table,
+.middle_banner,
+/* bilesuserviss.lv */
+.banner_clicker,
+/* delfi.lv */
+#delfieduitems,
+.delfi_shop,
+.city24w,
+[id^="adoceandelfilv"],
+/* easyget.lv */
+[class^="adholder"],
+/* inbox.lv */
+#inboxshops_div,
+#inxHeadAdsPlace,
+/* ir.lv */
+#abonbanner,
+/* notepad.lv */
+#ad_big,
+/* tvnet.lv */
+#keyword_ad,
+#lattelecom_flying_boxv2,
+/* tvnet.lv financenet.lv*/
+#pop_keyword_everest_ad,
+#pop_keyword_letpas_ad,
+a[href^="http://q.tvnet.lv/"],
+/* zip.lv */
+#perkam_group_banner
+{ display:none !important; }
