@@ -89,7 +89,7 @@ sub createUrlfilter
   $list =~ s/^(;\s*)(Checksum:.*)$/$1$oldchecksum/mi if $oldchecksum;    # Insert old checksum
   $list =~ s/^(;\s*)((Last modified|Updated):.*)$/$1$oldmodified/mi if $oldmodified;    # Insert old modification date/time
 
-  $list =~ s/^([^;|].*$)/\*$1/gm;    # Add beginning asterisk
+  $list =~ s/^([^;|*].*$)/\*$1/gm;    # Add beginning asterisk
   $list =~ s/^([^;]\S*[^|*])$/$1\*/gm;    # Add ending asterisk
   $list =~ s/^\|([^|].*)$/$1/gm;    # Remove beginning pipe
   $list =~ s/^([^;].*)\|$/$1/gm;    # Remove ending pipe
