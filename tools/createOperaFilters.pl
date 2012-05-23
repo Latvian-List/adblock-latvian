@@ -21,6 +21,7 @@ use warnings;
 use File::Basename;
 use File::Slurp;
 use Getopt::Long qw(:config no_auto_abbrev);
+use feature 'unicode_strings';
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
