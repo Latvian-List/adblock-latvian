@@ -169,6 +169,9 @@ sub createElemfilter
 
   return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1);
 
+  $list =~ s/^(!\s*)Title:\s/$1/mi;    # Normalize title
+  $list =~ s/^(!\s*Redirect.*\n)//gmi;    # Remove redirect comment
+
   $list =~ s/^(!\s*)(Checksum:.*)$/$1$oldchecksum/mi if $oldchecksum;    # Insert old checksum
   $list =~ s/^(!\s*)((Last modified|Updated):.*)$/$1$oldmodified/mi if $oldmodified;    # Insert old modification date/time
 
