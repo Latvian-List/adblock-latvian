@@ -18,7 +18,7 @@
 
 use strict;
 use warnings;
-use File::Basename;
+use File::Spec;
 use File::Slurp;
 use Getopt::Long qw(:config no_auto_abbrev);
 use feature 'unicode_strings';
@@ -27,7 +27,7 @@ die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
 
 # Set defaults
-my $file = '';
+my $filename = '';
 my $urlfilterfile = '';
 my $cssfile = '';
 my $customcssfile = '';
@@ -35,18 +35,20 @@ my $nourlfilter ='';
 my $nocss = '';
 my $newsyntax = '';
 
-GetOptions ('<>' => \&{$file = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'addcustomcss:s' => \$customcssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss, 'new' => \$newsyntax);    # Get command line options
+GetOptions ('<>' => \&{$filename = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'addcustomcss:s' => \$customcssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss, 'new' => \$newsyntax);    # Get command line options
 
-die "Specified file: $file doesn't exist!\n" unless (-e $file);
-my $path = dirname($file);    # Get ABP list path
-$urlfilterfile = "$path/urlfilter.ini" unless $urlfilterfile;    # Set urlfilter file name
-$cssfile = "$path/element-filter.css" unless $cssfile;    # Set css file name
+die "Specified file: $filename doesn't exist!\n" unless (-e $filename);
+my ($volume,$directories,$file) = File::Spec->splitpath($filename);
+my $path = $volume.$directories;    # Get ABP list path
+
+$urlfilterfile = $path."urlfilter.ini" unless $urlfilterfile;    # Set urlfilter file name
+$cssfile = $path."element-filter.css" unless $cssfile;    # Set css file name
 
 
 die "No lists generated!\n" if ($nocss and $nourlfilter);
 
 
-my $list = read_file($file, binmode => ':utf8' );    # Read ABP list
+my $list = read_file($filename, binmode => ':utf8' );    # Read ABP list
 
 $list =~ s/\r\n/\n/gm;    # Remove CR from CR+LF line endings
 $list =~ s/\r/\n/gm;    # Convert CR line endings to LF
