@@ -76,9 +76,9 @@ sub createUrlfilter
   my $oldmodified = '';
   if (-e $urlfilterfile)
   {
-     my $oldlist = read_file($urlfilterfile, binmode => ':utf8' );
-     $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
-     $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
+    my $oldlist = read_file($urlfilterfile, binmode => ':utf8' );
+    $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
+    $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
   }
 
   my $whitelists = join("\n", ($list =~ m/^@@.*$/gm));    # Collect whitelists
@@ -163,9 +163,9 @@ sub createElemfilter
   my $oldmodified = '';
   if (-e $cssfile)
   {
-     my $oldlist = read_file($cssfile, binmode => ':utf8' );
-     $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
-     $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
+    my $oldlist = read_file($cssfile, binmode => ':utf8' );
+    $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
+    $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
   }
 
   $list =~ s/^(?!##|!).*\n?//gm;    # Leave only generic element filters and comments
