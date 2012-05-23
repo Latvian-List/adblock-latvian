@@ -31,8 +31,9 @@ my $urlfilterfile = '';
 my $cssfile = '';
 my $nourlfilter ='';
 my $nocss = '';
+my $newsyntax = '';
 
-GetOptions ('<>' => \&{$file = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss);    # Get command line options
+GetOptions ('<>' => \&{$file = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss, 'new' => \$newsyntax);    # Get command line options
 
 my $path = dirname($file);    # Get ABP list path
 $urlfilterfile = "$path/urlfilter.ini" unless $urlfilterfile;    # Set urlfilter file name
@@ -133,6 +134,13 @@ sub createUrlfilter
   $list = $urlfilter;
 
   return '' if ((scalar(split(m/^([^;])/m,$list)) - 1) < 1);
+
+
+  unless ($newsyntax)
+  {
+    $list =~ s/^\|\|(.*)/\*:\/\/$1\n\*\.$1/gm;    # Remove pipes and add protocol and add a filter with subdomain
+    $list =~ s/^([!;].*)^/$1\//gm;    # Convert caret to slash
+  }
 
 
   $list =~ s/^(;\s*)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;    # Add urlfilter header
