@@ -27,7 +27,13 @@ die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
 
 # Set defaults
-my ($filename, $urlfilterfile, $cssfile, $customcssfile, $nourlfilter, $nocss, $newsyntax) = '';
+my $filename = '';
+my $urlfilterfile = '';
+my $cssfile = '';
+my $customcssfile = '';
+my $nourlfilter ='';
+my $nocss = '';
+my $newsyntax = '';
 
 GetOptions ('<>' => \&{$filename = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'addcustomcss:s' => \$customcssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss, 'new' => \$newsyntax);    # Get command line options
 
@@ -69,7 +75,8 @@ sub createUrlfilter
   my $list = shift;
 
   # Get old checksum and modification time
-  my ($oldchecksum, $oldmodified) = '';
+  my $oldchecksum = '';
+  my $oldmodified = '';
   if (-e $urlfilterfile)
   {
     my $oldlist = read_file($urlfilterfile, binmode => ':utf8' );
@@ -102,6 +109,9 @@ sub createUrlfilter
 
 
   # Parse whitelists
+  my $urlfilter = '';
+  my $matcheswhitelist = '';
+
   $whitelists =~ s/^@@//gm;    # Remove whitelist symbols
   $whitelists =~ s/^\|\|//gm;    # Remove vertical bars
   $whitelists =~ s/\^$//gm;    # Remove ending caret
@@ -109,8 +119,6 @@ sub createUrlfilter
   $whitelists =~ s/\$.*//gm;    # Remove everything after a dollar sign
   $whitelists =~ s/^\*//gm;    # Remove beginning asterisk
   $whitelists =~ s/\*$//gm;    # Remove ending asterisk
-
-  my ($urlfilter, $matcheswhitelist) = '';
 
   foreach my $line (split(/\n/, $list))
   {
@@ -154,7 +162,8 @@ sub createElemfilter
   my $list = shift;
 
   # Get old checksum and modification time
-  my ($oldchecksum, $oldmodified) = '';
+  my $oldchecksum = '';
+  my $oldmodified = '';
   if (-e $cssfile)
   {
     my $oldlist = read_file($cssfile, binmode => ':utf8' );
@@ -195,7 +204,8 @@ sub createElemfilter
 
 
   # Convert comments
-  my ($tmplist, $previousline) = '';
+  my $tmplist = '';
+  my $previousline = '';
 
   foreach my $line (split(/\n/, $list))
   {
