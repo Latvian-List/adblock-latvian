@@ -77,14 +77,14 @@ sub createUrlfilter
 
   my $whitelists = join("\n", ($list =~ m/^@@.*$/gm));    # Collect whitelists
 
-  $list =~ s/^\[.*\]\n//m;    # Remove ABP header
+  $list =~ s/^\[.+\]\n//m;    # Remove ABP header
   $list =~ s/^@@.*\n?//gm;    # Remove whitelists
   $list =~ s/^.*##.*\n?//gm;    # Remove element filters
   $list =~ s/^.*\$.*\n?//gm;    # Remove filters with types
 
   $list =~ s/^!/;/gm;    # Convert comments
-  $list =~ s/^(;\s)Title:\s/$1/mi;    # Normalize title
-  $list =~ s/^(;\sRedirect.*\n)//gmi;    # Remove redirect comment
+  $list =~ s/^(;\s*)Title:\s/$1/mi;    # Normalize title
+  $list =~ s/^(;\s*Redirect.*\n)//gmi;    # Remove redirect comment
 
   $list =~ s/^(;\s*)(Checksum:.*)$/$1$oldchecksum/mi if $oldchecksum;    # Insert old checksum
   $list =~ s/^(;\s*)((Last modified|Updated):.*)$/$1$oldmodified/mi if $oldmodified;    # Insert old modification date/time
@@ -103,7 +103,7 @@ sub createUrlfilter
   $whitelists =~ s/^@@//gm;    # Remove whitelist symbols
   $whitelists =~ s/^\|\|//gm;    # Remove vertical bars
   $whitelists =~ s/\^$//gm;    # Remove ending caret
-  $whitelists =~ s/.\^/\//gm;    # Convert caret to slash
+  $whitelists =~ s/\^/\//gm;    # Convert caret to slash
   $whitelists =~ s/\$.*//gm;    # Remove everything after a dollar sign
   $whitelists =~ s/^\*//gm;    # Remove beginning asterisk
   $whitelists =~ s/\*$//gm;    # Remove ending asterisk
@@ -132,7 +132,7 @@ sub createUrlfilter
 
 
 
-  $list =~ s/^(;\s*?)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;    # Add urlfilter header
+  $list =~ s/^(;\s*)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;    # Add urlfilter header
 
   return $list;
 }
@@ -152,7 +152,7 @@ sub createElemfilter
     my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
   }
 
-  $list =~ s/^(?!##|^!).*\n?//gm;    # Leave only generic element filters and comments
+  $list =~ s/^(?!##|!).*\n?//gm;    # Leave only generic element filters and comments
 
 
   $list =~ s/^(!\s*)(Checksum:.*)$/$1$oldchecksum/mi if $oldchecksum;    # Insert old checksum
