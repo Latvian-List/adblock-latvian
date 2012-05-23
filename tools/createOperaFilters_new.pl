@@ -35,6 +35,7 @@ my $newsyntax = '';
 
 GetOptions ('<>' => \&{$file = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss, 'new' => \$newsyntax);    # Get command line options
 
+die "Specified file: $file doesn't exist!\n" unless (-e $file);
 my $path = dirname($file);    # Get ABP list path
 $urlfilterfile = "$path/urlfilter.ini" unless $urlfilterfile;    # Set urlfilter file name
 $cssfile = "$path/element-filter.css" unless $cssfile;    # Set css file name
