@@ -148,8 +148,8 @@ sub createElemfilter
   if (-e $cssfile)
   {
     my $oldlist = read_file($cssfile, binmode => ':utf8' );
-    my $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
-    my $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
+   $oldchecksum = $1 if $oldlist =~ m/(Checksum:.*)$/mi;
+   $oldmodified = $1 if $oldlist =~ m/((Last modified|Updated):.*)$/mi;
   }
 
   $list =~ s/^(?!##|!).*\n?//gm;    # Leave only generic element filters and comments
