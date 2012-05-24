@@ -174,6 +174,11 @@ sub createElemfilter
   $list =~ s/^##//gm;    # Remove beginning number signs
   $list =~ s/(^[^!].*[\[.#])/\L$1/gmi;    # Convert tags to lowercase
 
+  $list =~ s/^((?!\/\*|\*\/|\!).*[^,])\s*$/$1,/gm;    # Add commas
+  $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml";\n$1\n/m;    # Add xml namespace declaration
+  $list =~ s/(^[^!].*),\s*$/$1/ms;    # Remove last comma
+  $list = $list." { display: none !important; }\n";    # Add CSS rule
+
 
   if ($customcssfile and (-e $customcssfile))
   {
@@ -182,16 +187,10 @@ sub createElemfilter
     $list =~ s/\r/\n/gm;    # Convert CR line endings to LF
 
     $customcss =~ s/^@.*\n//gm;    # Remove at-rules
-    $customcss =~ s/^((?!\/\*|\*\/|!).*){.+}/$1/gm;    # Remove CSS rules
     $list = $list."\n".$customcss;    # Add custom CSS to list
   }
 
   return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1);
-
-  $list =~ s/^((?!\/\*|\*\/|\!).*[^,])\s*$/$1,/gm;    # Add commas
-  $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml";\n$1\n/m;    # Add xml namespace declaration
-  $list =~ s/(^[^!].*),\s*$/$1/ms;    # Remove last comma
-  $list = $list." { display: none !important; }\n";    # Add CSS rule
 
 
   # Convert comments
