@@ -190,8 +190,8 @@ sub createElemfilter
   if ($customcssfile and (-e $customcssfile))
   {
     my $customcss = read_file($customcssfile, binmode => ':utf8' );    # Read custom CSS file
-    $list =~ s/\r\n/\n/gm;    # Remove CR from CR+LF line endings
-    $list =~ s/\r/\n/gm;    # Convert CR line endings to LF
+    $customcss =~ s/\r\n/\n/gm;    # Remove CR from CR+LF line endings
+    $customcss =~ s/\r/\n/gm;    # Convert CR line endings to LF
 
     $customcss =~ s/^@.*\n//gm;    # Remove at-rules
     $list = $list."\n".$customcss;    # Add custom CSS to list
