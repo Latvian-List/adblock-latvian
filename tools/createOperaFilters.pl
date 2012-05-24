@@ -39,11 +39,15 @@ GetOptions ('<>'             => \&{$filename = shift},
             'new'            => \$newsyntax);
 
 die "Specified file: $filename doesn't exist!\n" unless (-e $filename);
-my ($volume,$directories,$file) = File::Spec->splitpath($filename);
-my $path = $volume.$directories;    # Get ABP list path
 
-$urlfilterfile = $path."urlfilter.ini" unless $urlfilterfile;    # Set urlfilter file name
-$cssfile = $path."element-filter.css" unless $cssfile;    # Set css file name
+unless ($urlfilterfile and $cssfile)
+{
+  my ($volume,$directories,$file) = File::Spec->splitpath($filename);
+  my $path = $volume.$directories;    # Get ABP list path
+
+  $urlfilterfile = $path."urlfilter.ini" unless $urlfilterfile;    # Set urlfilter file name
+  $cssfile = $path."element-filter.css" unless $cssfile;    # Set css file name
+}
 
 
 die "No lists generated!\n" if ($nocss and $nourlfilter);
