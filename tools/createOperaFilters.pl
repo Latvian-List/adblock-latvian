@@ -29,7 +29,14 @@ die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 # Set defaults
 my $filename = my $urlfilterfile = my $cssfile = my $customcssfile = my $nourlfilter = my $nocss = my $newsyntax = '';
 
-GetOptions ('<>' => \&{$filename = shift}, 'urlfilter:s' => \$urlfilterfile, 'css:s' => \$cssfile, 'addcustomcss:s' => \$customcssfile, 'nourlfilter' => \$nourlfilter, 'nocss' => \$nocss, 'new' => \$newsyntax);    # Get command line options
+# Get command line options
+GetOptions ('<>'             => \&{$filename = shift},
+            'urlfilter:s'    => \$urlfilterfile,
+            'css:s'          => \$cssfile,
+            'addcustomcss:s' => \$customcssfile,
+            'nourlfilter'    => \$nourlfilter,
+            'nocss'          => \$nocss,
+            'new'            => \$newsyntax);
 
 die "Specified file: $filename doesn't exist!\n" unless (-e $filename);
 my ($volume,$directories,$file) = File::Spec->splitpath($filename);
