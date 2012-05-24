@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 
-# Copyright 2011 Wladimir Palant
+# Copyright 2012 anonymous74100
+# Portions copyright 2011 Wladimir Palant
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,20 +17,30 @@
 
 use strict;
 use warnings;
+use File::Slurp;
+use Getopt::Long qw(:config no_auto_abbrev);
 use Digest::MD5 qw(md5_base64);
 use POSIX qw(strftime);
+use feature 'unicode_strings';
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
-my $file = $ARGV[0];
-my $data = readFile($file);
+my $file = my $opera = '';
+GetOptions ('<>' => \&{$file = shift}, 'opera' => \$opera);    # Get command line options
+
+die "Specified file: $file doesn't exist!\n" unless (-e $file);
+
+my $commentsymbol = '!';
+$commentsymbol = ';' if $opera;
+
+my $data = read_file($file, binmode => ':utf8' );
 
 # Get existing checksum
-$data =~ /^.*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n/gmi;
+$data =~ /^.*$commentsymbol\s*checksum[\s\-:]+([\w\+\/=]+).*\n/gmi;
 my $oldchecksum = $1;
 
 # Remove already existing checksum
-$data =~ s/^.*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n//gmi;
+$data =~ s/^.*$commentsymbol\s*checksum[\s\-:]+([\w\+\/=]+).*\n//gmi;
 
 # Calculate new checksum: remove all CR symbols and empty
 # lines and get an MD5 checksum of the result (base64-encoded,
@@ -46,7 +57,7 @@ die "List has not changed.\n" if ($checksum eq $oldchecksum);
 
 # Update the date and time.
 my $updated = strftime("%d.%m.%Y. %H:%M UTC", gmtime);
-$data =~ s/(^.*!.*Last modified:\s*)(.*)\s*$/$1$updated/gmi;
+$data =~ s/(^.*$commentsymbol.*Last modified:\s*)(.*)\s*$/$1$updated/gmi;
 
 # Recalculate the checksum as we've altered the date
 $checksumData = $data;
@@ -55,29 +66,6 @@ $checksumData =~ s/\n+/\n/g;
 $checksum = md5_base64($checksumData);
 
 # Insert checksum into the file
-$data =~ s/(\r?\n)/$1! Checksum: $checksum$1/;
+$data =~ s/(\r?\n)/$1$commentsymbol Checksum: $checksum$1/;
 
-writeFile($file, $data);
-
-sub readFile
-{
-  my $file = shift;
-
-  open(local *FILE, "<", $file) || die "Could not read file '$file'\n";
-  binmode(FILE);
-  local $/;
-  my $result = <FILE>;
-  close(FILE);
-
-  return $result;
-}
-
-sub writeFile
-{
-  my ($file, $contents) = @_;
-
-  open(local *FILE, ">", $file) || die "Could not write file '$file'\n";
-  binmode(FILE);
-  print FILE $contents;
-  close(FILE);
-}
+write_file($file, {binmode => ':utf8'}, $data);
