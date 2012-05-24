@@ -27,16 +27,17 @@ die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
 
 # Set defaults
-my $filename = my $urlfilterfile = my $cssfile = my $customcssfile = my $nourlfilter = my $nocss = my $newsyntax = '';
+my $filename = my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = '';
+my @customcssfile;
 
 # Get command line options
-GetOptions ('<>'             => \&{$filename = shift},
-            'urlfilter:s'    => \$urlfilterfile,
-            'css:s'          => \$cssfile,
-            'addcustomcss:s' => \$customcssfile,
-            'nourlfilter'    => \$nourlfilter,
-            'nocss'          => \$nocss,
-            'new'            => \$newsyntax);
+GetOptions ('<>'                => \&{$filename = shift},
+            'urlfilter:s'       => \$urlfilterfile,
+            'css:s'             => \$cssfile,
+            'addcustomcss:s{,}' => \@customcssfile,
+            'nourlfilter'       => \$nourlfilter,
+            'nocss'             => \$nocss,
+            'new'               => \$newsyntax);
 
 die "Specified file: $filename doesn't exist!\n" unless (-e $filename);
 
@@ -191,9 +192,10 @@ sub createElemfilter
   $list = $list." { display: none !important; }\n";    # Add CSS rule
 
 
-  if ($customcssfile and (-e $customcssfile))
+  foreach (@customcssfile)
   {
-    my $customcss = read_file($customcssfile, binmode => ':utf8' );    # Read custom CSS file
+    next unless (-e $_);    # Skip file if it doesn't exist
+    my $customcss = read_file($_, binmode => ':utf8' );    # Read custom CSS file
     $customcss =~ s/\r\n/\n/gm;    # Remove CR from CR+LF line endings
     $customcss =~ s/\r/\n/gm;    # Convert CR line endings to LF
 
