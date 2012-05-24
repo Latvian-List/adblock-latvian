@@ -1,10 +1,10 @@
 /*
-! Checksum: cGqbLLyI9UmivRLhJZb3aw
+! Checksum: BwjIov0HxtorYEowX4AWnA
 ! Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
-! Last modified: 23.05.2012. 14:25 UTC
+! Last modified: 24.05.2012. 06:54 UTC
 ! Expires: 2 days (update frequency)
 */
 @namespace "http://www.w3.org/1999/xhtml";
@@ -50,12 +50,13 @@
 .ban680x450,
 .ban980x90,
 a[href="http://www.salidzini.lv/"][style="display: block; width: 120px; height: 40px; overflow: hidden; position: relative;"],
-a[href="http://www.salidzini.lv/"][style="display: block; width: 88px; height: 31px; overflow: hidden; position: relative;"],
+a[href="http://www.salidzini.lv/"][style="display: block; width: 88px; height: 31px; overflow: hidden; position: relative;"]
 /*
 !
 ! ---------- Site specific element hiding filters ----------
 !
 */
+ { display: none !important; }
 
 /* 1188.lv */
 .LabsservissAdd,
@@ -92,4 +93,4 @@ a[href="http://www.salidzini.lv/"][style="display: block; width: 88px; height: 3
 a[href^="http://q.tvnet.lv/"],
 /* zip.lv */
 #perkam_group_banner
- { display: none !important; }
+{ display:none !important; }
