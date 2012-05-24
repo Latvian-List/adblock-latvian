@@ -192,6 +192,18 @@ sub createElemfilter
   $list = $list." { display: none !important; }\n";    # Add CSS rule
 
 
+  # Convert comments
+  my $tmplist = my $previousline = '';
+  foreach my $line (split(/\n/, $list))
+  {
+    $tmplist = $tmplist."/*\n" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
+    $tmplist = $tmplist."*/\n" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
+    $tmplist = $tmplist.$line."\n";
+    $previousline = $line;
+  }
+  $list = $tmplist;
+
+
   foreach (@customcssfile)
   {
     next unless (-e $_);    # Skip file if it doesn't exist
@@ -204,19 +216,6 @@ sub createElemfilter
   }
 
   return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1);
-
-
-  # Convert comments
-  my $tmplist = my $previousline = '';
-
-  foreach my $line (split(/\n/, $list))
-  {
-    $tmplist = $tmplist."/*\n" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
-    $tmplist = $tmplist."*/\n" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
-    $tmplist = $tmplist.$line."\n";
-    $previousline = $line;
-  }
-  ($list) = $tmplist;
 
   return $list;
 }
