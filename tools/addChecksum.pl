@@ -53,11 +53,11 @@ $checksumData =~ s/\n+/\n/g;
 my $checksum = md5_base64($checksumData);
 
 # If the old checksum matches the new one die
-die "List has not changed.\n" if ($checksum eq $oldchecksum);
+die "List has not changed.\n" if (($oldchecksum) and ($checksum eq $oldchecksum));
 
 # Update the date and time.
 my $updated = strftime("%d.%m.%Y. %H:%M UTC", gmtime);
-$data =~ s/(^.*$commentsymbol.*Last modified:\s*)(.*)\s*$/$1$updated/gmi;
+$data =~ s/(^.*$commentsymbol.*(Last modified|Updated):\s*)(.*)\s*$/$1$updated/gmi if ($data =~ m/^.*$commentsymbol.*(Last modified|Updated)/gmi);
 
 # Recalculate the checksum as we've altered the date
 $checksumData = $data;
