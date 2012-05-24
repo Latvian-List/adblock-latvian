@@ -7,7 +7,7 @@ perl tools\addChecksum.pl lists\latvian-list.txt
 ::
 :: Prepare Opera list
 perl tools\createOperaFilters.pl lists\latvian-list.txt --addcustomcss lists\specific_elements.css
-perl tools\addChecksum_Opera.pl lists\urlfilter.ini
+perl tools\addChecksum.pl lists\urlfilter.ini --opera
 perl tools\addChecksum.pl lists\element-filter.css
 ::
 pause
