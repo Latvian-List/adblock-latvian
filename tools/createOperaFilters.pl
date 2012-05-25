@@ -36,11 +36,12 @@ GetOptions ('urlfilter=s'       => \$urlfilterfile,
             'nourlfilter'       => \$nourlfilter,
             'nocss'             => \$nocss,
             'new'               => \$newsyntax,
-            'nocomments'        => \$nocomments);
+            'nocomments'        => \$nocomments)
+  or die pod2usage(" ");
 
 
-pod2usage("$0: No files specified.\n") if (@ARGV == 0);
-pod2usage("$0: Too many files specified.\n") if (@ARGV > 1);
+die pod2usage("$0: No files specified.\n") if (@ARGV == 0);
+die pod2usage("$0: Too many files specified.\n") if (@ARGV > 1);
 
 my $filename = '';
 $filename = $ARGV[0];    # Get filename
