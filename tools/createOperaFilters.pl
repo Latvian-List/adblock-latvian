@@ -104,7 +104,7 @@ sub createUrlfilter
 
   $list =~ s/^!/;/gm;    # Convert comments
 
-  return '' if ((scalar(split(m/^([^;])/m,$list)) - 1) < 1);
+  return '' if ((scalar(split(m/^(?!;|$)/m,$list)) - 1) < 1);   # Return empty list if it doesn't have anything but comments
 
   $list =~ s/^(;\s*)Title:\s/$1/mi;    # Normalize title
   $list =~ s/^(;\s*Redirect.*\n)//gmi;    # Remove redirect comment
@@ -151,7 +151,7 @@ sub createUrlfilter
   }
   $list = $urlfilter;
 
-  return '' if ((scalar(split(m/^([^;])/m,$list)) - 1) < 1);
+  return '' if ((scalar(split(m/^(?!;|$)/m,$list)) - 1) < 1);   # Return empty list if it doesn't have anything but comments
 
 
   unless ($newsyntax)
@@ -203,7 +203,7 @@ sub createElemfilter
   $list =~ s/^((?!\/\*|\*\/|\!).*[^,])\s*$/$1,/gm;    # Add commas
 
 
-  return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1 and !@customcssfile);   # Return empty list if it doesn't have anything but comments
+  return '' if ((scalar(split(m/^(?!\!|$)/m,$list)) - 1) < 1 and !@customcssfile);   # Return empty list if it doesn't have anything but comments
 
 
   $list =~ s/(^[^!].*),\s*$/$1/ms;    # Remove last comma
@@ -244,6 +244,8 @@ sub createElemfilter
     $customcss =~ s/^@.*\n//gm;    # Remove at-rules
     $list = $list."\n".$customcss;    # Add custom CSS to list
   }
+
+  return '' if ((scalar(split(m/^(?!\/\*|\*\/|!|\@namespace|$)/m,$list)) - 1) < 1);   # Return empty list if it doesn't have anything but comments and at-rules
 
   return $list;
 }
