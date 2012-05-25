@@ -261,7 +261,7 @@ createOperaFilters.pl [file] [options]
    --addcustomcss [file ...] - specify custom CSS file(s) to combine with converted CSS file
    --new - use new syntax
    --nocomments - don't put comments in generated files
-   --help brief help message
+   --help - brief help message
 
 
 =cut
