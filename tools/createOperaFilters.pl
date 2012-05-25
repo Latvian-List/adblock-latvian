@@ -26,7 +26,7 @@ use feature 'unicode_strings';
 
 
 # Set defaults
-my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = '';
+my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = my $nocomments = '';
 my @customcssfile;
 
 # Get command line options
@@ -35,7 +35,8 @@ GetOptions ('urlfilter:s'       => \$urlfilterfile,
             'addcustomcss:s{,}' => \@customcssfile,
             'nourlfilter'       => \$nourlfilter,
             'nocss'             => \$nocss,
-            'new'               => \$newsyntax);
+            'new'               => \$newsyntax,
+            'nocomments'        => \$nocomments);
 
 
 pod2usage("$0: No files specified.\n") if (@ARGV == 0);
@@ -62,7 +63,7 @@ my $list = read_file($filename, binmode => ':utf8' );    # Read ABP list
 
 $list =~ s/\r\n/\n/gm;    # Remove CR from CR+LF line endings
 $list =~ s/\r/\n/gm;    # Convert CR line endings to LF
-
+$list =~ s/^!.*\n//gm if $nocomments;    # Remove comments
 
 my $urlfilter = createUrlfilter($list) unless $nourlfilter;
 my $elemfilter = createElemfilter($list) unless $nocss;
@@ -111,7 +112,7 @@ sub createUrlfilter
   $list =~ s/^(;\s*)((Last modified|Updated):.*)$/$1$oldmodified/mi if $oldmodified;    # Insert old modification date/time
 
   $list =~ s/^([^;|*].*$)/\*$1/gm;    # Add beginning asterisk
-  $list =~ s/^([^;]\S*[^|*])$/$1\*/gm;    # Add ending asterisk
+  $list =~ s/^([^;]\S*[^|*])\n/$1\*\n/gm;    # Add ending asterisk
   $list =~ s/^\|([^|].*)$/$1/gm;    # Remove beginning pipe
   $list =~ s/^([^;].*)\|$/$1/gm;    # Remove ending pipe
 
@@ -159,7 +160,15 @@ sub createUrlfilter
   }
 
 
-  $list =~ s/^(;\s*)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;    # Add urlfilter header
+  # Add urlfilter header
+  unless ($nocomments)
+  {
+    $list =~ s/^(;\s*)\n/\[prefs\]\nprioritize excludelist=1\n\[include\]\n\*\n\[exclude\]\n$1\n/m;
+  }
+  else
+  {
+    $list = "[prefs]\nprioritize excludelist=1\n[include]\n*\n[exclude]\n".$list;
+  }
 
   return $list;
 }
@@ -191,22 +200,35 @@ sub createElemfilter
   $list =~ s/(^[^!].*[\[.#])/\L$1/gmi;    # Convert tags to lowercase
 
   $list =~ s/^((?!\/\*|\*\/|\!).*[^,])\s*$/$1,/gm;    # Add commas
-  $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml";\n$1\n/m;    # Add xml namespace declaration
+
+  # Add xml namespace declaration
+  unless ($nocomments)
+  {
+    $list =~ s/^(!\s*?)\n/\@namespace "http:\/\/www.w3.org\/1999\/xhtml";\n$1\n/m;
+  }
+  else
+  {
+    $list = '@namespace "http://www.w3.org/1999/xhtml";'."\n".$list;
+  }
+
+
   $list =~ s/(^[^!].*),\s*$/$1/ms;    # Remove last comma
   $list = $list." { display: none !important; }\n";    # Add CSS rule
 
 
   # Convert comments
-  my $tmplist = my $previousline = '';
-  foreach my $line (split(/\n/, $list))
+  unless ($nocomments)
   {
-    $tmplist = $tmplist."/*\n" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
-    $tmplist = $tmplist."*/\n" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
-    $tmplist = $tmplist.$line."\n";
-    $previousline = $line;
+    my $tmplist = my $previousline = '';
+    foreach my $line (split(/\n/, $list))
+    {
+      $tmplist = $tmplist."/*\n" if (($previousline !~ m/^!/) and ($line =~ m/^!/));
+      $tmplist = $tmplist."*/\n" if (($previousline =~ m/^!/) and ($line !~ m/^!/));
+      $tmplist = $tmplist.$line."\n";
+      $previousline = $line;
+    }
+    $list = $tmplist;
   }
-  $list = $tmplist;
-
 
   foreach (@customcssfile)
   {
@@ -238,6 +260,7 @@ createOperaFilters.pl [file] [options]
    --css [file] - specify CSS filename
    --addcustomcss [file ...] - specify custom CSS file(s) to combine with converted CSS file
    --new - use new syntax
+   --nocomments - don't put comments in generated files
    --help brief help message
 
 
