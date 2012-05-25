@@ -20,25 +20,29 @@ use strict;
 use warnings;
 use File::Spec;
 use File::Slurp;
-use Getopt::Long qw(:config no_auto_abbrev);
+use Pod::Usage;
+use Getopt::Long qw(:config no_auto_abbrev auto_help);
 use feature 'unicode_strings';
-
-die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
 
 # Set defaults
-my $filename = my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = '';
+my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = '';
 my @customcssfile;
 
 # Get command line options
-GetOptions ('<>'                => \&{$filename = shift},
-            'urlfilter:s'       => \$urlfilterfile,
+GetOptions ('urlfilter:s'       => \$urlfilterfile,
             'css:s'             => \$cssfile,
             'addcustomcss:s{,}' => \@customcssfile,
             'nourlfilter'       => \$nourlfilter,
             'nocss'             => \$nocss,
             'new'               => \$newsyntax);
 
+
+pod2usage("$0: No files specified.\n") if (@ARGV == 0);
+pod2usage("$0: Too many files specified.\n") if (@ARGV > 1);
+
+my $filename = '';
+$filename = $ARGV[0];    # Get filename
 die "Specified file: $filename doesn't exist!\n" unless (-e $filename);
 
 unless ($urlfilterfile and $cssfile)
@@ -219,3 +223,22 @@ sub createElemfilter
 
   return $list;
 }
+
+
+__END__
+
+=head1 SYNOPSIS
+
+createOperaFilters.pl [file] [options]
+
+ Options:
+   --nocss - don't create element-filter.css
+   --nourlfilter - don't create urlfilter.ini
+   --urlfilter [file] - specify urlfilter filename
+   --css [file] - specify CSS filename
+   --addcustomcss [file ...] - specify custom CSS file(s) to combine with converted CSS file
+   --new - use new syntax
+   --help brief help message
+
+
+=cut
