@@ -30,9 +30,9 @@ my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = 
 my @customcssfile;
 
 # Get command line options
-GetOptions ('urlfilter:s'       => \$urlfilterfile,
-            'css:s'             => \$cssfile,
-            'addcustomcss:s{,}' => \@customcssfile,
+GetOptions ('urlfilter=s'       => \$urlfilterfile,
+            'css=s'             => \$cssfile,
+            'addcustomcss=s{,}' => \@customcssfile,
             'nourlfilter'       => \$nourlfilter,
             'nocss'             => \$nocss,
             'new'               => \$newsyntax,
