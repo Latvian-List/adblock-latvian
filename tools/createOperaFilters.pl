@@ -202,6 +202,13 @@ sub createElemfilter
 
   $list =~ s/^((?!\/\*|\*\/|\!).*[^,])\s*$/$1,/gm;    # Add commas
 
+
+  return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1 and !@customcssfile);   # Return empty list if it doesn't have anything but comments
+
+
+  $list =~ s/(^[^!].*),\s*$/$1/ms;    # Remove last comma
+  $list = $list." { display: none !important; }\n" unless ((scalar(split(m/^([^!])/m,$list)) - 1) < 1);    # Add CSS rule if list has anything besides comments
+
   # Add xml namespace declaration
   unless ($nocomments)
   {
@@ -211,10 +218,6 @@ sub createElemfilter
   {
     $list = '@namespace "http://www.w3.org/1999/xhtml";'."\n".$list;
   }
-
-
-  $list =~ s/(^[^!].*),\s*$/$1/ms;    # Remove last comma
-  $list = $list." { display: none !important; }\n";    # Add CSS rule
 
 
   # Convert comments
@@ -241,8 +244,6 @@ sub createElemfilter
     $customcss =~ s/^@.*\n//gm;    # Remove at-rules
     $list = $list."\n".$customcss;    # Add custom CSS to list
   }
-
-  return '' if ((scalar(split(m/^([^!])/m,$list)) - 1) < 1);
 
   return $list;
 }
