@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: CqQscbzU6Cf0i5n5GxIljQ
+! Checksum: NEJXWGHhgXJpYtE8QU7ViQ
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
-! Last modified: 20.08.2012. 15:22 UTC
+! Last modified: 20.08.2012. 15:52 UTC
 ! Expires: 2 days (update frequency)
 !
 ! ------------------ Do-Not-Track header -------------------
@@ -371,6 +371,7 @@ spoki.lv##div[style="background: url('/img/bg.png') 0 -427px; margin: 5px 0 0 0;
 sportacentrs.com##.banner
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
+ss.lv###sys_bnr_tbl
 tehnika.delfi.lv##div[style="width: 150px; background-color: #54AAFF;overflow: hidden;"]
 tehnika.delfi.lv##div[style="width: 150px; height:220px"]
 tele2.lv###fancybox-overlay
