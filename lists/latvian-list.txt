@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: GTJJi7RF3Cr4UgtIhw7zZg
+! Checksum: GGQZG7SLbwd2Hq5WGnkJIw
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-NC-SA 3.0  https://creativecommons.org/licenses/by-nc-sa/3.0/
-! Last modified: 20.08.2012. 14:54 UTC
+! Last modified: 20.08.2012. 14:59 UTC
 ! Expires: 2 days (update frequency)
 !
 ! ------------------ Do-Not-Track header -------------------
@@ -74,7 +74,6 @@
 ||ehalle.lv/grupu_bildes/
 ||elittesport.lv/pictures/banneri_gar_malam/
 ||elittesport.lv/pictures/Tirgoshanas/
-||financenet.lv/assets/swf/tvnet_pasts_997x250.swf
 ||gudriem.lv/App_Themes/Default/Banners/
 ||gudrinieks.lv/res/banner/
 ||gudrinieks.lv/res/js/sb_banner.js
@@ -380,18 +379,18 @@ tv.delfi.lv##.toolblock
 tvnet.lv###flag-banner
 tvnet.lv###footer_banner
 tvnet.lv###keyword_ad
+tvnet.lv###pop_keyword_everest_ad
+tvnet.lv###pop_keyword_letpas_ad
 tvnet.lv###shops_offer
 tvnet.lv###slidrinda
 tvnet.lv###slidrinda_close
+tvnet.lv##.banner
 tvnet.lv##.customers
+tvnet.lv##.list.customer
+tvnet.lv##.not_in_print
 tvnet.lv##[href^="http://q.tvnet.lv/"]
+tvnet.lv##[id^="ad120x600"]
 tvnet.lv##div[style="position: absolute; display: block; width: 100%; top: 450px; z-index: 9999999;"]
-tvnet.lv,financenet.lv###pop_keyword_everest_ad
-tvnet.lv,financenet.lv###pop_keyword_letpas_ad
-tvnet.lv,financenet.lv##.banner
-tvnet.lv,financenet.lv##.list.customer
-tvnet.lv,financenet.lv##.not_in_print
-tvnet.lv,financenet.lv##[id^="ad120x600"]
 uzkartes.lv###sz
 zeltazivtina.lv###banner
 zip.lv###ad_view
