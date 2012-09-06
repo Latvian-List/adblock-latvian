@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: 9xGqUjP0gdBOfCw5Idwphg
+! Checksum: XBMqwgplY7kt3q8Y6aplZg
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 06.09.2012. 09:55 UTC
+! Last modified: 06.09.2012. 10:04 UTC
 ! Expires: 2 days (update frequency)
 !
 ! ------------------ Do-Not-Track header -------------------
@@ -138,6 +138,7 @@
 ||alida.lv/upload/banner/
 ||anymedia.lv^
 ||apollo.lv/upload/city24
+||apps.lv/timthumb.php?*/uploads/shop_images/
 ||auto24.lv^$third-party
 ||b.itvnet.lv^
 ||banneri.lv^
@@ -282,6 +283,7 @@ apollo.lv##div[style^="width:259px; height:50px; background-image:url('http://im
 bilesuserviss.lv##.banner_clicker
 bilesuserviss.lv##.main_column_banner
 bilesuserviss.lv##.top_banner
+boot.lv##.bootlv_recommends
 boot.lv##div[style="padding: 10px;text-align:center;"]
 db.lv###slid_close
 db.lv##.banner
