@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: XBMqwgplY7kt3q8Y6aplZg
+! Checksum: +UBJBZT19qc/rdd5iI4uhw
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 06.09.2012. 10:04 UTC
+! Last modified: 10.09.2012. 07:20 UTC
 ! Expires: 2 days (update frequency)
 !
 ! ------------------ Do-Not-Track header -------------------
@@ -150,6 +150,7 @@
 ||delphi.lv/d/infoblock/
 ||delphi.lv/fp/city/
 ||delphi.lv/wd/x/*.160x107.jpeg
+||delphi.lv^*/ads/
 ||emediate.se/eas?cu=
 ||emediate.se/EAS_tag.
 ||evolution.lv^$third-party
