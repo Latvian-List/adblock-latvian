@@ -1,10 +1,10 @@
 /*
-! Checksum: OUGoX4NpmszNUbQrWB9yTQ
+! Checksum: jcJhnuigrZqPpjK+zr9LCA
 ! Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 06.09.2012. 09:55 UTC
+! Last modified: 01.10.2012. 09:48 UTC
 ! Expires: 2 days (update frequency)
 */
 @namespace "http://www.w3.org/1999/xhtml";
@@ -42,6 +42,7 @@
 */
 #ad_175x300,
 #ad_450x280,
+.ad_150x150,
 .ad_250x200,
 .ad_250x250_w,
 .ad_350x100,
