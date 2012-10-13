@@ -127,6 +127,7 @@ sub createUrlfilter
   $whitelists =~ s/^\|\|//gm;    # Remove vertical bars
   $whitelists =~ s/\^$//gm;    # Remove ending caret
   $whitelists =~ s/\^/\//gm;    # Convert caret to slash
+  $whitelists =~ s/^.*\$elemhide.*\n?//gm;    # Remove element whitelists
   $whitelists =~ s/\$.*//gm;    # Remove everything after a dollar sign
   $whitelists =~ s/^\*//gm;    # Remove beginning asterisk
   $whitelists =~ s/\*$//gm;    # Remove ending asterisk
