@@ -71,6 +71,11 @@ my $urlfilter = createUrlfilter($list) unless $nourlfilter;
 my $elemfilter = createElemfilter($list) unless $nocss;
 
 
+# Warn if a file won't be generated
+print "Urlfilter won't be generated!\n" if (!$urlfilter and !$nourlfilter);
+print "CSS won't be generated!\n" if (!$elemfilter and !$nocss);
+
+
 # Write generated files
 write_file($urlfilterfile, {binmode => ':utf8'}, $urlfilter) unless ($nourlfilter or !$urlfilter);
 write_file($cssfile, {binmode => ':utf8'}, $elemfilter) unless ($nocss or !$elemfilter);
