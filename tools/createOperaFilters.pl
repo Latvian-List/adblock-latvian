@@ -100,6 +100,10 @@ sub createUrlfilter
   $list =~ s/^\[.+\]\n//m;    # Remove ABP header
   $list =~ s/^@@.*\n?//gm;    # Remove whitelists
   $list =~ s/^.*##.*\n?//gm;    # Remove element filters
+
+  $list =~ s/^(.*[^\*])(\*?)\$script$/$1\*\.js\*/gm;    # Convert filters with script type
+  $list =~ s/^(.*[^\*])(\*?)\$stylesheet$/$1\*\.css\*/gm;    # Convert filters with stylesheet type
+
   $list =~ s/^.*\$.*\n?//gm;    # Remove filters with types
 
   $list =~ s/^!/;/gm;    # Convert comments
