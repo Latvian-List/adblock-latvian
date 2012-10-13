@@ -26,17 +26,18 @@ use feature 'unicode_strings';
 
 
 # Set defaults
-my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = my $nocomments = '';
+my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = my $nocomments = my $everythingisfirstparty = '';
 my @customcssfile;
 
 # Get command line options
-GetOptions ('urlfilter=s'       => \$urlfilterfile,
-            'css=s'             => \$cssfile,
-            'addcustomcss=s{,}' => \@customcssfile,
-            'nourlfilter'       => \$nourlfilter,
-            'nocss'             => \$nocss,
-            'new'               => \$newsyntax,
-            'nocomments'        => \$nocomments)
+GetOptions ('urlfilter=s'             => \$urlfilterfile,
+            'css=s'                   => \$cssfile,
+            'addcustomcss=s{,}'       => \@customcssfile,
+            'nourlfilter'             => \$nourlfilter,
+            'nocss'                   => \$nocss,
+            'new'                     => \$newsyntax,
+            'nocomments'              => \$nocomments,
+            'everythingisfirstparty'  => \$everythingisfirstparty)
   or die pod2usage(" ");
 
 
@@ -99,6 +100,7 @@ sub createUrlfilter
   $list =~ s/^(.*[^\*])(\*?)\$script$/$1\*\.js\*/gm;    # Convert filters with script type
   $list =~ s/^(.*[^\*])(\*?)\$stylesheet$/$1\*\.css\*/gm;    # Convert filters with stylesheet type
 
+  $list =~ s/^(.*)\$third-party$/$1/gm if $everythingisfirstparty;
   $list =~ s/^.*\$.*\n?//gm;    # Remove filters with types
 
   $list =~ s/^!/;/gm;    # Convert comments
@@ -264,6 +266,7 @@ createOperaFilters.pl [file] [options]
    --addcustomcss [file ...] - specify custom CSS file(s) to combine with converted CSS file
    --new - use new syntax
    --nocomments - don't put comments in generated files
+   --everythingisfirstparty - parse third party filters as first party filters
    --help - brief help message
 
 
