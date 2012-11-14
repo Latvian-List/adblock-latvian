@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: EjHsSEazJ4j0S9LrU/z1yg
+! Checksum: BScN2p86QL1SgtLyUY2x6Q
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 25.10.2012. 15:10 UTC
+! Last modified: 14.11.2012. 09:46 UTC
 ! Expires: 2 days (update frequency)
 !
 ! ------------------ Do-Not-Track header -------------------
@@ -53,6 +53,7 @@
 ||bm.lv^*_banner.swf
 ||cenuklubs.lv/assets/images/BANERI/
 ||cenuklubs.lv/assets/media/
+||db.lv/images/tmp/
 ||delfi.lv/ap/edu/g/
 ||delfi.lv/b/
 ||delfi.lv/d/bus/
@@ -171,6 +172,7 @@
 ||nerealitate.lv^
 ||next.lv^$third-party
 ||novonews.lv/ticker/flash/$third-party
+||openx.diena.lv^$popup
 ||otrapuse.lv^$third-party
 ||otrapuse.mango.lv^$third-party
 ||partneriem.smscredit.lv^$third-party
@@ -290,6 +292,8 @@ bilesuserviss.lv##.main_column_banner
 bilesuserviss.lv##.top_banner
 boot.lv##.bootlv_recommends
 boot.lv##div[style="padding: 10px;text-align:center;"]
+db.lv###outer-left
+db.lv###outer-right
 db.lv###slid_close
 db.lv##.banner
 delfi.lv###delfieduitems
