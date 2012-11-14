@@ -26,7 +26,7 @@ use feature 'unicode_strings';
 
 
 # Set defaults
-my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $newsyntax = my $nocomments = my $everythingisfirstparty = my $ignorewhitelist = '';
+my $urlfilterfile = my $cssfile = my $nourlfilter = my $nocss = my $oldsyntax = my $nocomments = my $everythingisfirstparty = my $ignorewhitelist = '';
 my @customcssfile;
 
 # Get command line options
@@ -35,7 +35,7 @@ GetOptions ('urlfilter=s'             => \$urlfilterfile,
             'addcustomcss=s{,}'       => \@customcssfile,
             'nourlfilter'             => \$nourlfilter,
             'nocss'                   => \$nocss,
-            'new'                     => \$newsyntax,
+            'old'                     => \$oldsyntax,
             'nocomments'              => \$nocomments,
             'everythingisfirstparty'  => \$everythingisfirstparty,
             'ignorewhitelist'         => \$ignorewhitelist)
@@ -166,7 +166,7 @@ sub createUrlfilter
   return '' if ((scalar(split(m/^(?!;|$)/m,$list)) - 1) < 1);   # Return empty list if it doesn't have anything but comments
 
 
-  unless ($newsyntax)
+  if ($oldsyntax)
   {
     $list =~ s/^\|\|(.*)/\*:\/\/$1\n\*\.$1/gm;    # Remove pipes and add protocol and add a filter with subdomain
     $list =~ s/^([^;].*)\^/$1\//gm;    # Convert caret to slash
@@ -275,7 +275,7 @@ createOperaFilters.pl [file] [options]
    --urlfilter [file] - specify urlfilter filename
    --css [file] - specify CSS filename
    --addcustomcss [file ...] - specify custom CSS file(s) to combine with converted CSS file
-   --new - use new syntax
+   --old - use old syntax
    --nocomments - don't put comments in generated files
    --everythingisfirstparty - parse third party filters as first party filters
    --ignorewhitelist - don't parse whitelists
