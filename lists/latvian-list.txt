@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: pjCFBZsl5tWwb/XOE2ejAw
+! Checksum: emqBLzzAotaBB8d29iuX9A
 ! Title: Latvian List
 ! Homepage: http://adblock-latvian.epit.lv/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 20.11.2012. 15:03 UTC
+! Last modified: 14.12.2012. 10:25 UTC
 ! Expires: 2 days (update frequency)
 !
 ! ------------------ Do-Not-Track header -------------------
@@ -418,6 +418,5 @@ tvnet.lv##[id^="ad120x600"]
 tvnet.lv##div[style="position: absolute; display: block; width: 100%; top: 450px; z-index: 9999999;"]
 uzkartes.lv###sz
 zeltazivtina.lv###banner
-zip.lv###ad_view
 zip.lv###perkam_group_banner
 zip.lv##.zip_spotlight.main_td
