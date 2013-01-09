@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: tdtm4Uao8p1QDhoH5Hv/Xw
+! Checksum: BxpS9IjWqagB1b7w8gCT+Q
 ! Title: Latvian List
 ! Homepage: http://latvian-list.intl.uk.to/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 16.12.2012. 18:03 UTC
+! Last modified: 09.01.2013. 12:43 UTC
 ! Expires: 2 days (update frequency)
 !
 ! ------------------ Do-Not-Track header -------------------
@@ -301,6 +301,7 @@ db.lv###slid_close
 db.lv##.banner
 delfi.lv###delfieduitems
 delfi.lv###horoweatherblock
+delfi.lv##.car-city24
 delfi.lv##.city24w
 delfi.lv##.clo
 delfi.lv##[class^="city24"]
