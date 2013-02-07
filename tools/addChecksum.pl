@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# Copyright 2012 anonymous74100
+# Copyright 2013 anonymous74100
 # Portions copyright 2011 Wladimir Palant
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -56,7 +56,7 @@ my $checksum = md5_base64($checksumData);
 die "List has not changed.\n" if (($oldchecksum) and ($checksum eq $oldchecksum));
 
 # Update the date and time.
-my $updated = strftime("%d.%m.%Y. %H:%M UTC", gmtime);
+my $updated = strftime("%Y-%m-%d %H:%M UTC", gmtime);
 $data =~ s/(^.*$commentsymbol.*(Last modified|Updated):\s*)(.*)\s*$/$1$updated/gmi if ($data =~ m/^.*$commentsymbol.*(Last modified|Updated)/gmi);
 
 # Recalculate the checksum as we've altered the date
