@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: ikr90xbdz8jzh3oDdk2ZzA
+! Checksum: qV7Wrc1p3PSAmweOv2CUOw
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 2013-05-22 10:04 UTC
+! Last modified: 2013-05-22 12:36 UTC
 ! Expires: 2 days (update frequency)
 !
 ! -------------- Generic ad blocking filters ---------------
@@ -57,6 +57,7 @@
 ||delfi.lv/d/h2011/pardotnet/
 ||delfi.lv/d/infoblock/
 ||delfi.lv/fp/city/
+||delfi.lv/fp/i/city24
 ||delfi.lv/jo/g/
 ||delfi.lv/mango/b/
 ||delfi.lv/misc/jauniauto_new.php
