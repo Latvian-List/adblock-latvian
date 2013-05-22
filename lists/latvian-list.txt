@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: Lv7elelHbkcd9gmsN4dl5A
+! Checksum: 9GOayXL4i0k7/T0FyHjS7Q
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 2013-05-22 13:03 UTC
+! Last modified: 2013-05-22 13:18 UTC
 ! Expires: 2 days (update frequency)
 !
 ! -------------- Generic ad blocking filters ---------------
@@ -250,6 +250,7 @@
 !
 ###ad_175x300
 ###ad_450x280
+###ad_500x150
 ###ad_700x430
 ##.ad_150x150
 ##.ad_250x200
