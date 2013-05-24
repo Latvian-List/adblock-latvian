@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: 7ajZCeeGmJ5X4/GBDwpwhg
+! Checksum: 9AMNK5XB8vKHB4Oh7KRGOA
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 2013-05-24 16:10 UTC
+! Last modified: 2013-05-24 16:27 UTC
 ! Expires: 2 days (update frequency)
 !
 ! -------------- Generic ad blocking filters ---------------
@@ -337,7 +337,10 @@ izklaide.delfi.lv###rightTop
 izklaide.delfi.lv##.iepazisanas
 kasjauns.lv###left
 kasjauns.lv###top_banner_container
+kasjauns.lv##.oxbanner
+kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border-bottom: 1px dotted #C1C1C1; margin-bottom: 3px;"]
 kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
+kasjauns.lv##li[style=" line-height:1.5em;"]
 kurpirkt.lv###leja_scroll
 kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
 lattelecom.lv##[id^="fixme_"]
