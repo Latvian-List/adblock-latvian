@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: 9GOayXL4i0k7/T0FyHjS7Q
+! Checksum: 5pjdhn+VYxXadFO0MNwxaA
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Email: anonymous.74100@gmail.com
 ! License: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 2013-05-22 13:18 UTC
+! Last modified: 2013-05-24 11:19 UTC
 ! Expires: 2 days (update frequency)
 !
 ! -------------- Generic ad blocking filters ---------------
@@ -13,12 +13,10 @@
 .lv/banners/
 .lv/images/banners/
 .lv/img/banners/
-/keyword_ad.
 !
 ! ------------- 1st party ad blocking filters --------------
 !
 ||1188.lv/img/special/
-||1a.lv/images/upload/ads/
 ||1w.lv/banner_
 ||220.lv/rek_html/
 ||2x2.lv/img/$object
@@ -94,14 +92,12 @@
 ||nra.lv/spec/
 ||oga.lv/ieBildes/
 ||petits.lv/pics/banners/
-||pornotv.lv/scroll_ads2.js
 ||q.tvnet.lv^
 ||r.inbox.lv^
 ||receptes.lv/images/design/davana_tev.png
 ||reklama.lv/images/picads/users/
 ||reklama.lv/services/ads_count.html
 ||riga.lv/MEDIA/Misc/
-||rigaslaiks.lv/Resources/Ads/
 ||semicom.lv/admin/files/$object
 ||serveris.lv/images/Baners/
 ||sexparty.lv/style/flash/banner.swf
@@ -248,14 +244,11 @@
 !
 ! ------------- Generic element hiding filters -------------
 !
-###ad_175x300
 ###ad_450x280
 ###ad_500x150
 ###ad_700x430
 ##.ad_150x150
 ##.ad_250x200
-##.ad_250x250_w
-##.ad_350x100
 ##.ad_630x130
 ##.ban420x200
 ##.ban420x260
@@ -356,7 +349,6 @@ mango.delfi.lv##div[style="font-weight:bold;width:250px;margin-bottom:5px;backgr
 mango.delfi.lv##div[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
 miljons.com###opencredit
 miljons.com##div[style="padding:3px; font-size:13px;"]
-notepad.lv###ad_big
 notepad.lv###blocks > .tabsaction + .news
 notepad.lv###footer > div:last-child
 notepad.lv###section_full + #blocks > .news:first-child
