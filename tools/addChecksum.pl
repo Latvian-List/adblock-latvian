@@ -20,6 +20,7 @@ use warnings;
 use File::Slurp;
 use Getopt::Long qw(:config no_auto_abbrev);
 use Digest::MD5 qw(md5_base64);
+use Encode qw(encode_utf8);
 use POSIX qw(strftime);
 use feature 'unicode_strings';
 
@@ -50,7 +51,7 @@ $checksumData =~ s/\r//g;
 $checksumData =~ s/\n+/\n/g;
 
 # Calculate new checksum
-my $checksum = md5_base64($checksumData);
+my $checksum = md5_base64(encode_utf8($checksumData));
 
 # If the old checksum matches the new one die
 die "List has not changed.\n" if (($oldchecksum) and ($checksum eq $oldchecksum));
@@ -63,7 +64,7 @@ $data =~ s/(^.*$commentsymbol.*(Last modified|Updated):\s*)(.*)\s*$/$1$updated/g
 $checksumData = $data;
 $checksumData =~ s/\r//g;
 $checksumData =~ s/\n+/\n/g;
-$checksum = md5_base64($checksumData);
+$checksum = md5_base64(encode_utf8($checksumData));
 
 # Insert checksum into the file
 $data =~ s/(\r?\n)/$1$commentsymbol Checksum: $checksum$1/;
