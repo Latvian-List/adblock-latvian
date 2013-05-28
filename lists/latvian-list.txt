@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: DnIY1LBmZL8rQllEL7UGtQ
+! Checksum: 27Da4d1+uLj+/pQngYGZLg
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Email: latvian-list@googlegroups.com
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
-! Last modified: 2013-05-28 06:55 UTC
+! Last modified: 2013-05-28 07:20 UTC
 ! Expires: 2 days (update frequency)
 !
 ! -------------- Generic ad blocking filters ---------------
@@ -200,16 +200,6 @@
 !
 ! ------------- Generic element hiding filters -------------
 !
-###ad_450x280
-###ad_500x150
-###ad_700x430
-##.ad_150x150
-##.ad_250x200
-##.ad_630x130
-##.ban420x200
-##.ban420x260
-##.ban680x450
-##.ban980x90
 ##a[href="http://www.salidzini.lv/"][style="display: block; width: 120px; height: 40px; overflow: hidden; position: relative;"]
 ##a[href="http://www.salidzini.lv/"][style="display: block; width: 88px; height: 31px; overflow: hidden; position: relative;"]
 !
