@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: A0FgpqxYbzwh9DgRwaUCNA
+! Checksum: 2jMDSoY8thJihieTp0Agfw
 ! Title: Latvian List
-! Last modified: 2013-05-31 12:33 UTC
+! Last modified: 2013-05-31 16:01 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -40,22 +40,13 @@
 ||cenuklubs.lv/assets/media/
 ||db.lv/images/tmp/
 ||delfi.lv/ap/edu/g/
-||delfi.lv/b/
-||delfi.lv/d/bus/
-||delfi.lv/d/h2011/Interinfo_LV_250x100px.gif
 ||delfi.lv/d/h2011/pardotnet/
 ||delfi.lv/d/infoblock/
-||delfi.lv/fp/city/
 ||delfi.lv/fp/i/city24
 ||delfi.lv/jo/g/
-||delfi.lv/mango/b/
-||delfi.lv/misc/jauniauto_new.php
-||delfi.lv/misc/varianti.php
 ||delfi.lv/misc/xml_infoblocks/
-||delfi.lv/teh/next_150_wtext.jpg
 ||delfi.lv/tr/g/
 ||delfi.lv/ve/g/
-||delfi.lv/wd/
 ||discover.lv/userfiles/promofotos/
 ||e-pica.lv/mce/uploads/banners/
 ||ecompics.power.oho.lv^
@@ -105,7 +96,6 @@
 ||torrenti.lv/themes/TBDev/images/banner
 ||torrenti.lv/themes/TBDev/images/ftlv.swf
 ||tours.lv/images/misc/
-||tv.delfi.lv/adtonomy/
 ||tvnet.lv/ajax/showJsAd/
 ||tvnet.lv/assets/swf/tvnet_pasts_997x250.swf
 ||viastream.viasat.tv/Commercials/
@@ -137,11 +127,6 @@
 ||clo.lv^
 ||cv.lv^*?type=banner
 ||deal24.lv^
-||delphi.lv/d/i/milka/
-||delphi.lv/d/infoblock/
-||delphi.lv/fp/city/
-||delphi.lv/js/milka.js
-||delphi.lv/wd/x/*.160x107.jpeg
 ||delphi.lv^*/ads/
 ||doaffiliate.net^
 ||emediate.se/eas?cu=
@@ -183,7 +168,6 @@
 !
 ! ------------------ 1st party whitelists ------------------
 !
-@@||delfi.lv/wd/*/r/
 !
 ! ------------------ 3rd party whitelists ------------------
 !
@@ -210,25 +194,13 @@ db.lv###outer-left
 db.lv###outer-right
 db.lv###slid_close
 db.lv##.banner
-delfi.lv###delfieduitems
 delfi.lv###horoweatherblock
 delfi.lv##.car-city24
-delfi.lv##.city24w
 delfi.lv##.clo
-delfi.lv##[class^="city24"]
-delfi.lv##[id="250x250AutoLV"]
-delfi.lv##[id^="city24"]
-delfi.lv##[style="position:relative;width:995px;height:100px;z-index:100000;"]
-delfi.lv##div[style$="no-repeat center; width:250px; border: 0px solid #d5d5d5; text-align: center;"]
 delfi.lv##div[style="background:#fef2d9;"]
-delfi.lv##div[style="font-size:0px;"]
-delfi.lv##div[style="margin-bottom:5px; height: 250px"]
-delfi.lv##div[style="margin-bottom:5px;height: 250px;"]
 delfi.lv##div[style="margin:10px;border:1px dashed #8e8e9e;overflow:auto;padding-left:15px;padding-right:15px;padding-top:10px;padding-bottom:10px"]
 delfi.lv##div[style="margin:10px;margin-bottom:0;padding-bottom:10px;text-align:center;border-bottom:1px solid #b4c8de;text-align:center;"]
-delfi.lv##div[style="width: 185px; height: 250px; padding: 0px;"]
 delfi.lv##div[style="width:150px;margin-bottom:5px;"]
-delfi.lv##div[style="width:248px;"]
 delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
 delfi.lv,morning.lv###right
 delfi.lv,morning.lv##.articlebanner
@@ -306,8 +278,6 @@ sportacentrs.com##.banner
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
 ss.lv###sys_bnr_tbl
-tehnika.delfi.lv##div[style="width: 150px; background-color: #54AAFF;overflow: hidden;"]
-tehnika.delfi.lv##div[style="width: 150px; height:220px"]
 tele2.lv###fancybox-overlay
 tera.lv###REKLAI
 travelnews.lv##table + #div_main_right_block
