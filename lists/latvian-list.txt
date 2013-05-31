@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: BU16LnZkPmKV4Xg3FYFmrg
+! Checksum: y1CUCkk7iVdvv878YZM0Ag
 ! Title: Latvian List
-! Last modified: 2013-05-31 16:18 UTC
+! Last modified: 2013-05-31 16:22 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -63,7 +63,6 @@
 ||leta.lv/img/*/info_banneris_
 ||lu.lv/uploads/tx_macinabanners/
 ||lv.lv/bildes/reklaama.png
-||mango.lv/otra_*.gif
 ||manstv.lv/js/bannerhandlerv2.js
 ||miljons.com/bnr/
 ||nekrize.lv/nkr300x250_
@@ -146,7 +145,6 @@
 ||novonews.lv/ticker/flash/$third-party
 ||openx.diena.lv^$popup
 ||otrapuse.lv^$third-party
-||otrapuse.mango.lv^$third-party
 ||partneriem.smscredit.lv^$third-party
 ||pay4results.ee^
 ||perkamkopa.lv^$third-party
@@ -232,8 +230,6 @@ lattelecom.lv##[id^="fixme_"]
 mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
 mac.tunt.lv##div[style="padding-left: 10px;"] + br + table[width="100%"]
 mac.tunt.lv##table[style="border: 1px solid #CBCBCB; background-color: #F3F3F3;"]
-mango.delfi.lv##div[style="font-weight:bold;width:250px;margin-bottom:5px;background:#98abc9;padding-bottom:25px;"]
-mango.delfi.lv##div[style^="background: url('http://g.mango.lv/otra_130x170.gif')"]
 miljons.com###opencredit
 miljons.com##div[style="padding:3px; font-size:13px;"]
 notepad.lv###blocks > .tabsaction + .news
