@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: 2jMDSoY8thJihieTp0Agfw
+! Checksum: BU16LnZkPmKV4Xg3FYFmrg
 ! Title: Latvian List
-! Last modified: 2013-05-31 16:01 UTC
+! Last modified: 2013-05-31 16:18 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -30,7 +30,6 @@
 ||apollo.lv^*/widgets/Banner
 ||atlaides.delfi.lv/export.php
 ||b.inbox.lv^
-||b.tvnet.lv^
 ||banners.zl.lv^
 ||bigshop.lv/baners/
 ||bilesuserviss.lv/upload/banner/
@@ -97,7 +96,6 @@
 ||torrenti.lv/themes/TBDev/images/ftlv.swf
 ||tours.lv/images/misc/
 ||tvnet.lv/ajax/showJsAd/
-||tvnet.lv/assets/swf/tvnet_pasts_997x250.swf
 ||viastream.viasat.tv/Commercials/
 ||xp.lv/res/banners/
 ||zip.lv/kasjauns.swf
@@ -284,22 +282,15 @@ travelnews.lv##table + #div_main_right_block
 tv.delfi.lv##.toolblock
 tvnet.lv###flag-banner
 tvnet.lv###footer_banner
-tvnet.lv###keyword_ad
-tvnet.lv###pop_keyword_everest_ad
-tvnet.lv###pop_keyword_letpas_ad
 tvnet.lv###shops_offer
-tvnet.lv###slidrinda
-tvnet.lv###slidrinda_close
 tvnet.lv##.banner
 tvnet.lv##.banner_container
 tvnet.lv##.customers
 tvnet.lv##.fp_horiz_ads_150x150
 tvnet.lv##.list.customer
-tvnet.lv##.not_in_print
 tvnet.lv##.right_custom_ad_four_pics_city24
 tvnet.lv##[href^="http://q.tvnet.lv/"]
 tvnet.lv##[id^="ad120x600"]
-tvnet.lv##div[style="position: absolute; display: block; width: 100%; top: 450px; z-index: 9999999;"]
 uzkartes.lv###sz
 zeltazivtina.lv###banner
 zip.lv###perkam_group_banner
