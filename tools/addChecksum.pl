@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 
-# Copyright 2013 anonymous74100
-# Portions copyright 2011 Wladimir Palant
+# Copyright 2011 Wladimir Palant
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,21 +26,18 @@ use feature 'unicode_strings';
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
 my $file = my $opera = '';
-GetOptions ('<>' => \&{$file = shift}, 'opera' => \$opera);    # Get command line options
+GetOptions ('<>' => \&{$file = shift});    # Get command line options
 
 die "Specified file: $file doesn't exist!\n" unless (-e $file);
-
-my $commentsymbol = '!';
-$commentsymbol = ';' if $opera;
 
 my $data = read_file($file, binmode => ':utf8' );
 
 # Get existing checksum
-$data =~ /^.*$commentsymbol\s*checksum[\s\-:]+([\w\+\/=]+).*\n/gmi;
+$data =~ /^.*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n/gmi;
 my $oldchecksum = $1;
 
 # Remove already existing checksum
-$data =~ s/^.*$commentsymbol\s*checksum[\s\-:]+([\w\+\/=]+).*\n//gmi;
+$data =~ s/^.*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n//gmi;
 
 # Calculate new checksum: remove all CR symbols and empty
 # lines and get an MD5 checksum of the result (base64-encoded,
@@ -58,7 +54,7 @@ die "List has not changed.\n" if (($oldchecksum) and ($checksum eq $oldchecksum)
 
 # Update the date and time.
 my $updated = strftime("%Y-%m-%d %H:%M UTC", gmtime);
-$data =~ s/(^.*$commentsymbol.*(Last modified|Updated):\s*)(.*)\s*$/$1$updated/gmi if ($data =~ m/^.*$commentsymbol.*(Last modified|Updated)/gmi);
+$data =~ s/(^.*!.*(Last modified|Updated):\s*)(.*)\s*$/$1$updated/gmi if ($data =~ m/^.*!.*(Last modified|Updated)/gmi);
 
 # Recalculate the checksum as we've altered the date
 $checksumData = $data;
@@ -67,6 +63,6 @@ $checksumData =~ s/\n+/\n/g;
 $checksum = md5_base64(encode_utf8($checksumData));
 
 # Insert checksum into the file
-$data =~ s/(\r?\n)/$1$commentsymbol Checksum: $checksum$1/;
+$data =~ s/(\r?\n)/$1! Checksum: $checksum$1/;
 
 write_file($file, {binmode => ':utf8'}, $data);
