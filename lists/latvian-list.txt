@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: 8wvs+UDHrAmlv+5or4R00A
+! Checksum: 7/2HWwSPOljkoIBznOWu/A
 ! Title: Latvian List
-! Last modified: 2013-09-15 08:49 UTC
+! Last modified: 2013-09-15 08:51 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -156,7 +156,7 @@
 ||serveris.lv/images/affiliate/
 ||sludini.lv^$third-party
 ||smartad.lv^
-||tvnet.lv/export_news/*$third-party
+||tvnet.lv/export_news/$third-party
 ||videoavatars.com^
 ||zizu.lv/bpublic/
 !
