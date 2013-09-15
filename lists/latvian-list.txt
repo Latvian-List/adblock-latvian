@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: 7/2HWwSPOljkoIBznOWu/A
+! Checksum: iXE8B74byUXHo7NkLzS/Pg
 ! Title: Latvian List
-! Last modified: 2013-09-15 08:51 UTC
+! Last modified: 2013-09-15 09:01 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -191,19 +191,19 @@ boot.lv##td[style="padding: 0 0 0 10px; width: 250px; vertical-align: top;"]
 db.lv###outer-left
 db.lv###outer-right
 db.lv###slid_close
-db.lv##.banner
+db.lv,sportacentrs.com,tvnet.lv##.banner
 delfi.lv###column3 a[style="margin-bottom: 10px;"]
 delfi.lv###horoweatherblock
 delfi.lv##.ads-block-small
 delfi.lv##.ads-blocks-link
 delfi.lv##.car-city24
-delfi.lv##.clo
 delfi.lv##.pardod-widget
 delfi.lv##div[style="background:#fef2d9;"]
 delfi.lv##div[style="margin:10px;border:1px dashed #8e8e9e;overflow:auto;padding-left:15px;padding-right:15px;padding-top:10px;padding-bottom:10px"]
 delfi.lv##div[style="margin:10px;margin-bottom:0;padding-bottom:10px;text-align:center;border-bottom:1px solid #b4c8de;text-align:center;"]
 delfi.lv##div[style="width:150px;margin-bottom:5px;"]
 delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
+delfi.lv,gudriem.lv,kurpirkt.lv##.clo
 delfi.lv,morning.lv###right
 delfi.lv,morning.lv##.articlebanner
 delfi.lv,morning.lv##.delfi_shop
@@ -215,7 +215,6 @@ forums.delfi.lv##div[style="width:250px;"]:last-child
 gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
 google.lv###rhscol
 google.lv###taw
-gudriem.lv##.clo
 inbox.lv###inboxshops_div
 inbox.lv###inx-main-roof
 inbox.lv###inx-textAds
@@ -232,7 +231,6 @@ kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border-bottom
 kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
 kasjauns.lv##li[style=" line-height:1.5em;"]
 kurpirkt.lv###leja_scroll
-kurpirkt.lv##.clo
 kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
 lattelecom.lv##[id^="fixme_"]
 mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
@@ -277,7 +275,6 @@ spoki.lv###scroll_ban1
 spoki.lv###scroll_ban2
 spoki.lv##.garnier-banner
 spoki.lv##div[style="background: url('/img/bg.png') 0 -427px; margin: 5px 0 0 0; width:250px;height:365px;font-family:verdana"]
-sportacentrs.com##.banner
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
 ss.lv###sys_bnr_tbl
@@ -288,7 +285,6 @@ tv.delfi.lv##.toolblock
 tvnet.lv###flag-banner
 tvnet.lv###footer_banner
 tvnet.lv###shops_offer
-tvnet.lv##.banner
 tvnet.lv##.banner_container
 tvnet.lv##.customers
 tvnet.lv##.fp_horiz_ads_150x150
