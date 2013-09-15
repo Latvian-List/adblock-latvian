@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: rJKHoi3FVsqZs78cGmsFXQ
+! Checksum: kxOFYD2/gYCVigri/qeTzQ
 ! Title: Latvian List
-! Last modified: 2013-09-15 09:06 UTC
+! Last modified: 2013-09-15 15:18 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -144,6 +144,7 @@
 ||partneriem.smscredit.lv^$third-party
 ||pay4results.ee^
 ||perkamkopa.lv^$third-party
+||prieks.lv^*/banner/
 ||promo.boomtime.lv^
 ||reklama.lv/promotion/
 ||saites.eon.lv^
@@ -218,6 +219,7 @@ inbox.lv###inx-main-roof
 inbox.lv###inx-textAds
 inbox.lv###inxAds-imr
 inbox.lv###inxHeadAdsPlace
+inbox.lv##.bxS-text_link
 intim.lv##div[style="margin: 8px 0px; cursor: hand;"]
 ir.lv###abonbanner
 izklaide.delfi.lv###rightTop
