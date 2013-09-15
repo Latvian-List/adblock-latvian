@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: lz/jr/nkePFWJSfJdj2B4Q
+! Checksum: 8wvs+UDHrAmlv+5or4R00A
 ! Title: Latvian List
-! Last modified: 2013-09-15 07:31 UTC
+! Last modified: 2013-09-15 08:49 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -95,7 +95,6 @@
 ||torrenti.lv/themes/TBDev/images/banner
 ||torrenti.lv/themes/TBDev/images/ftlv.swf
 ||tours.lv/images/misc/
-||tvnet.lv/ajax/showJsAd/
 ||viastream.viasat.tv/Commercials/
 ||xp.lv/res/banners/
 ||zip.lv/kasjauns.swf
@@ -103,9 +102,7 @@
 ! ------------- 3rd party ad blocking filters --------------
 !
 ||1shop.lv/i/ban/
-||468x60.lv^
 ||a.draugiem.lv^
-||adclick.lv^
 ||adnet.lt^
 ||ads.image.lv^
 ||adsplius.lt^
@@ -119,7 +116,6 @@
 ||b.itvnet.lv^
 ||banneri.lv^
 ||bbes.lv^
-||bepolite.eu^
 ||beta.lt^*/banners
 ||cetrassezonas.lv/tvnet.php
 ||city24.lv/ibox/
@@ -160,7 +156,6 @@
 ||serveris.lv/images/affiliate/
 ||sludini.lv^$third-party
 ||smartad.lv^
-||textads.lv^
 ||tvnet.lv/export_news/*$third-party
 ||videoavatars.com^
 ||zizu.lv/bpublic/
