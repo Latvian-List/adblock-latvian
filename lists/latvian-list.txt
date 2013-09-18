@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: qdrS2hjyHCMlYuZDLihUUQ
+! Checksum: YSQqzlK3Htek+DdUpq0U7A
 ! Title: Latvian List
-! Last modified: 2013-09-15 16:41 UTC
+! Last modified: 2013-09-18 07:31 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -165,6 +165,7 @@
 !
 ! ------------------ 3rd party whitelists ------------------
 !
+@@||emediate.se/eas?*ty=video$object-subrequest,domain=apollo.lv
 @@||viastream.viasat.tv^*?affiliate=
 !
 ! ------------- Generic element hiding filters -------------
