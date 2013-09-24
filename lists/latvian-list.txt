@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: YSQqzlK3Htek+DdUpq0U7A
+! Checksum: dTaWAtSoYrf7rPWVfjxrHQ
 ! Title: Latvian List
-! Last modified: 2013-09-18 07:31 UTC
+! Last modified: 2013-09-24 16:56 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -101,6 +101,7 @@
 !
 ||1shop.lv/i/ban/
 ||a.draugiem.lv^
+||adbox.lv^
 ||adnet.lt^
 ||ads.image.lv^
 ||adsplius.lt^
