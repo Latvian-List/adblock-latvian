@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: dTaWAtSoYrf7rPWVfjxrHQ
+! Checksum: Ax0qEFGw2fGHa4ZZlVAXIw
 ! Title: Latvian List
-! Last modified: 2013-09-24 16:56 UTC
+! Last modified: 2013-10-31 13:40 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
@@ -85,6 +85,7 @@
 ||sexparty.lv/uploads/banner/
 ||sexparty.lv/uploads/vip/
 ||signe.lv/userfiles/image/main%20page%20banners/
+||simpsoni.lv/rtr/
 ||spoki.lv/img/backs/*-banner.png
 ||spoki.lv/img/okarte/
 ||spoki.lv/js/ad.js
@@ -127,6 +128,8 @@
 ||emediate.se/EAS_tag.
 ||evolution.lv^$third-party
 ||garmtech.lv^$third-party
+||getgamers.ru^
+||getgamers.ru^$popup
 ||goaff.com^
 ||ifrype.com^*/ads.
 ||imd.petit.lv^
@@ -270,6 +273,7 @@ salidzini.lv##td[style="padding: 0px 2px;"]
 salidzini.lv##td[style="width: 340px; background-color: #FFFFFF; border: 1px solid #CCCCCC;"]
 salidzini.lv##td[width="165"][valign="top"][height="100%"][align="center"][style="padding: 2px 1px;"]
 sexparty.lv##td[width="230"]
+simpsoni.lv###head_banner
 spoki.lv###labakie
 spoki.lv###mod_eshops_b
 spoki.lv###okarte-banner
