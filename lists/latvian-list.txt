@@ -1,7 +1,7 @@
 [Adblock Plus 1.2]
-! Checksum: hlYpzhzJ4EhZfE5V8jqFvA
+! Checksum: bHDjYmc1Xa4F+3A4dp7ccA
 ! Title: Latvian List
-! Last modified: 2014-12-09 17:59 UTC
+! Last modified: 2014-12-09 18:14 UTC
 ! Expires: 2 days (update frequency)
 ! Homepage: http://latvian-list.site11.com/
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
@@ -138,6 +138,7 @@
 ||goaff.com^$third-party
 ||ifrype.com/ad_v/
 ||ifrype.com/adv/
+||ifrype.com/miniads
 ||ifrype.com^*/ad_v.
 ||ifrype.com^*/ads.
 ||imd.petit.lv^
