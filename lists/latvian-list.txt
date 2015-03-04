@@ -1,11 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: vh+D6svSLBfd6uesnU/0eQ
+! Checksum: b+bu4Qrym8tzSdyzZv+fcQ
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 2 days
-! Version: 201503041626
-! Redirect: https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt
-! Last modified: 2015-03-04 16:26 UTC
+! Version: 201503041705
+! Last modified: 2015-03-04 17:05 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
