@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: 4UwSN3qXras1ucNbnvne0w
+! Checksum: +azHka1DKq30rcmyVIS20g
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 2 days
-! Version: 201504181613
-! Last modified: 2015-04-18 16:13 UTC
+! Version: 201504181619
+! Last modified: 2015-04-18 16:19 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -272,6 +272,7 @@ kurpirkt.lv###leja_scroll
 kurpirkt.lv##.campaignblock1
 kurpirkt.lv##.campaignblock2
 kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
+la.lv##.side-banner
 lattelecom.lv##[id^="fixme_"]
 mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
 mac.tunt.lv##div[style="padding-left: 10px;"] + br + table[width="100%"]
