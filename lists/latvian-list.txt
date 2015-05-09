@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: Q+NjxUCe3YC1PD8Z0TdTUA
+! Checksum: RfyINurRC/8bX8ZqLUwvbA
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 2 days
-! Version: 201505091738
-! Last modified: 2015-05-09 17:38 UTC
+! Version: 201505091800
+! Last modified: 2015-05-09 18:00 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -305,6 +305,7 @@ salidzini.lv##div[style^="padding: 4px; margin: 4px; border: 2px solid red; back
 salidzini.lv##td[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
 salidzini.lv##td[style="background-color: #FFDCB9; border: 1px solid #FF8040; background-color: #FFFAD9; border: 1px solid #DFC400;"]
 salidzini.lv##td[style="background-color: #FFF4EA; border: 1px solid #FFC6AA;"]
+salidzini.lv##td[style="background-color: #fff7ee; border: 1px solid #ffd5bf;"]
 salidzini.lv##td[style="border: 1px solid #D4D4D4;"]
 salidzini.lv##td[style="padding: 0px 2px;"]
 salidzini.lv##td[style="width: 340px; background-color: #FFFFFF; border: 1px solid #CCCCCC;"]
