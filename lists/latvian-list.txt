@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: tL7iBjBUTdQdBhNTcnhjhg
+! Checksum: UZRpuQaD5Vtxjdlf3R6HCQ
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 2 days
-! Version: 201504231730
-! Last modified: 2015-04-23 17:30 UTC
+! Version: 201505090718
+! Last modified: 2015-05-09 07:18 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -334,6 +334,7 @@ tvnet.lv##.banner_container
 tvnet.lv##.c24-box
 tvnet.lv##.comment-baner-outer
 tvnet.lv##.customers
+tvnet.lv##.divTable_la
 tvnet.lv##.fp_horiz_ads_150x150
 tvnet.lv##.list.customer
 tvnet.lv##.right_custom_ad_2_pics
