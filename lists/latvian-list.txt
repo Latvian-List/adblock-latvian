@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: BBUMHfsO9Buat0hbEZQ0Mw
+! Checksum: QHJaFCQgB3/xdmdnet9kNQ
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 2 days
-! Version: 201505210553
-! Last modified: 2015-05-21 05:53 UTC
+! Version: 201505210617
+! Last modified: 2015-05-21 06:17 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -204,6 +204,7 @@ bilesuserviss.lv##.main_column_banner
 bilesuserviss.lv##.top_banner
 boot.lv###shop-item
 boot.lv##.bootlv_recommends
+boot.lv##.top_header_wrapper
 boot.lv##div[style="padding: 10px;text-align:center;"]
 boot.lv##td[style="padding: 0 0 0 10px; width: 250px; vertical-align: top;"]
 db.lv###outer-left
