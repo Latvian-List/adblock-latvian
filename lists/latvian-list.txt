@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: 5Ct5rxAeOhSK30HvcikkTA
+! Checksum: vQgHPn0H6GKdVT/PbtB0iQ
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 2 days
-! Version: 201505201403
-! Last modified: 2015-05-20 14:03 UTC
+! Version: 201505210537
+! Last modified: 2015-05-21 05:37 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -88,10 +88,6 @@
 ||sexparty.lv/uploads/vip/
 ||signe.lv/userfiles/image/main%20page%20banners/
 ||simpsoni.lv/rtr/
-||spoki.lv/img/backs/*-banner.png
-||spoki.lv/img/okarte/
-||spoki.lv/js/ad.js
-||spoki.lv/js/okarte.js
 ||sudzibas.lv/baneris_
 ||tavacena.lv/images/ltc/
 ||tele2.lv^*_popup_
@@ -310,13 +306,6 @@ salidzini.lv##td[width="165"][valign="top"][height="100%"][align="center"][style
 sexparty.lv##td[width="230"]
 simpsoni.lv###head_banner
 skats.lv##.articlebanner
-spoki.lv###labakie
-spoki.lv###mod_eshops_b
-spoki.lv###okarte-banner
-spoki.lv###scroll_ban1
-spoki.lv###scroll_ban2
-spoki.lv##.garnier-banner
-spoki.lv##div[style="background: url('/img/bg.png') 0 -427px; margin: 5px 0 0 0; width:250px;height:365px;font-family:verdana"]
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
 ss.lv###sys_bnr_tbl
