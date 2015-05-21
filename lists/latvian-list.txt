@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: vQgHPn0H6GKdVT/PbtB0iQ
+! Checksum: agsdr/+53vR3VCsw+emW7w
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 2 days
-! Version: 201505210537
-! Last modified: 2015-05-21 05:37 UTC
+! Version: 201505210538
+! Last modified: 2015-05-21 05:38 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -92,6 +92,7 @@
 ||tavacena.lv/images/ltc/
 ||tele2.lv^*_popup_
 ||tours.lv/images/misc/
+||tvnet.lv/js/ad.js
 ||vgk.lv/adv/
 ||viastream.viasat.tv/Commercials/
 ||xp.lv/res/banners/
@@ -306,6 +307,7 @@ salidzini.lv##td[width="165"][valign="top"][height="100%"][align="center"][style
 sexparty.lv##td[width="230"]
 simpsoni.lv###head_banner
 skats.lv##.articlebanner
+spoki.tvnet.lv###spec_head
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
 ss.lv###sys_bnr_tbl
