@@ -25,7 +25,7 @@ use feature 'unicode_strings';
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
-my $file = my $opera = '';
+my $file = '';
 GetOptions ('<>' => \&{$file = shift});    # Get command line options
 
 die "Specified file: $file doesn't exist!\n" unless (-e $file);
