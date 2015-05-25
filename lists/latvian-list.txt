@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: XHiGENK8x6PFUcJ8cBVilQ
+! Checksum: KtP1BMMJiWEdWDRKjXy/WA
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
-! Expires: 2 days
-! Version: 201505231250
-! Last modified: 2015-05-23 12:50 UTC
+! Expires: 4 days
+! Version: 201505250705
+! Last modified: 2015-05-25 07:05 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
