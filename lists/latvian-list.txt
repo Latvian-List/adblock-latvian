@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: w9oDcNQhG6yRJV9EtZBddw
+! Checksum: 2BxEdz7KEmKp/+eN5nXL9g
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 4 days
-! Version: 201505250908
-! Last modified: 2015-05-25 09:08 UTC
+! Version: 201505250910
+! Last modified: 2015-05-25 09:10 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -232,9 +232,9 @@ delfi.lv##div[style="width:150px;margin-bottom:5px;"]
 delfi.lv##table[style="background-color: #ECECEC; width:250px;"]
 delfi.lv,gudriem.lv,kurpirkt.lv##.clo
 delfi.lv,morning.lv###right
-delfi.lv,morning.lv##.articlebanner
 delfi.lv,morning.lv##.delfi_shop
 delfi.lv,morning.lv##[id^="adoceandelfilv"]
+delfi.lv,morning.lv,skats.lv##.articlebanner
 draugiem.lv##.adv
 e-klase.lv###mammtet_box
 e-klase.lv##.adv_urls
@@ -311,7 +311,6 @@ salidzini.lv##td[style="width: 340px; background-color: #FFFFFF; border: 1px sol
 salidzini.lv##td[width="165"][valign="top"][height="100%"][align="center"][style="padding: 2px 1px;"]
 sexparty.lv##td[width="230"]
 simpsoni.lv###head_banner
-skats.lv##.articlebanner
 spoki.tvnet.lv###spec_head
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
