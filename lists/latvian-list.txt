@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: 2BxEdz7KEmKp/+eN5nXL9g
+! Checksum: r5Gp1aY1H18f+OHB/axu3Q
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 4 days
-! Version: 201505250910
-! Last modified: 2015-05-25 09:10 UTC
+! Version: 201505250933
+! Last modified: 2015-05-25 09:33 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -103,7 +103,6 @@
 ||1shop.lv/i/ban/
 ||a.draugiem.lv^
 ||adbox.lv^$third-party
-||adnet.lt^$third-party
 ||ads.image.lv^$third-party
 ||adsplius.lt^$third-party
 ||adsxchange.lv^$third-party
@@ -128,8 +127,6 @@
 ||delphi.lv^*/ads/
 ||diena.lv/boxnews.html$third-party
 ||doaffiliate.net^$third-party
-||emediate.se/eas?cu=$third-party
-||emediate.se/EAS_tag.$third-party
 ||evolution.lv^$third-party
 ||freewheel.mtgx.tv^*.mp4
 ||garmtech.lv^$third-party
@@ -137,7 +134,6 @@
 ||getgamers.ru^$third-party
 ||goaff.com^$third-party
 ||ifrype.com/ad_v/
-||ifrype.com/adv/
 ||ifrype.com/miniads
 ||ifrype.com^*/ad_v.
 ||ifrype.com^*/ads.
