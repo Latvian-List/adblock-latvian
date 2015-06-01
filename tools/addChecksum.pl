@@ -18,7 +18,7 @@ use strict;
 use warnings;
 use Path::Tiny;
 use Digest::MD5 qw(md5_base64);
-use Encode qw(encode_utf8);
+use Unicode::UTF8 qw(encode_utf8);
 use POSIX qw(strftime);
 use feature 'unicode_strings';
 
