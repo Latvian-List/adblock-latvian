@@ -16,8 +16,7 @@
 
 use strict;
 use warnings;
-use File::Slurp;
-use Getopt::Long qw(:config no_auto_abbrev);
+use Path::Tiny;
 use Digest::MD5 qw(md5_base64);
 use Encode qw(encode_utf8);
 use POSIX qw(strftime);
@@ -25,12 +24,11 @@ use feature 'unicode_strings';
 
 die "Usage: $^X $0 subscription.txt\n" unless @ARGV;
 
-my $file = '';
-GetOptions ('<>' => \&{$file = shift});    # Get command line options
+my $file = shift;
 
 die "Specified file: $file doesn't exist!\n" unless (-e $file);
 
-my $data = read_file($file, binmode => ':utf8' );
+my $data = path($file)->slurp_utf8;
 
 # Get existing checksum
 $data =~ /^.*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n/gmi;
@@ -69,4 +67,4 @@ $checksum = md5_base64(encode_utf8($checksumData));
 # Insert checksum into the file
 $data =~ s/(\r?\n)/$1! Checksum: $checksum$1/;
 
-write_file($file, {binmode => ':utf8'}, $data);
+path($file)->spew_utf8($data);
