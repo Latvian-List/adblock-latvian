@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: WD0eCq10Z9tF40Jo9xMo1A
+! Checksum: Smr26SmpWOlEct5WjDmLkA
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 4 days
-! Version: 201506011754
-! Last modified: 2015-06-01 17:54 UTC
+! Version: 201506021659
+! Last modified: 2015-06-02 16:59 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -213,6 +213,7 @@ db.lv,sportacentrs.com,tvnet.lv##.banner
 delfi.lv###background-giga
 delfi.lv###column3 a[style="margin-bottom: 10px;"]
 delfi.lv###horoweatherblock
+delfi.lv###top-banner
 delfi.lv##.ads-block-small
 delfi.lv##.ads-blocks-link
 delfi.lv##.car-city24
