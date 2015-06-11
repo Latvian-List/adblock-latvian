@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: ceovelkcGHiMXnPN6dY9Wg
+! Checksum: vOV1nmii7b0ylCYK1LkUMA
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 4 days
-! Version: 201506110917
-! Last modified: 2015-06-11 09:17 UTC
+! Version: 201506110921
+! Last modified: 2015-06-11 09:21 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -340,6 +340,7 @@ tvnet.lv##[id^="ad120x600"]
 tvnet.lv##a[style="text-decoration: underline; cursor: pointer; padding-right: 17px; background: url('/assets/images/title_link.gif') right center no-repeat;"]
 tvnet.lv##div[style="height:53px; width:100%; position:fixed; bottom:0px; left:0px; background-color:white; z-index:999999; background-position:center center; background-image: url('http://b.itvnet.lv/_sa_alkohols.jpg'); background-repeat:no-repeat;"]
 uzkartes.lv###sz
+varianti.lv##.ad_prian
 varianti.lv##.textbanners
 vgk.lv##.infobox
 zeltazivtina.lv###banner
