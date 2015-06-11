@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: Smr26SmpWOlEct5WjDmLkA
+! Checksum: ZgPlWMZSZZBHEYmhRN6zPQ
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 4 days
-! Version: 201506021659
-! Last modified: 2015-06-02 16:59 UTC
+! Version: 201506110900
+! Last modified: 2015-06-11 09:00 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -342,3 +342,7 @@ vgk.lv##.infobox
 zeltazivtina.lv###banner
 zip.lv###perkam_group_banner
 zip.lv##.zip_spotlight.main_td
+!
+! --------------- Element hiding whitelists ----------------
+!
+varianti.lv#@#.single_ad
