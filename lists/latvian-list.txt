@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: fi0UetKWzUTRq6WrGSW9/g
+! Checksum: ceovelkcGHiMXnPN6dY9Wg
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 4 days
-! Version: 201506110907
-! Last modified: 2015-06-11 09:07 UTC
+! Version: 201506110917
+! Last modified: 2015-06-11 09:17 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -178,6 +178,7 @@
 ! ------------------ 1st party whitelists ------------------
 !
 @@||openx.kasjauns.lv/www/delivery/spcjs.php$domain=kasjauns.lv
+@@||varianti.lv/ads/load_ad_images/$xmlhttprequest,~third-party
 !
 ! ------------------ 3rd party whitelists ------------------
 !
