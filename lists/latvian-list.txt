@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: vOV1nmii7b0ylCYK1LkUMA
+! Checksum: w/YjUaqnJ13e3WeU8kBTcw
 ! Title: Latvian List
 ! Homepage: http://latvian-list.site11.com/
 ! Expires: 4 days
-! Version: 201506110921
-! Last modified: 2015-06-11 09:21 UTC
+! Version: 201506120944
+! Last modified: 2015-06-12 09:44 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -278,6 +278,7 @@ lattelecom.lv##[id^="fixme_"]
 mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
 mac.tunt.lv##div[style="padding-left: 10px;"] + br + table[width="100%"]
 mac.tunt.lv##table[style="border: 1px solid #CBCBCB; background-color: #F3F3F3;"]
+mail.inbox.lv##tr[id^="row"]
 miljons.com###opencredit
 miljons.com##div[style="padding:3px; font-size:13px;"]
 notepad.lv###blocks > .tabsaction + .news
