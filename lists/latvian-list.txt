@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: nCvCND8DwxCaEbkD09KNlw
+! Checksum: HFa7ybj3GSEuthRR1d64Sg
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201506121238
-! Last modified: 2015-06-12 12:38 UTC
+! Version: 201508141233
+! Last modified: 2015-08-14 12:33 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -145,6 +145,7 @@
 ||knc.lv^$third-party
 ||latloto.lv/banner/
 ||leta.lv/bm/www/images/$third-party
+||maxtraffic.com^$third-party
 ||miljons.com/widget/$third-party
 ||mtgonline.lv/counter-smscredit/
 ||nagi.ee^$third-party
