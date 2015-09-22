@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: HFa7ybj3GSEuthRR1d64Sg
+! Checksum: 7qQKGZyzqNQ9pkd5MWPoQw
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201508141233
-! Last modified: 2015-08-14 12:33 UTC
+! Version: 201509221218
+! Last modified: 2015-09-22 12:18 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -81,6 +81,10 @@
 ||reklama.lv/images/picads/users/
 ||reklama.lv/services/ads_count.html
 ||riga.lv/MEDIA/Misc/
+||runabildes.lv/?acx_onclick$popup
+||runabildes.lv^*/itro-popup/
+||runabildes.lv^*/ondo_tapete.jpg
+||runabildes.lv^*/wpsite-background-takeover/$script
 ||semicom.lv/admin/files/$object
 ||serveris.lv/images/Baners/
 ||sexparty.lv/style/flash/banner.swf
@@ -102,6 +106,7 @@
 ! ------------- 3rd party ad blocking filters --------------
 !
 ||1shop.lv/i/ban/
+||a.alicdn.com^*300x250.$third-party
 ||a.draugiem.lv^
 ||adbox.lv^$third-party
 ||ads.image.lv^$third-party
@@ -297,6 +302,7 @@ reklama.lv##div[style="margin-bottom:15px;"]
 riga.lv###_ctl16_HtmlBanner
 riga.lv##[id^="_ctl20_Elements__"]
 rigaslaiks.lv###ctl00_divAd1
+runabildes.lv##div[style="float:none;margin:10px 0 10px 0;text-align:center;"]
 salidzini.lv##.add_cell
 salidzini.lv##[id^="media_place"]
 salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
