@@ -1,10 +1,10 @@
 [Adblock Plus 1.2]
-! Checksum: jOr1zPPMqtYV5tc7G+BS9Q
+! Checksum: w9rPvMpvPlDsaNi1st3oSA
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201511171700
-! Last modified: 2015-11-17 17:00 UTC
+! Version: 201512071728
+! Last modified: 2015-12-07 17:28 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -139,6 +139,7 @@
 ||getgamers.ru^$popup
 ||getgamers.ru^$third-party
 ||goaff.com^$third-party
+||h.itvnet.lv^
 ||ifrype.com/ad_v/
 ||ifrype.com/miniads
 ||ifrype.com^*/ad_v.
@@ -201,7 +202,6 @@
 1s.lv##.reklama2
 apollo.tvnet.lv###e-shop-banner-block
 apollo.tvnet.lv##.banner-block
-apollo.tvnet.lv##.banner-block-new
 apollo.tvnet.lv##.banner-block-small
 apollo.tvnet.lv##.custom-ad-widget
 apollo.tvnet.lv##.e-shop-banner-block
@@ -334,6 +334,7 @@ tvnet.lv###flag-banner
 tvnet.lv###footer_banner
 tvnet.lv###shops_offer
 tvnet.lv##.autoplius-ad
+tvnet.lv##.banner-block-new
 tvnet.lv##.banner_container
 tvnet.lv##.c24-box
 tvnet.lv##.comment-baner-outer
