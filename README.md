@@ -8,4 +8,4 @@ Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām pa [e-pastu](mai
 ## Skatīt arī
  * [uBlock Origin](https://github.com/gorhill/uBlock)
  * [EasyList](https://easylist.github.io/)
- * [Known Adblock Plus subscriptions](https://adblockplus.org/en/subscriptions)
+ * [Known Adblock Plus subscriptions](https://adblockplus.org/subscriptions)
