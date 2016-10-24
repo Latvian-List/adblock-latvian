@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: 8LZ5VEjIpwdu+7ebzFPCMg
+! Checksum: t/KspK62O3Kl80dlP9kGKw
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201609280751
-! Last modified: 2016-09-28 07:51 UTC
+! Version: 201610241214
+! Last modified: 2016-10-24 12:14 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -198,6 +198,9 @@
 !
 ! ------------------ 3rd party whitelists ------------------
 !
+@@||b.adbox.lv/bxlib/js/emiter.js?*$script,domain=lsm.lv
+@@||b.adbox.lv/bxlib/js/loader.js?*$script,domain=lsm.lv
+@@||b.adbox.lv/emiter/bx_placement.js?$script,domain=lsm.lv
 @@||emediate.se/eas?*ty=video$object-subrequest,domain=apollo.lv
 @@||viastream.viasat.tv^*?affiliate=
 !
@@ -296,6 +299,7 @@ kurpirkt.lv##.campaignblock2
 kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
 la.lv##.side-banner
 lattelecom.lv##[id^="fixme_"]
+lsm.lv##.adbox
 mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
 mac.tunt.lv##div[style="padding-left: 10px;"] + br + table[width="100%"]
 mac.tunt.lv##table[style="border: 1px solid #CBCBCB; background-color: #F3F3F3;"]
