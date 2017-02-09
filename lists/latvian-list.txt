@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: bDBoEieeSiU0axQWysFiJg
+! Checksum: EwQiGqGwoQoMr/YUfW29hg
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201612081250
-! Last modified: 2016-12-08 12:50 UTC
+! Version: 201702091815
+! Last modified: 2017-02-09 18:15 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -175,6 +175,7 @@
 ||prieks.lv^*/banner/
 ||promo.boomtime.lv^
 ||reklama.lv/promotion/
+||rembi.lv^
 ||saites.eon.lv^$third-party
 ||salidzini.lv/affiliate/
 ||salidzini.lv/images/120x40.php
@@ -183,6 +184,7 @@
 ||serveris.lv/images/affiliate/
 ||sludini.lv^$third-party
 ||smartad.lv^$third-party
+||sure.lv^$third-party
 ||tvnet.lv/export_news/$third-party
 ||videoavatars.com^$third-party
 ||w.ifrype.com^
@@ -245,11 +247,13 @@ delfi.lv##.city24-2nd-block-title
 delfi.lv##.city24-2nd-items
 delfi.lv##.city24-2nd-news
 delfi.lv##.city24-articles
+delfi.lv##.city24-topBlock-wrapper
 delfi.lv##.city24ni
 delfi.lv##.city24nib
 delfi.lv##.pardod-widget
 delfi.lv##.top-banner
 delfi.lv##.veikali-banners-active
+delfi.lv##.zave-wrapper
 delfi.lv##.zave_r
 delfi.lv##div.adsAdmin-iblock-pinned
 delfi.lv##div.adsAdmin-section
