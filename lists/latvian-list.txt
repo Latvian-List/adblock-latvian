@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: zm0OLLcfW2yISjLPiM+x1A
+! Checksum: uZZ+ri/GGjISxDCXtfKA1w
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201702271122
-! Last modified: 2017-02-27 11:22 UTC
+! Version: 201702271132
+! Last modified: 2017-02-27 11:32 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -359,6 +359,7 @@ tv.delfi.lv##.toolblock
 tvnet.lv###ad_center_top_500x150
 tvnet.lv###ag_b_wrapper
 tvnet.lv###ag_wrapper
+tvnet.lv###c24-container
 tvnet.lv###flag-banner
 tvnet.lv###footer_banner
 tvnet.lv###middle_156_xml
