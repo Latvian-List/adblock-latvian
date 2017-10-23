@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: yyG9KSli8wwivhjeJ51+RA
+! Checksum: 6DV6tX2zAfsdjM6lElXBcw
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201710211254
-! Last modified: 2017-10-21 12:54 UTC
+! Version: 201710230903
+! Last modified: 2017-10-23 09:03 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -339,19 +339,11 @@ riga.lv###_ctl16_HtmlBanner
 riga.lv##[id^="_ctl20_Elements__"]
 rigaslaiks.lv###ctl00_divAd1
 runabildes.lv##div[style="float:none;margin:10px 0 10px 0;text-align:center;"]
-salidzini.lv##.add_cell
+salidzini.lv###AM_giga
+salidzini.lv###AM_scroll_row
+salidzini.lv###AM_tower_div
+salidzini.lv##.item_link[href^="/rekred.php"]
 salidzini.lv##[id^="media_place"]
-salidzini.lv##div[style="padding: 5px; margin: 8px; border: 2px solid red; background-color: #FFE479;"]
-salidzini.lv##div[style="padding: 7px; margin: 2px 0px 6px 0px; border: 3px solid red; background-color: white; width: 1100px; font-size: 17px;"]
-salidzini.lv##div[style^="padding: 4px; margin: 4px; border: 2px solid red; background-color:"][style$="width: 930px;"]
-salidzini.lv##td[style="background-color: #FFDAB5; border: 1px solid #FF8040;"]
-salidzini.lv##td[style="background-color: #FFDCB9; border: 1px solid #FF8040; background-color: #FFFAD9; border: 1px solid #DFC400;"]
-salidzini.lv##td[style="background-color: #FFF4EA; border: 1px solid #FFC6AA;"]
-salidzini.lv##td[style="background-color: #fff7ee; border: 1px solid #ffd5bf;"]
-salidzini.lv##td[style="border: 1px solid #D4D4D4;"]
-salidzini.lv##td[style="padding: 0px 2px;"]
-salidzini.lv##td[style="width: 340px; background-color: #FFFFFF; border: 1px solid #CCCCCC;"]
-salidzini.lv##td[width="165"][valign="top"][height="100%"][align="center"][style="padding: 2px 1px;"]
 sexparty.lv##td[width="230"]
 simpsoni.lv###head_banner
 spoki.tvnet.lv###spec_head
