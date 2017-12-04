@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: K9cz/kscU8V9TuUamuNLaQ
+! Checksum: V4ZsyE6ezVEa3TXmfWNdLA
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201711091218
-! Last modified: 2017-11-09 12:18 UTC
+! Version: 201712041910
+! Last modified: 2017-12-04 19:10 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -141,8 +141,6 @@
 ||diena.lv/boxnews.html$third-party
 ||doaffiliate.net^$third-party
 ||evolution.lv^$third-party
-||freewheel-mtgx-tv.akamaized.net^
-||freewheel.mtgx.tv^*.mp4
 ||garmtech.lv^$third-party
 ||getgamers.ru^$popup
 ||getgamers.ru^$third-party
@@ -215,6 +213,8 @@
 @@||b.adbox.lv/bxlib/js/loader.js?$script,domain=lsm.lv
 @@||b.adbox.lv/emiter/bx_placement.js?$script,domain=lsm.lv
 @@||emediate.se/eas?*ty=video$object-subrequest,domain=apollo.lv
+@@||fwmrm.net/ad/g/$xmlhttprequest,domain=skaties.lv
+@@||fwmrm.net/ad/l/$xmlhttprequest,domain=skaties.lv
 @@||viastream.viasat.tv^*?affiliate=
 !
 ! ------------- Generic element hiding filters -------------
