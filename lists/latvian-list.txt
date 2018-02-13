@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: c4yhUUzeJ2iR7X/KmEruIA
+! Checksum: jbMGuJR1p/7sKufql1oIzg
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201802131317
-! Last modified: 2018-02-13 13:17 UTC
+! Version: 201802131318
+! Last modified: 2018-02-13 13:18 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -60,7 +60,6 @@
 ||hop.lv^*/banneri/
 ||iaptieka.lv/atteli/apmaina/
 ||intim.lv/res/banners/
-||kasjauns.lv/objs/shops/
 ||kurpirkt.lv/ba/
 ||latauto.tvnet.lv/infoblock
 ||leta.lv/img/*/info_banneris_
@@ -202,7 +201,6 @@
 @@||fwmrm.net/p/MTG_Brightcove_HTML5/AdManager.js$script,domain=tvplay.skaties.lv
 @@||h.itvnet.lv^*/adjs/adjs/ads.js$script,domain=tvnet.lv
 @@||lsm.lv/public/scripts/ads.js$script,~third-party
-@@||openx.kasjauns.lv/www/delivery/spcjs.php$domain=kasjauns.lv
 @@||playapi.mtgx.tv/v3/adinfo$xmlhttprequest
 @@||tvplay.skaties.lv/ad$xmlhttprequest
 @@||varianti.lv/ads/load_ad_images/$xmlhttprequest,~third-party
@@ -306,12 +304,6 @@ izklaide.delfi.lv###rightTop
 izklaide.delfi.lv##.iepazisanas
 jauns.lv##.ad-dfp
 jauns.lv##.shop-list
-kasjauns.lv###left
-kasjauns.lv###top_banner_container
-kasjauns.lv##.oxbanner
-kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border-bottom: 1px dotted #C1C1C1; margin-bottom: 3px;"]
-kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
-kasjauns.lv##li[style=" line-height:1.5em;"]
 kurpirkt.lv###leja_scroll
 kurpirkt.lv##.campaignblock1
 kurpirkt.lv##.campaignblock2
