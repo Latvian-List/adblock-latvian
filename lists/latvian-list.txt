@@ -1,15 +1,15 @@
 [Adblock Plus 2.0]
-! Checksum: 07EbtuB+iTeipiHM0u+Y2g
+! Checksum: 4rFWI8Hq6KxdIi/MGhbuvw
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201803251353
-! Last modified: 2018-03-25 13:53 UTC
+! Version: 201803251459
+! Last modified: 2018-03-25 14:59 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
-! pa e-pastu (latvian-list@googlegroups.com)
-! vai forumā (https://forums.lanik.us/viewforum.php?f=99)
+! pa e-pastu ( latvian-list@googlegroups.com )
+! vai forumā ( https://forums.lanik.us/viewforum.php?f=99 )
 !
 ! -------------- Generic ad blocking filters ---------------
 !
