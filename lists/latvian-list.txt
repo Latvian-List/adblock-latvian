@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: 8naqjFi9Z+ihxfEEsj8OlA
+! Checksum: GmPB21EutltWEtXJyhUuSg
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 202001031759
-! Last modified: 2020-01-03 17:59 UTC
+! Version: 202001031830
+! Last modified: 2020-01-03 18:30 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -205,14 +205,10 @@
 !
 ! ------------------ 1st party whitelists ------------------
 !
-@@||fwmrm.net/ad/$script,domain=tvplay.skaties.lv
-@@||fwmrm.net/ad/*MTG_Play_HTML5_Live$xmlhttprequest,domain=tvplay.skaties.lv
-@@||fwmrm.net/p/MTG_Brightcove_HTML5/AdManager.js$script,domain=tvplay.skaties.lv
 @@||h.itvnet.lv^*/adjs/adjs/ads.js$script,domain=tvnet.lv
 @@||lsm.lv/public/scripts/ads.js$script,~third-party
 @@||ltv.lsm.lv/scripts/ads.js$script
 @@||playapi.mtgx.tv/v3/adinfo$xmlhttprequest
-@@||tvplay.skaties.lv/ad$xmlhttprequest
 @@||varianti.lv/ads/load_ad_images/$xmlhttprequest,~third-party
 @@||visidarbi.lv/advertisements$xmlhttprequest,~third-party
 !
@@ -362,6 +358,7 @@ salidzini.lv##.item_link[href^="/rekred.php"]
 salidzini.lv##[id^="media_place"]
 sexparty.lv##td[width="230"]
 simpsoni.lv###head_banner
+skaties.lv##[id^="_fw_frame_"]
 spoki.tvnet.lv###spec_head
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
@@ -401,7 +398,6 @@ tvnet.lv##[href^="http://q.tvnet.lv/"]
 tvnet.lv##[id^="ad120x600"]
 tvnet.lv##a[style="text-decoration: underline; cursor: pointer; padding-right: 17px; background: url('/assets/images/title_link.gif') right center no-repeat;"]
 tvnet.lv##div[style="height:53px; width:100%; position:fixed; bottom:0px; left:0px; background-color:white; z-index:999999; background-position:center center; background-image: url('http://b.itvnet.lv/_sa_alkohols.jpg'); background-repeat:no-repeat;"]
-tvplay.skaties.lv##.ad
 uzkartes.lv###sz
 varianti.lv##.ad_prian
 varianti.lv##.textbanners
