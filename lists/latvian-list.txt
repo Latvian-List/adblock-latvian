@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: Nv/sCRT2N6V43B/m5k5MMg
+! Checksum: XHAUbaInZbH8AgDZDSNMWg
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 202009241430
-! Last modified: 2020-09-24 14:30 UTC
+! Version: 202009241442
+! Last modified: 2020-09-24 14:42 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -150,7 +150,6 @@
 ||doaffiliate.net^$third-party
 ||evolution.lv^$third-party
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=skaties.lv
-||garmtech.lv^$third-party
 ||getgamers.ru^$popup
 ||getgamers.ru^$third-party
 ||goaff.com^$third-party
