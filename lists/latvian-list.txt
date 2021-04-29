@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: XHAUbaInZbH8AgDZDSNMWg
+! Checksum: ALZnjb8mi3qBz51mZTwJsw
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 202009241442
-! Last modified: 2020-09-24 14:42 UTC
+! Version: 202104291503
+! Last modified: 2021-04-29 15:03 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -55,6 +55,7 @@
 ||ehalle.lv/grupu_bildes/
 ||elittesport.lv/pictures/banneri_gar_malam/
 ||elittesport.lv/pictures/Tirgoshanas/
+||eveselibaspunkts.lv/images/banners/
 ||fotoreceptes.lv/banneris
 ||fotoreceptes.lv/iespeja.GIF
 ||gudriem.lv/App_Themes/Default/Banners/
