@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: 3rKExd+d52/IpGo1xKFnIg
+! Checksum: t0tAzd3eTWJpWF17pp6K8A
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 202110020833
-! Last modified: 2021-10-02 08:33 UTC
+! Version: 202110180936
+! Last modified: 2021-10-18 09:36 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -222,6 +222,8 @@
 @@||emediate.se/eas?*ty=video$object,domain=apollo.lv
 @@||fwmrm.net/ad/g/$xmlhttprequest,domain=skaties.lv
 @@||fwmrm.net/ad/l/$xmlhttprequest,domain=skaties.lv
+@@||mssl.fwmrm.net/libs/adm/*/LinkTag2.js$domain=skaties.lv
+@@||tv3play.skaties.lv/static/scripts/trackdb/events.gif$domain=skaties.lv
 @@||viastream.viasat.tv^*?affiliate=
 !
 ! ------------- Generic element hiding filters -------------
