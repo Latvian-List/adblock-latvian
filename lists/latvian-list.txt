@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: LBTWfX/YuEYxoXNhdQSFKw
+! Checksum: Whtu5Q3bKaqIGyUDblEOyQ
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 202204040915
-! Last modified: 2022-04-04 09:15 UTC
+! Version: 202204040916
+! Last modified: 2022-04-04 09:16 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -321,6 +321,7 @@ izklaide.delfi.lv##.iepazisanas
 jauns.lv##.ad-dfp
 jauns.lv##.meta-info__subscribe
 jauns.lv##.shop-list
+jauns.lv##.shop-multiple-items
 kopaa.lv##.adv_column
 kurpirkt.lv###leja_scroll
 kurpirkt.lv###top_ba_pos
