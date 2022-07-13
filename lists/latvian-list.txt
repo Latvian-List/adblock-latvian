@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: Whtu5Q3bKaqIGyUDblEOyQ
+! Checksum: LEkd5ESO4g4XhOvJjjMm2Q
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 202204040916
-! Last modified: 2022-04-04 09:16 UTC
+! Version: 202207131545
+! Last modified: 2022-07-13 15:45 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -279,6 +279,8 @@ delfi.lv##.top-banner
 delfi.lv##.veikali-banners-active
 delfi.lv##.zave-wrapper
 delfi.lv##.zave_r
+delfi.lv##[class^="custom-ads-block"]
+delfi.lv##[id^="custom-ads-block"]
 delfi.lv##div.adsAdmin-iblock-pinned
 delfi.lv##div.adsAdmin-section
 delfi.lv##div[style="background:#fef2d9;"]
