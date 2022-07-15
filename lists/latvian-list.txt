@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: UjAwB4L78o0m+OCF4yM1Og
+! Checksum: s649U+ytuIW19y+bkdP/yg
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 202207141616
-! Last modified: 2022-07-14 16:16 UTC
+! Version: 202207151426
+! Last modified: 2022-07-15 14:26 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
@@ -422,7 +422,3 @@ zip.lv##.zip_spotlight.main_td
 !
 varianti.lv#@##ad_table
 varianti.lv#@#.single_ad
-!
-! -------------- uBO extended syntax filters ---------------
-!
-!#include latvian-ubo.txt
