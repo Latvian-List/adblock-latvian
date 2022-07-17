@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: dtetSw8HM0D3VbKbQMc4ag
+! Checksum: rKFO5sucXK1UXqlpeXtbvQ
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202207170639
-! Last modified: 2022-07-17 06:39 UTC
+! Version: 202207170644
+! Last modified: 2022-07-17 06:44 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -307,6 +307,7 @@ elektroenergija.lv##.adv-txt
 europeanhitradio.com,europeanhitradio.lv##td[style="padding-top:10px;padding-left:6px;padding-bottom:10px;"]
 forums.delfi.lv##div[style="width:250px;"]:last-child
 gay.lv##div[style="width:568px;height:60px;background-color:#000000;"]
+gismeteo.lv##.placeholder
 google.lv###rhscol
 google.lv###taw
 gramata.ucoz.lv##[style="text-align:center;border:1px dashed #000000;width:468px;height:60px;position:absolute;overflow:hidden;margin-top:-20px;margin-right:160px;"]
