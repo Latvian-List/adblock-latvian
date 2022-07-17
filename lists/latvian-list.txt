@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: rKFO5sucXK1UXqlpeXtbvQ
+! Checksum: kOX5Cc0FhTX84Xju3Q6Jzw
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202207170644
-! Last modified: 2022-07-17 06:44 UTC
+! Version: 202207170652
+! Last modified: 2022-07-17 06:52 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -357,6 +357,8 @@ nra.lv##div[style="padding-top:2px; font-size:0.917em;"]
 oho.lv##div[style="width:180px; overflow:hidden; background:#ffffff; border: solid 1px #D30528; font-family:Verdana; font-size:11px; margin: 5px 0px 10px 0px;"]
 pornotv.lv###footer > table[width="100%"]
 pornotv.lv##.top_slud.sakums
+press.lv##.ads--banner
+press.lv##.zdorovje-widget
 receptes.lv###slider-wrap
 reklama.lv##.right_column
 reklama.lv##div[style="margin-bottom:15px;"]
