@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: WCk8JtXPYtOF3hWEju0i8w
+! Checksum: HFQZda6/3yAzZEFRDzMEGQ
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202207170658
-! Last modified: 2022-07-17 06:58 UTC
+! Version: 202207170701
+! Last modified: 2022-07-17 07:01 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -252,6 +252,7 @@ boot.lv##.bootlv_recommends
 boot.lv##.top_header_wrapper
 boot.lv##div[style="padding: 10px;text-align:center;"]
 boot.lv##td[style="padding: 0 0 0 10px; width: 250px; vertical-align: top;"]
+cvmarket.lv##.with_banner
 db.lv###outer-left
 db.lv###outer-right
 db.lv###slid_close
