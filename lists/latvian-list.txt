@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: zXSNVgUkKcjbN9ENNRVvhQ
+! Checksum: WCk8JtXPYtOF3hWEju0i8w
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202207170653
-! Last modified: 2022-07-17 06:53 UTC
+! Version: 202207170658
+! Last modified: 2022-07-17 06:58 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -224,6 +224,7 @@
 @@||emediate.se/eas?*ty=video$object,domain=apollo.lv
 @@||fwmrm.net/ad/g/$xmlhttprequest,domain=skaties.lv
 @@||fwmrm.net/ad/l/$xmlhttprequest,domain=skaties.lv
+@@||keytarget.adnet.lt^$script,domain=liepajniekiem.lv
 @@||mssl.fwmrm.net/libs/adm/*/LinkTag2.js$domain=skaties.lv
 @@||tv3play.skaties.lv/static/scripts/trackdb/events.gif$domain=skaties.lv
 @@||viastream.viasat.tv^*?affiliate=
