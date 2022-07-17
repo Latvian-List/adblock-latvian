@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: TjUgc021/S/B3DPgb8HXHg
+! Checksum: zPdMi9jjWXtx6YYcMNyCTA
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202207151511
-! Last modified: 2022-07-15 15:11 UTC
+! Version: 202207170637
+! Last modified: 2022-07-17 06:37 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -421,5 +421,7 @@ zip.lv##.zip_spotlight.main_td
 !
 ! --------------- Element hiding whitelists ----------------
 !
+atverskapi.delfi.lv#@#.ad-placement
+atverskapi.delfi.lv#@#.adocean
 varianti.lv#@##ad_table
 varianti.lv#@#.single_ad
