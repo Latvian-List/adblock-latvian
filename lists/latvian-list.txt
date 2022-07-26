@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: F6izO6A+kk+WNF8QcT8n7Q
+! Checksum: AmAWmgijx8skhpI2mcinTQ
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202207181400
-! Last modified: 2022-07-18 14:00 UTC
+! Version: 202207261120
+! Last modified: 2022-07-26 11:20 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -26,9 +26,7 @@
 ||1w.lv/banner_
 ||220.lv/rek_html/
 ||2x2.lv/img/$object
-||ad.one.lv^
 ||admp-tc.delfi.lv^
-||ao.skaties.lv^
 ||atlaides.delfi.lv/export.php
 ||balticlivecam.com/images/acb_logo.png
 ||banners.zl.lv^
@@ -86,7 +84,6 @@
 ||player.tvnet.lv/o/*.mp4
 ||player.tvnet.lv^*/stats.json
 ||pv2013.cvk.lv/lmt.jpg
-||q.tvnet.lv^
 ||r.inbox.lv^
 ||receptes.lv/images/design/davana_tev.png
 ||reklama.lv/images/picads/users/
@@ -98,11 +95,7 @@
 ||runabildes.lv^*/wpsite-background-takeover/$script
 ||semicom.lv/admin/files/$object
 ||serveris.lv/images/Baners/
-||sexparty.lv/style/flash/banner.swf
-||sexparty.lv/uploads/banner/
-||sexparty.lv/uploads/vip/
 ||signe.lv/userfiles/image/main%20page%20banners/
-||simpsoni.lv/rtr/
 ||sportazinas.com/wp-content/uploads/*.gif
 ||sudzibas.lv/baneris_
 ||tavacena.lv/images/ltc/
@@ -124,9 +117,7 @@
 ||a.draugiem.lv^
 ||adbox.lv^$third-party
 ||adhands.ru^$third-party
-||ads.image.lv^$third-party
 ||adsplius.lt^$third-party
-||adsxchange.lv^$third-party
 ||agk.lv^$third-party
 ||airbalticblog.com/shared/$third-party
 ||alida.lv/upload/banner/
@@ -138,14 +129,11 @@
 ||auto24.lv^$third-party
 ||b.itvnet.lv^
 ||banneri.lv^$third-party
-||bbes.lv^$third-party
 ||beta.lt^*/banners
 ||cetrassezonas.lv/tvnet.php
 ||chaula.tv/lv/output/$third-party
 ||city24.lv/ibox/$third-party
-||clo.lv^$third-party
 ||cv.lv^*?type=banner
-||deal24.lv^$third-party
 ||delphi.lv/bizness/techchill/
 ||delphi.lv/fp/i/airBaltic_block_v3_logo.svg
 ||delphi.lv^*/ads/
@@ -153,17 +141,12 @@
 ||doaffiliate.net^$third-party
 ||evolution.lv^$third-party
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=skaties.lv
-||getgamers.ru^$popup
-||getgamers.ru^$third-party
 ||goaff.com^$third-party
 ||h.itvnet.lv^
 ||ifrype.com/ad_v/
 ||ifrype.com/miniads
 ||ifrype.com^*/ad_v.
 ||ifrype.com^*/ads.
-||imd.petit.lv^
-||img.petit.lv^
-||inectar.lv^$third-party
 ||itvnet.lv/partner/
 ||knc.lv^$third-party
 ||latloto.lv/banner/
@@ -342,9 +325,6 @@ kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
 la.lv##.side-banner
 lattelecom.lv##[id^="fixme_"]
 lsm.lv##.adbox
-mac.tunt.lv##div[style="border-top: 1px solid #eaeaea; width: 90%;"] + center
-mac.tunt.lv##div[style="padding-left: 10px;"] + br + table[width="100%"]
-mac.tunt.lv##table[style="border: 1px solid #CBCBCB; background-color: #F3F3F3;"]
 mail.inbox.lv##tr[id^="row"]
 miljons.com###opencredit
 miljons.com##div[style="padding:3px; font-size:13px;"]
@@ -376,8 +356,6 @@ salidzini.lv###AM_scroll_row
 salidzini.lv###AM_tower_div
 salidzini.lv##.item_link[href^="/rekred.php"]
 salidzini.lv##[id^="media_place"]
-sexparty.lv##td[width="230"]
-simpsoni.lv###head_banner
 skaties.lv##[id^="_fw_frame_"]
 spoki.tvnet.lv###spec_head
 sportacentrs.com##.r_article
@@ -414,7 +392,6 @@ tvnet.lv##.pattern-side--ads
 tvnet.lv##.right-sidebar-top__ad
 tvnet.lv##.right_custom_ad_2_pics
 tvnet.lv##.right_custom_ad_four_pics_city24
-tvnet.lv##[href^="http://q.tvnet.lv/"]
 tvnet.lv##[id^="ad120x600"]
 tvnet.lv##a[style="text-decoration: underline; cursor: pointer; padding-right: 17px; background: url('/assets/images/title_link.gif') right center no-repeat;"]
 tvnet.lv##div[style="height:53px; width:100%; position:fixed; bottom:0px; left:0px; background-color:white; z-index:999999; background-position:center center; background-image: url('http://b.itvnet.lv/_sa_alkohols.jpg'); background-repeat:no-repeat;"]
