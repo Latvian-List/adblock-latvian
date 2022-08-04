@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: +NmOy5UQoFrZbyHoIrievw
+! Checksum: gEnLrhTbetQonyBXjjmB6g
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202208040801
-! Last modified: 2022-08-04 08:01 UTC
+! Version: 202208040804
+! Last modified: 2022-08-04 08:04 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -395,7 +395,7 @@ tvnet.lv##.right_custom_ad_four_pics_city24
 tvnet.lv##[id^="ad120x600"]
 tvnet.lv##a[style="text-decoration: underline; cursor: pointer; padding-right: 17px; background: url('/assets/images/title_link.gif') right center no-repeat;"]
 tvnet.lv##div[style="height:53px; width:100%; position:fixed; bottom:0px; left:0px; background-color:white; z-index:999999; background-position:center center; background-image: url('http://b.itvnet.lv/_sa_alkohols.jpg'); background-repeat:no-repeat;"]
-tvnet.lv##div[style="position: absolute; inset: 0px; background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%; z-index: 1004;"]
+tvnet.lv,apollo.lv##div[style="position: absolute; inset: 0px; background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%; z-index: 1004;"]
 uzkartes.lv###sz
 varianti.lv##.ad_prian
 varianti.lv##.textbanners
@@ -408,8 +408,8 @@ zip.lv##.zip_spotlight.main_td
 !
 atverskapi.delfi.lv#@#.ad-placement
 atverskapi.delfi.lv#@#.adocean
-tvnet.lv#@#.ad01
-tvnet.lv#@#.adBanner
-tvnet.lv#@#.dfp_ad
+tvnet.lv,apollo.lv#@#.ad01
+tvnet.lv,apollo.lv#@#.adBanner
+tvnet.lv,apollo.lv#@#.dfp_ad
 varianti.lv#@##ad_table
 varianti.lv#@#.single_ad
