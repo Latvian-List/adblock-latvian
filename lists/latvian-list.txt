@@ -3,8 +3,8 @@
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202302101116
-! Last modified: 2023-02-10 11:16 UTC
+! Version: 202310071940
+! Last modified: 2023-10-07 19:40 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -18,6 +18,8 @@
 .lv/banners/
 .lv/images/banners/$third-party
 .lv/img/banners/
+/optibet.jpg|$domain=~optibet.lu|~optibet.lv|~optibet.com|~optibet.ee|~optibet.lt
+/wp-content/srennab^
 !
 ! ------------- 1st party ad blocking filters --------------
 !
@@ -108,6 +110,9 @@
 ||viastream.viasat.tv/Commercials/
 ||xp.lv/res/banners/
 ||zip.lv/kasjauns.swf
+||img.pilseta24.lv/media/768x575^$image
+||source.pilseta24.lv^$image
+||sportazinas.com/*/1920x1000
 !
 ! ------------- 3rd party ad blocking filters --------------
 !
@@ -403,6 +408,18 @@ vgk.lv##.infobox
 zeltazivtina.lv###banner
 zip.lv###perkam_group_banner
 zip.lv##.zip_spotlight.main_td
+diena.lv###tagcloud
+kursors.lv##.pum
+lasi.lv##.article-advertisement
+pilseta24.lv##.card--alternative
+pilseta24.lv##.row > .text-center
+pilseta24.lv##.text-center.card
+pilseta24.lv#?#p:has(> a[href*=img])
+sportazinas.com##.category-summary--content-intro
+sportazinas.com##.related--ads
+zz.lv#?#.widget_execphp:has([class^=tag][class*=cloud])
+zz.lv,staburags.lv,aluksniesiem.lv,bauskasdzive.lv,dzirkstele.lv,ziemellatvija.lv,rekurzeme.lv##.content-add-desktop-description
+zz.lv,staburags.lv,aluksniesiem.lv,bauskasdzive.lv,dzirkstele.lv,ziemellatvija.lv,rekurzeme.lv#?#.widget_execphp:has-text(Reklāmraksti)
 !
 ! --------------- Element hiding whitelists ----------------
 !
