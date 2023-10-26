@@ -227,6 +227,7 @@ apollo.tvnet.lv##.banner-block
 apollo.tvnet.lv##.banner-block-small
 apollo.tvnet.lv##.custom-ad-widget
 apollo.tvnet.lv##.e-shop-banner-block
+bauskasdzive.lv###execphp-10
 bilesuserviss.lv##.banner_clicker
 bilesuserviss.lv##.main_column_banner
 bilesuserviss.lv##.top_banner
