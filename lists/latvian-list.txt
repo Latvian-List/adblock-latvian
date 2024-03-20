@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: 1K4xwH47c6Lev3VgVz0HDg
+! Checksum: wTWS/+FPjrXN0BRREWNfwQ
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202403201358
-! Last modified: 2024-03-20 13:58 UTC
+! Version: 202403201403
+! Last modified: 2024-03-20 14:03 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -18,6 +18,8 @@
 .lv/banners/
 .lv/images/banners/$third-party
 .lv/img/banners/
+/optibet.jpg|$domain=~optibet.lu|~optibet.lv|~optibet.com|~optibet.ee|~optibet.lt
+/wp-content/srennab^
 !
 ! ------------- 1st party ad blocking filters --------------
 !
@@ -63,6 +65,7 @@
 ||gudrinieks.lv/res/js/sb_banner.js
 ||hop.lv^*/banneri/
 ||iaptieka.lv/atteli/apmaina/
+||img.pilseta24.lv/media/768x575^$image
 ||intim.lv/res/banners/
 ||jauns.lv/ad_list/
 ||kurpirkt.lv/ba/
@@ -97,6 +100,8 @@
 ||semicom.lv/admin/files/$object
 ||serveris.lv/images/Baners/
 ||signe.lv/userfiles/image/main%20page%20banners/
+||source.pilseta24.lv^$image
+||sportazinas.com/*/1920x1000
 ||sportazinas.com/wp-content/uploads/*.gif
 ||sudzibas.lv/baneris_
 ||tavacena.lv/images/ltc/
@@ -282,6 +287,7 @@ delfi.lv,morning.lv###right
 delfi.lv,morning.lv##.delfi_shop
 delfi.lv,morning.lv##[id^="adoceandelfilv"]
 delfi.lv,morning.lv,skats.lv##.articlebanner
+diena.lv###tagcloud
 draugiem.lv##.adv
 e-klase.lv###mammtet_box
 e-klase.lv##.adv_urls
@@ -324,7 +330,9 @@ kurpirkt.lv##.campaignblock2
 kurpirkt.lv##.labsblock1
 kurpirkt.lv##.labsblock2
 kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
+kursors.lv##.pum
 la.lv##.side-banner
+lasi.lv##.article-advertisement
 lattelecom.lv##[id^="fixme_"]
 lsm.lv##.adbox
 mail.inbox.lv##tr[id^="row"]
@@ -339,6 +347,10 @@ notepad.lv##.hostnet
 nozare.lv##div[style="position:absolute;width:725px;height:90px;margin-left:250px;margin-top:33px;"]
 nra.lv##div[style="padding-top:2px; font-size:0.917em;"]
 oho.lv##div[style="width:180px; overflow:hidden; background:#ffffff; border: solid 1px #D30528; font-family:Verdana; font-size:11px; margin: 5px 0px 10px 0px;"]
+pilseta24.lv##.card--alternative
+pilseta24.lv##.row > .text-center
+pilseta24.lv##.text-center.card
+pilseta24.lv#?#p:has(> a[href*=img])
 pornotv.lv###footer > table[width="100%"]
 pornotv.lv##.top_slud.sakums
 press.lv##.ads--banner
@@ -362,6 +374,8 @@ skaties.lv##[id^="_fw_frame_"]
 spoki.tvnet.lv###spec_head
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
+sportazinas.com##.category-summary--content-intro
+sportazinas.com##.related--ads
 ss.lv###ads_sys_div1
 ss.lv###sys_bnr_tbl
 tele2.lv###fancybox-overlay
@@ -406,6 +420,9 @@ vgk.lv##.infobox
 zeltazivtina.lv###banner
 zip.lv###perkam_group_banner
 zip.lv##.zip_spotlight.main_td
+zz.lv#?#.widget_execphp:has([class^=tag][class*=cloud])
+zz.lv,staburags.lv,aluksniesiem.lv,bauskasdzive.lv,dzirkstele.lv,ziemellatvija.lv,rekurzeme.lv##.content-add-desktop-description
+zz.lv,staburags.lv,aluksniesiem.lv,bauskasdzive.lv,dzirkstele.lv,ziemellatvija.lv,rekurzeme.lv#?#.widget_execphp:has-text(Reklāmraksti)
 !
 ! --------------- Element hiding whitelists ----------------
 !
