@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: 25Lv3hnYzhnK1MTJVYWorA
+! Checksum: uV9+SUHBX4otYYK5CEVqjA
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202302101116
-! Last modified: 2023-02-10 11:16 UTC
+! Version: 202403201344
+! Last modified: 2024-03-20 13:44 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -64,6 +64,7 @@
 ||hop.lv^*/banneri/
 ||iaptieka.lv/atteli/apmaina/
 ||intim.lv/res/banners/
+||jauns.lv/ad_list/
 ||kurpirkt.lv/ba/
 ||kurpirkt.lv/img/ieskaties2.png
 ||latauto.tvnet.lv/infoblock
