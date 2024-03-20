@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: uV9+SUHBX4otYYK5CEVqjA
+! Checksum: J7SDueHfCBr+vXfwRHL7hA
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202403201344
-! Last modified: 2024-03-20 13:44 UTC
+! Version: 202403201351
+! Last modified: 2024-03-20 13:51 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -361,6 +361,7 @@ skaties.lv##[id^="_fw_frame_"]
 spoki.tvnet.lv###spec_head
 sportacentrs.com##.r_article
 sportacentrs.com##table[style="width: 240px; height: 97px;"]
+ss.lv###ads_sys_div1
 ss.lv###sys_bnr_tbl
 tele2.lv###fancybox-overlay
 tera.lv###REKLAI
