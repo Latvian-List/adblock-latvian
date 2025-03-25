@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: /A3w7j2I0J5iHDBpcSzZRw
+! Checksum: 4hktfkWMJ6WqnK0MZp92Qw
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202503251400
-! Last modified: 2025-03-25 14:00 UTC
+! Version: 202503251402
+! Last modified: 2025-03-25 14:02 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -339,6 +339,11 @@ kurzemnieks.lv##.banner-container.header
 la.lv##.side-banner
 lasi.lv##.article-advertisement
 lattelecom.lv##[id^="fixme_"]
+liepajniekiem.lv##+js(nano-setInterval-booster)
+liepajniekiem.lv##+js(set, window.LIEPAJNIEKIEM_ADBLOCK, null)
+liepajniekiem.lv##+js(set, window.LIEPAJNIEKIEM_ADBLOCK_COUNTER, 999)
+liepajniekiem.lv##+js(set, window.LIEPAJNIEKIEM_HAS_ADBLOCK, 0)
+liepajniekiem.lv##+js(set, window.liepajniekiemStats.event, function() {})
 lsm.lv##.adbox
 mail.inbox.lv##tr[id^="row"]
 miljons.com###opencredit
