@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: RaR9NdfdhK9Glku8NS06Yg
+! Checksum: VmuqdA5AkC1QJj+l72K75A
 ! Title: Latvian List
 ! Homepage: https://github.com/Latvian-List/adblock-latvian
 ! Expires: 4 days
-! Version: 202404161656
-! Last modified: 2024-04-16 16:56 UTC
+! Version: 202503251356
+! Last modified: 2025-03-25 13:56 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām vienā no šiem veidiem:
@@ -100,6 +100,7 @@
 ||salidzini.lv/*_1200x150$subdocument
 ||salidzini.lv/*_190x600$subdocument
 ||salidzini.lv/*_320x120$subdocument
+||salidzini.lv^$script,domain=salidzini.lv
 ||semicom.lv/admin/files/$object
 ||serveris.lv/images/Baners/
 ||signe.lv/userfiles/image/main%20page%20banners/
@@ -377,7 +378,14 @@ salidzini.lv###AM_tower_div
 salidzini.lv###AM_tower_sub
 salidzini.lv##.item_link[href^="/rekred.php"]
 salidzini.lv##.item_link[href^="/rekred1click"]
+salidzini.lv##[class*="fall15back"]
+salidzini.lv##[id^="fall15back"]
 salidzini.lv##[id^="media_place"]
+salidzini.lv##div:has(a[href*="fall15back"])
+salidzini.lv##div:has(div:has-text(Reklāma)):upward(div.item_box_main)
+salidzini.lv##div[id^="am"]:empty
+salidzini.lv##div[id^="am"][id*="giga"]
+salidzini.lv##div[id^="am"][id*="tower"]
 skaties.lv##[id^="_fw_frame_"]
 spoki.tvnet.lv###spec_head
 sportacentrs.com##.r_article
