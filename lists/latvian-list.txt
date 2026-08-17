@@ -38,6 +38,7 @@
 ||bm.lv/images/*.swf
 ||bm.lv^*_banner.swf
 ||cdn.balticlivecam.com/flowplayer/ad_clean.css
+||cdn.marketer.lv/*casino*
 ||cenuklubs.lv/assets/images/BANERI/
 ||cenuklubs.lv/assets/media/
 ||delfi.lv/ap/edu/g/
